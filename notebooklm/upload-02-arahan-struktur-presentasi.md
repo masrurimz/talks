@@ -14,40 +14,46 @@ Fokus terbesar harus pada:
 4. alasan pentingnya pembatasan usia dan pengawasan pengguna muda.
 
 ## Proporsi isi yang diinginkan
-- 55–65% media sosial.
-- 10–15% penjelasan teknis sederhana tentang cara kerja platform digital.
+- 50–60% media sosial.
+- 15–20% penjelasan teknis sederhana tentang cara kerja platform digital.
 - 10–15% game online.
 - 10–15% judi online.
 - 10–15% pembatasan usia / pengawasan pengguna muda.
 
 ## Durasi target
 - Presentasi sekitar **30 menit**.
-- Lebih baik deck berisi sekitar **12–15 slide** daripada terlalu pendek, karena nanti masih bisa difilter.
+- Lebih baik deck berisi sekitar **14–18 slide** daripada terlalu pendek, karena nanti masih bisa difilter.
 
 ## Judul yang diinginkan
 Judul deck harus langsung nyambung ke tema besar acara. Gunakan arah seperti:
 **Al-Qur'an Menjawab Problematika Zaman: Tantangan Media Sosial, Game Online, dan Judi Online di Era Digital**
 
 ## Struktur narasi yang diinginkan
-Susun deck dengan alur seperti ini:
+Susun deck dengan alur yang lebih terurai seperti ini:
 1. **Pembuka:** problem zaman digital kini ada di genggaman.
 2. **Media sosial sebagai isu utama:** mengapa ia paling dekat dengan kehidupan sehari-hari.
 3. **Media sosial: manfaatnya tetap ada.**
-4. **Risiko media sosial tanpa kendali:** waktu, emosi, relasi, adab, dan ibadah.
-5. **Mengapa sistem digital mudah menarik perhatian:** notifikasi, feed tanpa akhir, autoplay, dan kebiasaan mengecek.
-6. **Sedikit penjelasan teknis:** algoritma sederhana, personalisasi konten, iklan, FOMO, dan social proof.
-7. **Data pendukung yang cukup kuat, tetapi tidak berlebihan.**
-8. **Sekilas tentang game online:** cukup sebagai fenomena yang juga perlu kendali.
-9. **Sekilas tentang judi online:** cukup sebagai bahaya serius yang perlu diwaspadai.
-10. **Mengapa pembatasan usia dan pengawasan itu perlu:** mulai dari alasannya dulu, baru contoh umum platform atau praktik.
-11. **Sikap keluarga dan masyarakat:** langkah-langkah sederhana.
-12. **Penutup reflektif:** ini bukan sekadar isu teknologi, tetapi problem zaman; lalu jembatankan ke sesi 2.
+4. **Risiko media sosial pada waktu dan fokus.**
+5. **Risiko media sosial pada emosi dan perbandingan sosial.**
+6. **Risiko media sosial pada adab dan kualitas interaksi.**
+7. **Mengapa sistem digital mudah menarik perhatian:** notifikasi, feed tanpa akhir, autoplay, dan kebiasaan mengecek.
+8. **Sedikit penjelasan teknis:** algoritma sederhana dan rekomendasi konten.
+9. **Sedikit penjelasan teknis lanjutan:** personalisasi, iklan, FOMO, dan social proof.
+10. **Data pendukung yang cukup kuat, tetapi tidak berlebihan.**
+11. **Sekilas tentang game online:** cukup sebagai fenomena yang juga perlu kendali.
+12. **Sekilas tentang judi online:** cukup sebagai bahaya serius yang perlu diwaspadai.
+13. **Mengapa pembatasan usia itu perlu.**
+14. **Bentuk pengawasan pengguna muda.**
+15. **Sikap keluarga dan masyarakat:** langkah-langkah sederhana.
+16. **Penutup reflektif:** ini bukan sekadar isu teknologi, tetapi problem zaman.
+17. **Jembatan ke sesi 2:** Al-Qur'an sebagai petunjuk.
 
 ## Aturan isi slide
 - Satu slide, satu gagasan utama.
 - Jangan terlalu padat teks.
 - Bila memakai data, tampilkan sedikit dan pilih yang paling kuat.
 - Data harus mendukung pesan, bukan menguasai presentasi.
+- Lebih baik pisahkan gagasan besar ke beberapa slide kecil daripada menggabungkan terlalu banyak hal dalam satu slide.
 - Gunakan contoh kehidupan sehari-hari: scrolling, grup WhatsApp, video pendek, notifikasi, game setelah belajar atau setelah berbuka, top-up, promosi terselubung, dan pengawasan anak.
 
 ## Aturan nada
