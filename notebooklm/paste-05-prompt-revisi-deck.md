@@ -1,40 +1,40 @@
 # Prompt Revisi Deck NotebookLM
 
-Catatan penting: menurut bantuan resmi NotebookLM, revisi slide saat ini **tidak lagi mempertimbangkan sources**. Jadi, bila struktur deck awal sudah melenceng jauh, lebih aman **generate deck baru** dengan prompt yang diperbaiki daripada mengandalkan revisi berat.
+Catatan penting: menurut bantuan resmi NotebookLM, revisi slide saat ini **tidak lagi mempertimbangkan sources**. Jadi, bila arah deck sudah melenceng jauh, lebih aman **generate deck baru** dengan prompt yang diperbaiki daripada mengandalkan revisi berat.
 
-## Prompt revisi 1 — sederhanakan untuk audiens umum
+## Prompt revisi 1 — kembalikan fokus ke media sosial
 ```text
-Sederhanakan seluruh deck untuk audiens umum di lingkungan desa Indonesia. Kurangi istilah teknis, pendekkan kalimat, dan pastikan setiap slide hanya punya satu pesan utama. Pertahankan poin penting dan data inti saja.
+Kembalikan fokus deck ini ke media sosial sebagai isu utama. Kurangi porsi game online dan judi online agar tetap hanya menjadi bahasan singkat pendukung.
 ```
 
-## Prompt revisi 2 — lebih cocok untuk pembicara langsung
+## Prompt revisi 2 — sesuaikan untuk sesi 1 acara dua pemateri
 ```text
-Ubah deck ini agar lebih cocok untuk presentasi lisan. Kurangi paragraf, ubah menjadi poin-poin singkat, dan perkuat ritme antar slide. Pastikan pembicara bisa menjelaskan sendiri tanpa slide terasa penuh teks.
+Ubah deck ini agar jelas terasa sebagai sesi 1 yang membuka fenomena dari sudut pandang praktisi IT. Jangan membuat deck terasa seperti sudah menuntaskan kajian agama. Penutup harus menjembatani ke sesi 2.
 ```
 
-## Prompt revisi 3 — perbanyak contoh sehari-hari
+## Prompt revisi 3 — ringkas untuk 30 menit
 ```text
-Tambahkan contoh yang dekat dengan kehidupan sehari-hari di Indonesia: notifikasi saat salat, scrolling sebelum tidur, game setelah berbuka, grup WhatsApp keluarga, top-up game, dan pengawasan orang tua terhadap akun anak.
+Ringkas deck ini agar nyaman dipresentasikan dalam sekitar 30 menit. Kurangi slide yang berulang, pendekkan teks, dan pertahankan hanya pesan yang paling penting.
 ```
 
-## Prompt revisi 4 — pertegas bagian judi online
+## Prompt revisi 4 — sederhanakan bahasa untuk audiens umum desa
 ```text
-Pertegas bagian tentang judi online sebagai bahaya yang haram, merusak keluarga, dan memanfaatkan kelemahan psikologis. Buat penyampaiannya tegas tetapi tidak berlebihan, dan tambahkan ajakan praktis untuk pencegahan.
+Sederhanakan seluruh deck untuk audiens umum di lingkungan desa Indonesia. Kurangi istilah teknis, pendekkan kalimat, dan gunakan contoh yang dekat dengan kehidupan sehari-hari.
 ```
 
-## Prompt revisi 5 — perkuat penutup
+## Prompt revisi 5 — kuatkan bagian pembatasan usia dan pengawasan
 ```text
-Buat 2 slide penutup yang lebih kuat: satu slide ringkasan 3 pesan utama, lalu satu slide ajakan praktis yang realistis untuk Ramadhan ini. Nada harus hangat, tegas, dan menggerakkan.
+Perjelas alasan mengapa pembatasan usia dan pengawasan pengguna muda itu penting. Mulai dari alasan perlindungan dulu, lalu beri contoh singkat praktik umum atau platform tanpa menjadikannya fokus utama.
 ```
 
-## Prompt revisi 6 — ringkas data
+## Prompt revisi 6 — perkuat jembatan ke sesi 2
 ```text
-Ringkas slide-slide data agar hanya menampilkan angka yang paling penting. Setiap angka harus langsung dihubungkan dengan makna praktis bagi orang tua, remaja, keluarga, atau jamaah.
+Buat slide penutup lebih reflektif. Tegaskan bahwa problem digital ini menunjukkan manusia membutuhkan arah, lalu arahkan audiens ke sesi berikutnya tentang bagaimana Al-Qur'an menjawab problematika zaman.
 ```
 
 ## Jika deck awal kurang tepat
 Gunakan prompt generasi baru seperti ini:
 
 ```text
-Buat ulang deck dari awal. Fokuskan pada audiens umum di desa Indonesia, gunakan bahasa sederhana, kurangi jargon, batasi teks per slide, dan prioritaskan alur: Ramadhan sebagai latihan kendali diri, media sosial, game, judi online, pengawasan akun anak, lalu langkah praktis.
+Buat ulang deck dari awal untuk sesi 1 acara refleksi Nuzulul Qur'an bertema “Al-Qur'an menjawab problematika zaman”. Fokus utama harus pada media sosial, dengan sedikit bahasan tentang game online, judi online, dan pentingnya pengawasan pengguna muda. Buat deck sekitar 8–10 slide, cocok untuk 30 menit, dan akhiri dengan jembatan yang natural ke sesi 2.
 ```

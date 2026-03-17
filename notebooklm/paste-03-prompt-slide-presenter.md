@@ -3,57 +3,59 @@
 Salin prompt di bawah ini ke kolom deskripsi Slide Deck di NotebookLM.
 
 ```text
-Buatkan Slide Presenter dalam bahasa Indonesia untuk pembicara umum dengan judul besar:
-“Ramadhan di Era Digital: Media Sosial, Game, Judi Online, dan Pengawasan Akun Anak”.
+Buatkan Slide Presenter dalam bahasa Indonesia untuk sesi 1 acara refleksi Nuzulul Qur'an dengan tema besar:
+“Al-Qur'an menjawab problematika zaman”.
 
-Audiensnya campuran, berada di lingkungan desa di Indonesia: siswa SMP, SMA, mahasiswa, orang dewasa, dan sebagian usia 40–50-an. Mereka memakai ponsel dan akrab dengan teknologi sehari-hari, tetapi tidak semuanya paham istilah teknis. Karena itu, gunakan bahasa Indonesia yang sederhana, hangat, jelas, dan membumi.
+Judul deck harus langsung nyambung ke tema besar acara, misalnya:
+“Al-Qur'an Menjawab Problematika Zaman: Tantangan Media Sosial, Game Online, dan Judi Online di Era Digital”.
 
-Pembicaranya adalah Failaqul Haq, S.Kom., M.T., dosen Teknik Informatika ITS Surabaya. Buat slide yang membantu beliau menjelaskan dengan lisan, bukan slide yang penuh paragraf.
+Ini adalah sesi 1 dari dua pemateri. Posisi sesi ini adalah pembuka fenomena dari sudut pandang praktisi IT, bukan sesi kajian agama utama. Karena itu, deck harus memotret problem zaman digital secara sederhana, lalu memberi jembatan yang natural ke sesi 2 yang akan membahas jawaban Al-Qur'an.
 
-Tujuan deck:
-- mengaitkan Ramadhan dengan pengendalian diri digital;
-- menjelaskan manfaat sekaligus bahaya media sosial;
-- menjelaskan game sebagai hiburan yang perlu batas;
-- menegaskan judi online sebagai bahaya yang haram, merusak, dan memanfaatkan kelemahan psikologis;
-- menjelaskan pentingnya pengawasan orang tua pada akun game dengan contoh Roblox;
-- menutup dengan langkah praktis yang bisa langsung dilakukan keluarga selama Ramadhan.
+Pembicaranya adalah Failaqul Haq, S.Kom., M.T., dosen Teknik Informatika ITS Surabaya.
+
+Durasi presentasi sekitar 30 menit. Karena itu, buat deck sekitar 8–10 slide yang ritmenya nyaman untuk presentasi langsung.
+
+Audiensnya campuran di lingkungan desa Indonesia: siswa SMP, SMA, mahasiswa, orang dewasa, dan sebagian usia 40–50-an. Mereka memakai ponsel dan akrab dengan teknologi sehari-hari, tetapi tidak semuanya paham istilah teknis. Gunakan bahasa Indonesia yang sederhana, hangat, jelas, dan membumi.
+
+Fokus deck harus seperti ini:
+- fokus utama: media sosial;
+- sedikit menyinggung game online;
+- sedikit menyinggung judi online;
+- jelaskan kenapa pembatasan usia dan pengawasan pengguna muda itu penting;
+- jangan menjadikan Roblox atau platform lain sebagai fokus utama, cukup contoh singkat bila perlu;
+- jangan mengambil porsi yang seharusnya menjadi wilayah pemateri 2.
 
 Gunakan alur narasi berikut:
-1. pembuka yang dekat dengan kehidupan sehari-hari;
-2. Ramadhan sebagai latihan menahan diri;
-3. media sosial: manfaat dan bahayanya;
-4. game: hiburan yang perlu aturan;
-5. judi online: bahaya paling tegas;
-6. kenapa sistem digital terasa membuat candu;
-7. data pendukung yang singkat dan kuat;
-8. Roblox sebagai contoh pengawasan akun anak;
-9. peran orang tua, guru, dan pembina;
-10. ajakan praktis dan penutup yang menggerakkan.
+1. problem zaman digital ada di genggaman kita;
+2. media sosial sebagai isu utama: manfaat dan risikonya;
+3. dampak media sosial tanpa kendali pada waktu, emosi, relasi, adab, dan ibadah;
+4. mengapa media sosial mudah menarik perhatian;
+5. sekilas tentang game online sebagai fenomena yang juga perlu kendali;
+6. sekilas tentang judi online sebagai bahaya serius;
+7. mengapa pembatasan usia dan pengawasan pengguna muda itu penting;
+8. penutup reflektif yang menjembatani ke sesi 2 tentang Al-Qur'an.
 
 Aturan penting:
 - satu slide satu pesan utama;
 - teks ringkas, jangan padat;
-- jika menampilkan data, maksimal 1–3 angka utama per slide lalu langsung hubungkan ke makna praktis;
-- pakai contoh sehari-hari: notifikasi saat salat, scrolling sebelum tidur, game setelah berbuka, grup WhatsApp, top-up, anak main bersama teman;
+- media sosial harus menjadi bagian terbesar dari deck;
+- game online dan judi online jangan terlalu dominan;
+- jika memakai data, tampilkan sedikit dan hanya yang paling kuat;
 - hindari jargon teknis tanpa penjelasan;
 - hindari nada menghakimi;
-- tegas pada bahaya judi online;
-- seimbang dan adil saat membahas media sosial dan game;
-- akhiri dengan harapan dan komitmen kecil yang realistis.
+- buat deck terasa seperti pengantar reflektif dari praktisi IT;
+- penutup harus membuka jalan ke sesi 2, bukan menutup seluruh pembahasan.
 
 Gaya visual:
-- rapi, bersih, kuat secara visual, mudah dibaca audiens umum;
-- nuansa Ramadhan yang sopan dan hangat;
-- hindari kesan korporat dingin dan hindari visual terlalu ramai;
-- jika memungkinkan, pakai metafora visual sederhana seperti rem, pagar pengaman, jam waktu, rumah, keluarga, sekolah, masjid, dan lampu notifikasi.
+- rapi, bersih, mudah dibaca audiens umum;
+- nuansa acara refleksi yang sopan;
+- hindari visual terlalu ramai;
+- jika perlu, gunakan metafora visual sederhana seperti layar ponsel, notifikasi, jam, keluarga, sekolah, masjid, dan pagar pengaman.
 
-Buat deck yang cocok untuk pembicara presentasi langsung. Prioritaskan kejelasan, ritme, dan daya bantu bicara.
+Buat deck yang membantu pembicara berbicara langsung selama 30 menit.
 ```
 
 ## Rekomendasi pengaturan
 - Format: **Slide Presenter**
 - Bahasa: **Indonesia**
 - Panjang: **Default**
-
-## Kapan ganti ke Long
-Pilih **Long** bila durasi bicara lebih dari 35–40 menit atau Anda ingin lebih banyak slide transisi dan slide data.

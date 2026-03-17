@@ -1,59 +1,71 @@
 # Brief Pembicara dan Audiens
 
+## Konteks acara
+- Acara: refleksi Nuzulul Qur'an.
+- Tema besar acara: **Al-Qur'an menjawab problematika zaman**.
+- Format acara: 2 sesi pemateri.
+- Posisi materi ini: **sesi 1**, sebagai pembuka fenomena dari sudut pandang praktisi IT.
+- Durasi materi: sekitar **30 menit**.
+
+## Peran sesi 1
+Sesi 1 tidak bertugas menuntaskan kajian agama secara mendalam. Tugas sesi ini adalah:
+- memotret problem zaman digital yang dekat dengan kehidupan sehari-hari;
+- menjelaskan mengapa media sosial menjadi isu utama;
+- sedikit menyinggung game online dan judi online sesuai permintaan panitia;
+- menjelaskan mengapa pembatasan usia dan pengawasan pengguna muda itu penting;
+- memberi jembatan yang natural ke sesi 2, yaitu kajian Al-Qur'an atas fenomena tadi.
+
 ## Identitas pembicara
 - Nama: Failaqul Haq, S.Kom., M.T.
-- Peran: Dosen Teknik Informatika, Institut Teknologi Sepuluh Nopember Surabaya
-- Posisi saat menyampaikan materi: pembicara yang paham teknologi, tetapi sedang berbicara kepada masyarakat umum dengan bahasa yang sederhana, hangat, dan membumi.
+- Posisi: praktisi / akademisi bidang IT.
+- Afiliasi: Dosen Teknik Informatika, Institut Teknologi Sepuluh Nopember Surabaya.
 
-## Tujuan presentasi
-Presentasi ini bertujuan membantu jamaah dan masyarakat memahami:
-1. hubungan Ramadhan dengan pengendalian diri digital;
-2. manfaat sekaligus risiko media sosial;
-3. game sebagai hiburan yang perlu batas;
-4. judi online sebagai bahaya nyata yang haram dan merusak;
-5. pentingnya pengawasan orang tua pada akun game, termasuk contoh Roblox;
-6. langkah praktis yang bisa langsung dilakukan keluarga selama Ramadhan.
+## Fokus isi yang benar
+Urutan prioritas isi untuk sesi ini:
+1. **Media sosial** sebagai fokus utama.
+2. **Game online** hanya disentuh secukupnya sebagai fenomena yang juga perlu kendali.
+3. **Judi online** hanya disentuh secukupnya sebagai bahaya serius yang tidak boleh dinormalisasi.
+4. **Pembatasan usia / pengawasan pengguna muda** sebagai alasan perlindungan, lalu boleh diberi contoh platform atau praktik umum.
+
+## Hal yang jangan sampai keliru
+- Jangan membuat materi ini terasa seperti kajian utama tentang judi online.
+- Jangan membuat game online menjadi topik dominan.
+- Jangan membuat pembahasan platform seperti Roblox menjadi pusat presentasi.
+- Jangan mengambil porsi yang seharusnya menjadi wilayah pemateri 2.
+- Jangan menutup presentasi dengan kesan bahwa semua jawaban agama sudah selesai dibahas di sesi 1.
 
 ## Profil audiens
-Audiens berada di Indonesia, di lingkungan desa. Spektrum usia campuran:
+Audiens berada di Indonesia, lingkungan desa, dengan rentang usia campuran:
 - siswa SMP;
 - siswa SMA;
 - mahasiswa;
 - orang dewasa;
-- sebagian peserta bisa berusia 40–50-an tahun.
+- sebagian bisa berusia 40–50-an.
 
 ## Karakter audiens
-- Sudah memakai ponsel dan media sosial.
-- Cukup akrab dengan teknologi sehari-hari, tetapi tidak semuanya paham istilah teknis.
-- Lebih mudah menangkap contoh konkret daripada teori abstrak.
-- Membutuhkan bahasa Indonesia yang natural, sederhana, dan tidak terasa seperti kuliah kampus.
-- Akan lebih mudah tersambung jika materi dekat dengan kehidupan keluarga, sekolah, masjid, grup WhatsApp, game sehari-hari, dan kebiasaan setelah berbuka atau sebelum tidur.
+- Sudah memakai ponsel, WhatsApp, YouTube, dan media sosial.
+- Tidak semuanya akrab dengan istilah teknis.
+- Lebih mudah menangkap contoh yang dekat dengan kehidupan sehari-hari.
+- Akan lebih mudah terhubung bila materi dikaitkan dengan keluarga, anak, sekolah, masjid, waktu luang, dan kebiasaan setelah berbuka atau sebelum tidur.
 
 ## Gaya bahasa yang diinginkan
-- Gunakan bahasa Indonesia yang mudah dipahami lintas usia.
-- Hindari jargon teknis jika tidak perlu.
-- Jika ada istilah teknis seperti algoritma, notifikasi, autoplay, atau parental controls, jelaskan dengan kalimat pendek dan contoh sehari-hari.
-- Nada harus tegas pada bahaya judi online, tetapi tidak menggurui.
-- Nada untuk orang tua dan remaja harus mengajak, bukan menyalahkan.
-- Hindari bahasa yang terlalu urban, terlalu gaul, atau terlalu akademik.
+- Gunakan bahasa Indonesia yang sederhana, natural, dan membumi.
+- Hindari jargon teknis yang tidak perlu.
+- Jika ada istilah teknis, jelaskan dengan satu kalimat sederhana.
+- Nada harus hangat, reflektif, dan mudah diikuti.
+- Jangan terlalu menghakimi.
+- Jangan terlalu akademik.
 
 ## Gaya penyampaian yang diinginkan
-- Pembicara menjelaskan, bukan membaca paragraf panjang dari slide.
-- Slide harus membantu berbicara, bukan menggantikan pembicara.
-- Visual sebaiknya kuat, tetapi isi tetap sopan, rapi, dan mudah diikuti.
-- Setiap slide idealnya punya satu pesan utama.
-- Bila ada data, tampilkan secukupnya dan langsung hubungkan ke makna praktis.
-
-## Penekanan isi
-- Fokus utama bukan sekadar teknologi, tetapi adab, kendali diri, keluarga, dan perlindungan dari mudarat.
-- Ramadhan harus menjadi bingkai utama, bukan tempelan.
-- Media sosial dan game tidak digambarkan hitam-putih; tekankan bahwa masalah muncul ketika tidak ada batas.
-- Judi online harus dijelaskan sebagai dosa, jebakan psikologis, dan ancaman keluarga.
-- Bagian Roblox dipakai sebagai contoh pentingnya pengawasan akun anak, bukan sebagai promosi platform.
+- Pembicara menjelaskan dengan lisan, bukan membaca paragraf panjang.
+- Slide harus menjadi penunjang bicara.
+- Setiap slide idealnya membawa satu pesan utama.
+- Poin-poin harus cukup singkat untuk presentasi 30 menit.
 
 ## Hasil yang diharapkan dari audiens
-Setelah presentasi, audiens diharapkan:
-- lebih sadar bahwa kebiasaan digital perlu dikendalikan;
-- bisa mengenali tanda bahaya pada media sosial, game, dan judol;
-- memahami bahwa orang tua perlu aktif mendampingi akun digital anak;
-- membawa pulang 3–5 langkah kecil yang realistis untuk dilakukan selama Ramadhan.
+Setelah sesi 1, audiens diharapkan:
+- sadar bahwa problem zaman digital itu nyata dan dekat;
+- melihat media sosial sebagai isu utama yang perlu kendali;
+- memahami bahwa game online dan judi online juga perlu diwaspadai, tetapi dibahas secukupnya;
+- mengerti mengapa pengguna muda butuh pembatasan dan pendampingan;
+- siap menerima sesi 2 tentang bagaimana Al-Qur'an memberi arah atas problematika zaman tersebut.
