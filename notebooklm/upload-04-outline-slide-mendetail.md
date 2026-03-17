@@ -1,9 +1,8 @@
 # Al-Qur'an Menjawab Problematika Zaman
 ## Tantangan Media Sosial, Game Online, dan Judi Online di Era Digital
 
-**Sesi 1 — Sudut Pandang Praktisi IT**  
-**Failaqul Haq, S.Kom., M.T.**  
-Dosen Teknik Informatika, Institut Teknologi Sepuluh Nopember Surabaya
+**Sesi 1 — Sudut Pandang Praktisi / Akademisi Geomatika**  
+**Failaqul Haq, S.Kom., M.T.**
 
 ---
 
@@ -54,7 +53,28 @@ Yang kita hadapi bukan hanya aplikasi, tetapi sistem yang memang dibuat untuk me
 
 ---
 
-## Slide 6 — Beberapa data yang cukup untuk menunjukkan skalanya
+## Slide 6 — Sedikit teknis: algoritma rekomendasi sederhana
+- Platform merekam apa yang ditonton, disukai, dicari, dan dilewati.
+- Dari situ sistem memberi skor pada konten yang paling mungkin membuat pengguna bertahan.
+- Karena itu, feed tidak tampil acak, tetapi dipilihkan untuk memancing perhatian.
+
+**Pesan sederhana:**
+Apa yang sering kita sentuh hari ini akan ikut membentuk isi layar kita besok.
+
+---
+
+## Slide 7 — Sedikit teknis: personalisasi, autoplay, FOMO, dan social proof
+- Personalisasi membuat iklan dan konten terasa relevan.
+- Autoplay mengurangi jeda berpikir.
+- FOMO membuat orang takut tertinggal tren atau info.
+- Social proof membuat angka like, view, dan komentar terasa seperti tanda bahwa sesuatu harus dilihat.
+
+**Inti slide:**
+Sistem digital tidak hanya menampilkan isi, tetapi juga mengatur cara perhatian kita dipertahankan.
+
+---
+
+## Slide 8 — Beberapa data yang cukup untuk menunjukkan skalanya
 - Pengguna internet di Indonesia sangat besar.
 - Pengguna media sosial juga sangat besar.
 - Durasi penggunaan yang tinggi, terutama pada remaja, berkaitan dengan risiko masalah mental yang lebih besar.
@@ -64,21 +84,21 @@ Ini menunjukkan bahwa isu media sosial bukan isu pinggiran, melainkan bagian dar
 
 ---
 
-## Slide 7 — Sekilas tentang game online
+## Slide 9 — Sekilas tentang game online
 - Game online tidak perlu dijadikan musuh utama dalam sesi ini.
 - Namun ia tetap perlu disentuh karena sebagian orang mulai kehilangan kendali dalam memakainya.
 - Tanda yang patut diwaspadai: sulit berhenti, emosi berlebihan, salat tertunda, tidur rusak, dan tanggung jawab terganggu.
 
 ---
 
-## Slide 8 — Sekilas tentang judi online
+## Slide 10 — Sekilas tentang judi online
 - Judi online perlu disebut sebagai bahaya serius zaman ini.
 - Ia sering datang lewat promosi yang disamarkan, rasa penasaran, dan janji hasil cepat.
 - Dalam sesi ini, judol cukup dibahas sebagai peringatan awal, bukan sebagai topik utama.
 
 ---
 
-## Slide 9 — Mengapa pembatasan usia dan pengawasan pengguna muda itu penting?
+## Slide 11 — Mengapa pembatasan usia dan pengawasan pengguna muda itu penting?
 - Tidak semua konten dan fitur digital cocok untuk semua umur.
 - Anak dan remaja lebih mudah terdorong oleh rasa penasaran, tren, fitur chat, dan pola konsumsi impulsif.
 - Karena itu, pembatasan usia dan pengawasan dibuat sebagai bentuk perlindungan.
@@ -91,7 +111,7 @@ Ini menunjukkan bahwa isu media sosial bukan isu pinggiran, melainkan bagian dar
 
 ---
 
-## Slide 10 — Apa yang bisa dilakukan keluarga dan masyarakat?
+## Slide 12 — Apa yang bisa dilakukan keluarga dan masyarakat?
 - Bangun kesadaran bahwa media sosial perlu batas.
 - Biasakan waktu tanpa gawai di rumah.
 - Dampingi anak saat memakai platform digital.
@@ -100,10 +120,18 @@ Ini menunjukkan bahwa isu media sosial bukan isu pinggiran, melainkan bagian dar
 
 ---
 
-## Slide 11 — Penutup: dari gejala zaman menuju petunjuk
-- Sesi ini memotret gejalanya: perhatian terpecah, emosi mudah digerakkan, dan batas makin longgar.
-- Ini menunjukkan bahwa problem digital bukan hanya soal alat, tetapi juga soal manusia dan arah hidup.
-- Karena itu, kita memerlukan petunjuk yang lebih dalam daripada sekadar aturan teknis.
+## Slide 13 — Catatan reflektif untuk sesi ini
+- Sesi ini tidak bertugas menuntaskan seluruh jawaban.
+- Sesi ini baru memotret gejala zaman yang tampak di kehidupan digital.
+- Dari sini kita bisa melihat bahwa manusia bukan hanya butuh teknologi, tetapi juga arah.
+
+---
+
+## Slide 14 — Penutup: dari gejala zaman menuju petunjuk
+- Perhatian mudah pecah.
+- Emosi mudah digerakkan.
+- Batas makin longgar.
+- Karena itu, problem digital bukan hanya soal alat, tetapi juga soal manusia dan arah hidup.
 
 **Jembatan ke sesi 2:**
-Setelah melihat problematikanya dari sudut pandang praktisi IT, sesi berikutnya akan mengajak kita melihat bagaimana Al-Qur'an menjawab problematika zaman.
+Setelah melihat problematikanya dari sudut pandang praktisi teknologi, sesi berikutnya akan mengajak kita melihat bagaimana Al-Qur'an menjawab problematika zaman.

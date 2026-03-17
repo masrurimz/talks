@@ -2,12 +2,14 @@
 
 Dokumen ini merangkum file yang perlu Anda unggah ke NotebookLM untuk **sesi 1** acara refleksi Nuzulul Qur'an bertema **Al-Qur'an menjawab problematika zaman**.
 
-Arah yang dipakai sekarang sudah disesuaikan dengan brief asli:
-- sesi 1 dari sudut pandang praktisi IT;
+Arah yang dipakai sekarang sudah disesuaikan dengan brief dan feedback terbaru:
+- sesi 1 dari sudut pandang praktisi / akademisi bidang Geomatika;
 - durasi sekitar 30 menit;
 - fokus utama pada media sosial;
 - game online dan judi online hanya disentuh secukupnya;
+- ada sedikit penjelasan teknis yang tetap mudah dipahami;
 - pembatasan usia dan pengawasan pengguna muda dibahas dari alasan perlindungannya dulu;
+- slide boleh sedikit lebih banyak agar nanti bisa difilter;
 - penutup harus menjadi jembatan ke sesi 2.
 
 ## 1. Daftar file di folder `notebooklm/`
@@ -46,7 +48,7 @@ Gunakan:
 Pengaturan yang direkomendasikan:
 - Format: **Slide Presenter**
 - Bahasa: **Indonesia**
-- Panjang: **Default**
+- Panjang: **Default** atau **Long**
 
 ### Untuk deck yang lebih lengkap / handout
 Gunakan:
@@ -58,7 +60,7 @@ Gunakan:
 Pengaturan yang direkomendasikan:
 - Format: **Presentasi Mendetail**
 - Bahasa: **Indonesia**
-- Panjang: **Default**
+- Panjang: **Default** atau **Long**
 
 ## 4. Prompt yang dipakai
 - Untuk deck presenter: buka `notebooklm/paste-03-prompt-slide-presenter.md`
@@ -70,11 +72,13 @@ Pengaturan yang direkomendasikan:
 - Jangan biarkan judi online mengambil porsi terbesar.
 - Jangan jadikan contoh platform sebagai fokus utama.
 - Pastikan media sosial tetap menjadi bahasan paling besar.
+- Pastikan penjelasan teknis tetap sederhana dan membumi.
 - Pastikan penutup mengarah ke sesi 2, bukan menutup semua jawaban di sesi 1.
 
 ## 6. Checklist sebelum klik Generate
 - Apakah deck ini jelas untuk **sesi 1**, bukan materi gabungan dua pemateri?
 - Apakah media sosial mendapat porsi terbesar?
+- Apakah ada sedikit penjelasan teknis yang membantu, bukan membingungkan?
 - Apakah game online dan judol hanya disebut secukupnya?
 - Apakah pembatasan usia dibahas dari alasan perlindungannya dulu?
 - Apakah penutup menjadi jembatan ke sesi 2?
