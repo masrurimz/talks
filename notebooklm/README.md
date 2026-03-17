@@ -84,12 +84,24 @@ Pengaturan yang direkomendasikan:
 - Apakah penutup menjadi jembatan ke sesi 2?
 - Apakah bahasa sudah sederhana dan cocok untuk audiens umum di desa?
 
-## 7. Catatan NotebookLM yang tetap berlaku
+## 7. Panduan pakai cepat saat presentasi
+File `upload-03-outline-slide-presenter.md` sekarang sudah memuat:
+- label **[Wajib]** dan **[Opsional]** per slide;
+- perkiraan **ritme bicara** per slide;
+- arahan singkat cara membawakan slide;
+- urutan potong jika waktu mepet.
+
+Kalau durasi benar-benar ketat, potong dulu:
+1. slide teknis lanjutan yang opsional;
+2. slide sikap praktis yang bisa diringkas lisan;
+3. ringkas slide game dan judol, tetapi jangan hilangkan sepenuhnya.
+
+## 8. Catatan NotebookLM yang tetap berlaku
 - NotebookLM mendukung Markdown, PDF, Google Docs, Google Slides, URL web, YouTube, audio, dan format lain; satu notebook bisa memuat hingga 50 source dan tiap source bisa sampai 500.000 kata atau 200MB. Sumber yang sedikit tetapi terarah biasanya memberi hasil deck yang lebih baik.
 - NotebookLM menyediakan mode **Presenter Slides** dan **Detailed Deck**.
 - Revisi deck tidak lagi memakai sources sebagai dasar. Jadi jika arah deck awal salah, lebih aman generate ulang dari prompt yang benar daripada merevisi besar-besaran.
 
-## 8. Sumber web yang dipakai untuk konfirmasi NotebookLM
+## 9. Sumber web yang dipakai untuk konfirmasi NotebookLM
 1. Google NotebookLM Help — Add or discover new sources for your notebook: https://support.google.com/notebooklm/answer/16215270
 2. Google NotebookLM Help — Generate a Slide Deck in NotebookLM: https://support.google.com/notebooklm/answer/16757456
 3. Google Blog — 8 ways to make the most out of Slide Decks in NotebookLM: https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/
