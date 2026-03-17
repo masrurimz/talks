@@ -1,168 +1,113 @@
-# Ramadhan di Era Digital
-## Media Sosial, Game, Judi Online, dan Pengawasan Akun Anak
+# Al-Qur'an Menjawab Problematika Zaman
+## Tantangan Media Sosial, Game Online, dan Judi Online di Era Digital
 
+**Sesi 1 — Sudut Pandang Praktisi IT**  
 **Failaqul Haq, S.Kom., M.T.**  
-Dosen Teknik Informatika  
-Institut Teknologi Sepuluh Nopember Surabaya
+Dosen Teknik Informatika, Institut Teknologi Sepuluh Nopember Surabaya
 
 ---
 
-## Slide 1 — Kita semua hidup di tengah layar
-- Bangun tidur cek HP.
-- Setelah berbuka buka media sosial.
-- Anak main game.
-- Grup WhatsApp ramai.
-- Sebelum tidur scroll lagi.
+## Slide 1 — Problem zaman digital sekarang ada di genggaman
+- Ponsel selalu dekat.
+- Media sosial dibuka berkali-kali dalam sehari.
+- Grup chat selalu ramai.
+- Video pendek terus muncul.
+- Informasi, hiburan, dan godaan bercampur dalam satu layar.
 
 **Pesan utama:**
-Teknologi sudah menjadi bagian hidup sehari-hari. Karena itu, adab digital juga harus jadi bagian akhlak kita.
+Problem zaman hari ini sering tidak datang dari tempat jauh, tetapi dari layar yang selalu ada di tangan kita.
 
 ---
 
-## Slide 2 — Puasa adalah latihan memberi batas
-- Bisa, tetapi memilih berhenti.
-- Ingin, tetapi menahan diri.
-- Boleh, tetapi tahu kapan cukup.
+## Slide 2 — Mengapa media sosial jadi isu utama?
+- Media sosial paling sering dipakai.
+- Ia memengaruhi cara berpikir, merasa, dan bereaksi.
+- Ia masuk ke waktu belajar, waktu kerja, waktu keluarga, bahkan waktu ibadah.
 
 **Pesan utama:**
-Kalau makan dan minum saja bisa kita tahan karena Allah, maka jempol, mata, emosi, dan waktu layar juga harus bisa kita kendalikan.
+Kalau bicara problem zaman digital, media sosial adalah pintu yang paling dekat dengan kehidupan sehari-hari.
 
 ---
 
-## Slide 3 — Media sosial: alat, bukan musuh
+## Slide 3 — Media sosial tidak selalu buruk
 - Bisa untuk belajar.
 - Bisa untuk silaturahmi.
 - Bisa untuk dakwah dan usaha.
+- Bisa mempercepat akses informasi.
 
 **Pesan utama:**
-Masalah muncul bukan karena medianya saja, tetapi karena dipakai tanpa adab dan tanpa batas.
+Masalahnya bukan sekadar ada pada medianya, tetapi pada cara kita memakainya dan seberapa jauh ia mengendalikan hidup kita.
 
 ---
 
-## Slide 4 — Saat media sosial mulai merusak
+## Slide 4 — Saat media sosial lepas kendali
 - Waktu habis tanpa terasa.
-- Ibadah terganggu.
-- Hati mudah iri, gelisah, dan marah.
-- Komentar jadi kasar.
-- Konten buruk makin mudah masuk.
+- Hati mudah iri, marah, atau gelisah.
+- Komentar menjadi kasar.
+- Fokus belajar dan kerja menurun.
+- Waktu bersama keluarga atau ibadah ikut terganggu.
 
-**Contoh:**
-Niat buka 5 menit, ternyata hilang 1 jam.
-
----
-
-## Slide 5 — Adab bermedia sosial saat Ramadhan
-- Buka aplikasi dengan tujuan yang jelas.
-- Batasi waktu.
-- Hindari media sosial saat menjelang dan sesudah salat.
-- Saring akun yang diikuti.
-- Tahan diri dari debat, sindiran, dan pamer.
-
-**Pesan utama:**
-Ramadhan bukan hanya menahan lapar, tetapi juga menahan dorongan yang tidak perlu.
+**Contoh harian:**
+Niat buka sebentar, ternyata lewat lama. Mau cek satu pesan, malah pindah ke banyak konten.
 
 ---
 
-## Slide 6 — Game bukan selalu haram, tetapi tetap perlu batas
-- Bisa menjadi hiburan sehat.
-- Bisa melatih strategi dan kerja sama.
-- Bisa jadi masalah kalau mulai menguasai hidup.
-
-**Pesan utama:**
-Pertanyaannya bukan cuma “boleh atau tidak”, tetapi “apakah game ini masih di bawah kendali saya?”
-
----
-
-## Slide 7 — Kapan game jadi tanda bahaya?
-- Sulit berhenti.
-- Marah saat diminta jeda.
-- Salat ditunda.
-- Tidur berantakan.
-- Belajar atau kerja menurun.
-- Hubungan dengan keluarga memburuk.
-
-**Pesan utama:**
-Kalau hiburan mulai merusak amanah, itu bukan hiburan yang sehat lagi.
-
----
-
-## Slide 8 — Judi online bukan hiburan, tapi jebakan
-- Haram.
-- Merusak akal, harta, dan keluarga.
-- Dibungkus dengan istilah game, bonus, spin, cashback, atau cuan cepat.
-
-**Pesan utama:**
-Judi online bukan jalan rezeki. Ia adalah perangkap yang sengaja dibuat agar orang terus kalah tetapi tetap berharap.
-
----
-
-## Slide 9 — Mengapa judol sangat menggoda?
-- Ingin hasil cepat.
-- Penasaran ingin menang besar.
-- Ingin menutup kekalahan.
-- Sedang stres atau tertekan.
-- Merasa “sekali lagi mungkin balik modal”.
-
-**Pesan utama:**
-Judol bekerja bukan hanya lewat uang, tetapi lewat emosi, harapan, dan rasa putus asa.
-
----
-
-## Slide 10 — Kenapa HP terasa bikin susah berhenti?
+## Slide 5 — Kenapa media sosial sulit dilepas?
 - Notifikasi memanggil perhatian.
-- Infinite scroll tidak memberi tanda berhenti.
-- Autoplay membuat kita lanjut terus.
-- Hadiah tidak pasti membuat orang terus mengecek.
+- Feed terus bergerak tanpa titik berhenti.
+- Konten selalu disesuaikan dengan minat kita.
+- Rasa penasaran membuat kita ingin cek lagi dan lagi.
 
 **Pesan utama:**
-Aplikasi modern dirancang supaya kita betah lama-lama, bukan supaya kita cepat selesai.
+Sistem digital modern memang dirancang agar perhatian kita bertahan selama mungkin.
 
 ---
 
-## Slide 11 — Ini bukan masalah kecil
-- 221,5 juta pengguna internet di Indonesia.
-- 139 juta pengguna aktif media sosial di Indonesia.
-- Penggunaan media sosial lebih dari 3 jam per hari pada remaja terkait risiko masalah mental 2 kali lipat.
-- Transaksi judi online 2024 dilaporkan mencapai Rp359,81 triliun.
-- 197.540 anak usia 11–19 tahun disebut terlibat judol.
+## Slide 6 — Ini masalah besar, bukan hal kecil
+- Pengguna internet di Indonesia sangat besar.
+- Pengguna media sosial juga sangat besar.
+- Durasi tinggi pada remaja berkaitan dengan risiko masalah mental yang lebih besar.
 
 **Pesan utama:**
-Masalah ini besar, dekat, dan nyata. Karena itu, pengendalian diri digital bukan isu pinggiran.
+Masalah ini bukan cuma urusan beberapa orang. Ini sudah menjadi fenomena sosial yang dekat dengan keluarga kita.
 
 ---
 
-## Slide 12 — Akun game anak tidak boleh dibiarkan sendiri
-- Ada label kematangan konten.
-- Ada parental controls.
-- Ada batas usia dan kontrol komunikasi.
-- Orang tua harus tahu anak main apa, dengan siapa, dan dengan pengaturan apa.
-
-**Contoh penting:** Roblox
+## Slide 7 — Sekilas tentang game online
+- Game bisa menjadi hiburan.
+- Tetapi game mulai bermasalah jika sulit dihentikan.
+- Tanda bahaya: salat tertunda, emosi mudah meledak, tidur rusak, dan tanggung jawab terganggu.
 
 **Pesan utama:**
-Batas usia di platform bukan formalitas. Itu pagar pengaman.
+Game online bukan fokus utama sesi ini, tetapi tetap perlu disebut sebagai bagian dari problem kendali diri di era digital.
 
 ---
 
-## Slide 13 — Anak tidak bisa dijaga sendirian
-- Orang tua memberi teladan.
-- Guru memberi penjelasan.
-- Pembina memberi arah dan pendampingan.
-- Keluarga perlu aturan yang realistis, bukan sekadar marah.
+## Slide 8 — Sekilas tentang judi online
+- Judi online bukan hiburan biasa.
+- Ia menjual harapan cepat dan ilusi menang.
+- Ia mudah menyebar lewat iklan, tautan, grup, dan promosi terselubung.
 
-**Contoh praktis:**
-- Jam tanpa gawai.
-- Makan tanpa layar.
-- HP dijauhkan saat mau tidur.
+**Pesan utama:**
+Judi online adalah bahaya serius zaman ini, tetapi cukup disentuh secukupnya di sesi ini sebagai peringatan awal.
 
 ---
 
-## Slide 14 — Mulai dari langkah kecil malam ini
-- Kurangi akun yang merusak hati.
-- Tetapkan batas main game.
-- Putus akses dari judi online.
-- Sisihkan waktu layar untuk tilawah, kajian, belajar, dan keluarga.
-- Saling mengingatkan tanpa mempermalukan.
+## Slide 9 — Mengapa pembatasan usia dan pengawasan itu penting?
+- Tidak semua ruang digital cocok untuk semua usia.
+- Anak dan remaja belum siap menghadapi semua konten, fitur chat, dan dorongan konsumtif.
+- Karena itu, pembatasan usia dan pengawasan dibuat untuk perlindungan.
+- Contoh umum: rating usia, batas fitur komunikasi, dan kontrol orang tua di platform.
 
-**Penutup:**
-Ramadhan datang untuk menguatkan kita. Jangan biarkan teknologi menguasai hati kita. Gunakan teknologi dengan adab, gunakan waktu dengan tanggung jawab, dan jadikan Ramadhan sebagai titik balik.
+**Pesan utama:**
+Pembatasan usia bukan formalitas. Itu pagar pengaman bagi pengguna muda.
+
+---
+
+## Slide 10 — Penutup: teknologi menunjukkan gejalanya, Al-Qur'an memberi arah
+- Hari ini kita melihat gejalanya: perhatian terpecah, emosi mudah digerakkan, dan batas makin longgar.
+- Problem ini bukan hanya soal alat, tetapi soal manusia dan arah hidup.
+- Di titik inilah kita membutuhkan petunjuk yang lebih dalam.
+
+**Jembatan ke sesi 2:**
+Setelah melihat problematikanya dari sudut pandang zaman digital, sesi berikutnya akan mengajak kita melihat bagaimana Al-Qur'an memberi jawaban dan arah.

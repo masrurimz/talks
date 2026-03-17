@@ -1,98 +1,92 @@
 # Paket Kerja NotebookLM untuk Persiapan Slide
 
-Dokumen ini merangkum apa yang perlu Anda unggah ke NotebookLM, pengaturan yang saya rekomendasikan, prompt yang siap ditempel, dan best practices yang saya konfirmasi lewat dokumentasi Google.
+Dokumen ini merangkum file yang perlu Anda unggah ke NotebookLM untuk **sesi 1** acara refleksi Nuzulul Qur'an bertema **Al-Qur'an menjawab problematika zaman**.
 
-## 1. File yang sudah siap dipakai
+Arah yang dipakai sekarang sudah disesuaikan dengan brief asli:
+- sesi 1 dari sudut pandang praktisi IT;
+- durasi sekitar 30 menit;
+- fokus utama pada media sosial;
+- game online dan judi online hanya disentuh secukupnya;
+- pembatasan usia dan pengawasan pengguna muda dibahas dari alasan perlindungannya dulu;
+- penutup harus menjadi jembatan ke sesi 2.
 
-### Sumber utama materi
-Unggah file berikut sebagai sumber utama isi presentasi:
-- `og-reference/bahan-bacaan-ramadhan-medsos-game-judol-roblox-revisi-v2.md`
-- `og-reference/lampiran-data-statistik-ramadhan-medsos-game-judol-v2.md`
+## 1. Daftar file di folder `notebooklm/`
+- `notebooklm/README.md`
+- `notebooklm/upload-01-brief-pembicara-audiens.md`
+- `notebooklm/upload-02-arahan-struktur-presentasi.md`
 - `notebooklm/upload-03-outline-slide-presenter.md`
 - `notebooklm/upload-04-outline-slide-mendetail.md`
+- `notebooklm/paste-03-prompt-slide-presenter.md`
+- `notebooklm/paste-04-prompt-presentasi-mendetail.md`
+- `notebooklm/paste-05-prompt-revisi-deck.md`
 
+## 2. File yang disarankan untuk diunggah ke NotebookLM
 
-### Sumber tambahan untuk membentuk gaya dan target deck
-Unggah juga file berikut agar NotebookLM memahami siapa pembicara, siapa audiens, dan gaya deck yang diinginkan:
+### Referensi isi utama
+- `og-reference/bahan-bacaan-ramadhan-medsos-game-judol-roblox-revisi-v2.md`
+- `og-reference/lampiran-data-statistik-ramadhan-medsos-game-judol-v2.md`
+
+### Pengarah konteks dan audiens
 - `notebooklm/upload-01-brief-pembicara-audiens.md`
 - `notebooklm/upload-02-arahan-struktur-presentasi.md`
 
-## 2. Urutan kerja yang disarankan di NotebookLM
-1. Buat notebook baru.
-2. Unggah 6 file di atas.
-3. Jika ingin hasil paling terarah untuk deck presenter, aktifkan terutama `upload-03-outline-slide-presenter.md` bersama 4 source pendukung lain yang relevan.
-4. Jika ingin hasil paling terarah untuk deck detail/handout, aktifkan terutama `upload-04-outline-slide-mendetail.md` bersama 4 source pendukung lain yang relevan.
-5. Buat deck pertama dengan format **Slide Presenter**.
-6. Gunakan prompt dari `paste-03-prompt-slide-presenter.md`.
-7. Jika hasilnya terlalu ringkas atau Anda ingin versi handout, buat deck kedua dengan prompt dari `paste-04-prompt-presentasi-mendetail.md`.
-8. Jika ada bagian yang perlu dipoles, gunakan prompt revisi dari `paste-05-prompt-revisi-deck.md`.
+### Sumber slide yang paling langsung
+- `notebooklm/upload-03-outline-slide-presenter.md`
+- `notebooklm/upload-04-outline-slide-mendetail.md`
 
-## 3. Konfigurasi yang direkomendasikan
+## 3. Cara pakai yang paling aman
 
-### Untuk acara presentasi langsung
+### Untuk deck presentasi utama
+Gunakan:
+- `upload-03-outline-slide-presenter.md` sebagai sumber slide utama;
+- `upload-01-brief-pembicara-audiens.md`;
+- `upload-02-arahan-struktur-presentasi.md`;
+- dua file dari `og-reference/` sebagai referensi isi dan data.
+
+Pengaturan yang direkomendasikan:
 - Format: **Slide Presenter**
 - Bahasa: **Indonesia**
 - Panjang: **Default**
-- Alasan: format ini paling cocok untuk pembicara yang akan menjelaskan dengan lisan. Deck lebih bersih dan tidak terlalu penuh teks.
 
-### Untuk versi bagikan setelah acara
+### Untuk deck yang lebih lengkap / handout
+Gunakan:
+- `upload-04-outline-slide-mendetail.md` sebagai sumber slide utama;
+- `upload-01-brief-pembicara-audiens.md`;
+- `upload-02-arahan-struktur-presentasi.md`;
+- dua file dari `og-reference/` sebagai referensi isi dan data.
+
+Pengaturan yang direkomendasikan:
 - Format: **Presentasi Mendetail**
 - Bahasa: **Indonesia**
-- Panjang: **Default** atau **Long**
-- Alasan: lebih nyaman dibaca sendiri atau dibagikan lewat PDF.
+- Panjang: **Default**
 
-## 4. Best practices yang sebaiknya Anda ikuti
+## 4. Prompt yang dipakai
+- Untuk deck presenter: buka `notebooklm/paste-03-prompt-slide-presenter.md`
+- Untuk deck mendetail: buka `notebooklm/paste-04-prompt-presentasi-mendetail.md`
+- Untuk revisi ringan: buka `notebooklm/paste-05-prompt-revisi-deck.md`
 
-### A. Gunakan source yang bersih dan terarah
-NotebookLM mendukung Markdown, PDF, Google Docs, Google Slides, web URL, YouTube, audio, dan beberapa format lain. Setiap source dapat mencapai sampai 500.000 kata atau 200 MB, dan satu notebook bisa memuat hingga 50 source. Namun untuk hasil deck yang fokus, lebih baik gunakan sedikit source yang benar-benar relevan daripada terlalu banyak source bercampur.[1]
+## 5. Prinsip penting supaya NotebookLM tidak salah arah
+- Jangan biarkan game online menjadi topik dominan.
+- Jangan biarkan judi online mengambil porsi terbesar.
+- Jangan jadikan contoh platform sebagai fokus utama.
+- Pastikan media sosial tetap menjadi bahasan paling besar.
+- Pastikan penutup mengarah ke sesi 2, bukan menutup semua jawaban di sesi 1.
 
-### B. Tambahkan source khusus untuk audiens dan gaya
-Google juga menekankan bahwa rough notes atau outline bisa dipakai sebagai source untuk membentuk deck. Karena itu saya buat dua file tambahan khusus untuk pembicara, audiens, struktur, dan gaya presentasi. Ini membantu deck lebih cocok dengan konteks desa Indonesia dan audiens lintas usia.[2]
+## 6. Checklist sebelum klik Generate
+- Apakah deck ini jelas untuk **sesi 1**, bukan materi gabungan dua pemateri?
+- Apakah media sosial mendapat porsi terbesar?
+- Apakah game online dan judol hanya disebut secukupnya?
+- Apakah pembatasan usia dibahas dari alasan perlindungannya dulu?
+- Apakah penutup menjadi jembatan ke sesi 2?
+- Apakah bahasa sudah sederhana dan cocok untuk audiens umum di desa?
 
-### C. Pilih format sesuai fungsi
-Menurut bantuan resmi Google, **Detailed Deck** cocok untuk dibaca sendiri atau dibagikan, sedangkan **Presenter Slides** cocok untuk membantu Anda berbicara langsung.[3]
+## 7. Catatan NotebookLM yang tetap berlaku
+- NotebookLM mendukung Markdown, PDF, Google Docs, Google Slides, URL web, YouTube, audio, dan format lain; satu notebook bisa memuat hingga 50 source dan tiap source bisa sampai 500.000 kata atau 200MB. Sumber yang sedikit tetapi terarah biasanya memberi hasil deck yang lebih baik.
+- NotebookLM menyediakan mode **Presenter Slides** dan **Detailed Deck**.
+- Revisi deck tidak lagi memakai sources sebagai dasar. Jadi jika arah deck awal salah, lebih aman generate ulang dari prompt yang benar daripada merevisi besar-besaran.
 
-### D. Jangan terlalu mengandalkan revisi berat
-Dokumentasi resmi Google menyebut bahwa saat melakukan revisi slide, **sources tidak dipertimbangkan**. Jadi bila hasil deck awal melenceng secara isi atau struktur, lebih aman generate deck baru dari awal dengan prompt yang lebih tegas daripada merevisi besar-besaran.[3]
-
-### E. Verifikasi slide penting sebelum dipakai
-Google juga mengingatkan bahwa Slide Deck bersifat AI-generated dan bisa mengandung ketidakakuratan visual maupun fakta. Karena itu, cek kembali terutama:
-- angka statistik;
-- istilah Roblox dan kontrol usia;
-- kutipan ayat atau pesan agama;
-- slide yang terlalu indah tetapi kurang tepat isi.
-
-### F. Fokus pada satu pesan per slide
-Blog resmi Google tentang Slide Decks menonjolkan penggunaan NotebookLM untuk mengubah riset padat menjadi cerita visual, rough notes menjadi deck, dan data menjadi visual yang lebih mudah dipahami. Untuk audiens Anda, prinsip yang paling aman adalah: satu slide, satu pesan utama, dengan contoh sehari-hari.[2]
-
-## 5. Strategi deck yang saya rekomendasikan
-
-### Opsi terbaik: buat 2 deck
-1. **Deck utama**: Slide Presenter, dipakai saat tampil.
-2. **Deck pendamping**: Presentasi Mendetail, dipakai untuk dibagikan atau dijadikan PDF setelah acara.
-
-Keuntungannya:
-- deck presenter tetap rapi dan tidak penuh tulisan;
-- deck detail bisa jadi bahan panitia, moderator, atau jamaah yang ingin membaca ulang.
-
-## 6. Checklist cepat sebelum klik Generate
-- Apakah source outline yang tepat sudah aktif: presenter atau mendetail?
-- Apakah source referensi utama dan data statistik juga aktif?
-- Apakah bahasa output sudah Indonesia?
-- Apakah format deck sesuai tujuan: presenter vs handout?
-- Apakah prompt sudah menyebut audiens desa, lintas usia, dan bahasa sederhana?
-- Apakah prompt sudah menegaskan bahwa judol harus dibahas tegas, sementara medsos dan game dibahas seimbang?
-
-## 7. Jika hasil pertama belum memuaskan
-Urutan perbaikannya:
-1. Perbaiki prompt generasi awal.
-2. Generate ulang deck baru.
-3. Baru gunakan prompt revisi untuk penyempurnaan lokal.
-
-Jangan mulai dari revisi besar kalau arah awal deck sudah salah.
-
-## 8. Sumber web yang saya pakai untuk konfirmasi
+## 8. Sumber web yang dipakai untuk konfirmasi NotebookLM
 1. Google NotebookLM Help — Add or discover new sources for your notebook: https://support.google.com/notebooklm/answer/16215270
-2. Google Blog — 8 ways to make the most out of Slide Decks in NotebookLM: https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/
-3. Google NotebookLM Help — Generate a Slide Deck in NotebookLM: https://support.google.com/notebooklm/answer/16757456
+2. Google NotebookLM Help — Generate a Slide Deck in NotebookLM: https://support.google.com/notebooklm/answer/16757456
+3. Google Blog — 8 ways to make the most out of Slide Decks in NotebookLM: https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/
 4. Google Blog — NotebookLM goes global with Slides support and better ways to fact-check: https://blog.google/innovation-and-ai/products/notebooklm-goes-global-support-for-websites-slides-fact-check/
