@@ -8,6 +8,9 @@ Dokumen ini merangkum apa yang perlu Anda unggah ke NotebookLM, pengaturan yang 
 Unggah file berikut sebagai sumber utama isi presentasi:
 - `og-reference/bahan-bacaan-ramadhan-medsos-game-judol-roblox-revisi-v2.md`
 - `og-reference/lampiran-data-statistik-ramadhan-medsos-game-judol-v2.md`
+- `notebooklm/upload-03-outline-slide-presenter.md`
+- `notebooklm/upload-04-outline-slide-mendetail.md`
+
 
 ### Sumber tambahan untuk membentuk gaya dan target deck
 Unggah juga file berikut agar NotebookLM memahami siapa pembicara, siapa audiens, dan gaya deck yang diinginkan:
@@ -16,12 +19,13 @@ Unggah juga file berikut agar NotebookLM memahami siapa pembicara, siapa audiens
 
 ## 2. Urutan kerja yang disarankan di NotebookLM
 1. Buat notebook baru.
-2. Unggah 4 file di atas.
-3. Pastikan hanya 4 source itu yang aktif/terpilih saat generate deck.
-4. Buat deck pertama dengan format **Slide Presenter**.
-5. Gunakan prompt dari `paste-03-prompt-slide-presenter.md`.
-6. Jika hasilnya terlalu ringkas atau Anda ingin versi handout, buat deck kedua dengan prompt dari `paste-04-prompt-presentasi-mendetail.md`.
-7. Jika ada bagian yang perlu dipoles, gunakan prompt revisi dari `paste-05-prompt-revisi-deck.md`.
+2. Unggah 6 file di atas.
+3. Jika ingin hasil paling terarah untuk deck presenter, aktifkan terutama `upload-03-outline-slide-presenter.md` bersama 4 source pendukung lain yang relevan.
+4. Jika ingin hasil paling terarah untuk deck detail/handout, aktifkan terutama `upload-04-outline-slide-mendetail.md` bersama 4 source pendukung lain yang relevan.
+5. Buat deck pertama dengan format **Slide Presenter**.
+6. Gunakan prompt dari `paste-03-prompt-slide-presenter.md`.
+7. Jika hasilnya terlalu ringkas atau Anda ingin versi handout, buat deck kedua dengan prompt dari `paste-04-prompt-presentasi-mendetail.md`.
+8. Jika ada bagian yang perlu dipoles, gunakan prompt revisi dari `paste-05-prompt-revisi-deck.md`.
 
 ## 3. Konfigurasi yang direkomendasikan
 
@@ -72,7 +76,8 @@ Keuntungannya:
 - deck detail bisa jadi bahan panitia, moderator, atau jamaah yang ingin membaca ulang.
 
 ## 6. Checklist cepat sebelum klik Generate
-- Apakah hanya 4 source yang relevan sedang aktif?
+- Apakah source outline yang tepat sudah aktif: presenter atau mendetail?
+- Apakah source referensi utama dan data statistik juga aktif?
 - Apakah bahasa output sudah Indonesia?
 - Apakah format deck sesuai tujuan: presenter vs handout?
 - Apakah prompt sudah menyebut audiens desa, lintas usia, dan bahasa sederhana?
