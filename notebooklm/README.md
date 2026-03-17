@@ -60,14 +60,23 @@ Gunakan:
 Pengaturan yang direkomendasikan:
 - Format: **Presentasi Mendetail**
 - Bahasa: **Indonesia**
-- Panjang: **Default** atau **Long**
+- Panjang: **Long**
 
-## 4. Prompt yang dipakai
+## 4. Rekomendasi praktis untuk mengejar slide yang lebih banyak
+Kalau target Anda adalah **lebih banyak slide dulu, lalu difilter**, pakai jalur ini:
+- upload `upload-04-outline-slide-mendetail.md`;
+- paste `paste-04-prompt-presentasi-mendetail.md`;
+- pilih format **Presentasi Mendetail**;
+- pilih panjang **Long**.
+
+Paket detail sekarang sudah diarahkan untuk menghasilkan kira-kira **14–18 slide**, bukan berhenti di sekitar 11–12 slide.
+
+## 5. Prompt yang dipakai
 - Untuk deck presenter: buka `notebooklm/paste-03-prompt-slide-presenter.md`
 - Untuk deck mendetail: buka `notebooklm/paste-04-prompt-presentasi-mendetail.md`
 - Untuk revisi ringan: buka `notebooklm/paste-05-prompt-revisi-deck.md`
 
-## 5. Prinsip penting supaya NotebookLM tidak salah arah
+## 6. Prinsip penting supaya NotebookLM tidak salah arah
 - Jangan biarkan game online menjadi topik dominan.
 - Jangan biarkan judi online mengambil porsi terbesar.
 - Jangan jadikan contoh platform sebagai fokus utama.
@@ -75,7 +84,7 @@ Pengaturan yang direkomendasikan:
 - Pastikan penjelasan teknis tetap sederhana dan membumi.
 - Pastikan penutup mengarah ke sesi 2, bukan menutup semua jawaban di sesi 1.
 
-## 6. Checklist sebelum klik Generate
+## 7. Checklist sebelum klik Generate
 - Apakah deck ini jelas untuk **sesi 1**, bukan materi gabungan dua pemateri?
 - Apakah media sosial mendapat porsi terbesar?
 - Apakah ada sedikit penjelasan teknis yang membantu, bukan membingungkan?
@@ -84,7 +93,7 @@ Pengaturan yang direkomendasikan:
 - Apakah penutup menjadi jembatan ke sesi 2?
 - Apakah bahasa sudah sederhana dan cocok untuk audiens umum di desa?
 
-## 7. Panduan pakai cepat saat presentasi
+## 8. Panduan pakai cepat saat presentasi
 File `upload-03-outline-slide-presenter.md` sekarang sudah memuat:
 - label **[Wajib]** dan **[Opsional]** per slide;
 - perkiraan **ritme bicara** per slide;
@@ -96,12 +105,12 @@ Kalau durasi benar-benar ketat, potong dulu:
 2. slide sikap praktis yang bisa diringkas lisan;
 3. ringkas slide game dan judol, tetapi jangan hilangkan sepenuhnya.
 
-## 8. Catatan NotebookLM yang tetap berlaku
+## 9. Catatan NotebookLM yang tetap berlaku
 - NotebookLM mendukung Markdown, PDF, Google Docs, Google Slides, URL web, YouTube, audio, dan format lain; satu notebook bisa memuat hingga 50 source dan tiap source bisa sampai 500.000 kata atau 200MB. Sumber yang sedikit tetapi terarah biasanya memberi hasil deck yang lebih baik.
 - NotebookLM menyediakan mode **Presenter Slides** dan **Detailed Deck**.
 - Revisi deck tidak lagi memakai sources sebagai dasar. Jadi jika arah deck awal salah, lebih aman generate ulang dari prompt yang benar daripada merevisi besar-besaran.
 
-## 9. Sumber web yang dipakai untuk konfirmasi NotebookLM
+## 10. Sumber web yang dipakai untuk konfirmasi NotebookLM
 1. Google NotebookLM Help — Add or discover new sources for your notebook: https://support.google.com/notebooklm/answer/16215270
 2. Google NotebookLM Help — Generate a Slide Deck in NotebookLM: https://support.google.com/notebooklm/answer/16757456
 3. Google Blog — 8 ways to make the most out of Slide Decks in NotebookLM: https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/
