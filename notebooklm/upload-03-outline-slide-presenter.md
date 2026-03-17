@@ -120,14 +120,15 @@ Apa yang sering kita sentuh hari ini akan ikut membentuk apa yang kita lihat bes
 - Notifikasi memberi pemicu.
 - Infinite scroll menghilangkan tanda berhenti.
 - Autoplay membuat lanjut terus.
+- Personalisasi membuat konten dan iklan terasa relevan.
 - Social proof seperti like, komentar, dan view membuat orang ingin ikut melihat.
 - FOMO membuat orang takut ketinggalan.
 
 **Arah bicara:**
-Kalau waktu longgar, pakai slide ini untuk menjelaskan kenapa aplikasi terasa “nagih”. Kalau waktu sempit, ini slide pertama yang bisa dipotong.
+Kalau waktu longgar, pakai slide ini untuk menjelaskan kenapa aplikasi terasa “nagih” sekaligus kenapa orang bisa terdorong konsumtif tanpa sadar. Kalau waktu sempit, ini slide pertama yang bisa dipotong.
 
 **Pesan utama:**
-Bukan hanya kontennya yang kuat, tetapi cara penyajiannya juga dirancang agar sulit ditinggalkan.
+Bukan hanya kontennya yang kuat, tetapi cara penyajian dan personalisasinya juga dirancang agar sulit ditinggalkan.
 
 ---
 
@@ -162,11 +163,12 @@ Game online bukan fokus utama sesi ini, tetapi tetap perlu disebut sebagai bagia
 ## Slide 10 [Wajib] — Sekilas tentang judi online
 **Ritme bicara:** 1,5–2 menit  
 - Judi online bukan hiburan biasa.
+- Ia sering dibungkus dengan bahasa seperti bonus, spin, cashback, atau cuan cepat.
 - Ia menjual harapan cepat dan ilusi menang.
 - Ia mudah menyebar lewat iklan, tautan, grup, dan promosi terselubung.
 
 **Arah bicara:**
-Tegas, tapi singkat. Jangan biarkan judol mengambil terlalu banyak porsi. Sampaikan sebagai bahaya serius yang perlu dikenali sejak awal.
+Tegas, tapi singkat. Jangan biarkan judol mengambil terlalu banyak porsi. Sampaikan sebagai bahaya serius yang perlu dikenali sejak awal, termasuk saat ia menyamar sebagai hiburan ringan.
 
 **Pesan utama:**
 Judi online adalah bahaya serius zaman ini, tetapi cukup disentuh secukupnya di sesi ini sebagai peringatan awal.
@@ -176,12 +178,12 @@ Judi online adalah bahaya serius zaman ini, tetapi cukup disentuh secukupnya di 
 ## Slide 11 [Wajib] — Mengapa pembatasan usia dan pengawasan itu penting?
 **Ritme bicara:** 2–3 menit  
 - Tidak semua ruang digital cocok untuk semua usia.
-- Anak dan remaja belum siap menghadapi semua konten, fitur chat, dan dorongan konsumtif.
+- Anak dan remaja belum siap menghadapi semua konten, fitur chat atau voice, dan dorongan konsumtif atau transaksi.
 - Karena itu, pembatasan usia dan pengawasan dibuat untuk perlindungan.
 - Contoh umum: rating usia, batas fitur komunikasi, dan kontrol orang tua di platform.
 
 **Arah bicara:**
-Mulai dari “mengapa perlu” baru masuk ke contoh. Jangan jadikan contoh platform sebagai fokus besar. Ini sesuai brief dan masukan Anda.
+Mulai dari “mengapa perlu” baru masuk ke contoh. Tekankan bahwa orang tua perlu tahu anak main apa, dengan siapa, dan memakai pengaturan apa. Jangan jadikan contoh platform sebagai fokus besar.
 
 **Pesan utama:**
 Pembatasan usia bukan formalitas. Itu pagar pengaman bagi pengguna muda.

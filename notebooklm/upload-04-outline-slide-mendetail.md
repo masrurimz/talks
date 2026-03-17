@@ -64,13 +64,14 @@ Apa yang sering kita sentuh hari ini akan ikut membentuk isi layar kita besok.
 ---
 
 ## Slide 7 — Sedikit teknis: personalisasi, autoplay, FOMO, dan social proof
-- Personalisasi membuat iklan dan konten terasa relevan.
+- Personalisasi membuat konten dan iklan terasa relevan.
 - Autoplay mengurangi jeda berpikir.
 - FOMO membuat orang takut tertinggal tren atau info.
 - Social proof membuat angka like, view, dan komentar terasa seperti tanda bahwa sesuatu harus dilihat.
+- Akibatnya, pengguna bisa terdorong terus membuka aplikasi atau bahkan menjadi lebih konsumtif tanpa sadar.
 
 **Inti slide:**
-Sistem digital tidak hanya menampilkan isi, tetapi juga mengatur cara perhatian kita dipertahankan.
+Sistem digital tidak hanya menampilkan isi, tetapi juga mengatur cara perhatian dan keputusan kita dipengaruhi.
 
 ---
 
@@ -93,21 +94,22 @@ Ini menunjukkan bahwa isu media sosial bukan isu pinggiran, melainkan bagian dar
 
 ## Slide 10 — Sekilas tentang judi online
 - Judi online perlu disebut sebagai bahaya serius zaman ini.
-- Ia sering datang lewat promosi yang disamarkan, rasa penasaran, dan janji hasil cepat.
+- Ia sering datang lewat promosi yang disamarkan, rasa penasaran, dan bahasa seperti bonus, spin, cashback, atau cuan cepat.
 - Dalam sesi ini, judol cukup dibahas sebagai peringatan awal, bukan sebagai topik utama.
 
 ---
 
 ## Slide 11 — Mengapa pembatasan usia dan pengawasan pengguna muda itu penting?
 - Tidak semua konten dan fitur digital cocok untuk semua umur.
-- Anak dan remaja lebih mudah terdorong oleh rasa penasaran, tren, fitur chat, dan pola konsumsi impulsif.
+- Anak dan remaja lebih mudah terdorong oleh rasa penasaran, tren, fitur chat atau voice, dan pola konsumsi impulsif.
 - Karena itu, pembatasan usia dan pengawasan dibuat sebagai bentuk perlindungan.
 
 **Contoh umum:**
 - rating usia;
 - pembatasan fitur komunikasi;
 - parental controls;
-- pendampingan orang tua saat anak memakai platform digital.
+- pendampingan orang tua saat anak memakai platform digital;
+- orang tua tahu anak main apa, dengan siapa, dan dengan pengaturan apa.
 
 ---
 
