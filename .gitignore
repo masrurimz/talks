@@ -1,2 +1,8 @@
-og-reference/*.pdf
+# PDFs in references (usually large files)
+presentations/*/sources/references/*.pdf
+
+# Generated outputs (optional to track)
+presentations/*/output/
+
+# OS files
 .DS_Store
