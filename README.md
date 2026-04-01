@@ -28,26 +28,29 @@ Save generated slides to output folder.
 
 ```
 presentations/
-├── YYYY-event-title/
-│   ├── sources/              # Upload to NotebookLM
-│   │   ├── context/          # Brief + structure
-│   │   │   ├── brief.md
-│   │   │   ├── structure.md
-│   │   ├── outlines/         # Slide outlines
-│   │   │   ├── presenter.md
-│   │   │   ├── detailed.md
-│   │   ├── references/       # Research materials
-│   │   └── *.md, *.pdf
-│   ├── prompts/              # Paste into NotebookLM
-│   │   ├── generate-presenter.md
-│   │   ├── generate-detailed.md
-│   │   └── revise.md
-│   ├── output/               # Generated slides
-│   └── README.md
-├── _template/                # Copy for new presentations
+├── YYYY-event-series/                  # Level 1: Event grouping
+│   ├── presentation-title/             # Level 2: Individual presentation
+│   │   ├── sources/                    # Upload to NotebookLM
+│   │   │   ├── context/                # Brief + structure
+│   │   │   │   ├── brief.md
+│   │   │   │   ├── structure.md
+│   │   │   ├── outlines/               # Slide outlines
+│   │   │   │   ├── presenter.md
+│   │   │   │   ├── detailed.md
+│   │   │   ├── references/             # Research materials
+│   │   │   └── *.md, *.pdf
+│   │   ├── prompts/                    # Paste into NotebookLM
+│   │   │   ├── generate-presenter.md
+│   │   │   ├── generate-detailed.md
+│   │   │   └── revise.md
+│   │   ├── output/                     # Generated slides
+│   │   └── README.md
+│   ├── README.md                       # Event series overview
+│   └── ...                             # Other presentations in same event
+├── _template/                          # Copy for new presentations
 └── README.md
 
-AGENTS.md                     # AI assistant context
+AGENTS.md                               # AI assistant context
 ```
 
 ## How to create a new presentation
@@ -62,7 +65,9 @@ AGENTS.md                     # AI assistant context
 
 ### Manually
 
-1. Copy `_template/` to `YYYY-event-title/`
+1. Copy `_template/` to appropriate location:
+   - New event series → `presentations/YYYY-event-series/presentation-title/`
+   - Existing event → `presentations/YYYY-event-series/presentation-title/`
 2. Fill in `sources/context/brief.md` and `structure.md`
 3. Create outlines in `sources/outlines/`
 4. Add references in `sources/references/`
@@ -72,9 +77,11 @@ AGENTS.md                     # AI assistant context
 
 ## Presentations
 
-| Folder | Event | Status |
-|--------|-------|--------|
-| 2026-ramadhan-digital-challenges | Refleksi Nuzulul Qur'an | Draft |
+| Event Series | Presentation | Status |
+|--------------|--------------|--------|
+| 2026-halal-bihalal-alkhidmah-pt | kolaborasi-lembaga-pendidikan | Draft |
+| 2026-halal-bihalal-alkhidmah-pt | pengembangan-pt | Draft |
+| 2026-ramadhan-nuzulul-quran | digital-challenges | Draft |
 
 ## AI assistant context
 

@@ -18,7 +18,7 @@ brainstorm → sources → NotebookLM → output
 - Decide on presentation format (presenter vs detailed)
 
 ### 2. Generate sources
-Create files in `presentations/YYYY-event-title/sources/`:
+Create files in `presentations/YYYY-event-series/presentation-title/sources/`:
 
 ```
 sources/
@@ -34,7 +34,7 @@ sources/
 ```
 
 ### 3. Generate prompts
-Create files in `presentations/YYYY-event-title/prompts/`:
+Create files in `presentations/YYYY-event-series/presentation-title/prompts/`:
 
 ```
 prompts/
@@ -49,13 +49,14 @@ User uploads `sources/` files to NotebookLM, then pastes prompts to generate sli
 AI assistant does NOT interact with NotebookLM directly — we prepare the materials.
 
 ### 5. Output
-Generated slides saved to `presentations/YYYY-event-title/output/`.
+Generated slides saved to `presentations/YYYY-event-series/presentation-title/output/`.
 
 ## File naming conventions
 
 | Type | Pattern | Example |
 |------|---------|---------|
-| Presentation folder | `YYYY-event-title` | `2026-ramadhan-digital-challenges` |
+| Event series folder (Level 1) | `YYYY-event-series` | `2026-halal-bihalal-alkhidmah-pt` |
+| Presentation folder (Level 2) | `presentation-title` | `kolaborasi-lembaga-pendidikan` |
 | Context files | `brief.md`, `structure.md` | Fixed names |
 | Outline files | `presenter.md`, `detailed.md` | Fixed names |
 | Reference files | Descriptive | `bahan-bacaan.md`, `data-statistik.md` |
