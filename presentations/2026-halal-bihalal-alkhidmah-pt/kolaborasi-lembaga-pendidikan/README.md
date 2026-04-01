@@ -85,10 +85,14 @@ Lihat detail data di `sources/references/data-statistik.md`.
 Setelah generate deck di NotebookLM, tambahkan gambar berikut:
 
 1. **Foto KH. Achmad Asrori Al-Ishaqy RA** — pada slide Landasan Utama
+   - File: `sources/references/gambar-kh-achmad-asrori.png` (foto utama)
+   - File: `sources/references/gambar-kh-achmad-asrori-2.png` (foto alternatif)
 2. **Peta Indonesia** — pada slide Pengembangan Wilayah Indonesia (opsional)
+   - File: `sources/references/peta-indonesia.png`
 3. **Peta Global** — pada slide Pengembangan Wilayah Luar Negeri (opsional)
+   - File: `sources/references/peta-global.png`
 
-Gambar tersedia di folder `pptx-extracted/images/` di root repository.
+Semua gambar sudah dalam format PNG dan siap digunakan di NotebookLM.
 
 ## Keterkaitan dengan presentasi lain
 
