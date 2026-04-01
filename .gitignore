@@ -4,5 +4,11 @@ presentations/*/sources/references/*.pdf
 # Generated outputs (optional to track)
 presentations/*/output/
 
+# Extracted PPTX content (generated)
+pptx-extracted/
+
+# Source PPTX files (usually large)
+*.pptx
+
 # OS files
 .DS_Store
