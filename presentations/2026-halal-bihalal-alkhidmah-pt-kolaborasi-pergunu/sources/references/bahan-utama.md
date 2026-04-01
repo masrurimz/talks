@@ -73,14 +73,18 @@ Melalui pintu majlis dzikir.
 
 ---
 
-## Al Khidmah Oase Dunia
+## Al Khidmah Oase Dunia (Potensi Jangkauan)
 
-Data jangkauan Jama'ah Al Khidmah:
-- **38** Provinsi
-- **514** Kabupaten/Kota
-- **195** Negara
-- **7.285** Kecamatan
-- **84.276** Desa/Kelurahan
+**⚠️ Catatan**: Data "Oase Dunia" adalah **potensi jangkauan** Jama'ah Al Khidmah secara geografis, bukan jumlah negara/wilayah yang sudah terbentuk kepengurusan. Data aktual kehadiran ada di bagian "Pengembangan Wilayah".
+
+Potensi jangkauan Jama'ah Al Khidmah:
+- **38** Provinsi (seluruh Indonesia)
+- **514** Kabupaten/Kota (seluruh Indonesia)
+- **195** Negara (potensi global)
+- **7.285** Kecamatan (seluruh Indonesia)
+- **84.276** Desa/Kelurahan (seluruh Indonesia)
+
+**Cara menyampaikan**: "Al Khidmah memiliki visi untuk hadir di 38 provinsi, 514 kabupaten/kota, dan berpotensi menjangkau 195 negara di dunia. Saat ini, kami sudah terbentuk di 28 provinsi dan 168 kabupaten/kota, serta memiliki kehadiran di 7 negara."
 
 ---
 
@@ -140,6 +144,51 @@ Kolaborasi sering berhasil karena kedekatan, bukan formalitas:
 - Silaturahmi tokoh/leader komunitas
 - Menghadiri kegiatan mitra
 - Mengedepankan adab dan komunikasi santun
+
+---
+
+## Data PERGUNU dan Ekosistem Pendidikan Indonesia
+
+### Tentang PERGUNU
+- **Nama**: Persatuan Guru Nahdlatul Ulama
+- **Didirikan**: 1 Mei 1958 di Surabaya
+- **Cakupan**: Aktif di **34 provinsi** di Indonesia
+- **Struktur**: Pusat → Wilayah (Provinsi) → Cabang (Kab/Kota) → Anak Cabang (Kecamatan)
+- **Peran**: Organisasi profesi guru yang berafiliasi dengan NU, menjadi jembatan antara Al Khidmah dan dunia pendidikan
+
+**Sumber**: Wikipedia, PERGUNU Jawa Tengah
+
+### Statistik Pendidikan Indonesia (2025)
+
+| Kategori | Jumlah | Sumber |
+|----------|--------|--------|
+| Pondok Pesantren | 42.391-42.433 unit | Kemenag 2025 |
+| Madrasah (RA/MI/MTs/MA) | 55.107 unit (pengguna RDM) | Kemenag 2025 |
+| PAUD di bawah NU | 13.000 unit | TVNU |
+| Pesantren di bawah NU | 26.000 unit | TVNU |
+
+### Kolaborasi Al Khidmah dengan Lembaga Pendidikan (Aktual)
+1. **UIN Walisongo Semarang** — Kerjasama formal dengan Al Khidmah Jawa Tengah (2025)
+2. **STAI Al Fithrah Surabaya** — Tuan rumah RAKERNAS ke-1 Jama'ah Al Khidmah Indonesia
+3. **Al Khidmah Kampus** — Aktif di:
+   - **IPB** (Institut Pertanian Bogor)
+   - **ITS** (Institut Teknologi Sepuluh Nopember)
+   - **UNAIR** (Universitas Airlangga)
+   - **UNESA** (Universitas Negeri Surabaya)
+   - **UNISDA** (Universitas Islam Darul Ulum Lamongan)
+   - **UII Dalwa**
+   - **UIN Walisongo**
+   - Dan kampus lainnya di berbagai daerah
+
+**Sumber**: UIN Walisongo, STAI Al Fithrah, Al Khidmah Kampus Indonesia
+
+### Matriks Kolaborasi (Contoh untuk Presentasi)
+
+| Mitra | Bentuk Kolaborasi | Langkah Pertama |
+|-------|-------------------|-----------------|
+| **PERGUNU** | Pengajian guru, pelatihan karakter, istighosah bersama, dies natalis sekolah | Silaturahmi PC PERGUNU, hadiri kegiatan rutin, tawarkan kolaborasi pengajian |
+| **Kampus/Mahasiswa** | UKM Al Khidmah, mentoring, dies natalis, kajian rutin, pengabdian masyarakat | Bentuk penggerak kampus, hubungi alumni, koordinasi dengan BEM/UKM |
+| **Sekolah/Madrasah** | Ekstrakurikuler dzikir, pembinaan santri, maulid, peringatan hari besar Islam | Koordinasi dengan guru agama, kunjungan rutin, program mentoring |
 
 ---
 

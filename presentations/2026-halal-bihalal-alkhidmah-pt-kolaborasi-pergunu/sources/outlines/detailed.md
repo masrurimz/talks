@@ -7,8 +7,10 @@ Slide-by-slide breakdown untuk deck detail (16–20 slide). Setiap slide membawa
 ## Slide 1: Judul [Wajib]
 - **Judul**: Kolaborasi Al Khidmah di Lembaga Pendidikan
 - **Subjudul**: PERGUNU dan Lembaga Pendidikan Lainnya
-- **Konteks**: Halal Bi Halal Jama'ah Al Khidmah — Bidang Mahasiswa, Pelajar, dan Pemuda
-- **Detail**: Tampilkan logo Al Khidmah dan konteks acara Halal Bi Halal
+- **Pembicara**: Dr. Aris Adi Laksono
+- **Konteks**: Halal Bi Halal Jama'ah Al Khidmah — Bidang Pemuda dan Pelajar
+- **Tanggal**: 1 April 2026
+- **Detail**: Tampilkan logo Al Khidmah, nama pembicara, dan konteks acara Halal Bi Halal
 - **Visual**: Logo Al Khidmah, latar belakang majlis/dzikir
 
 ---
@@ -118,15 +120,16 @@ Slide-by-slide breakdown untuk deck detail (16–20 slide). Setiap slide membawa
 ---
 
 ## Slide 11: Al Khidmah Oase Dunia [Opsional]
-- **Judul**: Al Khidmah adalah OASE DUNIA
+- **Judul**: Al Khidmah — Potensi Jangkauan (Oase Dunia)
 - **Konten**:
-  - 38 Provinsi
-  - 514 Kabupaten/Kota
-  - 195 Negara
-  - 7.285 Kecamatan
-  - 84.276 Desa/Kelurahan
-- **Detail**: Tampilkan data ini sebagai bukti jangkauan global Al Khidmah yang mendukung kolaborasi dengan lembaga pendidikan
-- **Visual**: Data visualisasi yang menunjukkan jangkauan global
+  - 38 Provinsi (seluruh Indonesia)
+  - 514 Kabupaten/Kota (seluruh Indonesia)
+  - 195 Negara (potensi global)
+  - 7.285 Kecamatan (seluruh Indonesia)
+  - 84.276 Desa/Kelurahan (seluruh Indonesia)
+- **⚠️ Framing**: Ini adalah **potensi jangkauan**, bukan kehadiran aktual. Sampaikan: "Al Khidmah memiliki visi untuk hadir di 38 provinsi, 514 kabupaten/kota, dan berpotensi menjangkau 195 negara. Saat ini, kami sudah terbentuk di 28 provinsi dan 168 kabupaten/kota, serta memiliki kehadiran di 7 negara."
+- **Detail**: Tampilkan data ini sebagai bukti potensi jangkauan Al Khidmah yang mendukung kolaborasi dengan lembaga pendidikan. Pastikan membedakan antara "potensi" dan "aktual".
+- **Visual**: Data visualisasi yang menunjukkan potensi jangkauan
 
 ---
 
@@ -168,7 +171,38 @@ Slide-by-slide breakdown untuk deck detail (16–20 slide). Setiap slide membawa
 
 ---
 
-## Slide 15: Potensi dan Daya Dukung — I'tikad dan Struktur [Wajib]
+## Slide 15: Apa Arti Data Ini untuk Lembaga Pendidikan? [Wajib] — BRIDGE
+- **Judul**: Apa Arti Data Ini untuk PERGUNU & Lembaga Pendidikan?
+- **Konten**:
+  - **28 provinsi** sudah ada Al Khidmah → bisa jadi mitra kolaborasi di tingkat wilayah
+  - **168 kabupaten/kota** sudah ada Al Khidmah → akses langsung ke guru, santri, mahasiswa
+  - **42.000+ pesantren** di Indonesia → potensi besar untuk kolaborasi (sumber: Kemenag 2025)
+  - **55.000+ madrasah** (RA/MI/MTs/MA) → ekosistem pendidikan yang siap disinergikan (sumber: Kemenag 2025)
+  - **PERGUNU** aktif di 34 provinsi → jaringan guru NU yang sudah ada
+  - **Al Khidmah Kampus** sudah hadir di IPB, ITS, UNAIR, UNESA, UIN Walisongo, dan lainnya
+- **Pesan kunci**: Data bukan sekadar angka — ini adalah **jaringan siap pakai** untuk kolaborasi dengan PERGUNU dan lembaga pendidikan
+- **Detail**: Jelaskan bagaimana data ini menjadi dasar untuk memulai kolaborasi. Fokus pada "apa yang bisa kita lakukan HARI INI" dengan data yang ada.
+- **Visual**: Infografik sederhana menghubungkan data dengan mitra potensial
+
+---
+
+## Slide 16: Matriks Kolaborasi — PERGUNU, Kampus, Sekolah [Wajib] — BARU
+- **Judul**: Matriks Kolaborasi dengan Lembaga Pendidikan
+- **Konten**:
+
+| Mitra | Bentuk Kolaborasi | Langkah Pertama |
+|-------|-------------------|-----------------|
+| **PERGUNU** | Pengajian guru, pelatihan karakter, istighosah bersama, dies natalis sekolah | Silaturahmi PC PERGUNU, hadiri kegiatan rutin, tawarkan kolaborasi pengajian |
+| **Kampus/Mahasiswa** | UKM Al Khidmah, mentoring, dies natalis, kajian rutin, pengabdian masyarakat | Bentuk penggerak kampus, hubungi alumni, koordinasi dengan BEM/UKM |
+| **Sekolah/Madrasah** | Ekstrakurikuler dzikir, pembinaan santri, maulid, peringatan hari besar Islam | Koordinasi dengan guru agama, kunjungan rutin, program mentoring |
+
+- **Kunci**: Kolaborasi dimulai dari **kedekatan**, bukan formalitas. "Silaturahmi tokoh/leader komunitas, menghadiri kegiatan mitra, mengedepankan adab dan komunikasi santun."
+- **Detail**: Jelaskan bahwa setiap mitra memiliki bentuk kolaborasi yang berbeda. Yang penting adalah memulai dengan langkah kecil dan konsisten.
+- **Visual**: Tabel matriks yang jelas dan mudah dibaca
+
+---
+
+## Slide 17: Potensi dan Daya Dukung — I'tikad dan Struktur [Wajib]
 - **Judul**: Potensi dan Daya Dukung — I'tikad dan Struktur
 - **Konten**:
   - **01 I'tikad Kuat**
@@ -269,14 +303,17 @@ Slide-by-slide breakdown untuk deck detail (16–20 slide). Setiap slide membawa
 
 ---
 
-## Slide 22: Penutup [Wajib]
-- **Judul**: Penutup
+## Slide 22: Penutup & Call to Action [Wajib]
+- **Judul**: Penutup — Mari Berkolaborasi!
 - **Konten**:
-  - **Pesan utama**: Kolaborasi Al Khidmah dengan lembaga pendidikan adalah kebutuhan
-  - **Ajakan**: Mari kita bangun kolaborasi di level masing-masing
-  - **Harapan**: Doa dan harapan untuk masa depan Al Khidmah di lembaga pendidikan
-- **Detail**: Tampilkan pesan penutup yang membangun tekad dan semangat kolaborasi
-- **Visual**: Visual yang menunjukkan harapan/kolaborasi
+  - **Call to Action (30 hari)**:
+    - **PP/PW/PD**: Petakan 3 mitra potensial di wilayah masing-masing
+    - **Mahasiswa**: Bentuk penggerak kampus atau hubungi Al Khidmah Kampus terdekat (IPB, ITS, UNAIR, UNESA, UIN Walisongo, dll)
+    - **Semua**: Hadiri kegiatan mitra, bangun silaturahmi
+  - **Handoff ke materi berikutnya**: "Selanjutnya, Mas Deda akan membahas Strategi Pengembangan Al Khidmah di Perguruan Tinggi — bagaimana kita mengoptimalkan kehadiran Al Khidmah di kampus setelah kolaborasi terbangun."
+  - **Doa**: Semoga Al Khidmah semakin kuat di lembaga pendidikan Indonesia
+- **Detail**: Tampilkan pesan penutup yang membangun tekad dan semangat kolaborasi. Pastikan CTA jelas dan terukur.
+- **Visual**: Visual yang menunjukkan aksi/harapan/kolaborasi
 
 ---
 
@@ -286,4 +323,6 @@ Slide-by-slide breakdown untuk deck detail (16–20 slide). Setiap slide membawa
 - Slide yang **[Opsional]** bisa dihilangkan jika perlu mempersingkat
 - **GAMBAR PETA** (slide 13–14) dan **GAMBAR KH. ACHMAD ASRORI** (slide 2) akan ditambahkan manual setelah generate
 - Data perkembangan (slide 12) harus akurat sesuai data yang diekstrak dari PPTX asli
+- **Slide BARU (15–16)**: Bridge + Matriks Kolaborasi — penting untuk relevansi audiens
+- **Penutup (slide 22)** harus menyertakan CTA dan handoff ke materi Mas Deda
 - Untuk deck detail, setiap slide memiliki penjelasan lebih lengkap dan contoh implementasi

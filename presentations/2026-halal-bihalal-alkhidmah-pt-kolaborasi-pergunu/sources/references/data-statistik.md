@@ -51,17 +51,21 @@ Data statistik yang digunakan dalam presentasi. Semua data berasal dari presenta
 
 ---
 
-## Data Jangkauan Global Jama'ah Al Khidmah
+## Data Potensi Jangkauan Jama'ah Al Khidmah ("Oase Dunia")
 
-### Tabel 5: Jangkauan Oase Dunia
+**⚠️ PENTING**: Data "Oase Dunia" di bawah ini adalah **potensi jangkauan** (target coverage) Jama'ah Al Khidmah secara geografis, **bukan** jumlah negara/wilayah yang sudah terbentuk kepengurusan. Data ini menunjukkan bahwa Jama'ah Al Khidmah memiliki visi untuk hadir di seluruh Indonesia dan dunia.
 
-| Kategori | Jumlah |
-|----------|--------|
-| Provinsi | 38 |
-| Kabupaten/Kota | 514 |
-| Negara | 195 |
-| Kecamatan | 7.285 |
-| Desa/Kelurahan | 84.276 |
+Lihat data aktual kehadiran di bagian "Data Peta Global" di bawah.
+
+### Tabel 5: Potensi Jangkauan (Oase Dunia)
+
+| Kategori | Jumlah | Keterangan |
+|----------|--------|------------|
+| Provinsi | 38 | Target: semua provinsi di Indonesia |
+| Kabupaten/Kota | 514 | Target: semua kabupaten/kota di Indonesia |
+| Negara | 195 | Potensi global (termasuk Indonesia) |
+| Kecamatan | 7.285 | Target: semua kecamatan di Indonesia |
+| Desa/Kelurahan | 84.276 | Target: semua desa/kelurahan di Indonesia |
 
 ---
 
