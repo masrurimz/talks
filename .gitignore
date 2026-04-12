@@ -10,5 +10,12 @@ pptx-extracted/
 # Source PPTX files (usually large)
 *.pptx
 
+# Python virtual environment
+.venv/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
 # OS files
 .DS_Store

@@ -123,6 +123,37 @@ When user asks to revise existing presentation:
 
 `presentations/_template/` — copy this folder for new presentations.
 
+## Python tooling (uv)
+
+This repo uses [uv](https://docs.astral.sh/uv/) for all Python dependency management. This avoids polluting global Python packages.
+
+**Why uv?** Using system `pip` breaks global Python packages (PEP 668 enforced). `uv` manages a project-local `.venv` instead.
+
+### Commands
+
+| Action | Command |
+|--------|---------|
+| Install/sync dependencies | `uv sync` |
+| Add a package | `uv add <package>` |
+| Remove a package | `uv remove <package>` |
+| Run Python script | `uv run python3 <script>` |
+| Run any command in venv | `uv run <command>` |
+| List installed packages | `uv pip list` |
+
+### Rules
+
+- **NEVER** use `pip install`, `pip3 install`, or `--break-system-packages`
+- **ALWAYS** use `uv add <package>` to add new dependencies
+- **ALWAYS** use `uv run python3 <script>` to run Python scripts (auto-activates venv)
+- Dependencies are declared in `pyproject.toml` and locked in `uv.lock`
+- The `.venv/` is gitignored — run `uv sync` after cloning
+
+### Current dependencies
+
+- `python-docx` — extract content from `.docx` files
+- `python-pptx` — extract/generate `.pptx` files
+- `pillow` — image processing
+
 ## Git workflow
 
 - Commit after each major phase (sources done, prompts done)
