@@ -3,7 +3,7 @@
 ## Tantangan Kewilayahan
 
 ### JABODETABEK sebagai Ekosistem
-- Jakarta disangga oleh wilayah BODETABEKKAR (Bogor-Depok-Tangerang-Bekasi-Karawang)
+- Jakarta disangga oleh wilayah JABODETABEK (Bogor-Depok-Tangerang-Bekasi-Karawang)
 - Jama'ah yang mengikuti majlis juga banyak berasal dari wilayah penyangga
 - Perlu pendekatan kewilayahan khusus dalam pengembangan majlis di wilayah JABODETABEK dan sekitarnya
 - Perlu pendekatan untuk pengembangan majlis di sektor pemuda-pelajar

@@ -26,9 +26,10 @@ Terdapat **3 motif utama**, masing-masing memiliki **5-6 varian warna** — semu
 | Komponen | Nilai |
 |----------|-------|
 | HPP Pabrik | Rp 65.000/pcs |
-| ^ sudah termasuk Royalti Kas PP, Ndalem & Pemodal (Rp 2.000/pcs) | |
 | Harga ke End User | Rp 85.000 – Rp 90.000 |
 | Profit/Margin untuk Kas PW & PD | Rp 20.000 – Rp 25.000/pcs |
+
+**Catatan**: HPP Rp 65.000 sudah termasuk Royalti Kas PP, Ndalem & Pemodal sebesar Rp 2.000/pcs.
 
 **Perhitungan margin**: Harga end-user (Rp 85.000–90.000) dikurangi HPP (Rp 65.000) = margin Rp 20.000–25.000/pcs yang masuk ke kas PW & PD.
 

@@ -29,7 +29,7 @@ Prioritaskan file berikut (upload semua ke NotebookLM):
 6. Gunakan bahasa yang hangat dan mengajak, bukan menggurui
 7. Sertakan emoji secukupnya untuk memperkuat pesan (🏗️ untuk proyek, 🆕 untuk sarung baru, ✅ untuk pencapaian)
 8. **JANGAN mengarang data yang tidak ada di sumber** — jika alamat lengkap tidak tersedia, jangan membuatnya
-9. Arc narasi: **"Dari Menjaga ke Menyelesaikan — Dari Istiqomah ke Inovasi"** harus tercerminalam alur slide
+9. Arc narasi: **"Dari Menjaga ke Menyelesaikan — Dari Istiqomah ke Inovasi"** harus tercermin dalam alur slide
 10. Frame sarung sebagai **ikhtiar menopang keberlanjutan syiar**, bukan sekadar usaha komersial
 
 ### Struktur Slide (ikuti outline presenter.md)

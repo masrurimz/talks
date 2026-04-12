@@ -28,7 +28,7 @@
 
 ---
 
-## Rekapitulasi Cashflow Asset Koperasi Alkhidmah DKI Jakarta
+## Rekapitulasi Cashflow Asset Koperasi Al Khidmah DKI Jakarta
 
 ### Posisi Asset
 

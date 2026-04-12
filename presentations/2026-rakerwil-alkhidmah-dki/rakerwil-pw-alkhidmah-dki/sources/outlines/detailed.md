@@ -149,7 +149,7 @@ Majlis Tahunan: HBH, Maulid, Nisfu Sya'ban, Haul Akbar, Haul Kembangan, Haul Kya
 
 ## Slide 11 — Tantangan Kewilayahan JABODETABEK
 **[Wajib]**
-- Jakarta disangga BODETABEKKAR (Bogor-Depok-Tangerang-Bekasi-Karawang)
+- Jakarta disangga wilayah JABODETABEK (Bogor-Depok-Tangerang-Bekasi-Karawang)
 - Jama'ah banyak dari wilayah penyangga
 - Perlu pendekatan kewilayahan khusus
 - Peluang: kampus unggulan (UI, IPB, UIN Ciputat, UNJ, STAN, UNUSIA)

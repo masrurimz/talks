@@ -21,7 +21,7 @@
 > "Kita tidak sedang memulai lagi 👉 tapi Kita sedang MENYELESAIKAN"
 
 ## Informasi Donasi (dari poster resmi)
-- **Rekening**: BRI atas nama Masjid Al-Fithrah Jakarta
+- **Rekening**: BRI atas nama "Masjid Al-Fithrah Jakarta" (nama resmi di rekening)
 - **Contact person**: Eko Arijanto dan H. Asing Irawan
 - **Lokasi**: Jl. Raya Ujung Aspal, No. 99, Kel. Jatirangon, Kec. Jatisampurna, Bekasi
 

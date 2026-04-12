@@ -3,9 +3,9 @@
 > **Catatan untuk NotebookLM**: File ini adalah referensi latar belakang. Gunakan hanya untuk konteks historis singkat di slide pembuka — jangan jadikan konten utama presentasi. Fokus presentasi ada di file referensi lainnya.
 
 ## Sejarah
-- Didirikan oleh **Hadhrotus Syaikh KH. Achmad Asrori Al Ishaqy RA** pada tahun **1987** di Surabaya (Jl. Kedinding Lor No. 99)
+- Didirikan oleh **Hadhrotus Syaikh KH. Achmad Asrori Al-Ishaqy RA** pada tahun **1987** di Surabaya (Jl. Kedinding Lor No. 99)
 - Dideklarasikan sebagai perkumpulan berbadan hukum pada **25 Desember 2005** di Semarang
-- Berdiri di lingkungan **Ponpes Assalafi Al Fitrah**, Surabaya
+- Berdiri di lingkungan **Ponpes Assalafi Al Fithrah**, Surabaya
 
 ## Tujuan
 > Membantu dan melayani masyarakat untuk mencapai hakikat tujuan kehidupan: semua selamat dunia dan akhirat, semua bahagia dunia dan akhirat.
@@ -21,10 +21,10 @@
 | **Pendidikan** | Mencari & menuntut ilmu sebagai kewajiban setiap Muslim |
 | **Sosial** | Berperan aktif dalam kegiatan sosial dan majelis dzikir |
 
-## Tentang KH. Achmad Asrori Al Ishaqy
+## Tentang KH. Achmad Asrori Al-Ishaqy
 - **Lahir**: 17 Agustus 1951 di Surabaya
-- Putra keempat dari 10 bersaudara, putra KH. Utsman Al Ishaqy dan Nyai Haji Siti Qomariyah
-- Pengasuh Ponpes Assalafi Al Fitrah (3 hektar, sistem klasikal + kitab kuning)
+- Putra keempat dari 10 bersaudara, putra KH. Utsman Al-Ishaqy dan Nyai Haji Siti Qomariyah
+- Pengasuh Ponpes Assalafi Al Fithrah (3 hektar, sistem klasikal + kitab kuning)
 - Memimpin Thariqoh Qadiriyah wa Naqsyabandiyah dengan posisi netral secara politik
 - Dikenal suara merdu, dakwah sederhana, dan pendekatan langsung ke kaum muda
 
