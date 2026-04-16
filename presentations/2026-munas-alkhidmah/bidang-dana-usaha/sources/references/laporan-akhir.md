@@ -73,11 +73,11 @@
 
 ## Gambar Pendukung
 
-Semua file gambar tersedia di folder: `sources/references/images/`
+Semua file gambar yang aman untuk diunggah tersedia di folder: `sources/references/images/`
 
 | File | Path | Posisi dalam Laporan | Deskripsi |
 |------|------|----------------------|-----------|
-| cover-doa.jpg | `sources/references/images/cover-doa.jpg` | Cover/halaman depan | Perempuan berdoa khusyuk — simbol spiritualitas |
+| placeholder-dawuh-hadrotussyaikh.png | `sources/references/images/placeholder-dawuh-hadrotussyaikh.png` | Bagian Dawuh | Placeholder visual (tanpa foto manusia) |
 | pt-dbl-kandang.jpg | `sources/references/images/pt-dbl-kandang.jpg` | Bagian PT DBL | Interior kandang ayam modern |
 | sarung-motif1-6warna.jpg | `sources/references/images/sarung-motif1-6warna.jpg` | Bagian Sarung (Motif 1) | 6 varian warna motif BB/11051-4 |
 | sarung-motif2-5warna.jpg | `sources/references/images/sarung-motif2-5warna.jpg` | Bagian Sarung (Motif 2) | 5 varian warna motif EM-AM |

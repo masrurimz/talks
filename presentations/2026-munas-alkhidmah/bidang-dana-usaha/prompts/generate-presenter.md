@@ -39,6 +39,7 @@ Buatkan slide deck presenter-style untuk laporan pertanggungjawaban Bidang Dana 
 - Metafora burung dua sayap dari dawuh Hadrotusyaikh RA
 - Angka-angka konkret: Rp 2,8M (PT DBL), 5% dividen, Rp 96Jt, >Rp 200Jt (CSR), Rp 128,5Jt (PPOB), Rp 1,3M (Khidmah Connect penuh)
 - Gunakan gambar langsung dari `sources/references/images/` ketika relevan (kandang ayam, motif sarung, kolam lele, menu PPOB, cover-doa)
+- Untuk slide Dawuh: gunakan placeholder (tanpa foto manusia) `sources/references/images/placeholder-dawuh-hadrotussyaikh.png` dan tambahkan foto asli secara manual di luar NotebookLM bila dibutuhkan.
 - Wajib tampilkan chart untuk data utama (boleh bergaya sederhana dan clean):
   - Bar chart skema bisnis sarung (harga produksi vs harga jual vs margin)
   - Bar chart target vs realisasi Modal Abadi (+ anotasi CSR > Rp200Jt)

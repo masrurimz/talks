@@ -48,6 +48,7 @@ Ikuti alur LPJ (bukan pitch deck), namun setiap slide memiliki konten yang lebih
 - Tabel investasi Khidmah Connect (3 modul vs 11 modul)
 - Visi "The Next Generation of Al Khidmah"
 - Gunakan gambar langsung dari `sources/references/images/` di slide yang sesuai
+- Untuk slide Dawuh: gunakan placeholder (tanpa foto manusia) `sources/references/images/placeholder-dawuh-hadrotussyaikh.png` dan tambahkan foto asli secara manual di luar NotebookLM bila dibutuhkan.
 - Wajib buat chart data berikut (bar chart sederhana, clean):
   - Bar chart kontribusi PT DBL (modal vs dividen)
   - Bar chart skema bisnis sarung (harga produksi vs harga jual vs margin)
