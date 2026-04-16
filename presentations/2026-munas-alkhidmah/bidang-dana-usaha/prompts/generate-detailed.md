@@ -8,12 +8,12 @@ Buatkan slide deck detailed-style untuk laporan pertanggungjawaban Bidang Dana d
 
 - **Bahasa**: Bahasa Indonesia
 - **Gaya**: Detailed-style — konten lengkap di setiap slide, bisa berdiri sendiri tanpa pembicara
-- **Jumlah slide**: 28-32 slide
-- **Target durasi**: ±30-35 menit (jika dipresentasikan) atau dokumen mandiri
+- **Jumlah slide**: 22-26 slide
+- **Target durasi**: ±25-30 menit (jika dipresentasikan) atau dokumen mandiri
 
 ## Konteks Penting
 
-- Ketua Bidang Dana dan Usaha, **Pak Yaumi Azhar, telah Almarhum**. Laporan diwakilkan oleh Ketua Umum PP Al Khidmah. Presentasi harus menghormati konteks ini.
+- Ketua Bidang Dana dan Usaha, **Pak Yaumi Azhar, telah Almarhum**. Penyampaian LPJ di MUNAS ini diwakilkan oleh Ketua Umum PP Al Khidmah; cukup dicantumkan singkat di cover atau disampaikan lisan.
 - Audiens: Pengurus Pusat, PW, PD, PC, dan jama'ah Al Khidmah se-Indonesia
 - Versi detailed ini bisa digunakan sebagai dokumen pendukung yang dibagikan ke peserta setelah MUNAS
 
@@ -28,31 +28,36 @@ Buatkan slide deck detailed-style untuk laporan pertanggungjawaban Bidang Dana d
 
 ## Alur Narasi
 
-Sama dengan presenter deck, tapi setiap slide memiliki konten yang lebih lengkap:
+Ikuti alur LPJ (bukan pitch deck), namun setiap slide memiliki konten yang lebih lengkap:
 
 1. **Pembukaan spiritual** — Dawuh + AD/ART + Visi (lebih detail)
 2. **Laporan kinerja** — Semua pencapaian dengan data lengkap dan narasi
 3. **Proyeksi masa depan** — Program 2026-2029 dengan detail implementasi
-4. **Penutup** — Kesimpulan, tantangan, ajakan, penghormatan almarhum
+4. **Penutup** — Kesimpulan LPJ dan tantangan utama
 
 ## Hal-hal yang HARUS Ada
 
 - Semua yang ada di presenter deck, PLUS:
 - Kutipan lengkap dawuh Hadrotusyaikh RA (bukan ringkasan)
+- Cantumkan *in memoriam* secara kecil dan sopan di cover (tanpa membuat slide khusus)
 - Detail skema bisnis sarung (harga produksi, jual, margin, royalti)
 - 3 motif sarung dengan nama dan varian warna lengkap
-- Kasus Jimpitan vs UPZ sebagai pembelajaran
+- Catatan evaluasi pemanfaatan QRIS (gunakan redaksi netral sesuai LPJ; jangan framing konflik)
 - 5 tahapan implementasi budidaya lele
-- 4 fitur Khidmah Connect dengan deskripsi
+- Konsep dan fungsi Khidmah Connect (cukup ringkas sesuai outline)
 - Tabel investasi Khidmah Connect (3 modul vs 11 modul)
 - Visi "The Next Generation of Al Khidmah"
 - Gunakan gambar langsung dari `sources/references/images/` di slide yang sesuai
-- Wajib buat chart data berikut:
+- Wajib buat chart data berikut (bar chart sederhana, clean):
   - Bar chart kontribusi PT DBL (modal vs dividen)
   - Bar chart skema bisnis sarung (harga produksi vs harga jual vs margin)
-  - Bar chart target vs realisasi Modal Abadi + nilai CSR
+  - Bar chart target vs realisasi Modal Abadi + (opsional) chart nilai CSR (boleh digabung atau dipisah)
   - Bar chart investasi Khidmah Connect (3 modul vs 11 modul)
-  - Bar chart perbandingan angka acuan per 3 pilar kinerja
+  - (Opsional) Bar chart perbandingan angka acuan per kelompok program
+
+## Penutup
+
+- Akhiri dengan penutup yang human: apresiasi, mohon doa/masukan, dan ajakan sinergi yang rendah hati (bukan promosi)
 
 ## Hal-hal yang TIDAK BOLEH
 
@@ -64,7 +69,7 @@ Sama dengan presenter deck, tapi setiap slide memiliki konten yang lebih lengkap
 
 ## Tone & Nuansa
 
-- Sama dengan presenter deck: profesional, hangat, spiritual, inspiratif
+- Akuntabel, dokumentatif, profesional, hangat, dan rendah hati
 - Tapi lebih informatif dan dokumentatif — cocok sebagai bahan bacaan
 - Setiap slide harus bisa dipahami tanpa penjelasan lisan
 
@@ -73,6 +78,6 @@ Sama dengan presenter deck, tapi setiap slide memiliki konten yang lebih lengkap
 | Aspek | Presenter | Detailed |
 |-------|-----------|----------|
 | Teks per slide | Ringkas, poin | Lengkap, naratif |
-| Jumlah slide | 22-25 | 28-32 |
+| Jumlah slide | 22-25 | 22-26 |
 | Penggunaan | Presentasi lisan | Dokumen mandiri |
 | Angka/data | Highlight utama | Detail lengkap |

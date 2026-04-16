@@ -2,7 +2,7 @@
 
 ## Narrative Arc
 
-Presentasi mengikuti alur **"Fondasi → Bukti → Visi Masa Depan"**:
+Presentasi mengikuti alur **"Fondasi → Bukti → Proyeksi Tindak Lanjut"**:
 
 1. **Pembukaan (Spiritual Foundation)** — Dimulai dari landasan dawuh Hadrotusyaikh RA, bukan dari angka-angka. Ini mengingatkan audiens bahwa usaha ekonomi ini BAGIAN dari perjuangan spiritual, bukan sekadar bisnis.
 
@@ -90,8 +90,8 @@ Presentasi mengikuti alur **"Fondasi → Bukti → Visi Masa Depan"**:
 
 | Bagian | Durasi | Slide Est. |
 |--------|--------|------------|
-| Pembukaan & Landasan | 7 menit | 5-6 slide |
-| Laporan Kinerja | 14 menit | 11-13 slide |
-| Proyeksi 2026-2029 | 10 menit | 9-10 slide |
-| Kesimpulan & Tantangan | 4 menit | 3-4 slide |
-| **Total** | **±30-35 menit** | **±28-32 slide** |
+| Pembukaan & Landasan | 6 menit | 4-5 slide |
+| Laporan Kinerja | 12 menit | 9-11 slide |
+| Proyeksi 2026-2029 | 8 menit | 6-7 slide |
+| Kesimpulan & Tantangan | 3 menit | 2-3 slide |
+| **Total** | **±25-30 menit** | **±22-26 slide** |
