@@ -31,7 +31,7 @@ Dawuh Hadrotusyaikh RA
 - Sayap Kiri: Kesejahteraan & kemakmuran keluarga
 - Sayap Kanan: Berkhidmah kepada Allah (zakat, infaq, shodaqoh)
 
-*Visual:* Placeholder visual untuk Dawuh (tanpa foto manusia): `sources/references/images/placeholder-dawuh-hadrotussyaikh.png`
+*Visual:* [GAMBAR KH. ACHMAD ASRORI] — Foto KH. Achmad Asrori Al-Ishaqi RA; sediakan ruang di slide, akan ditambahkan manual setelah generate
 *Narasi lisan:* Baca kutipan dawuh lengkap — ini adalah LANDASAN SELURUH program
 
 ---
@@ -294,7 +294,7 @@ Kolaborasi seluruh PW/PD/PC dan jama'ah:
 
 Laporan ini dipersembahkan dalam rangka menghormati jasa almarhum **Pak Yaumi Azhar** yang telah meletakkan fondasi kemandirian ekonomi Jama'ah Al Khidmah.
 
-*Visual:* Nuansa damai, doa, atau ilustrasi spiritual (tanpa foto manusia). Gunakan placeholder: `sources/references/images/placeholder-dawuh-hadrotussyaikh.png`
+*Visual:* Nuansa damai, doa, atau ilustrasi spiritual. [GAMBAR KH. ACHMAD ASRORI] — sediakan ruang, akan ditambahkan manual setelah generate
 
 ---
 

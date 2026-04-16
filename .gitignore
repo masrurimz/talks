@@ -4,10 +4,6 @@ presentations/*/sources/references/*.pdf
 # Generated outputs (optional to track)
 presentations/*/output/
 
-# Manual-only assets (e.g., human photos)
-presentations/*/*/manual_assets/*
-!presentations/*/*/manual_assets/.gitkeep
-
 # Extracted PPTX content (generated)
 pptx-extracted/
 

@@ -41,13 +41,8 @@ Gambar sudah dipindahkan ke folder lokal presentasi agar ikut terunggah saat upl
 
 - Folder aset gambar: `sources/references/images/`
 
-Catatan: Foto manusia **tidak** dimasukkan ke `sources/` (agar tidak ikut terunggah). File yang akan kamu pasang manual setelah slide jadi disimpan di:
-
-- `manual_assets/`
-
 | File | Path | Digunakan di |
 |------|------|-------------|
-| placeholder-dawuh-hadrotussyaikh.png | `sources/references/images/placeholder-dawuh-hadrotussyaikh.png` | Slide Dawuh (placeholder, tanpa foto manusia) |
 | pt-dbl-kandang.jpg | `sources/references/images/pt-dbl-kandang.jpg` | Slide PT DBL |
 | sarung-motif1-6warna.jpg | `sources/references/images/sarung-motif1-6warna.jpg` | Slide Sarung Motif 1 |
 | sarung-motif2-5warna.jpg | `sources/references/images/sarung-motif2-5warna.jpg` | Slide Sarung Motif 2 |
@@ -56,8 +51,8 @@ Catatan: Foto manusia **tidak** dimasukkan ke `sources/` (agar tidak ikut terung
 | lele-pemberian-pakan.jpg | `sources/references/images/lele-pemberian-pakan.jpg` | Slide Budidaya Lele |
 | ppob-menu.png | `sources/references/images/ppob-menu.png` | Slide PPOB/Khidmah Connect |
 
-### Manual-only assets (jangan upload ke NotebookLM)
+### Gambar yang ditambahkan manual setelah generate
 
 | File | Path | Dipakai untuk |
 |------|------|--------------|
-| kh-achmad-asrori-al-ishaqi.jpg | `manual_assets/kh-achmad-asrori-al-ishaqi.jpg` | Tambahkan manual (tidak di-commit): foto (manusia) untuk dipasang di slide Dawuh/Penutup |
+| kh-achmad-asrori-al-ishaqi.jpg | `sources/references/images/kh-achmad-asrori-al-ishaqi.jpg` | Foto KH. Achmad Asrori Al-Ishaqi RA untuk slide Dawuh dan Penutup — ditandai dengan **[GAMBAR KH. ACHMAD ASRORI]** di outline. Sediakan ruang di slide, tambahkan manual setelah generate. |

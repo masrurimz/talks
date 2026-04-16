@@ -34,7 +34,7 @@ Ringkasan makna:
 
 Alangkah baik dan mulianya bila kedua sayap ini bisa dikembangkan dan digerakkan bersama-sama, lebih-lebih bila bisa terbentuk dalam satu wadah dan sarana.
 
-*Visual:* Placeholder visual untuk Dawuh (tanpa foto manusia): `sources/references/images/placeholder-dawuh-hadrotussyaikh.png`
+*Visual:* [GAMBAR KH. ACHMAD ASRORI] — Foto KH. Achmad Asrori Al-Ishaqi RA; sediakan ruang di slide, akan ditambahkan manual setelah generate
 
 ---
 

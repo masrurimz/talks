@@ -38,8 +38,8 @@ Buatkan slide deck presenter-style untuk laporan pertanggungjawaban Bidang Dana 
 - Slide In Memoriam untuk Pak Yaumi Azhar (Almarhum)
 - Metafora burung dua sayap dari dawuh Hadrotusyaikh RA
 - Angka-angka konkret: Rp 2,8M (PT DBL), 5% dividen, Rp 96Jt, >Rp 200Jt (CSR), Rp 128,5Jt (PPOB), Rp 1,3M (Khidmah Connect penuh)
-- Gunakan gambar langsung dari `sources/references/images/` ketika relevan (kandang ayam, motif sarung, kolam lele, menu PPOB, cover-doa)
-- Untuk slide Dawuh: gunakan placeholder (tanpa foto manusia) `sources/references/images/placeholder-dawuh-hadrotussyaikh.png` dan tambahkan foto asli secara manual di luar NotebookLM bila dibutuhkan.
+- Gunakan gambar langsung dari `sources/references/images/` ketika relevan (kandang ayam, motif sarung, kolam lele, menu PPOB)
+- Untuk slide yang membutuhkan foto KH. Achmad Asrori Al-Ishaqi RA: gunakan notasi **[GAMBAR KH. ACHMAD ASRORI]** sebagai penanda ruang di slide. Sediakan ruang kosong yang cukup untuk foto — foto akan ditambahkan manual setelah generate. JANGAN upload/masukkan foto manusia ke dalam konten slide.
 - Wajib tampilkan chart untuk data utama (boleh bergaya sederhana dan clean):
   - Bar chart skema bisnis sarung (harga produksi vs harga jual vs margin)
   - Bar chart target vs realisasi Modal Abadi (+ anotasi CSR > Rp200Jt)
