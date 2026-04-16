@@ -69,7 +69,7 @@ Pasal BAB XVI, Pasal 48 poin 3:
 | 🤝 Sinergi Kemitraan Strategis | Modal Abadi + CSR |
 | 💻 Transformasi Digital | QRIS + PPOB |
 
-*Visual:* Pie chart proporsi nilai per pilar (PT DBL, CSR/Kemitraan, Investasi Digital) + 3 ikon/pilar
+*Visual:* Bar chart perbandingan angka acuan per pilar (PT DBL, CSR/Kemitraan, Investasi Digital) + 3 ikon/pilar
 
 ---
 

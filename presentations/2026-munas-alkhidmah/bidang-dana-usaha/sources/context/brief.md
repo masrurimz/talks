@@ -17,10 +17,10 @@
 | **Bidang** | Bidang Dana dan Usaha |
 | **Organisasi** | Pengurus Pusat (PP) Jama'ah Al Khidmah |
 | **Ketua Bidang** | Pak Yaumi Azhar (**Almarhum**) |
-| **Pemateri** | Diwakilkan oleh Ketum PP Al Khidmah |
+| **Pemateri** | Diwakilkan oleh Ketua Umum PP Al Khidmah |
 
 ### Catatan Penting
-Ketua Bidang Dana Usaha (Pak Yaumi Azhar) telah meninggal dunia (Almarhum), sehingga penyampaian laporan diwakilkan oleh Ketua Umum PP Al Khidmah. Ini adalah konteks emosional yang harus dihormati dalam penyajian — tonya harus menghargai jasa dan perjuangan almarhum.
+Ketua Bidang Dana dan Usaha (Pak Yaumi Azhar) telah meninggal dunia (Almarhum), sehingga penyampaian laporan diwakilkan oleh Ketua Umum PP Al Khidmah. Ini adalah konteks emosional yang harus dihormati dalam penyajian — tonenya harus menghargai jasa dan perjuangan almarhum.
 
 ## Profil Audiens
 
@@ -28,7 +28,7 @@ Ketua Bidang Dana Usaha (Pak Yaumi Azhar) telah meninggal dunia (Almarhum), sehi
 |-------|--------|
 | **Komposisi** | Pengurus Pusat, Pengurus Wilayah (PW), Pengurus Daerah (PD), Pengurus Cabang (PC), dan jama'ah Al Khidmah se-Indonesia |
 | **Jumlah** | Peserta MUNAS (est. ratusan orang) |
-| **Pengetahuan** | Mixture — ada yang aktif di bidang usaha, ada yang belum familiar dengan konsep kewirausahaan organisasi |
+| **Pengetahuan** | Beragam — ada yang aktif di bidang usaha, ada yang belum familiar dengan konsep kewirausahaan organisasi |
 | **Harapan** | Ingin melihat pertanggungjawaban yang jelas, bukti nyata hasil, dan rencana ke depan yang konkret |
 | **Bahasa** | Bahasa Indonesia, dengan istilah-istilah keislaman dan keorganisasian Al Khidmah |
 
@@ -54,7 +54,7 @@ Ketua Bidang Dana Usaha (Pak Yaumi Azhar) telah meninggal dunia (Almarhum), sehi
 
 ## Expected Outcomes
 
-1. Jama'ah memahami pencapaian dan tantangan Bidang Dana Usaha 2022-2026
+1. Jama'ah memahami pencapaian dan tantangan Bidang Dana dan Usaha 2022-2026
 2. Jama'ah termotivasi untuk berpartisipasi dalam program 2026-2029
 3. PW/PD/PC memiliki kejelasan peran dalam ekosistem usaha
 4. Laporan diterima sebagai pertanggungjawaban yang memadai di MUNAS

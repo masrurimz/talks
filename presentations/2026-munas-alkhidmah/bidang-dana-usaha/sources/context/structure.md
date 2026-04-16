@@ -65,7 +65,7 @@ Presentasi mengikuti alur **"Fondasi → Bukti → Visi Masa Depan"**:
 
 ### Pedoman Visual Data
 - Gunakan aset gambar dari `sources/references/images/`
-- Prioritaskan chart sederhana (bar/pie) untuk mempercepat pemahaman angka
+- Prioritaskan chart sederhana (bar/line) untuk mempercepat pemahaman angka
 - Jangan tampilkan tabel panjang tanpa visual pendamping
 
 ### YANG TIDAK MASUK
@@ -76,6 +76,8 @@ Presentasi mengikuti alur **"Fondasi → Bukti → Visi Masa Depan"**:
 
 ## Timing (Estimasi)
 
+### Presenter Deck
+
 | Bagian | Durasi | Slide Est. |
 |--------|--------|------------|
 | Pembukaan & Landasan | 5 menit | 3-4 slide |
@@ -83,3 +85,13 @@ Presentasi mengikuti alur **"Fondasi → Bukti → Visi Masa Depan"**:
 | Proyeksi 2026-2029 | 8 menit | 6-8 slide |
 | Kesimpulan & Tantangan | 3 menit | 2-3 slide |
 | **Total** | **±25 menit** | **±22-25 slide** |
+
+### Detailed Deck
+
+| Bagian | Durasi | Slide Est. |
+|--------|--------|------------|
+| Pembukaan & Landasan | 7 menit | 5-6 slide |
+| Laporan Kinerja | 14 menit | 11-13 slide |
+| Proyeksi 2026-2029 | 10 menit | 9-10 slide |
+| Kesimpulan & Tantangan | 4 menit | 3-4 slide |
+| **Total** | **±30-35 menit** | **±28-32 slide** |

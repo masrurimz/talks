@@ -83,7 +83,7 @@ Pasal BAB XVI (KEUANGAN), Pasal 48 poin 3:
 | 🤝 Sinergi Kemitraan Strategis | Modal Abadi, CSR Perusahaan |
 | 💻 Transformasi Digital (E-Khidmah) | QRIS, PPOB |
 
-*Visual:* Pie chart proporsi nilai per pilar (berbasis data di `sources/references/data-chart.md`)
+*Visual:* Bar chart perbandingan angka acuan per pilar (berbasis data di `sources/references/data-chart.md`)
 
 ---
 
@@ -181,7 +181,7 @@ Semua motif bertuliskan **"NDALEM AL KHIDMAH"**
 
 - Digunakan untuk donasi bencana dan pembangunan
 - Efektivitas perlu dievaluasi — jamaah cenderung transfer manual
-- Kasus: QRIS direncanakan sebagai pengganti Jimpitan, tapi bersamaan dengan program UPZ yang punya omplong sama
+- Kasus: QRIS direncanakan sebagai pengganti Jimpitan, namun bersamaan dengan program UPZ yang memiliki kanal iuran sejenis
 - **Akibat**: Program jimpitan 2 lembaga → kebingungan jamaah → kurang optimal
 - **Rekomendasi**: Sinergi lembaga & pengembangan dalam satu sistem E-Khidmah
 

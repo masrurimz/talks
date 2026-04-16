@@ -43,7 +43,7 @@ Catatan:
 |--------|------------|
 | Target Modal Abadi | 1.500.000.000 |
 | Terkumpul Modal Abadi | 25.000.000 |
-| Dana CSR Terkumpul | 200.000.000+ |
+| Dana CSR Terkumpul (minimum) | 200.000.000 |
 
 Catatan: Nilai CSR di laporan ditulis "lebih dari Rp 200 Juta".
 
@@ -62,9 +62,9 @@ Catatan: 3 modul awal dibayarkan dalam 6 termin.
 
 ---
 
-## 5) Proporsi Nilai per Pilar (untuk Overview)
+## 5) Perbandingan Angka Acuan per Pilar (untuk Overview)
 
-**Rekomendasi chart:** Pie chart (approximated from reported anchors)
+**Rekomendasi chart:** Bar chart perbandingan (bukan pie chart)
 
 | Pilar | Angka Acuan | Nilai (Rp) |
 |-------|-------------|------------|
@@ -74,4 +74,5 @@ Catatan: 3 modul awal dibayarkan dalam 6 termin.
 
 Catatan penting:
 - Ini chart komunikasi visual (bukan laporan audit penuh).
-- Gunakan label bahwa proporsi memakai "angka acuan utama" agar tidak disalahartikan sebagai total agregat resmi.
+- Gunakan label bahwa perbandingan memakai "angka acuan utama" agar tidak disalahartikan sebagai total agregat resmi.
+- Hindari pie chart karena datanya bukan komponen dari satu total yang sama.

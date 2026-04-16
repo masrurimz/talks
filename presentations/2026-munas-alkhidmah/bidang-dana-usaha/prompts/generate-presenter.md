@@ -2,7 +2,7 @@
 
 ## Instruksi
 
-Buatkan slide deck presenter-style untuk laporan pertanggungjawaban Bidang Dana dan Usaha Pengurus Pusat Jama'ah Al Khidmah, masa khidmat 2022-2026, yang disampaikan di MUNAS 24-25 April 2026 di Hotel Royal Orchid Batu Malang.
+Buatkan slide deck presenter-style untuk laporan pertanggungjawaban Bidang Dana dan Usaha Pengurus Pusat Jama'ah Al Khidmah, masa khidmat 2022-2026, yang disampaikan di MUNAS 24-25 April 2026 di Hotel Royal Orchid, Batu Malang.
 
 ## Format
 
@@ -13,7 +13,7 @@ Buatkan slide deck presenter-style untuk laporan pertanggungjawaban Bidang Dana 
 
 ## Konteks Penting
 
-- Ketua Bidang Dana Usaha, **Pak Yaumi Azhar, telah Almarhum**. Laporan diwakilkan oleh Ketum PP Al Khidmah. Presentasi harus menghormati konteks ini — ada slide In Memoriam, dan tone keseluruhan harus menghargai jasa almarhum.
+- Ketua Bidang Dana dan Usaha, **Pak Yaumi Azhar, telah Almarhum**. Laporan diwakilkan oleh Ketua Umum PP Al Khidmah. Presentasi harus menghormati konteks ini — ada slide In Memoriam, dan tone keseluruhan harus menghargai jasa almarhum.
 - Audiens: Pengurus Pusat, PW, PD, PC, dan jama'ah Al Khidmah se-Indonesia
 - Ini adalah laporan PERTANGGUNGJAWABAN di MUNAS, bukan sekadar presentasi informasi
 
@@ -43,7 +43,7 @@ Buatkan slide deck presenter-style untuk laporan pertanggungjawaban Bidang Dana 
   - Bar chart skema bisnis sarung (harga produksi vs harga jual vs margin)
   - Bar chart target vs realisasi Modal Abadi (+ anotasi CSR > Rp200Jt)
   - Bar chart investasi Khidmah Connect (3 modul vs 11 modul)
-  - Pie chart overview 3 pilar kinerja (berdasarkan data ringkas)
+  - Bar chart perbandingan angka acuan 3 pilar kinerja (berdasarkan data ringkas)
 - Grand Launching Sarung Gloyor di MUNAS ini sebagai highlight
 - 3 tantangan utama sebagai closing yang jujur dan reflektif
 - Ajakan kolaborasi ke PW/PD/PC
@@ -55,6 +55,7 @@ Buatkan slide deck presenter-style untuk laporan pertanggungjawaban Bidang Dana 
 - Jangan lewatkan konteks spiritual — usaha ekonomi ini BAGIAN dari misi spiritual
 - Jangan abaikan penghormatan almarhum — ini bukan presentasi korporat biasa
 - Jangan tambahkan informasi yang tidak ada di sumber referensi
+- Jangan gunakan pie chart jika data bukan bagian dari satu total yang sama
 
 ## Tone & Nuansa
 

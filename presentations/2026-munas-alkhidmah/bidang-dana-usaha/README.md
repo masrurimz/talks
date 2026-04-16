@@ -16,7 +16,7 @@ Presentasi laporan pertanggungjawaban Bidang Dana dan Usaha PP Jama'ah Al Khidma
 |-------|--------|
 | Bidang | Bidang Dana dan Usaha |
 | Ketua Bidang | Pak Yaumi Azhar (Almarhum) |
-| Pemateri | Diwakilkan oleh Ketum PP Al Khidmah |
+| Pemateri | Diwakilkan oleh Ketua Umum PP Al Khidmah |
 
 ## Status
 

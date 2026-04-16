@@ -2,7 +2,7 @@
 
 ## Instruksi
 
-Buatkan slide deck detailed-style untuk laporan pertanggungjawaban Bidang Dana dan Usaha Pengurus Pusat Jama'ah Al Khidmah, masa khidmat 2022-2026, yang disampaikan di MUNAS 24-25 April 2026 di Hotel Royal Orchid Batu Malang.
+Buatkan slide deck detailed-style untuk laporan pertanggungjawaban Bidang Dana dan Usaha Pengurus Pusat Jama'ah Al Khidmah, masa khidmat 2022-2026, yang disampaikan di MUNAS 24-25 April 2026 di Hotel Royal Orchid, Batu Malang.
 
 ## Format
 
@@ -13,7 +13,7 @@ Buatkan slide deck detailed-style untuk laporan pertanggungjawaban Bidang Dana d
 
 ## Konteks Penting
 
-- Ketua Bidang Dana Usaha, **Pak Yaumi Azhar, telah Almarhum**. Laporan diwakilkan oleh Ketum PP Al Khidmah. Presentasi harus menghormati konteks ini.
+- Ketua Bidang Dana dan Usaha, **Pak Yaumi Azhar, telah Almarhum**. Laporan diwakilkan oleh Ketua Umum PP Al Khidmah. Presentasi harus menghormati konteks ini.
 - Audiens: Pengurus Pusat, PW, PD, PC, dan jama'ah Al Khidmah se-Indonesia
 - Versi detailed ini bisa digunakan sebagai dokumen pendukung yang dibagikan ke peserta setelah MUNAS
 
@@ -52,7 +52,7 @@ Sama dengan presenter deck, tapi setiap slide memiliki konten yang lebih lengkap
   - Bar chart skema bisnis sarung (harga produksi vs harga jual vs margin)
   - Bar chart target vs realisasi Modal Abadi + nilai CSR
   - Bar chart investasi Khidmah Connect (3 modul vs 11 modul)
-  - Pie chart proporsi nilai per 3 pilar kinerja
+  - Bar chart perbandingan angka acuan per 3 pilar kinerja
 
 ## Hal-hal yang TIDAK BOLEH
 
@@ -60,6 +60,7 @@ Sama dengan presenter deck, tapi setiap slide memiliki konten yang lebih lengkap
 - Jangan gunakan jargon bisnis berlebihan
 - Jangan abaikan konteks spiritual dan penghormatan almarhum
 - Jangan tambahkan informasi yang tidak ada di sumber referensi
+- Jangan gunakan pie chart jika data bukan bagian dari satu total yang sama
 
 ## Tone & Nuansa
 
