@@ -1,84 +1,102 @@
-# Prompt NotebookLM: Generate Detailed Deck
+# Prompt Generate: Detailed Deck — Bidang Dana dan Usaha MUNAS 2026
 
-## Instruksi
+## Instruksi untuk NotebookLM
 
-Buatkan slide deck detailed-style untuk laporan pertanggungjawaban Bidang Dana dan Usaha Pengurus Pusat Jama'ah Al Khidmah, masa khidmat 2022-2026, yang disampaikan di MUNAS 24-25 April 2026 di Hotel Royal Orchid, Batu Malang.
+Buat slide deck **detailed-style** untuk laporan pertanggungjawaban Bidang Dana dan Usaha Pengurus Pusat Jama'ah Al Khidmah, Masa Khidmat 2022-2026, yang disampaikan pada MUNAS 24-25 April 2026 di Royal Orchid Garden Hotel, Batu Malang.
 
 ## Format
 
+- **Format deck**: Detailed Deck
 - **Bahasa**: Bahasa Indonesia
-- **Gaya**: Detailed-style — konten lengkap di setiap slide, bisa berdiri sendiri tanpa pembicara
-- **Jumlah slide**: 22-26 slide
-- **Target durasi**: ±25-30 menit (jika dipresentasikan) atau dokumen mandiri
+- **Length**: Long
+- **Target slide**: 24-28 slide
+- **Fungsi**: dapat dipresentasikan dan juga cukup jelas bila dibaca mandiri
 
-## Konteks Penting
+## Tujuan deck
 
-- Ketua Bidang Dana dan Usaha, **Pak Yaumi Azhar, telah Almarhum**. Penyampaian LPJ di MUNAS ini diwakilkan oleh Ketua Umum PP Al Khidmah; cukup dicantumkan singkat di cover atau disampaikan lisan.
-- Audiens: Pengurus Pusat, PW, PD, PC, dan jama'ah Al Khidmah se-Indonesia
-- Versi detailed ini bisa digunakan sebagai dokumen pendukung yang dibagikan ke peserta setelah MUNAS
+Deck ini harus bekerja sebagai dokumen pertanggungjawaban yang:
+1. menjelaskan landasan, capaian, evaluasi, dan proyeksi secara utuh;
+2. memudahkan peserta MUNAS membaca ulang poin-poin kunci tanpa bergantung penuh pada narasi lisan;
+3. tetap menjaga rasa khidmat dan penghormatan pada konteks almarhum Ketua Bidang.
 
-## Sumber yang Diprioritaskan
+## Sumber yang harus diprioritaskan
 
-1. **`sources/references/laporan-akhir.md`** — Sumber kebenaran, semua angka dan data dari sini
-2. **`sources/context/brief.md`** — Konteks event, pembicara, audiens
-3. **`sources/context/structure.md`** — Narasi dan alur presentasi
-4. **`sources/outlines/detailed.md`** — Outline slide-by-slide (IKUTI INI)
-5. **`sources/references/data-chart.md`** — Data siap visual untuk grafik
-6. **`sources/references/images/`** — Aset gambar untuk visual slide
+1. `sources/context/brief.md`
+2. `sources/context/structure.md`
+3. `sources/outlines/detailed.md`
+4. `sources/references/laporan-akhir.md`
+5. `sources/references/data-chart.md`
+6. gambar yang relevan di `sources/references/images/`
 
-## Alur Narasi
+## Prinsip penyusunan
 
-Ikuti alur LPJ (bukan pitch deck), namun setiap slide memiliki konten yang lebih lengkap:
+1. Pertahankan alur LPJ: landasan → kinerja → proyeksi → penutup.
+2. Teks boleh lebih lengkap daripada presenter deck, tetapi tetap enak dibaca.
+3. Setiap slide harus cukup jelas meskipun dibaca tanpa penjelasan lisan.
+4. Data, kutipan, dan urutan program harus setia pada sumber.
 
-1. **Pembukaan spiritual** — Dawuh + AD/ART + Visi (lebih detail)
-2. **Laporan kinerja** — Semua pencapaian dengan data lengkap dan narasi
-3. **Proyeksi masa depan** — Program 2026-2029 dengan detail implementasi
-4. **Penutup** — Kesimpulan LPJ dan tantangan utama
+## Struktur yang harus diikuti
 
-## Hal-hal yang HARUS Ada
+1. pembukaan dan pengantar amanah
+2. dawuh Hadrotussyaikh RA
+3. dasar ART
+4. visi besar
+5. pengantar LPJ 2022-2026
+6. tiga pilar kinerja 2022-2026
+7. detail tiap program utama
+8. evaluasi dan pelajaran penting
+9. arah program 2026-2029
+10. kesimpulan LPJ dan tantangan utama
 
-- Semua yang ada di presenter deck, PLUS:
-- Kutipan lengkap dawuh Hadrotusyaikh RA (bukan ringkasan)
-- Cantumkan *in memoriam* secara kecil dan sopan di cover (tanpa membuat slide khusus)
-- Detail skema bisnis sarung (harga produksi, jual, margin, royalti)
-- 3 motif sarung dengan nama dan varian warna lengkap
-- Catatan evaluasi pemanfaatan QRIS (gunakan redaksi netral sesuai LPJ; jangan framing konflik)
-- 5 tahapan implementasi budidaya lele
-- Konsep dan fungsi Khidmah Connect (cukup ringkas sesuai outline)
-- Tabel investasi Khidmah Connect (3 modul vs 11 modul)
-- Visi "The Next Generation of Al Khidmah"
-- Gunakan gambar langsung dari `sources/references/images/` di slide yang sesuai
-- Untuk slide yang membutuhkan foto KH. Achmad Asrori Al-Ishaqi RA: gunakan notasi **[GAMBAR KH. ACHMAD ASRORI]** sebagai penanda ruang di slide. Sediakan ruang kosong yang cukup untuk foto — foto akan ditambahkan manual setelah generate. JANGAN upload/masukkan foto manusia ke dalam konten slide.
-- Wajib buat chart data berikut (bar chart sederhana, clean):
-  - Bar chart kontribusi PT DBL (modal vs dividen)
-  - Bar chart skema bisnis sarung (harga produksi vs harga jual vs margin)
-  - Bar chart target vs realisasi Modal Abadi + (opsional) chart nilai CSR (boleh digabung atau dipisah)
-  - Bar chart investasi Khidmah Connect (3 modul vs 11 modul)
-  - (Opsional) Bar chart perbandingan angka acuan per kelompok program
+## Aturan isi
 
-## Penutup
+1. Gunakan judul slide yang jelas dan formal.
+2. Jika ada angka, tampilkan bersama konteks singkatnya.
+3. Boleh gunakan tabel ringkas, tetapi jangan menjejalkan tabel mentah yang panjang.
+4. Jika satu slide berisi angka pembanding, gunakan chart sederhana.
+5. Tulis evaluasi QRIS dengan redaksi netral dan jujur.
+6. Bedakan jelas antara program yang **sudah berjalan** dan program yang **diproyeksikan**.
 
-- Akhiri dengan penutup yang human: apresiasi, mohon doa/masukan, dan ajakan sinergi yang rendah hati (bukan promosi)
+## Aturan visual
 
-## Hal-hal yang TIDAK BOLEH
+1. Tetap gunakan visual yang rapi dan sopan.
+2. Gunakan foto/gambar lokal saat relevan.
+3. Untuk landasan dawuh, gunakan penanda **[GAMBAR KH. ACHMAD ASRORI]** dan sediakan ruang untuk penambahan manual.
+4. Hindari layout yang terlalu ramai.
 
-- Jangan buat slide yang terlalu ringkas — ini detailed deck, konten harus cukup untuk dibaca mandiri
-- Jangan gunakan jargon bisnis berlebihan
-- Jangan abaikan konteks spiritual dan penghormatan almarhum
-- Jangan tambahkan informasi yang tidak ada di sumber referensi
-- Jangan gunakan pie chart jika data bukan bagian dari satu total yang sama
+## Hal-hal yang wajib muncul
 
-## Tone & Nuansa
+- pengantar singkat bahwa LPJ disampaikan oleh Ketua Umum sebagai kelanjutan amanah almarhum Ketua Bidang
+- kutipan dawuh Hadrotussyaikh RA lebih lengkap daripada versi presenter
+- dasar ART pasal 48 poin 3
+- empat poin visi besar
+- penjelasan trial and error sebagai fase membangun sistem
+- PT Dujaj Berkah Lestari: permodalan, infrastruktur, kontribusi
+- Sarung Gloyor: branding, launching, skema bisnis, target awal
+- Modal Abadi dan pengalihan dana ke PPOB
+- CSR perusahaan
+- evaluasi pemanfaatan QRIS
+- PPOB sebagai 3 modul awal
+- seluruh agenda proyeksi 2026-2029
+- Khidmah Connect dan investasi digital
+- kesimpulan fondasi organisasi
+- 3 tantangan utama
 
-- Akuntabel, dokumentatif, profesional, hangat, dan rendah hati
-- Tapi lebih informatif dan dokumentatif — cocok sebagai bahan bacaan
-- Setiap slide harus bisa dipahami tanpa penjelasan lisan
+## Hal-hal yang tidak boleh dilakukan
 
-## Perbedaan dari Presenter Deck
+- jangan menambah data warna/motif/detail yang tidak tertulis di sumber final
+- jangan mengubah LPJ menjadi brosur promosi
+- jangan menghapus hambatan yang ada di naskah
+- jangan gunakan tone terlalu keras, defensif, atau terlalu korporat
 
-| Aspek | Presenter | Detailed |
-|-------|-----------|----------|
-| Teks per slide | Ringkas, poin | Lengkap, naratif |
-| Jumlah slide | 22-25 | 22-26 |
-| Penggunaan | Presentasi lisan | Dokumen mandiri |
-| Angka/data | Highlight utama | Detail lengkap |
+## Tone yang diinginkan
+
+- dokumentatif
+- akuntabel
+- spiritual
+- hangat
+- rendah hati
+
+## Catatan penting tentang revisi
+
+NotebookLM tidak ideal untuk perubahan struktur besar melalui flow revisi. Jadi hasil generate pertama harus sudah cukup matang secara struktur. Gunakan prompt revisi nanti hanya untuk koreksi fokus, pengurangan kepadatan, atau perbaikan wording per slide.

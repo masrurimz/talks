@@ -1,97 +1,103 @@
-# Struktur Presentasi: Laporan Bidang Dana dan Usaha
+# Arahan Struktur Presentasi untuk NotebookLM
 
-## Narrative Arc
+## Tujuan deck
 
-Presentasi mengikuti alur **"Fondasi → Bukti → Proyeksi Tindak Lanjut"**:
+Buat deck laporan pertanggungjawaban Bidang Dana dan Usaha Pengurus Pusat Jama'ah Al Khidmah untuk MUNAS 2026.
 
-1. **Pembukaan (Spiritual Foundation)** — Dimulai dari landasan dawuh Hadrotusyaikh RA, bukan dari angka-angka. Ini mengingatkan audiens bahwa usaha ekonomi ini BAGIAN dari perjuangan spiritual, bukan sekadar bisnis.
+Deck harus terasa sebagai **amanah pertanggungjawaban**: dimulai dari landasan spiritual dan dasar organisasi, lalu menunjukkan capaian nyata 2022-2026, kemudian menutup dengan arah program 2026-2029 yang konkret, realistis, dan mengajak sinergi.
 
-2. **Laporan Kinerja (Evidence)** — Apa yang sudah dicapai, dengan data dan bukti nyata. Di sini masuk angka-angka, gambar, dan hasil konkret.
+## Fokus deck
 
-3. **Proyeksi Masa Depan (Vision)** — Ke mana arahnya, dengan program-program yang konkret dan actionable.
+Fokus terbesar harus pada:
+1. landasan utama dari dawuh Hadrotussyaikh RA dan dasar ART;
+2. bukti ikhtiar dan capaian nyata 2022-2026;
+3. pembacaan jujur atas hambatan dan evaluasi;
+4. proyeksi program kerja 2026-2029 yang actionable;
+5. ajakan partisipasi PW/PD/PC dalam ekosistem usaha jama'ah.
 
-4. **Penutup (Tantangan & Ajakan)** — Jujur tentang hambatan, tapi diakhiri dengan ajakan kolaborasi dan menghormati jasa almarhum.
+## Proporsi isi yang diinginkan
 
-## Bagian-Bagian Utama
+- 15% pembukaan: penghormatan, dawuh, ART, visi besar.
+- 40% laporan kinerja 2022-2026.
+- 30% proyeksi program kerja 2026-2029.
+- 15% kesimpulan, tantangan, dan ajakan.
 
-### BAGIAN 1: Pembukaan & Landasan [Wajib]
-- Judul laporan & identitas
-- Dawuh Hadrotusyaikh RA (metafora burung dengan dua sayap)
-- Dasar ART (keuangan dari usaha yang halal)
-- Visi besar organisasi
+## Durasi target
 
-### BAGIAN 2: Laporan Kinerja 2022-2026 [Wajib]
-- Konteks: kebutuhan dana meningkat, sumber utama masih donasi
-- Pencapaian Bidang Dana & Usaha:
-  - **Kemandirian Kewirausahaan**: PT DBL (peternakan ayam), Sarung Gloyor Ndalem Al Khidmah
-  - **Sinergi Kemitraan Strategis**: Modal Abadi, CSR Perusahaan
-  - **Transformasi Digital**: QRIS, PPOB
-- Highlight angka-angka penting
+- Presenter deck: sekitar **25 menit**.
+- Detailed deck: dapat dipresentasikan **25-30 menit** atau dibaca mandiri.
 
-### BAGIAN 3: Proyeksi 2026-2029 [Wajib]
-- Tagline: "Membangun Ekosistem Mandiri Al Khidmah"
-- Program-program:
-  - Forum Pengusaha Nasional
-  - Akselerasi Kemitraan
-  - Ekspansi PT DBL
-  - Optimalisasi Sarung Gloyor
-  - Budidaya Lele Jama'ah
-  - Super Apps Khidmah Connect
+## Judul yang diinginkan
 
-### BAGIAN 4: Kesimpulan & Tantangan [Wajib]
-- Kesimpulan: fondasi sudah terbentuk, siap diakselerasi
-- 3 tantangan utama
-- Ajakan partisipasi
-- Penghormatan almarhum Ketua Bidang
+Judul utama harus tetap lurus dengan naskah final:
 
-## Transisi Kunci
+**Laporan Pertanggungjawaban Bidang Dana dan Usaha**
 
-| Dari | Ke | Transisi |
-|------|-----|----------|
-| Landasan spiritual | Laporan kinerja | "Dari landasan ini, apa yang sudah kita wujudkan?" |
-| PT DBL | Sarung Gloyor | Dari kemandirian usaha ke identitas & syiar |
-| Laporan kinerja | Proyeksi | "Fondasi sudah terbentuk, sekarang saatnya akselerasi" |
-| Proyeksi | Tantangan | "Namun tantangan nyata dan harus kita jawab bersama" |
-| Tantangan | Penutup | Ajakan kolaborasi + penghormatan almarhum |
+Subjudul atau penajaman bisa memakai:
 
-## Batasan Konten
+**Masa Khidmat 2022-2026 • Menuju Ekosistem Mandiri Al Khidmah 2026-2029**
 
-### YANG MASUK
-- Angka-angka konkret dari laporan (Rp 2,8M, 5% dividen, Rp 96Jt, dll)
-- Gambar/foto pendukung (kandang, sarung, kolam lele, PPOB)
-- Grafik ringkas untuk data numerik utama (modal vs dividen, target vs realisasi, investasi bertahap)
-- Program-program dengan detail yang cukup untuk dipahami
-- Landasan spiritual yang RELEVAN (bukan ceramah panjang)
+## Struktur narasi yang diinginkan
 
-### Pedoman Visual Data
-- Gunakan aset gambar dari `sources/references/images/`
-- Prioritaskan chart sederhana (bar/line) untuk mempercepat pemahaman angka
-- Jangan tampilkan tabel panjang tanpa visual pendamping
+Susun deck dengan alur:
 
-### YANG TIDAK MASUK
-- Detail teknis operasional yang tidak relevan untuk audiens umum
-- Narasi kegagalan yang terlalu detail (cukup diakui sebagai hambatan)
-- Konten yang tidak ada di laporan resmi
-- Jargon bisnis berlebihan yang tidak dipahami jama'ah umum
+1. **Pembuka**: judul, konteks MUNAS, dan penghormatan singkat kepada almarhum Pak Yaumi Azhar.
+2. **Landasan utama**: dawuh Hadrotussyaikh RA tentang dua sayap.
+3. **Dasar organisasi**: ART sebagai legitimasi usaha organisasi.
+4. **Visi besar**: hubungan antara syiar, pemberdayaan ekonomi, dan penguatan digitalisasi.
+5. **Pengantar LPJ 2022-2026**: kebutuhan dana meningkat, donasi belum cukup, perlunya sumber berkelanjutan.
+6. **Kinerja pilar 1 — Kemandirian kewirausahaan**: PT Dujaj Berkah Lestari dan Sarung Tenun Gloyor.
+7. **Kinerja pilar 2 — Sinergi kemitraan strategis**: Modal Abadi dan CSR perusahaan.
+8. **Kinerja pilar 3 — Transformasi digital**: QRIS, evaluasi jimpitan, dan PPOB.
+9. **Transisi**: fondasi telah terbentuk, kini saatnya akselerasi.
+10. **Proyeksi 2026-2029**: Forum Pengusaha Nasional, kemitraan, ekspansi PT, optimalisasi sarung, budidaya lele, Khidmah Connect.
+11. **Penutup**: kesimpulan LPJ, 3 tantangan utama, dan ajakan sinergi.
 
-## Timing (Estimasi)
+## Aturan isi slide
 
-### Presenter Deck
+- Satu slide, satu gagasan utama.
+- Angka harus tetap sama dengan sumber DOCX final.
+- Jangan mengubah redaksi kutipan dawuh dan dasar ART secara bebas.
+- Capaian dan rencana harus dipisahkan jelas.
+- Kekurangan atau hambatan harus ditulis jujur, namun tetap diarahkan ke pembelajaran dan perbaikan.
+- Gunakan bahasa yang akrab bagi audiens jama'ah, bukan bahasa korporat yang terlalu dingin.
 
-| Bagian | Durasi | Slide Est. |
-|--------|--------|------------|
-| Pembukaan & Landasan | 5 menit | 3-4 slide |
-| Laporan Kinerja | 10 menit | 8-10 slide |
-| Proyeksi 2026-2029 | 8 menit | 6-8 slide |
-| Kesimpulan & Tantangan | 3 menit | 2-3 slide |
-| **Total** | **±25 menit** | **±22-25 slide** |
+## Aturan nada
 
-### Detailed Deck
+- Khidmat dan menghormati jasa almarhum.
+- Akuntabel, tidak defensif.
+- Strategis dan optimis, tetapi tidak berlebihan.
+- Rendah hati dan mengajak gotong royong.
+- Tegas bahwa unit usaha adalah bagian dari perjuangan syiar, bukan tujuan yang berdiri sendiri.
 
-| Bagian | Durasi | Slide Est. |
-|--------|--------|------------|
-| Pembukaan & Landasan | 6 menit | 4-5 slide |
-| Laporan Kinerja | 12 menit | 9-11 slide |
-| Proyeksi 2026-2029 | 8 menit | 6-7 slide |
-| Kesimpulan & Tantangan | 3 menit | 2-3 slide |
-| **Total** | **±25-30 menit** | **±22-26 slide** |
+## Aturan visual
+
+- Gunakan visual yang sederhana, bersih, dan mudah dibaca.
+- Prioritaskan bar chart untuk angka pembanding utama.
+- Gunakan gambar lokal di `sources/references/images/` bila relevan.
+- Foto KH. Achmad Asrori Al-Ishaqi RA cukup diberi penanda **[GAMBAR KH. ACHMAD ASRORI]** agar ditambahkan manual setelah generate.
+- Hindari pie chart untuk angka yang bukan bagian dari satu total yang sama.
+
+## Penutup yang diinginkan
+
+Penutup deck harus:
+- menegaskan bahwa masa khidmat 2022-2026 adalah fase peletakan fondasi;
+- mengakui tantangan dengan jujur;
+- mengajak PW/PD/PC ikut menjadi bagian dari ekosistem usaha dan digital jama'ah;
+- tetap menghadirkan penghormatan kepada almarhum Ketua Bidang secara proporsional.
+
+## Batasan konten
+
+### Yang masuk
+- dawuh Hadrotussyaikh RA;
+- dasar ART;
+- visi besar Hadrotussyaikh RA;
+- seluruh data LPJ dan proyeksi yang tertulis di DOCX final;
+- evaluasi QRIS/jimpitan secara netral;
+- angka investasi, margin, target, dan tantangan utama.
+
+### Yang tidak masuk
+- klaim keberhasilan di luar naskah final;
+- detail operasional terlalu teknis yang tidak menolong audiens umum;
+- perluasan konteks organisasi yang membuat fokus LPJ kabur;
+- jargon startup/venture yang tidak relevan dengan Jama'ah Al Khidmah.

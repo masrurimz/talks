@@ -1,333 +1,221 @@
-# Outline Detailed (LPJ): Bidang Dana dan Usaha — MUNAS 2026
+# Outline Detailed — Laporan Pertanggungjawaban Bidang Dana dan Usaha
 
-*Detailed-style berorientasi LPJ: fokus pertanggungjawaban (apa yang dikerjakan dan hasilnya) sesuai naskah sumber, lalu proyeksi program kerja.*
-
----
-
-## SLIDE 1 — Judul Utama [Wajib]
-**LAPORAN PERTANGGUNGJAWABAN**
-**BIDANG DANA DAN USAHA**
-Pengurus Pusat Jama'ah Al Khidmah
-Masa Khidmat 2022-2026
-
-*In memoriam (kecil):* Ketua Bidang Dana dan Usaha, **Pak Yaumi Azhar (Almarhum)**
-
-MUNAS Jama'ah Al Khidmah
-*Konteks penyampaian MUNAS:* 24-25 April 2026 | Hotel Royal Orchid, Batu Malang
-
-*Visual:* Logo Al Khidmah + branding MUNAS, nuansa hijau-emas
+Outline ini untuk deck detailed-style: tetap presentable, tetapi cukup lengkap untuk dibaca mandiri sebagai dokumen pendukung LPJ.
 
 ---
 
-## SLIDE 2 — Landasan Utama: Dawuh Hadrotusyaikh RA [Wajib]
-**Landasan Dawuh Hadrotusyaikh RA**
-
-Hadrotussyaikh RA ingin menghaturkan satu pemikiran dan saran serta harapan kepada para jama'atina "Jama'ah Al Khidmah" yang mulia dan yang berbahagia. Dalam kita meniti dan melangkah menjalani hidup dan kehidupan ini, tentu tidak bisa lepas dari tuntutan untuk memenuhi segala perangkat kebutuhan hidup, dan begitu pula, dalam kita menjalankan roda perjuangan dan segala kegiatan "Jama'ah Al Khidmah" ini. Tentu memerlukan kesiapan dan dana yang banyak dan besar untuk meraih kesuksesan yang prima, lebih-lebih yang sempurna.
-
-> *"Di sini kita ibarat seekor burung yang ingin terbang tinggi, kita kembangkan dan gerakkan kedua sayap ini, satu sayap untuk kesejahteraan dan kemakmuran keluarga dan lingkungan sekitarnya, dan sayap yang satu lagi untuk mengabdi dan berkhidmah kepada Allah SWT., dengan memenuhi zakat, berinfaq, bershodaqoh, dan memberi bantuan dan pertolongan".*
->
-> *Alangkah baik dan mulianya, bila kedua sayap ini, bisa dikembangkan dan digerakkan bersama-sama antara Jama'atina "Jama'ah Al Khidmah" dan para mu'taqidin wal muhibbin, lebih-lebih bila bisa terbentuk dalam satu wadah dan sarana, seperti koperasi "Al Khidmah" atau "Al Wava", dan sebagainya.*
-
-Ringkasan makna:
-- **Sayap Kiri:** Kesejahteraan & kemakmuran keluarga dan lingkungan
-- **Sayap Kanan:** Mengabdi & berkhidmah kepada Allah SWT — zakat, infaq, shodaqoh, bantuan & pertolongan
-
-Alangkah baik dan mulianya bila kedua sayap ini bisa dikembangkan dan digerakkan bersama-sama, lebih-lebih bila bisa terbentuk dalam satu wadah dan sarana.
-
-*Visual:* [GAMBAR KH. ACHMAD ASRORI] — Foto KH. Achmad Asrori Al-Ishaqi RA; sediakan ruang di slide, akan ditambahkan manual setelah generate
+## Slide 1: Judul Utama [Wajib]
+- **Judul**: Laporan Pertanggungjawaban Bidang Dana dan Usaha
+- **Subjudul**: Pengurus Pusat Jama'ah Al Khidmah — Masa Khidmat 2022-2026
+- **In memoriam kecil**: Pak Yaumi Azhar (Almarhum)
+- **Konteks**: MUNAS 24-25 April 2026, Royal Orchid Garden Hotel, Batu Malang
 
 ---
 
-## SLIDE 3 — Dasar AD/ART [Wajib]
-**Landasan Organisasi**
-
-**Aturan Anggaran Rumah Tangga (ART)**
-Pasal BAB XVI (KEUANGAN), Pasal 48 poin 3:
-"Keuangan Jama'ah Al Khidmah diperoleh dari usaha-usaha lain yang tidak bertentangan dengan AD ART dan perundangan yang berlaku."
+## Slide 2: Pengantar Amanah [Wajib]
+- LPJ ini disampaikan oleh Ketua Umum PP Jama'ah Al Khidmah
+- Disusun sebagai bentuk pertanggungjawaban atas ikhtiar 2022-2026
+- Diteruskan dengan semangat menghormati jasa almarhum Ketua Bidang
 
 ---
 
-## SLIDE 4 — Visi Besar [Wajib]
-**Mewujudkan Visi Besar Hadrotusyaikh RA**
-
-1. Menyelamatkan sebanyak-banyaknya orang selamat di dunia & akhirat melalui pintu majlis dzikir
-2. Mewujudkan keluarga, masyarakat, pemimpin yang Sholeh-Sholihah
-3. Mewujudkan dawuh bahwa perjuangan memerlukan kesiapan dan dana yang besar
-4. Mendukung pemberdayaan ekonomi kewirausahaan & penguatan digitalisasi
-
-*Visual:* 4 poin dengan ikon visual masing-masing
+## Slide 3: Dawuh Hadrotussyaikh RA [Wajib]
+- Cantumkan kutipan lengkap landasan utama dari naskah final
+- Jelaskan makna dua sayap: kesejahteraan dan khidmah
+- **Visual**: [GAMBAR KH. ACHMAD ASRORI]
 
 ---
 
-## SLIDE 5 — Pengantar Laporan Kinerja 2022–2026 [Wajib]
-**Laporan Kinerja Bidang Dana dan Usaha (2022–2026)**
-
-- Seiring berkembangnya kegiatan Jama'ah Al Khidmah, kebutuhan pendanaan semakin meningkat
-- Sumber utama masih: Khidmah/Donasi jama'ah
-- Diperlukan ikhtiar sumber pemasukan yang berkelanjutan
-- Dalam periode 2022–2026 dilakukan berbagai upaya (trial and error) sebagai langkah awal membangun sistem
-
-*Visual:* 1 slide ikhtisar angka kunci (ambil dari `sources/references/data-chart.md`)
+## Slide 4: Dasar ART [Wajib]
+- BAB XVI Keuangan, Pasal 48 poin 3
+- Tegaskan bahwa usaha organisasi memiliki dasar formal dalam ART
 
 ---
 
-## SLIDE 6 — PT DBL: Permodalan dan Infrastruktur [Wajib]
-**PT Dujaj Berkah Lestari — Peternakan Ayam**
+## Slide 5: Visi Besar Hadrotussyaikh RA [Wajib]
+- 4 poin visi besar dari naskah final
+- Hubungkan ekonomi, syiar, digitalisasi, dan penguatan organisasi
 
-**Permodalan:**
-- Didirikan dengan modal kolektif Rp 2,8 Miliar (280 saham)
+---
 
-**Infrastruktur:**
+## Slide 6: Pengantar Kinerja 2022-2026 [Wajib]
+- Kebutuhan pendanaan meningkat
+- Donasi jama'ah masih menjadi sumber utama
+- Ikhtiar 2022-2026 dilakukan melalui trial and error membangun sistem
+
+---
+
+## Slide 7: Ikhtisar 3 Pilar Kinerja [Wajib]
+- Kemandirian kewirausahaan
+- Sinergi kemitraan strategis
+- Transformasi digital
+- **Visual**: chart per pilar
+
+---
+
+## Slide 8: PT Dujaj Berkah Lestari — Permodalan dan Infrastruktur [Wajib]
+- Modal kolektif Rp 2,8 miliar (280 saham)
 - Lahan 1 hektar
-- 2 kandang tingkat (ukuran 20x100m)
+- 2 kandang tingkat ukuran 20x100m
 - Dikelola secara profesional
 
-*Visual:* Foto kandang (`sources/references/images/pt-dbl-kandang.jpg`) + bar chart modal PT DBL (Rp2,8M)
+---
+
+## Slide 9: PT Dujaj Berkah Lestari — Kontribusi [Wajib]
+- Dividen untuk PP: 5%
+- Dana terkumpul ± Rp 96 juta
+- Jelaskan makna kontribusi ini bagi perjuangan organisasi
 
 ---
 
-## SLIDE 7 — PT DBL: Kontribusi bagi Organisasi [Wajib]
-**Kontribusi PT DBL untuk Organisasi**
-
-- Berdasarkan kesepakatan RUPS: **5% Dividen** dialokasikan untuk perjuangan PP Al Khidmah
-- Hingga akhir periode: terkumpul ±**Rp 96 Juta**
-- Dikelola secara profesional dengan pengawasan pemegang saham
-
-*Visual:* Bar chart kontribusi PT DBL (Modal Rp2,8M vs Dividen Rp96Jt)
+## Slide 10: Sarung Tenun Gloyor — Branding dan Launching [Wajib]
+- Launching pada MUNAS 24-25 April 2026
+- Branding "NDALEM AL KHIDMAH"
+- Gus Vaiq sebagai Brand Ambassador
+- Dipakai perdana pada Malam 27 Ramadhan
 
 ---
 
-## SLIDE 8 — Sarung Tenun Gloyor: Launching dan Branding [Wajib]
-**Sarung Tenun Gloyor Ndalem Al Khidmah**
-Peluncuran pada MUNAS 24-25 April 2026
-
-**Branding:**
-- Merek: **"NDALEM AL KHIDMAH"** — diberikan oleh Gus Vaiq mewakili Keluarga Ndalem
-- Brand Ambassador: **Gus Vaiq** — sudah memakai perdana pada Malam 27 Ramadhan di pondok
-
-*Visual:* Foto motif sarung (`sources/references/images/sarung-motif1-6warna.jpg`) atau foto produk yang paling representatif
+## Slide 11: Sarung Tenun Gloyor — Skema Bisnis [Wajib]
+- Harga produksi ± Rp 65.000
+- Harga jual Rp 85.000-90.000
+- Margin Rp 20.000-25.000
+- Royalti Rp 2.000/pcs sudah termasuk dalam harga produksi
+- Target awal pre-order 6.000 pcs
 
 ---
 
-## SLIDE 9 — Sarung Tenun Gloyor: Skema Bisnis dan Target Awal [Wajib]
-**Model Bisnis Sarung Gloyor**
-
-| Komponen | Nilai |
-|----------|-------|
-| Harga produksi | ±Rp 65.000 (termasuk Royalti Kas PP, Ndalem & Pemodal Rp 2.000/pcs) |
-| Harga jual ke End User | Rp 85.000 - Rp 90.000 |
-| Margin | ±Rp 20.000 - Rp 25.000 (untuk PW/PD/PC sesuai kesepakatan) |
-| Target Pre-order | **6.000 pcs** dengan 3 motif eksklusif |
-
-*Visual:* Bar chart perbandingan harga produksi, harga jual, dan margin
+## Slide 12: Sarung Tenun Gloyor — Identitas Produk [Opsional]
+- 3 motif eksklusif
+- Motif 1: 6 warna, paling disukai Gus Vaiq
+ - Tekankan bahwa tiga motif ini memperkuat positioning produk pada fase launching
 
 ---
 
-## SLIDE 10 — Sarung Tenun Gloyor: Tiga Motif Eksklusif [Opsional]
-**Koleksi 3 Motif Eksklusif**
-
-**Motif 1** (BB / 11051-4): 6 varian warna — Paling disukai Gus Vaiq
-**Motif 2** (EM-AM): 5 varian warna — Hitam, Navy, Hijau Botol, Cream, Putih
-**Motif 3** (AMD / 11071-4): 6 varian warna — Hitam, Cream, Navy, Coklat, Ijo, Abu
-
-Semua motif bertuliskan **"NDALEM AL KHIDMAH"**
-
-*Visual:* 3 gambar motif berdampingan (`sources/references/images/sarung-motif1-6warna.jpg`, `sources/references/images/sarung-motif2-5warna.jpg`, `sources/references/images/sarung-motif3-6warna.jpg`)
+## Slide 13: Investasi Modal Abadi [Wajib]
+- Target Rp 1,5 miliar
+- Terkumpul Rp 25 juta
+- Dana dialihkan ke pengembangan PPOB
+- Jelaskan ini sebagai evaluasi yang jujur, bukan kegagalan yang ditutupi
 
 ---
 
-## SLIDE 11 — Investasi Modal Abadi [Wajib]
-**Investasi Modal Abadi**
-
-- Upaya pengumpulan modal abadi untuk saham di perusahaan jamaah
-- Target: **Rp 1,5 Miliar**
-- Terkumpul: **Rp 25 Juta** (belum mencapai target)
-- Penanganan: Dana dialihkan secara produktif untuk pengembangan infrastruktur digital (PPOB)
-
-*Visual:* Bar chart target vs realisasi Modal Abadi
+## Slide 14: Kemitraan CSR Perusahaan [Wajib]
+- 3 perusahaan milik jama'ah
+- Dana > Rp 200 juta
+- Digunakan untuk kemaslahatan majlis
 
 ---
 
-## SLIDE 12 — Kemitraan CSR Perusahaan [Wajib]
-**Kemitraan CSR Perusahaan**
-
-- Berhasil menjalin sinergi dengan **3 perusahaan milik jamaah**
-- Melalui partisipasi doa dalam kegiatan syukuran perusahaan
-- Dana kemitraan terkumpul: **>Rp 200 Juta**
-- Diserap untuk: **kemaslahatan majlis**
-
-*Visual:* Bar/column chart nilai CSR (>Rp200Jt) + anotasi 3 perusahaan
+## Slide 15: Pemanfaatan QRIS — Evaluasi [Wajib]
+- Dipakai untuk donasi bencana dan pembangunan
+- Efektivitas belum optimal karena kebiasaan transfer manual
+- Irisan jimpitan dengan UPZ membuat jama'ah bingung
+- Perlunya sinergi antar-lembaga
 
 ---
 
-## SLIDE 13 — Evaluasi Pemanfaatan QRIS [Wajib]
-**Evaluasi Pemanfaatan QRIS**
-
-- QRIS dicoba/dimanfaatkan untuk donasi bencana dan pembangunan
-- Efektivitas perlu dievaluasi karena sebagian jamaah masih cenderung menggunakan transfer manual
-- Dalam periode ini, program QRIS direncanakan sebagai pengganti **JIMPITAN** konvensional; pada saat yang sama diluncurkan program **UPZ** yang juga memiliki omplong jimpitan serupa, sehingga implementasinya kurang optimal
-- Catatan perbaikan: perlunya sinergi antar-lembaga dan penataan dalam satu sistem E-Khidmah sesuai kebutuhan, peruntukan, dan fungsi masing-masing
+## Slide 16: Pengembangan PPOB [Wajib]
+- Investasi 3 modul awal Rp 128,5 juta
+- Modul: PPOB, Manajemen Donasi, Marketplace
+- PPOB sebagai bagian fondasi ekosistem digital jama'ah
 
 ---
 
-## SLIDE 14 — Pengembangan PPOB [Wajib]
-**Pengembangan PPOB (Payment Point Online Bank)**
-
-- Alokasi investasi: **Rp 128,5 Juta**
-- 3 modul: PPOB, Manajemen Donasi, Marketplace
-- Membangun ekosistem digital untuk jama'ah
-
-*Visual:* Screenshot menu PPOB (`sources/references/images/ppob-menu.png`) — 12 layanan (Isi Pulsa, Paket Data, Token PLN, PDAM, BPJS, dll)
+## Slide 17: Arah 2026-2029 [Wajib]
+- Tagline: Membangun Ekosistem Mandiri Al Khidmah
+- Pengelolaan harus terstruktur, profesional, berkelanjutan
+- Libatkan SDM jama'ah yang kompeten di bidang usaha
 
 ---
 
-## SLIDE 15 — Proyeksi Program Kerja 2026–2029 [Wajib]
-**Proyeksi Program Kerja (2026–2029)**
-
-**MEMBANGUN EKOSISTEM MANDIRI AL KHIDMAH**
-
-Ke depan, pengembangan kewirausahaan diharapkan dapat dikelola secara terstruktur, profesional, dan berkelanjutan dengan melibatkan SDM jama'ah yang kompeten.
-
----
-
-## SLIDE 16 — Forum Pengusaha Nasional Al Khidmah [Wajib]
-**Pembentukan Forum Pengusaha Nasional Al Khidmah**
-
-Wadah (one stop) untuk pengusaha jama'ah dengan fungsi:
-
-- **Networking** — Ruang kolaborasi & pertukaran ide bisnis antar pengusaha Al Khidmah
-- **Spiritual Support** — Pendampingan doa bagi keberkahan usaha
-- **Filantropi Terstruktur** — Penyaluran zakat mal, CSR, investasi sosial (Haul Akbar, Al Khidmah Center)
+## Slide 18: Forum Pengusaha Nasional Al Khidmah [Wajib]
+- One stop solution untuk pengusaha jama'ah
+- Networking
+- Spiritual support
+- Filantropi terstruktur
 
 ---
 
-## SLIDE 17 — Akselerasi Kemitraan Kewirausahaan [Wajib]
-**Akselerasi Kemitraan Kewirausahaan**
-
-- Membuka kerjasama bagi para pelaku usaha untuk menawarkan kolaborasi kemitraan kewirausahaan
-- Skema bagi hasil dapat dibicarakan sesuai kebutuhan dan model kerjasama
-
----
-
-## SLIDE 18 — Ekspansi PT Dujaj Berkah Lestari [Wajib]
-**Ekspansi PT Dujaj Berkah Lestari**
-
-- Kinerja positif 2022-2026
-- RUPS Maret 2026: Pembangunan **2 kandang tambahan**
-- Skema: Pembiayaan pihak ketiga (investor)
-- Total investasi: **Rp 2,8 Miliar**
-- Target dividen: **5%** untuk PP Al Khidmah
-- Strategis: Memperkuat kemandirian ekonomi jama'ah berkelanjutan
-
-*Visual:* Foto kandang + diagram ekspansi
+## Slide 19: Akselerasi Kemitraan Kewirausahaan [Wajib]
+- Buka ruang kerjasama pelaku usaha
+- Kolaborasi dengan skema bagi hasil yang dibicarakan bersama
+- Tekankan fleksibilitas model kerjasama
 
 ---
 
-## SLIDE 19 — Optimalisasi Sarung Tenun Gloyor [Wajib]
-**Optimalisasi Sarung Tenun Gloyor Ndalem Al Khidmah**
-
-- Tidak hanya sebagai produk, tapi juga **media syiar & pemberdayaan**
-- Memberdayakan PW/PD/PC sebagai agen distribusi → nasional & internasional
-- Menjadi identitas bersama dalam setiap kegiatan Al Khidmah
-- **Tagline**: *"Sarung Tenun Gloyor Ndalem Al Khidmah — Sarungnya Jama'ah Al Khidmah."*
+## Slide 20: Ekspansi PT Dujaj Berkah Lestari [Wajib]
+- Tambahan 2 kandang
+- Investasi sekitar Rp 2,8 miliar
+- Pembiayaan pihak ketiga / investor
+- Target dividen sekitar 5% untuk PP
 
 ---
 
-## SLIDE 20 — Budidaya Lele: Latar Belakang dan Target [Wajib]
-**Program Kewirausahaan Budidaya Lele Jama'ah**
+## Slide 21: Optimalisasi Sarung Gloyor [Wajib]
+- Sarung sebagai media syiar dan pemberdayaan
+- PW/PD/PC sebagai agen distribusi
+- Nasional hingga internasional
+- Tagline: Sarungnya Jama'ah Al Khidmah
 
-**Mengapa Lele?**
-- Relatif mudah dijalankan
+---
+
+## Slide 22: Program Budidaya Lele — Latar Belakang [Wajib]
+- Mudah dijalankan
 - Pasar luas
-- Perputaran modal cepat: ±3 bulan per siklus
-
-**Potensi Jama'ah:**
-- Banyak anggota punya lahan, tenaga, semangat usaha
-- Belum terorganisir dalam sistem terarah
-
-**Target:** Setiap PW/PD/PC memiliki minimal **3-10 kolam aktif**, sehingga dapat menciptakan cash flow rutin setiap 3 bulan
-
-*Visual:* Foto kolam lele (`sources/references/images/lele-kolam-padat.jpg`) atau aktivitas pakan (`sources/references/images/lele-pemberian-pakan.jpg`)
+- Perputaran modal cepat
+- Potensi jama'ah belum terorganisir optimal
 
 ---
 
-## SLIDE 21 — Budidaya Lele: Tahapan Implementasi [Wajib]
-**5 Tahapan Implementasi**
-
-1. **Pembentukan Kelompok Pembudidaya** di setiap wilayah
-2. **Pembuatan & Pengelolaan Kolam** secara terstandar
-3. **Pelatihan & Pendampingan** teknis (budidaya, manajemen, keuangan)
-4. **Pemasaran & Distribusi** hasil panen
-5. **Kontribusi** sebagian keuntungan untuk kas jama'ah
+## Slide 23: Program Budidaya Lele — Model Pelaksanaan [Wajib]
+- Target 3-10 kolam aktif per PW/PD/PC
+- Diameter kolam 5 meter
+- 10.000 ekor per kolam
+- Panen ± 1 ton
+- tampilkan 5 tahapan implementasi
 
 ---
 
-## SLIDE 22 — Khidmah Connect: Konsep dan Fungsi [Wajib]
-**Super Apps "Khidmah Connect" — Terintegrasi**
-
-Transformasi E-Khidmah menjadi platform tunggal:
-
-- Penciptaan model transaksi digital modern → timbal balik manfaat langsung
-- PPOB: pulsa, listrik, air, dll (disinergikan dengan Bidang Media & IT)
-- Bagi hasil: PP ↔ PW/PD/PC sesuai jenis transaksi
+## Slide 24: Khidmah Connect — Konsep [Wajib]
+- Transformasi E-Khidmah menjadi platform tunggal
+- manfaat langsung bagi jama'ah
+- sinergi dengan Bidang Media dan IT
+- bagi hasil PP ↔ PW/PD/PC sesuai transaksi
 
 ---
 
-## SLIDE 23 — Khidmah Connect: Biaya dan Arah Pengembangan [Wajib]
-**Investasi Digital Khidmah Connect**
-
-| Tahap | Modul | Biaya |
-|-------|-------|-------|
-| Awal | 3 modul (PPOB, Donasi, Marketplace) | **Rp 128.500.000** (6 termin) |
-| Penuh | 11 modul | ±**Rp 1.300.000.000** |
-
-Visi: **"The Next Generation of Al Khidmah"** — modern, terintegrasi, berkelanjutan
-
-*Visual:* Bar chart perbandingan investasi 3 modul vs 11 modul
+## Slide 25: Khidmah Connect — Investasi dan Arah Strategis [Wajib]
+- 3 modul awal: Rp 128.500.000 (6 termin)
+- 11 modul penuh: ± Rp 1,3 miliar
+- fungsi: info majlis, PPOB, marketplace/store, donasi digital
+- arah strategis: The Next Generation of Al Khidmah
 
 ---
 
-## SLIDE 24 — Kesimpulan LPJ 2022–2026 [Wajib]
-**Kesimpulan**
-
-Masa khidmat 2022-2026 merupakan **fase peletakan batu pertama (fondasi)** bagi kemandirian ekonomi organisasi.
-
-Meski hasil secara nominal belum mencapai angka maksimal, namun:
-- ✅ **PT DBL** — berjalan, dividen terkumpul
-- ✅ **Sarung Gloyor Ndalem Al Khidmah** — launching di MUNAS ini
-- ✅ **PPOB** — pengembangan infrastruktur digital disiapkan
-- ✅ **CSR** — >Rp 200 Juta untuk kemaslahatan
-
-**Instrumen usaha telah terbentuk dan siap diakselerasi.**
+## Slide 26: Kesimpulan LPJ [Wajib]
+- Masa khidmat 2022-2026 adalah fase peletakan fondasi
+- instrumen usaha telah terbentuk: PT, branding, digitalisasi
+- hasil belum maksimal secara nominal, tetapi arah sudah terbaca jelas
 
 ---
 
-## SLIDE 25 — Tantangan Utama [Wajib]
-**3 Tantangan Utama**
-
-1. 🎓 **Edukasi Jama'ah**
-   Menggeser pola pikir dari donatur pasif → pelaku ekonomi aktif dalam ekosistem digital organisasi
-
-2. 🤝 **Sinergi Antar Lembaga**
-   Koordinasi agar tidak terjadi tumpang tindih program (pelajaran dari irisan kanal penghimpunan pada periode ini)
-
-3. 👨‍💼 **SDM Profesional**
-   Dibutuhkan pengelola dengan kompetensi bisnis + ruh khidmah yang kuat, agar unit usaha tidak kehilangan jati diri nilai-nilai Al Khidmah
+## Slide 27: Tantangan Utama [Wajib]
+- Edukasi jama'ah
+- Sinergi antar-lembaga
+- SDM profesional dengan ruh khidmah
 
 ---
 
-## SLIDE 26 — Penutup: Apresiasi & Ajakan Sinergi [Opsional]
-**Penutup**
-
-- Terima kasih atas dukungan dan kepercayaan seluruh jama'ah dan struktur PW/PD/PC
-- Mohon doa dan masukan agar program-program ke depan berjalan lebih rapi, sinergis, dan amanah
-- Semoga ikhtiar ini menjadi bagian dari khidmah yang membawa kemaslahatan
-
-*Catatan penyampaian:* ajakan dibuat human dan rendah hati (bukan promosi/penjualan).
+## Slide 28: Penutup [Opsional]
+- Mohon doa, masukan, dan partisipasi
+- tekankan bahwa kelanjutan perjuangan memerlukan sinergi bersama
+- tutup dengan nada khidmat dan rendah hati
 
 ---
 
----
+## Catatan untuk NotebookLM
 
-**Total: 26 slide (wajib dominan, 2 opsional)**
-**Estimasi durasi: ±25-30 menit (LPJ detailed)**
+- Detailed deck harus bisa dibaca tanpa penjelasan lisan.
+- Tetap hindari teks terlalu padat dalam satu slide; lebih baik pecah bila perlu.
+- Jika perlu pemangkasan, slide opsional yang paling aman dipotong: Slide 12 dan Slide 28.

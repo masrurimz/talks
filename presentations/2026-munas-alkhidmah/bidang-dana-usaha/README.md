@@ -1,58 +1,81 @@
-# Laporan Bidang Dana dan Usaha — MUNAS Al Khidmah 2026
+# Laporan Pertanggungjawaban Bidang Dana dan Usaha — MUNAS Al Khidmah 2026
 
-Presentasi laporan pertanggungjawaban Bidang Dana dan Usaha PP Jama'ah Al Khidmah pada Musyawarah Nasional (MUNAS).
+Presentasi laporan pertanggungjawaban Bidang Dana dan Usaha Pengurus Pusat Jama'ah Al Khidmah untuk MUNAS 24-25 April 2026.
 
-## Event
+## Konteks
 
-| Aspek | Detail |
-|-------|--------|
-| Acara | MUNAS Jama'ah Al Khidmah |
-| Tanggal | 24-25 April 2026 |
-| Lokasi | Hotel Royal Orchid, Batu Malang |
+- **Acara**: Musyawarah Nasional (MUNAS) Jama'ah Al Khidmah
+- **Tanggal**: 24-25 April 2026
+- **Lokasi**: Royal Orchid Garden Hotel, Batu Malang
+- **Periode LPJ**: Masa Khidmat 2022-2026
+- **Arah proyeksi**: Masa Khidmat 2026-2029
+- **Ketua Bidang**: Pak Yaumi Azhar (Almarhum)
+- **Penyampai laporan**: Ketua Umum PP Jama'ah Al Khidmah
 
-## Pembicara
+## Prinsip Paket Sumber
 
-| Aspek | Detail |
-|-------|--------|
-| Bidang | Bidang Dana dan Usaha |
-| Ketua Bidang | Pak Yaumi Azhar (Almarhum) |
-| Pemateri | Diwakilkan oleh Ketua Umum PP Al Khidmah |
+- `sources/context/brief.md` dipertahankan sebagai pengarah tone, audiens, tujuan, dan konteks emosional.
+- File lain ditulis ulang berdasarkan dokumen final `DRAFT BIDANG DANA USAHA (1).docx`.
+- Presentasi mengikuti alur: **landasan → kinerja 2022-2026 → proyeksi 2026-2029 → kesimpulan & tantangan**.
+- Nada harus **spiritual, akuntabel, strategis, dan tetap rendah hati**.
 
-## Status
+## Struktur Folder
 
-| Tahap | Status |
-|-------|--------|
-| Sources | ✅ Selesai |
-| Prompts | ✅ Selesai |
-| NotebookLM | ⏳ Menunggu upload |
-| Output | ⏳ Menunggu |
+```text
+sources/
+├── context/
+│   ├── brief.md
+│   └── structure.md
+├── outlines/
+│   ├── presenter.md
+│   └── detailed.md
+└── references/
+    ├── laporan-akhir.md
+    ├── data-chart.md
+    └── images/
+prompts/
+├── generate-presenter.md
+├── generate-detailed.md
+└── revise.md
+output/
+```
 
-## Workflow
+## Workflow NotebookLM
 
-1. Unggah semua file di `sources/` ke NotebookLM
-2. Paste prompt dari `prompts/generate-presenter.md` untuk presenter deck
-3. Paste prompt dari `prompts/generate-detailed.md` untuk detailed deck
-4. Simpan hasil ke `output/`
-5. Jika perlu revisi, gunakan `prompts/revise.md`
+### 1. Upload ke NotebookLM
 
-## Gambar Pendukung
+Upload minimal:
+- `sources/context/brief.md`
+- `sources/context/structure.md`
+- `sources/outlines/presenter.md` atau `sources/outlines/detailed.md`
+- `sources/references/laporan-akhir.md`
+- `sources/references/data-chart.md`
+- gambar yang relevan di `sources/references/images/`
 
-Gambar sudah dipindahkan ke folder lokal presentasi agar ikut terunggah saat upload `sources/` ke NotebookLM:
+### 2. Generate
 
-- Folder aset gambar: `sources/references/images/`
+Gunakan prompt:
+- `prompts/generate-presenter.md` — deck presenter, ringkas, untuk penyampaian lisan
+- `prompts/generate-detailed.md` — deck lebih lengkap, dapat dibaca mandiri
+- `prompts/revise.md` — revisi ringan setelah generate
 
-| File | Path | Digunakan di |
-|------|------|-------------|
-| pt-dbl-kandang.jpg | `sources/references/images/pt-dbl-kandang.jpg` | Slide PT DBL |
-| sarung-motif1-6warna.jpg | `sources/references/images/sarung-motif1-6warna.jpg` | Slide Sarung Motif 1 |
-| sarung-motif2-5warna.jpg | `sources/references/images/sarung-motif2-5warna.jpg` | Slide Sarung Motif 2 |
-| sarung-motif3-6warna.jpg | `sources/references/images/sarung-motif3-6warna.jpg` | Slide Sarung Motif 3 |
-| lele-kolam-padat.jpg | `sources/references/images/lele-kolam-padat.jpg` | Slide Budidaya Lele |
-| lele-pemberian-pakan.jpg | `sources/references/images/lele-pemberian-pakan.jpg` | Slide Budidaya Lele |
-| ppob-menu.png | `sources/references/images/ppob-menu.png` | Slide PPOB/Khidmah Connect |
+### 3. Setelah Generate
 
-### Gambar yang ditambahkan manual setelah generate
+- Tambahkan manual foto **KH. Achmad Asrori Al-Ishaqi RA** pada slide landasan bila diperlukan.
+- Tinjau kembali akurasi angka agar tetap sesuai `sources/references/laporan-akhir.md`.
+- Gunakan revisi ringan untuk wording/layout; untuk perubahan struktur besar, generate ulang dari prompt utama.
 
-| File | Path | Dipakai untuk |
-|------|------|--------------|
-| kh-achmad-asrori-al-ishaqi.jpg | `sources/references/images/kh-achmad-asrori-al-ishaqi.jpg` | Foto KH. Achmad Asrori Al-Ishaqi RA untuk slide Dawuh dan Penutup — ditandai dengan **[GAMBAR KH. ACHMAD ASRORI]** di outline. Sediakan ruang di slide, tambahkan manual setelah generate. |
+## Aset Visual
+
+Folder `sources/references/images/` tetap dipakai sebagai inventaris visual lokal untuk:
+- kandang PT Dujaj Berkah Lestari
+- tiga motif sarung tenun gloyor
+- budidaya lele
+- menu PPOB
+- foto KH. Achmad Asrori Al-Ishaqi RA (tambahkan manual setelah generate)
+
+## Catatan Penting
+
+- Jangan menambah fakta baru di luar DOCX final.
+- Jangan mengubah capaian yang belum maksimal menjadi seolah-olah sudah berhasil penuh.
+- Presentasi ini adalah **LPJ**, bukan pitch deck bisnis murni.

@@ -1,35 +1,72 @@
-# Prompt NotebookLM: Revisi Slide Deck
+# Prompt Revisi Deck NotebookLM — Bidang Dana dan Usaha MUNAS 2026
 
-## Instruksi
+Gunakan prompt ini untuk **revisi ringan** setelah deck pertama selesai di-generate.
 
-Revisi slide deck laporan Bidang Dana dan Usaha berdasarkan feedback yang diberikan. Perbaiki sesuai catatan di bawah, dengan tetap mempertahankan alur narasi, tone, dan akurasi data.
+## Batas revisi
 
-## Catatan Revisi
+Gunakan prompt ini untuk:
+- memperjelas wording
+- merapikan fokus pesan per slide
+- mengurangi atau menambah sedikit detail di slide yang sudah ada
+- memperbaiki layout/visual yang terlalu padat
 
-*(Isi bagian ini dengan feedback spesifik saat akan melakukan revisi. Contoh:)*
+Jangan gunakan prompt ini untuk perubahan besar seperti:
+- menambah atau menghapus banyak slide
+- mengubah total alur deck
+- memindahkan blok besar dari capaian ke proyeksi atau sebaliknya
 
-- Slide X perlu ditambah/dihapus karena...
-- Angka Y perlu dikoreksi menjadi...
-- Tone di bagian Z kurang tepat, sebaiknya...
-- Visual di slide W perlu diganti dengan...
-- Urutan slide A dan B perlu ditukar karena...
+Jika perlu perubahan besar, **generate ulang** dari prompt utama.
 
-## Prinsip Revisi
+## Instruksi revisi
 
-1. **Akurasi data**: Semua angka harus sesuai dengan `sources/references/laporan-akhir.md`
-2. **Konsistensi**: Jangan mengubah tone atau alur narasi kecuali diminta
-3. **Penghormatan**: Tetap menjaga konteks penghormatan almarhum Pak Yaumi Azhar
-4. **Keseimbangan**: Jangan membuat revisi yang membuat slide terlalu padat atau terlalu kosong
-5. **Bahasa**: Tetap Bahasa Indonesia
+Revisi slide deck laporan Bidang Dana dan Usaha berdasarkan catatan berikut, dengan tetap menjaga:
+- akurasi data sesuai `sources/references/laporan-akhir.md`
+- konteks audiens dan tone sesuai `sources/context/brief.md`
+- alur sesuai `sources/outlines/presenter.md` atau `sources/outlines/detailed.md`
 
-## Referensi
+## Format catatan revisi
 
-- Gunakan `sources/references/laporan-akhir.md` sebagai sumber kebenaran untuk data
-- Gunakan `sources/context/brief.md` untuk konteks audiens dan tujuan
-- Gunakan `sources/outlines/presenter.md` atau `sources/outlines/detailed.md` sebagai acuan struktur
+Gunakan format seperti ini saat mengisi:
 
-## Format Output
+### Versi deck
+- Presenter / Detailed
 
-- Tentukan: versi mana yang direvisi (presenter / detailed)
-- Jelaskan: perubahan apa yang dilakukan di setiap slide
-- Pertahankan: slide yang tidak perlu diubah
+### Slide yang direvisi
+- Slide [nomor]: [masalah singkat]
+
+### Ubah menjadi
+- [instruksi revisi yang sangat spesifik]
+
+### Pertahankan
+- [hal yang tidak boleh berubah]
+
+### Hindari
+- [efek samping yang tidak diinginkan]
+
+## Contoh
+
+### Versi deck
+- Presenter
+
+### Slide yang direvisi
+- Slide 11: terlalu padat, pesan utama kurang terlihat
+
+### Ubah menjadi
+- ringkas isi menjadi 3 poin utama: target Modal Abadi, realisasi, dan dana CSR
+- tampilkan angka target Rp 1,5 miliar dan realisasi Rp 25 juta lebih dominan
+- jadikan CSR > Rp 200 juta sebagai callout terpisah
+
+### Pertahankan
+- tone tetap rendah hati
+- jangan ubah angka
+
+### Hindari
+- jangan menghapus penjelasan bahwa dana dialihkan ke PPOB
+
+## Prinsip tetap
+
+1. Jangan ubah fakta dari sumber.
+2. Jangan hilangkan konteks spiritual.
+3. Jangan hilangkan penghormatan kepada almarhum Pak Yaumi Azhar.
+4. Jangan mengubah hambatan menjadi klaim keberhasilan.
+5. Untuk slide landasan, pertahankan penanda **[GAMBAR KH. ACHMAD ASRORI]** bila foto belum ditambahkan manual.
