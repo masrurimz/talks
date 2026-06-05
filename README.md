@@ -84,6 +84,7 @@ AGENTS.md                               # AI assistant context
 | 2026-ramadhan-nuzulul-quran | digital-challenges | Draft |
 | 2026-rakerwil-alkhidmah-dki | rakerwil-pw-alkhidmah-dki | Draft |
 | 2026-rakerwil-alkhidmah-jateng | bidang-majlis | Draft |
+| 2026-rakerwil-alkhidmah-jateng | sop-standar-operating-prosedur | Draft |
 
 ## AI assistant context
 
