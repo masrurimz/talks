@@ -83,6 +83,7 @@ AGENTS.md                               # AI assistant context
 | 2026-halal-bihalal-alkhidmah-pt | pengembangan-pt | Draft |
 | 2026-ramadhan-nuzulul-quran | digital-challenges | Draft |
 | 2026-rakerwil-alkhidmah-dki | rakerwil-pw-alkhidmah-dki | Draft |
+| 2026-rakerwil-alkhidmah-jateng | bidang-majlis | Draft |
 
 ## AI assistant context
 
