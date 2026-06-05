@@ -40,17 +40,17 @@ sources/ → Upload ke NotebookLM → Paste prompts → Generate slides → Save
 bidang-majlis/
 ├── sources/
 │   ├── context/
-│   │   ├── brief.md                    — Identitas acara, speaker H. Syakroni S.Pd., audiens PD se-Jateng, tujuan
-│   │   └── structure.md                — Arc narasi + 8 sekuens section + batasan konten
+│   │   ├── brief.md                    — Identitas acara, speaker H. Syakroni S.Pd., audiens, tujuan, pesan kunci
+│   │   └── structure.md                — Arc narasi: "Dari Amanat ke Aksi" + 11 sekuens section
 │   ├── outlines/
-│   │   ├── presenter.md                — Outline 14–15 slide (ringkas, visual)
-│   │   └── detailed.md                 — Outline 15–18 slide (data-rich + tabel lengkap)
+│   │   ├── presenter.md                — Outline 12 slide (ringkas, visual, 1 ide per slide)
+│   │   └── detailed.md                 — Outline 16 slide (data-rich, tabel lengkap)
 │   └── references/
 │       ├── bidang-majlis-target-2026.md      — Clean, structured Markdown version of "Rakerwil 2026 Bidang Majlis" (primary data source)
 │       └── rundown-rakerwil-2026.md          — Clean schedule version of the Master Rundown (context for komisi & timing)
 ├── prompts/
-│   ├── generate-presenter.md           — Prompt untuk deck presenter (14–16 slide)
-│   ├── generate-detailed.md            — Prompt untuk deck detailed (data lengkap)
+│   ├── generate-presenter.md           — Prompt untuk deck presenter (12 slide, visual, arc narasi kuat)
+│   ├── generate-detailed.md            — Prompt untuk deck detailed (16 slide, data lengkap)
 │   └── revise.md                       — Prompt revisi
 ├── output/                             — Hasil NotebookLM (belum ada)
 └── README.md

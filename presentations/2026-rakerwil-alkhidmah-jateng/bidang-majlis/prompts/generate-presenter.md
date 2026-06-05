@@ -2,58 +2,58 @@
 
 ## Instruksi untuk NotebookLM
 
-Buatlah slide deck presentasi dengan gaya **presenter** (ringkas, visual, impactful) untuk **Bidang Majlis — Target Data Kegiatan Majlis Jawa Tengah 2026** dalam Rapat Kerja Wilayah (RAKERWIL) II Al Khidmah dan Ath Thoriqoh Jawa Tengah.
+Buatlah slide deck **presenter-style** (ringkas, visual, 1 ide per slide) untuk paparan **Bidang Pembinaan Majlis** di RAKERWIL II Al Khidmah dan Ath Thoriqoh Jawa Tengah 2026.
 
-### Format & Gaya
-- **Bahasa**: Bahasa Indonesia, formal dengan nuansa keagamaan khas Al Khidmah (jama'ah, majlis, haul, qiyamullail, istiqomah, amanat, dll.)
-- **Tone**: Transparan, mengajak, penuh harapan, kebersamaan
-- **Jumlah slide**: 14–16 slide
-- **Gaya presenter**: Satu ide utama per slide, teks sedikit, visual & angka besar dominan
-- **Target audiens**: Pengurus Daerah (PD), Korda, dan perwakilan jama'ah yang hadir di Rakerwil
+### Format
+- **Bahasa**: Indonesia formal, nuansa keagamaan
+- **Tone**: Transparan, mengajak, penuh harapan
+- **Slide**: **12 slide** (jangan lebih)
+- **Gaya**: 1 ide utama per slide, teks minimal, angka besar & bold, visual dominan
 
-### Sumber yang Harus Dibaca (Upload Semua ke NotebookLM)
-1. `brief.md` — Identitas acara, pembicara (H. Syakroni, S.Pd.), audiens, tujuan, fokus utama
-2. `structure.md` — Arc narasi: "Dari Amanat Munas ke Tanggung Jawab Daerah — Istiqomah Membangun Majlis Jawa Tengah"
-3. `presenter.md` — Outline slide-by-slide (ikuti struktur ini persis)
-4. `bidang-majlis-target-2026.md` — Dokumen utama target kegiatan (prioritas tertinggi — versi Markdown yang sudah dibersihkan dan diformat rapi)
-5. `rundown-rakerwil-2026.md` — Konteks acara dan posisi Bidang Pembinaan Majlis di dalam komisi
-
-Catatan: File PDF asli tidak perlu di-upload ke NotebookLM. Kedua file .md di references/ sudah berisi seluruh data lengkap dalam format yang rapi dan mudah dibaca. PDF asli tetap tersedia di folder `rakerwil/` root repo jika suatu saat butuh referensi layout asli.
+### Sumber (Upload Semua ke NotebookLM)
+1. `brief.md` — Identitas acara, pembicara, audiens, tujuan
+2. `structure.md` — Arc narasi: "Dari Amanat ke Aksi — Bersama Membangun Majlis Jawa Tengah"
+3. `presenter.md` — Outline 12 slide (ikuti persis)
+4. `bidang-majlis-target-2026.md` — Data primer (angka, daftar, skema)
+5. `rundown-rakerwil-2026.md` — Konteks komisi
 
 ### Aturan Konten
-1. Setiap slide hanya **1 ide utama** — jangan campur topik
-2. Angka dana: gunakan **bold** dan ukuran besar (Rp 1.400.000.000, Rp 515.000.000, Rp 15.000.000, dll.). Jangan tampilkan tabel penuh di presenter deck
-3. Daftar 8 Tuan Rumah Mandiri vs daftar gabungan: tampilkan jelas (bisa 2 kolom atau highlight)
-4. Jadwal kerja bakti (Juni minggu 4 + Juli 1-5): buat visual timeline sederhana
-5. Untuk tanggal yang masih kosong (Qiyamullail, Haul Akbar): tuliskan "dalam penetapan" atau "…………"
-6. **JANGAN mengarang data** — semua angka, nama daerah, dan ketentuan harus persis dari sumber `bidang-majlis-target-2026.md`
-7. Arc narasi harus tercermin: mulai dari amanat Munas → HAF sebagai ujian besar → skema pembiayaan & kerja bakti → perubahan 11an + tuan rumah mandiri → program pendukung → ajakan komitmen daerah
-8. Gunakan emoji secukupnya untuk memperkuat pesan (🏗️ HAF, 🤝 komitmen daerah, 📍 lokasi, 💰 dana)
-9. Frame semua program sebagai **ikhtiar kebersamaan dan istiqomah**, bukan beban
-10. Slide penutup: tekan penyerahan hasil komisi kepada Ketua PW + doa
+1. **12 slide maksimal** — jangan tambah
+2. Setiap slide = **1 ide utama saja**
+3. Angka dana = **bold & besar**:
+   - Rp 1.400.000.000 (total HAF Meteseh)
+   - Rp 515.000.000 (Pagu Daerah)
+   - Rp 250.000.000 (Donatur Khusus)
+   - Rp 250.000.000 (Amplop Arwah)
+   - Rp 150.000.000 (Kotak Amal)
+   - Rp 15.000.000 (cash per 11an / Tuan Rumah Mandiri)
+4. Slide 8 (Tuan Rumah Mandiri): tampilkan sebagai **2 kolom** (Mandiri 8 daerah vs Gabungan 13+ daerah)
+5. Slide 5 (Pagu Daerah): gunakan **bar chart atau infografik** — jangan tabel mentah
+6. Slide 6 (Kerja Bakti): **timeline** Juni–Juli
+7. Untuk tanggal kosong: tuliskan "dalam penetapan"
+8. **JANGAN mengarang data** — semua angka dan nama daerah persis dari sumber
+9. Arc narasi harus terasa: Amanat → Target Besar → Cara Capai → Model Baru → Ajakan
+10. Frame semua sebagai **ikhtiar kebersamaan**, bukan beban
 
 ### Struktur Slide (Ikuti presenter.md)
-1. Cover — judul, subtitle, tanggal, lokasi
-2. Amanat Munas 2026 & Konteks HAF Surabaya sebagai Icon + 3 Posko
-3. Agenda 7 Kegiatan Bidang Majlis
-4. HAF Meteseh 2026 — tanggal & total target Rp 1,4 Miliar
-5. Sumber Pembiayaan — highlight 4 sumber utama (Pagu Daerah 515jt, Amplop 250jt, Donatur Khusus 250jt, Kotak Amal 150jt)
-6. Pagu Daerah — tulang punggung (Kota Semarang 45jt + kontribusi khusus PAF/UCC/PW)
-7. Kerja Bakti / Ro'an — timeline Juni–Juli 2026
-8. Haul Akbar Jateng @ MAJT (opsional, singkat)
-9. Majlis 11an — lokasi PP Al Fithrah + perubahan pengelolaan + kebutuhan Rp 15 jt cash
-10. Skema Tuan Rumah Mandiri — 8 daerah + daftar gabungan (visual jelas)
-11. Qiyamullail & Majlis Rutin Zonasi (7 daerah)
-12. Ringkasan 7 Program
-13. Ajakan Komitmen Daerah (pagu, tenaga, tuan rumah, donatur)
-14. Penutup — penyerahan hasil komisi + doa Fatihah
+1. Cover
+2. Amanat Munas & Agenda (HAF Surabaya = icon + Posko 3 kegiatan)
+3. HAF Meteseh: Target Besar (Rp 1,4 M)
+4. Empat Tiang Pembiayaan (Pagu, Donatur, Amplop, Kotak Amal)
+5. Pagu Daerah: Semua Punya Peran (31 daerah, chart)
+6. Kerja Bakti: Bangun Bersama (timeline Juni–Juli)
+7. Majlis 11an: Model Baru (perubahan pengelolaan, cash 15jt)
+8. Tuan Rumah Mandiri (2 kolom: 8 mandiri vs gabungan)
+9. Program Pendukung (Haul, Qiyamullail, Majlis Rutin)
+10. Ringkasan
+11. Ajakan Bertindak
+12. Penutup
 
-### Visual & Brand
-- Warna: hijau khas Al Khidmah, putih, aksen emas
-- Slide data/angka: chart atau infografik sederhana, bukan tabel mentah
-- Slide daftar tuan rumah: dua kolom atau highlight box
-- Slide ajakan: visual mengajak (tangan bergandeng, atau ikon daerah)
-- Hindari foto wajah kecuali sudah ada approval (NotebookLM sering membatasi)
+### Visual
+- Warna: hijau Al Khidmah, putih, emas
+- Emoji: 🏗️ (HAF), 🤝 (komitmen), 📍 (lokasi), 💰 (dana)
+- Slide data: chart/infografik, bukan teks tabel
+- Slide ajakan: visual yang mengajak (icon komitmen)
 
 ### Output
-Hasilkan 14–16 slide yang siap dipresentasikan di Sidang Pleno II Rakerwil. Ringkas, kuat secara visual, dan mendorong komitmen daerah.
+Deck presenter 12 slide yang siap dipresentasikan di Sidang Pleno II. Ringkas, kuat visual, mendorong komitmen.
