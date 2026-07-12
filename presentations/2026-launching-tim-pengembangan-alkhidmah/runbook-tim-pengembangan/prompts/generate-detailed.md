@@ -26,7 +26,7 @@ Buat deck presentasi dengan format **Slide Detailed** untuk materi:
 1. **Landasan spiritual** — visi Al Khidmah Oase Dunia, digitalisasi sebagai enabler. Empat tujuan digitalisasi.
 2. **Konteks organisasi** — Bidang Media & IT → Departemen Pengembangan IT. Struktur kepemimpinan (Imam, Dzaky, Zahid).
 3. **Strategi konsolidasi super app** — as-is 3 app terpisah → to-be 1 super app + 1 thin landing. Kenapa Expo Web.
-4. **Tiga stream migrasi** — A (jamaah→super app, H-3 HAF Okt'26), B (web→thin landing, HAF), C (store→embedded, Q2'27).
+4. **Tiga stream migrasi** — A (jamaah→super app, H-3 HAF Okt'26), B (web→thin landing, HAF), C (ZIS donasi→embedded dari hexa, Q2'27).
 5. **Roadmap 2026–2028** — build (H2'26) → coverage (2027) → redesign (2028).
 6. **Milestone terdekat: H-3 bulan HAF (Oktober 2026)** — Definition of Done lengkap. HAF Januari 2027 = wide-usage launch.
 7. **Tim aktual** — 7 orang: 4 dev (Zahid, Dzaky, Anaz, Faiz) + 3 PM (Shofi, Taufik, Tahzan) + Imam leadership.
@@ -76,6 +76,7 @@ Buat deck presentasi dengan format **Slide Detailed** untuk materi:
 5. `sources/references/referensi-milestone.md` — milestone detail.
 6. `sources/references/referensi-tim-dan-raci.md` — tim & RACI.
 7. `sources/references/referensi-engineering-process.md` — cara kerja.
+8. `sources/references/referensi-arsitektur-dan-auth.md` — arsitektur, auth/OTP, kapasitas, tooling, infra.
 
 ---
 
@@ -83,3 +84,15 @@ Buat deck presentasi dengan format **Slide Detailed** untuk materi:
 - **Haul Metesh (Sep 2026) sudah superseded** — milestone terdekat adalah H-3 bulan HAF (Oktober 2026).
 - Tim adalah 7 orang: 4 developer + 3 product manager. Pakai nama asli.
 - Detailed-style berarti lebih banyak teks per slide — cocok untuk dibaca sendiri maupun dipresentasikan.
+- **Desktop-first adaptive mobile** (bukan mobile-first) — info density lebih baik untuk dashboard/admin.
+- **URL pakai `.or.id`** — `my.alkhidmah.or.id` dan `alkhidmah.or.id`, bukan `.id`.
+- **Monorepo shared packages only** — per-feature packages deferred.
+- **OTP via kirimdev.com** (WhatsApp, Rp 25K/mo). Customer-initiated untuk registrasi murah.
+- **ZIS donasi dari hexa** (embedded dengan shared auth), bukan ekhidmah store. Stream C = hexa.
+- **Keuangan bukan bagian dari org/majlis** — domain terpisah.
+- **Kapasitas ~10 jam/orang/2-minggu** (part-time). Sprint 2-mingguan.
+- **Tooling: GitHub Issues + Projects + markdown** (tidak pakai Jira/Trello/Notion).
+- **Infra: Biznet Gio VPS** (self-hosted, no managed cloud) + kirimdev Rp 25K/mo.
+- **WhatsApp fallback = open design item** — belum ada keputusan.
+- **Foundation baseline WIP** — Zahid target done end July. Shared packages only.
+- Deck menjadi **~21 slide** (ada slide baru: Auth, OTP & Infrastruktur).

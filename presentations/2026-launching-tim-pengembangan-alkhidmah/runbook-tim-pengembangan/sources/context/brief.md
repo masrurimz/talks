@@ -37,6 +37,12 @@ Strategi dan cara kerja adalah bagian terbesar deck. Tim dan milestone proporsi 
 - Jangan abaikan landasan spiritual — visi "Al Khidmah Oase Dunia" adalah akar dari semua strategi.
 - Jangan fabricate nama atau peran di luar tabel tim aktual.
 - **Jangan sebut Haul Metesh sebagai milestone aktif** — sudah superseded. Milestone terdekat adalah H-3 bulan HAF.
+- **Kapasitas tim part-time**: ~10 jam/orang/2-minggu (bukan full-time). Total ~1 FTE. Sprint 2-mingguan.
+- **Desktop-first, bukan mobile-first** — info density lebih baik untuk admin/dashboard.
+- **Infra hemat**: Biznet Gio VPS (1 box, no managed cloud) + kirimdev Rp 25K/mo. Jangan implikasikan biaya cloud mahal.
+- **ZIS donasi dari hexa** (embedded dengan shared auth), bukan built-from-scratch. Stream C = hexa, bukan ekhidmah store.
+- **Keuangan bukan bagian dari org/majlis** — domain terpisah.
+- **Monorepo shared packages only** — per-feature packages deferred (Expo typed routes + client-server splitting belum stabil).
 
 ## Profil audiens (Selasa 14 Jul)
 Audiens adalah Tim Pengembangan penuh — **7 orang**:

@@ -62,16 +62,16 @@
 ## Slide 6 — Strategi: Konsolidasi Super App
 - **Saat ini (As-Is)**: 3 app terpisah.
   - Jamaah app — mobile, separate codebase. Active, sunsetting pasca-migrasi.
-  - Web app — `alkhidmah.id` (TanStack Start). Active, refactor jadi thin landing.
+  - Web app — `alkhidmah.or.id` (TanStack Start). Active, refactor jadi thin landing.
   - Ekhidmah store — mobile, separate codebase. Active, embedding TBD.
 - Masalah: 3 codebase = beban maintenance tinggi, auth/data/UX terpisah, release train pecah.
 - **Target (To-Be)**: 1 super app + 1 thin landing.
-  - Super App — `my.alkhidmah.id` (+ iOS/Android). Expo Router universal. Auth required (Better Auth).
-  - Public Landing — `alkhidmah.id`. `apps/web` SSG-first. Auth none.
+  - Super App — `my.alkhidmah.or.id` (+ iOS/Android). Expo Router universal. Auth required (Better Auth).
+  - Public Landing — `alkhidmah.or.id`. `apps/web` SSG-first. Auth none.
 - Kenapa Expo Web:
   - Shared codebase — satu pipeline fitur untuk semua platform.
-  - `apps/native` sudah responsive (SidebarTabBar tablet/desktop, FloatingTabBar mobile).
-  - Satu auth cookie cross-subdomain — login di `alkhidmah.id` berlaku di `my.alkhidmah.id`.
+  - `apps/native` desktop-first adaptive mobile — info density lebih baik untuk dashboard/admin flows.
+  - Satu auth cookie cross-subdomain — login di `alkhidmah.or.id` berlaku di `my.alkhidmah.or.id`.
 
 ---
 
@@ -82,10 +82,10 @@
   - Faiz membawa knowledge dari jamaah app lama — langsung relevan.
 - **Stream B — Web app → Thin Landing**.
   - Target: **HAF (Januari 2027)**.
-  - Scope: strip `apps/web` jadi landing, redirect route interaktif ke `my.alkhidmah.id`.
-- **Stream C — Ekhidmah store → Embedded**.
-  - Target: **Q2 2027** (post-HAF).
-  - Scope: store jadi tab/domain di super app.
+  - Scope: strip `apps/web` jadi landing, redirect route interaktif ke `my.alkhidmah.or.id`.
+- **Stream C — ZIS donasi → Embedded dari hexa**.
+  - Target: **post-HAF** (2027).
+  - Scope: ZIS + donasi jadi embedded app dari hexa dengan shared auth (Better Auth session).
 
 ---
 
@@ -110,8 +110,9 @@
   - Stream A (jamaah app → super app) migration lengkap.
   - Majlis MVP production-ready: CRUD + RSVP + committee flows end-to-end.
   - Khidmah Hub + organization governance production-ready.
-  - Auth + cross-subdomain cookie verified di `my.alkhidmah.id`.
+  - Auth + cross-subdomain cookie verified di `my.alkhidmah.or.id`.
   - Quality gates: crash rate < 1%, load time < 3s.
+  - Foundation baseline selesai (Zahid, target end July 2026).
 - Dependencies: Expo EAS builds, PostgreSQL prod, API server, app store submissions, SSL.
 - Kenapa bukan Haul Metesh: tim launching 14 Jul, jendela 2 bulan ke Haul Metesh (Sep) terlalu sempit. Haul Metesh dilewati.
 
@@ -120,8 +121,8 @@
 ## Slide 10 — Milestone: HAF (Januari 2027)
 - **Wide-usage launch.** Super app jadi pengganti resmi jamaah app.
 - Definition of Done:
-  - Super app live di 3 platform: iOS App Store + Google Play + `my.alkhidmah.id` web.
-  - Public landing page (`alkhidmah.id`) shipped — route interaktif redirect ke super app.
+  - Super app live di 3 platform: iOS App Store + Google Play + `my.alkhidmah.or.id` web.
+  - Public landing page (`alkhidmah.or.id`) shipped — route interaktif redirect ke super app.
   - Ekhidmah store embedding design finalized (Stream C scope dikunci).
   - Adoption: 1.000+ registered users, 100+ majlis, 70% RSVP rate.
   - Trunk-based dev + PR review policy operating at scale.
@@ -181,6 +182,7 @@
   - `bun run check-types` (tsc --noEmit)
   - `bun run test` (Vitest + Jest)
 - Anti-pattern: branch > 2 hari, push langsung ke master, merge-commit dari master (pakai rebase).
+- Monorepo: shared packages only (DB, API contracts, config, auth, UI). Per-feature packages deferred — Expo typed routes (beta) + client-server splitting (experimental) belum stabil. Riset lanjutan diperlukan.
 
 ---
 
@@ -200,7 +202,16 @@
 
 ---
 
-## Slide 16 — Cadence Pertemuan
+## Slide 16 — Auth, OTP & Infrastruktur
+- **OTP provider**: kirimdev.com — WhatsApp Business API, Indonesia. Rp 25K/mo starter. Meta-approved AUTHENTICATION templates (auto-approved). Single REST endpoint, TypeScript SDK, webhooks.
+- **Cost optimization — customer-initiated messages**: registrasi via WhatsApp di mana user menginisiasi chat (klik link → kirim trigger → sistem balas OTP). Free within 24h window (up to 1.000/bulan per WABA). Business-initiated auth template ~$0.003/msg.
+- **WhatsApp fallback — OPEN DESIGN ITEM**: current approach tidak disukai. Flag untuk diskusi dengan Imam & Dzaky. Belum ada keputusan.
+- **Infrastruktur**: Biznet Gio VPS (self-hosted PostgreSQL + API server Elysia + app). No managed cloud (no RDS, no Vercel/Render, no managed Redis). Maybe Cloudflare R2 for object storage later. SSL via reverse proxy (Caddy/nginx + Let's Encrypt).
+- **Total cost**: VPS + Rp 25K/mo (kirimdev).
+
+---
+
+## Slide 17 — Cadence Pertemuan
 | Meeting | Frequency | Duration | Output |
 | --- | --- | --- | --- |
 | Product Meeting | Bulanan (minggu pertama) | 90 min | Prioritized backlog, milestone progress, decisions log |
@@ -210,21 +221,23 @@
 
 - Output setiap meeting committed ke `docs/ops/` dalam 48 jam.
 - Tidak ada meeting notes di luar repo — catatan mentah boleh di mana saja, output final harus di repo.
+- Tooling: GitHub Issues (bugs) + GitHub Projects (sprint kanban, 2-mingguan). Dokumentasi markdown di docs/ops/ — bisa di-publish via super app nanti. Tidak pakai Jira/Trello/Notion.
 
 ---
 
-## Slide 17 — Langkah Berikutnya
+## Slide 18 — Langkah Berikutnya
 - **Minggu 1 — Onboarding**:
   - Setup environment, worktree, akses repo untuk semua.
   - Baca `docs/ops/` — mulai dari roadmap, roster, engineering process.
-- **Zahid**: selesaikan core baseline arsitektur agar Dzaky/Anaz/Faiz bisa mulai build.
+- **Zahid**: core baseline WIP, target done end of July. Folder structure: shared packages only — lalu Dzaky/Anaz/Faiz build di atasnya.
 - **PM (Shofi/Taufik/Tahzan)**: mulai audit kebutuhan produk — parity audit jamaah app, domain MVP scope.
 - **Dev (Dzaky/Anaz/Faiz)**: familiarisasi codebase (`apps/native`, `packages/api`, `apps/server`, `packages/db`).
 - **Dev Sync pertama**: Senin depan.
+- **Kapasitas tim**: ~10 jam/orang/2-minggu (part-time, ~5 jam/minggu). Total ~35 jam/minggu ≈ <1 FTE. Sprint 2-mingguan, realistis terhadap milestone.
 
 ---
 
-## Slide 18 — Penutup
+## Slide 19 — Penutup
 - Tim ini punya peran strategis: mewujudkan Al Khidmah Oase Dunia lewat teknologi.
 - Kita bukan sekadar ngoding — kita membangun alat yang melayani jamaah dan mensyiarkan nilai Al Khidmah.
 - Setiap orang di tim ini penting — dev, PM, leadership.

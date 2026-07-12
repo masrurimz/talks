@@ -14,7 +14,7 @@
 ## Urutan potong jika waktu mepet
 Potong dalam urutan ini:
 1. Slide 5 (Program Kerja 7 item — ringkas jadi 1 kalimat).
-2. Slide 16 (Cadence pertemuan — sebut cepat).
+2. Slide 17 (Cadence pertemuan — sebut cepat).
 3. Slide 8 (Roadmap detail — tunjukkan tabel saja, skip detail per-tahun).
 
 Dengan begitu, inti besar masih aman: strategi, milestone, tim, dan cara kerja masih utuh.
@@ -99,10 +99,10 @@ Scope Departemen Pengembangan IT adalah database, IT tools, dan web portal — i
 
 ## Slide 6 [Wajib] — Strategi: Konsolidasi Super App
 **Ritme bicara:** 3–4 menit
-- **Saat ini**: 3 app terpisah — jamaah app (mobile), web app (`alkhidmah.id`), ekhidmah store (mobile).
+- **Saat ini**: 3 app terpisah — jamaah app (mobile), web app (`alkhidmah.or.id`), ekhidmah store (mobile).
 - Masalah: maintenance 3 codebase, auth/data/UX terpisah, release train pecah.
-- **Target**: 1 super app (`my.alkhidmah.id`, Expo Router untuk iOS/Android/Web) + 1 thin landing (`alkhidmah.id`, konten publik read-only).
-- Kenapa Expo Web: satu codebase, sudah responsive, satu auth cookie cross-subdomain.
+- **Target**: 1 super app (`my.alkhidmah.or.id`, Expo Router untuk iOS/Android/Web) + 1 thin landing (`alkhidmah.or.id`, konten publik read-only).
+- Kenapa Expo Web: satu codebase, desktop-first adaptive mobile — info density lebih baik untuk admin/dashboard, satu auth cookie cross-subdomain.
 
 **Arah bicara:**
 Ini adalah slide strategis terpenting. Jelaskan masalah dulu (3 app = beban), lalu solusi (konsolidasi). Pakai tabel as-is vs to-be kalau bisa. Tekankan: satu pipeline fitur untuk semua platform.
@@ -116,13 +116,13 @@ Kita mengkonsolidasi 3 app terpisah menjadi 1 super app + 1 thin landing — sat
 **Ritme bicara:** 2–3 menit
 - **Stream A** (paling kritis): jamaah app → super app. Target **H-3 HAF (Okt 2026)**. Faiz bawa knowledge dari jamaah app lama — langsung relevan.
 - **Stream B**: web app → thin landing. Target **HAF (Jan 2027)**.
-- **Stream C**: ekhidmah store → embedded di super app. Target **Q2 2027** (post-HAF).
+- **Stream C**: ZIS donasi → embedded dari hexa dengan shared auth. Target **post-HAF** (2027).
 
 **Arah bicara:**
 Tiga stream paralel dengan target berbeda. Stream A paling kritis — mengaktifkan super app untuk pengguna nyata. Sebut Faiz sebagai knowledge bridge untuk Stream A.
 
 **Pesan utama:**
-Tiga stream migrasi: A (jamaah→super app, Okt'26), B (web→thin landing, HAF), C (store→embedded, Q2'27).
+Tiga stream migrasi: A (jamaah→super app, Okt'26), B (web→thin landing, HAF), C (ZIS donasi→embedded dari hexa, post-HAF).
 
 ---
 
@@ -150,6 +150,7 @@ Tiga tahun: build (2026) → coverage (2027) → redesign (2028).
   - Khidmah Hub + org governance production-ready.
   - Auth + cross-subdomain cookie verified.
   - Quality gates: crash < 1%, load < 3s.
+  - Foundation baseline selesai (Zahid, target end July) — shared packages structure siap untuk dev.
 - Kenapa bukan Haul Metesh: tim baru launching Jul, jendela 2 bulan terlalu sempit. Haul Metesh dilewati.
 
 **Arah bicara:**
@@ -164,8 +165,8 @@ Target pertama kita: H-3 bulan HAF (Okt 2026) — super app feature-complete dan
 **Ritme bicara:** 2–3 menit
 - **Wide-usage launch.** Super app jadi pengganti resmi jamaah app.
 - Definition of Done:
-  - Live di 3 platform: iOS + Play Store + web `my.alkhidmah.id`.
-  - Thin landing (`alkhidmah.id`) ship.
+  - Live di 3 platform: iOS + Play Store + web `my.alkhidmah.or.id`.
+  - Thin landing (`alkhidmah.or.id`) ship.
   - Ekhidmah store embed design finalized.
   - Adoption: 1.000+ users, 100+ majlis, 70% RSVP rate.
   - Engineering process at scale.
@@ -239,6 +240,7 @@ Setiap workstream punya R/A/C/I yang jelas — tidak ada yang ambiguity tentang 
 - Branch naming: `feat/`, `fix/`, `docs/`, `chore/`, `refactor/`.
 - Setiap branch punya worktree sendiri (lazyworktree) + Postgres terisolasi.
 - Pre-PR: `bun run check`, `check-types`, `test`.
+- Monorepo: shared packages only (DB, API contracts, config, auth, UI) — per-feature packages deferred (Expo typed routes + client-server splitting belum stabil).
 
 **Arah bicara:**
 Jelaskan untuk PM juga — mereka perlu tahu alurnya walau tidak ngoding. Tekankan: branch pendek, sering merge, tidak ada branch lama. Pre-PR checklist wajib sebelum buka PR.
@@ -264,13 +266,30 @@ Ini adalah aturan paling penting untuk kualitas. Jelaskan kenapa 3 pasang mata: 
 Setiap PR diverifikasi oleh 3 orang: 2 reviewer + 1 retester — tanpa exception.
 
 ---
+## Slide 16 [Wajib] — Auth, OTP & Infrastruktur
+**Ritme bicara:** 2–3 menit
+- **OTP via kirimdev.com** — WhatsApp Business API, Indonesia. Rp 25K/mo starter. Meta-approved AUTHENTICATION templates (auto-approved).
+- **Customer-initiated messages untuk registrasi murah** — user menginisiasi chat → sistem balas OTP. Customer-initiated conversations dalam 24h window = **gratis** (up to 1.000/bulan per WABA).
+- **WhatsApp fallback = open design item** — current approach belum ideal. Perlu desain ulang feedback/feel-back flow kalau OTP via WhatsApp gagal. **Flag untuk diskusi malam ini dengan Imam & Dzaky.** Belum ada keputusan.
+- **Infra: Biznet Gio VPS** — self-hosted: PostgreSQL + API server + app, semua di satu box. Tidak ada managed cloud (tidak pakai RDS, Vercel/Render terpisah, managed Redis).
+- **Mungkin nanti**: Cloudflare R2 untuk object storage (file/image uploads).
+- SSL via reverse proxy di VPS (Caddy/nginx + Let's Encrypt).
 
-## Slide 16 [Opsional] — Cadence Pertemuan
+**Arah bicara:**
+Jelaskan strategi auth yang hemat. Tekankan: customer-initiated = gratis. WhatsApp fallback masih open — sebut sebagai pertanyaan untuk diskusi. Infra sangat hemat: 1 VPS untuk semuanya.
+
+**Pesan utama:**
+Auth hemat via kirimdev + customer-initiated; infra sederhana di 1 VPS.
+
+---
+
+## Slide 17 [Opsional] — Cadence Pertemuan
 **Ritme bicara:** 1–2 menit
 - **Product Meeting**: bulanan, 90 min — prioritized backlog, milestone progress.
 - **Dev Sync**: mingguan (Senin), 30 min — blockers, PR queue.
 - **Retrospective**: bulanan — process improvements.
 - Output meeting committed ke `docs/ops/` dalam 48 jam — tidak ada notes di luar repo.
+- **Tooling**: GitHub Issues (bugs) + GitHub Projects (sprint board, 2-mingguan). Dokumentasi: markdown di `docs/ops/` — bisa di-publish via app nanti.
 
 **Arah bicara:**
 Ringkas. Tekankan: output meeting selalu di repo, bukan di Slack/Notion terpisah.
@@ -280,14 +299,15 @@ Kita punya ritme: product meeting bulanan, dev sync mingguan — output selalu d
 
 ---
 
-## Slide 17 [Wajib] — Langkah Berikutnya
+## Slide 18 [Wajib] — Langkah Berikutnya
 **Ritme bicara:** 2–3 menit
 - **Minggu 1**: Onboarding — setup environment, worktree, akses repo.
-- **Zahid**: selesaikan core baseline arsitektur agar Dzaky/Anaz/Faiz bisa mulai build.
+- **Zahid**: core baseline WIP, target done end of July. Folder structure: shared packages only.
 - **PM (Shofi/Taufik/Tahzan)**: mulai audit kebutuhan produk — parity audit jamaah app, domain MVP scope.
 - **Dev (Dzaky/Anaz/Faiz)**: familiarisasi codebase (`apps/native`, `packages/api`, `apps/server`).
 - **Semua**: baca `docs/ops/` — mulai dari roadmap, roster, engineering process.
 - Dev Sync pertama: Senin depan.
+- **Kapasitas**: ~10 jam/orang/2-minggu (part-time) — sprint 2-mingguan, realistis terhadap milestone.
 
 **Arah bicara:**
 Ini adalah call to action konkret. Setiap orang tahu apa yang dilakukan minggu pertama. Tekankan: Zahid bangun baseline dulu, PM mulai audit, dev familiarisasi.
@@ -296,8 +316,7 @@ Ini adalah call to action konkret. Setiap orang tahu apa yang dilakukan minggu p
 Minggu pertama: onboarding + Zahid selesaikan baseline + PM mulai audit kebutuhan + dev familiarisasi codebase.
 
 ---
-
-## Slide 18 [Wajib] — Penutup
+## Slide 19 [Wajib] — Penutup
 **Ritme bicara:** 2–3 menit
 - Tim ini punya peran strategis: mewujudkan Al Khidmah Oase Dunia lewat teknologi.
 - Kita bukan sekadar ngoding — kita membangun alat yang melayani jamaah dan mensyiarkan nilai Al Khidmah.
@@ -313,5 +332,5 @@ Kita adalah tim yang mewujudkan Al Khidmah Oase Dunia lewat teknologi — mari m
 
 ---
 
-## Jumlah slide: 18
+## Jumlah slide: 19
 ## Estimasi total waktu: 30–35 menit

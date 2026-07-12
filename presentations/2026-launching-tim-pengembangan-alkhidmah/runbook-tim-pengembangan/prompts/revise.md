@@ -37,7 +37,7 @@ Revisi deck presentasi yang sudah dihasilkan untuk materi:
 
 #### 5. Cek strategi super app
 - As-is: 3 app terpisah (jamaah mobile, web, ekhidmah store).
-- To-be: 1 super app (`my.alkhidmah.id`) + 1 thin landing (`alkhidmah.id`).
+- To-be: 1 super app (`my.alkhidmah.or.id`) + 1 thin landing (`alkhidmah.or.id`).
 - Stream A target: H-3 HAF (Okt 2026), bukan Haul Metesh.
 
 #### 6. Cek cara kerja
@@ -51,6 +51,22 @@ Revisi deck presentasi yang sudah dihasilkan untuk materi:
 - Istilah teknis dengan penjelasan singkat.
 - Satu pesan utama per slide.
 
+#### 8. Cek kapasitas tim
+- **Kapasitas: ~10 jam/orang/2-minggu (part-time)** — pastikan disebut, bukan full-time.
+- Sprint 2-mingguan, bukan 1-mingguan.
+
+#### 9. Cek tooling & infra
+- **Tooling: GitHub Issues (bugs) + GitHub Projects (sprint) + markdown docs** — tidak pakai Jira/Trello/Notion.
+- **Infra: Biznet Gio VPS** (self-hosted Postgres + API + app, no managed cloud) — jangan implikasikan biaya cloud mahal.
+- **OTP: kirimdev.com** (WhatsApp, Rp 25K/mo). Customer-initiated = gratis dalam 24h window.
+
+#### 10. Cek URL & Stream C
+- Semua URL pakai **`.or.id`** — tidak boleh ada `alkhidmah.id` (harus `alkhidmah.or.id`).
+- **Stream C = ZIS donasi dari hexa** (bukan ekhidmah store).
+- **Keuangan bukan bagian dari org/majlis** — domain terpisah.
+- **Desktop-first** (bukan mobile-first).
+- **Monorepo shared packages only** — per-feature packages deferred.
+
 ---
 
 ## Prioritas sumber untuk revisi:
@@ -59,6 +75,7 @@ Revisi deck presentasi yang sudah dihasilkan untuk materi:
 3. `sources/outlines/presenter.md` atau `detailed.md` — cek slide-by-slide.
 4. `sources/references/referensi-tim-dan-raci.md` — cek tim & RACI.
 5. `sources/references/referensi-milestone.md` — cek milestone.
+6. `sources/references/referensi-arsitektur-dan-auth.md` — cek arsitektur, auth, kapasitas, tooling, infra.
 
 ---
 

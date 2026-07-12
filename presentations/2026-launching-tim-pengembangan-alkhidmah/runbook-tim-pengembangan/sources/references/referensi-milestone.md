@@ -24,8 +24,9 @@ Milestone ini memvalidasi arsitektur dan membuka jalan untuk final sprint menuju
 - Stream A (jamaah app → super app) migration lengkap.
 - Majlis MVP production-ready: CRUD + RSVP + committee flows end-to-end di staging & production.
 - Khidmah Hub + organization governance production-ready.
-- Auth + cross-subdomain cookie verified end-to-end di `my.alkhidmah.id`.
+- Auth + cross-subdomain cookie verified end-to-end di `my.alkhidmah.or.id`.
 - Quality gates: crash rate < 1%, load time < 3s.
+- Foundation baseline selesai (Zahid, target end July 2026) — shared packages folder structure siap untuk Dzaky/Anaz/Faiz build di atasnya.
 
 ### Workstreams
 
@@ -41,9 +42,9 @@ Milestone ini memvalidasi arsitektur dan membuka jalan untuk final sprint menuju
 
 - Expo EAS production builds (iOS/Android).
 - PostgreSQL production provisioning.
-- API server hosting (`api.alkhidmah.id` live).
+- API server hosting (`api.alkhidmah.or.id` live).
 - App Store + Play Store submissions (akun ready, review time).
-- SSL certificates untuk `my.alkhidmah.id` dan `alkhidmah.id`.
+- SSL certificates untuk `my.alkhidmah.or.id` dan `alkhidmah.or.id`.
 
 ### Risks
 
@@ -59,9 +60,9 @@ Setelah HAF, super app menjadi pengganti resmi jamaah app untuk semua pengguna. 
 
 ### Definition of Done
 
-- Super app live di 3 platform: iOS App Store + Google Play + `my.alkhidmah.id` web.
-- Public landing page (`alkhidmah.id`) shipped — semua route interaktif redirect ke super app (Stream B).
-- Ekhidmah store embedding design finalized (Stream C scope dikunci; eksekusi post-HAF).
+- Super app live di 3 platform: iOS App Store + Google Play + `my.alkhidmah.or.id` web.
+- Public landing page (`alkhidmah.or.id`) shipped — semua route interaktif redirect ke super app (Stream B).
+- ZIS donasi hexa embed design finalized (Stream C scope dikunci; eksekusi post-HAF).
 - Adoption: 1.000+ registered users, 100+ majlis, 70% RSVP rate.
 - Trunk-based dev + PR review policy operating at scale.
 - Designer onboard (target Q4 2026 atau awal Q1 2027).

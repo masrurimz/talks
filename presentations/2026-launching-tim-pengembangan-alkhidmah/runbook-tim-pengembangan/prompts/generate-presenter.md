@@ -24,8 +24,8 @@ Buat deck presentasi dengan format **Slide Presenter** untuk materi:
 
 ### Fokus utama:
 1. **Landasan spiritual** — visi Al Khidmah Oase Dunia, digitalisasi sebagai enabler.
-2. **Strategi konsolidasi super app** — 3 app terpisah → 1 super app (`my.alkhidmah.id`) + 1 thin landing (`alkhidmah.id`). Kenapa Expo Web (shared codebase, responsive, satu auth cookie).
-3. **Tiga stream migrasi** — A: jamaah→super app (H-3 HAF Okt'26); B: web→thin landing (HAF Jan'27); C: store→embedded (Q2'27).
+2. **Strategi konsolidasi super app** — 3 app terpisah → 1 super app (`my.alkhidmah.or.id`) + 1 thin landing (`alkhidmah.or.id`). Kenapa Expo Web (shared codebase, responsive, satu auth cookie).
+3. **Tiga stream migrasi** — A: jamaah→super app (H-3 HAF Okt'26); B: web→thin landing (HAF Jan'27); C: ZIS donasi→embedded dari hexa (Q2'27).
 4. **Milestone terdekat: H-3 bulan HAF (Oktober 2026)** — readiness checkpoint, Stream A selesai, majlis MVP production-ready. HAF Januari 2027 = wide-usage launch.
 5. **Tim aktual** — dev: Zahid (Tech Lead), Dzaky, Anaz (+ QA automation), Faiz (ex-jamaah app); product: Shofi, Taufik, Tahzan (PM + per-product QA); leadership: Imam (Ketua Bidang).
 6. **Cara kerja engineering** — trunk-based development, code review (2 reviewer + 1 retest), cadence pertemuan.
@@ -75,6 +75,7 @@ Buat deck presentasi dengan format **Slide Presenter** untuk materi:
 5. `sources/references/referensi-milestone.md` — milestone detail.
 6. `sources/references/referensi-tim-dan-raci.md` — tim & RACI.
 7. `sources/references/referensi-engineering-process.md` — cara kerja.
+8. `sources/references/referensi-arsitektur-dan-auth.md` — arsitektur, auth/OTP, kapasitas, tooling, infra.
 
 ---
 
@@ -83,3 +84,15 @@ Buat deck presentasi dengan format **Slide Presenter** untuk materi:
 - **Haul Metesh (Sep 2026) sudah superseded** — milestone terdekat adalah H-3 bulan HAF (Oktober 2026).
 - Tim adalah 7 orang: 4 developer + 3 product manager. Pakai nama asli, bukan placeholder.
 - Audiens campuran teknis (dev) dan non-teknis (PM) — jangan terlalu jargon-heavy.
+- **Desktop-first adaptive mobile** (bukan mobile-first) — info density lebih baik untuk dashboard/admin.
+- **URL pakai `.or.id`** — `my.alkhidmah.or.id` dan `alkhidmah.or.id`, bukan `.id`.
+- **Monorepo shared packages only** — per-feature packages deferred (Expo typed routes + client-server splitting belum stabil).
+- **OTP via kirimdev.com** (WhatsApp, Rp 25K/mo). Customer-initiated messages untuk registrasi murah (free dalam 24h window).
+- **ZIS donasi dari hexa** (embedded dengan shared auth), bukan ekhidmah store. Stream C = hexa.
+- **Keuangan bukan bagian dari org/majlis** — domain terpisah.
+- **Kapasitas ~10 jam/orang/2-minggu** (part-time, bukan full-time). Sprint 2-mingguan.
+- **Tooling: GitHub Issues + Projects + markdown** (tidak pakai Jira/Trello/Notion).
+- **Infra: Biznet Gio VPS** (self-hosted, no managed cloud) + kirimdev Rp 25K/mo.
+- **WhatsApp fallback = open design item** — belum ada keputusan, flag untuk diskusi.
+- **Foundation baseline WIP** — Zahid target done end July. Folder structure: shared packages only.
+- Deck menjadi **19 slide** (ada slide baru: Auth, OTP & Infrastruktur di posisi 16).
