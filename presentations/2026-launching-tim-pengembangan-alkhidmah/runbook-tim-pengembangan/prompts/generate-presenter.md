@@ -1,0 +1,85 @@
+# Prompt untuk Generate Presenter Deck
+
+## Instruksi untuk NotebookLM
+
+Buat deck presentasi dengan format **Slide Presenter** untuk materi:
+
+**Launching Tim Pengembangan IT**
+**Visi, Strategi, dan Cara Kerja Menuju Super App Al Khidmah**
+
+### Pengaturan:
+- **Format**: Slide Presenter.
+- **Bahasa**: Indonesia.
+- **Panjang**: Long (untuk coverage lebih baik).
+
+---
+
+## Arahan isi:
+
+### Judul dan pembuka:
+- Judul utama: "Launching Tim Pengembangan IT".
+- Subjudul: "Visi, Strategi, dan Cara Kerja Menuju Super App Al Khidmah".
+- Nama pembicara: Zahid (Koordinator Pengembangan / Tech Lead).
+- Konteks: Bidang Media & IT PP Jama'ah Al Khidmah, Selasa 14 Juli 2026.
+
+### Fokus utama:
+1. **Landasan spiritual** — visi Al Khidmah Oase Dunia, digitalisasi sebagai enabler.
+2. **Strategi konsolidasi super app** — 3 app terpisah → 1 super app (`my.alkhidmah.id`) + 1 thin landing (`alkhidmah.id`). Kenapa Expo Web (shared codebase, responsive, satu auth cookie).
+3. **Tiga stream migrasi** — A: jamaah→super app (H-3 HAF Okt'26); B: web→thin landing (HAF Jan'27); C: store→embedded (Q2'27).
+4. **Milestone terdekat: H-3 bulan HAF (Oktober 2026)** — readiness checkpoint, Stream A selesai, majlis MVP production-ready. HAF Januari 2027 = wide-usage launch.
+5. **Tim aktual** — dev: Zahid (Tech Lead), Dzaky, Anaz (+ QA automation), Faiz (ex-jamaah app); product: Shofi, Taufik, Tahzan (PM + per-product QA); leadership: Imam (Ketua Bidang).
+6. **Cara kerja engineering** — trunk-based development, code review (2 reviewer + 1 retest), cadence pertemuan.
+
+### Proporsi yang diinginkan:
+- Landasan + pembuka: 10%.
+- Strategi + roadmap: 25% (bagian terbesar).
+- Milestone: 15%.
+- Tim & peran & RACI: 20%.
+- Cara kerja engineering: 20%.
+- Langkah berikutnya + penutup: 10%.
+
+### Tim aktual (WAJIB pakai nama-nama ini):
+- **Dev**: Zahid (Tech Lead, bangun baseline), Dzaky (developer, dual role Sekretaris), Anaz (developer + QA automation), Faiz (developer, mantan tim jamaah app).
+- **Product**: Shofi, Taufik, Tahzan (Product Manager + per-product QA).
+- **Leadership**: Imam (Ketua Bidang, Accountable).
+
+### Milestone (WAJIB):
+- **Milestone terdekat = H-3 bulan HAF (Oktober 2026)** — readiness checkpoint 3 bulan sebelum HAF.
+- **HAF = Januari 2027** — wide-usage launch.
+- **Haul Metesh sudah superseded** — JANGAN sebut sebagai milestone aktif.
+
+### Gaya yang diinginkan:
+- Jelas, terstruktur, formal namun hangat.
+- Bahasa Indonesia sederhana. Istilah teknis (trunk-based, PR, RACI) dengan penjelasan singkat.
+- Bukan korporat/kaku — ini organisasi keagamaan.
+- Bukan seminar akademik, bukan ceramah motivasi tanpa substansi.
+- Satu pesan utama per slide.
+
+### Jumlah slide target:
+- 16–18 slide untuk presenter-style.
+- Durasi target: 30 menit.
+
+### Visual yang diharapkan:
+- Rapi, bersih, mudah dibaca.
+- Tabel untuk tim, RACI, stream migrasi.
+- Timeline untuk roadmap dan milestone.
+- Tidak terlalu korporat.
+
+---
+
+## Prioritas sumber:
+1. `sources/context/brief.md` — konteks, audiens, tujuan.
+2. `sources/context/structure.md` — struktur narasi + urutan slide.
+3. `sources/outlines/presenter.md` — slide-by-slide breakdown.
+4. `sources/references/referensi-strategi-dan-roadmap.md` — strategi & roadmap.
+5. `sources/references/referensi-milestone.md` — milestone detail.
+6. `sources/references/referensi-tim-dan-raci.md` — tim & RACI.
+7. `sources/references/referensi-engineering-process.md` — cara kerja.
+
+---
+
+## Catatan khusus:
+- Materi ini dipakai dua kali: review kepemimpinan (Minggu 12 Jul, Imam + Dzaky) dan launch tim (Selasa 14 Jul).
+- **Haul Metesh (Sep 2026) sudah superseded** — milestone terdekat adalah H-3 bulan HAF (Oktober 2026).
+- Tim adalah 7 orang: 4 developer + 3 product manager. Pakai nama asli, bukan placeholder.
+- Audiens campuran teknis (dev) dan non-teknis (PM) — jangan terlalu jargon-heavy.
