@@ -72,13 +72,15 @@ Keuangan (finance) **bukan bagian dari organization dan majlis management**. Dom
 
 ## Roadmap 2026–2028
 
-| Year | Theme | Key Milestones | Headcount |
-| --- | --- | --- | --- |
-| **2026 H2** | Build + Migrate + Launch | H-3 HAF (Okt 2026), HAF launch (Jan 2027) | Current team |
-| **2027** | Functionality Coverage | Semua PRD domain MVP parity; ZIS donasi dari hexa | Current team + 1 designer (hire Q4 2026) |
-| **2028** | Redesign + UX Maturity | App-wide redesign; riset usability | + designer full-time |
+> Timeline dimulai Juli 2026. Foundation baseline masih WIP (Zahid, target done end Jul). Tim part-time (~10 jam/orang/2-minggu).
 
-- **2026 H2**: Stream A aktif (parity audit Jul → porting Aug–Sep → data migration Okt). H-3 HAF milestone Okt. Backend stabil (auth + cross-subdomain). Stream B dimulai Q4 (strip web ke thin landing). Polish pasca-H-3 HAF. Designer hiring mulai. HAF launch Jan 2027.
-- **2027 H1**: Stabilisasi pasca-HAF (monitoring, performance, crash < 1%). PRD domain coverage sprint (content, zis, spiritual, notification).
-- **2027 H2**: Stream C (ZIS donasi dari hexa embedding). Domain coverage lanjutan (store, organization). Designer onboard.
-- **2028**: App-wide redesign. Usability research. Designer full-time.
+| Year | Theme | Key Deliverables | Headcount |
+| --- | --- | --- | --- |
+| **2026 H2** | Build Basics | Foundation baseline; majlis management (CRUD, RSVP, maktab, undangan); org management | Current team |
+| **2027** | Expand & Explore | Eksplorasi kebutuhan org; SK docs; signing; keuangan module; ZIS donasi dari hexa | Current team |
+| **2028** | Design & Polish | Hire UI/UX designer; design review & improvement; app-wide redesign | Current team + 1 designer (hire 2028) |
+
+- **2026 H2 (Build Basics)**: Foundation baseline (Zahid, done Jul). Majlis management basics: CRUD, RSVP, committee, maktab, undangan, food distribution, checkin. Org management basics: struktur pengurus, data jamaah. H-3 HAF checkpoint Okt. HAF launch Jan 2027.
+- **2027 H1 (Expand)**: Stabilisasi pasca-HAF. Eksplorasi kebutuhan org — riset prioritas. SK (Surat Keputusan) document management. Digital signing.
+- **2027 H2 (Explore)**: Keuangan module (domain terpisah). ZIS donasi dari hexa (Stream C). Domain coverage mengikuti prioritas org.
+- **2028 (Design & Polish)**: Hire UI/UX designer. Design review & improvement berdasarkan feedback 2026–2027. App-wide redesign. Sisa fitur mengikuti prioritas org.

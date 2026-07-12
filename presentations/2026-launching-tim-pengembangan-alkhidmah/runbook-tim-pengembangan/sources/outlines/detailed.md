@@ -90,16 +90,19 @@
 ---
 
 ## Slide 8 — Roadmap 2026–2028
-| Year | Theme | Key Milestones | Headcount |
-| --- | --- | --- | --- |
-| 2026 H2 | Build + Migrate + Launch | H-3 HAF (Okt 2026), HAF launch (Jan 2027) | Current team |
-| 2027 | Functionality Coverage | Semua PRD domain MVP parity; ekhidmah embedded | + 1 designer (hire Q4 2026) |
-| 2028 | Redesign + UX Maturity | App-wide redesign; riset usability | + designer full-time |
+> Timeline dimulai Juli 2026. Foundation baseline masih WIP. Tim part-time.
 
-- Q3 2026: Stream A aktif (parity audit Jul → porting Aug–Sep → migration Okt). H-3 HAF milestone. Backend stabil.
-- Q4 2026: Stream B dimulai. Polish pasca-H-3 HAF. Designer hiring. HAF launch Jan 2027.
-- 2027: stabilisasi + PRD domain coverage sprint (content, zis, spiritual, notification). Stream C H2.
-- 2028: app-wide redesign, usability research, designer full-time.
+| Year | Theme | Key Deliverables | Headcount |
+| --- | --- | --- | --- |
+| 2026 H2 | Build Basics | Foundation baseline; majlis management (CRUD, RSVP, maktab, undangan); org management | Current team |
+| 2027 | Expand & Explore | SK docs; signing; keuangan module; ZIS donasi dari hexa; eksplorasi kebutuhan org | Current team |
+| 2028 | Design & Polish | Hire UI/UX designer; design review; app-wide redesign | + 1 designer (hire 2028) |
+
+- Q3 2026: Foundation baseline (Zahid, done Jul). Majlis management basics: CRUD, RSVP, committee, maktab, undangan, food distribution, checkin. Org management basics. H-3 HAF milestone Okt.
+- Q4 2026: Polish pasca-H-3 HAF. Stabilisasi majlis + org. HAF launch Jan 2027.
+- 2027 H1: Stabilisasi pasca-HAF. Eksplorasi kebutuhan org. SK (Surat Keputusan) docs. Digital signing.
+- 2027 H2: Keuangan module (domain terpisah). ZIS donasi dari hexa (Stream C).
+- 2028: Hire UI/UX designer. Design review & improvement. App-wide redesign. Sisa fitur mengikuti prioritas org.
 
 ---
 

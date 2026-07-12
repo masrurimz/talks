@@ -41,7 +41,7 @@ Susun deck dengan alur **why → where → what → who → how → next**:
 5. **Program Kerja Bidang Media & IT** — 7 item dari roadmap visioner; item 1–3 (database, IT tools, web portal) adalah scope kita.
 6. **Strategi: konsolidasi super app** — as-is 3 app terpisah → to-be 1 super app (`my.alkhidmah.or.id`) + 1 thin landing (`alkhidmah.or.id`). Desktop-first adaptive mobile.
 7. **Tiga stream migrasi** — A: jamaah→super app (H-3 HAF Okt'26); B: web→thin landing (HAF Jan'27); C: ZIS donasi→embedded dari hexa (Q2'27).
-8. **Roadmap 2026–2028** — build+migrate+launch (H2'26) → functionality coverage (2027) → redesign+UX (2028).
+8. **Roadmap 2026–2028** — build basics: majlis+org management (H2'26) → expand: SK docs, signing, keuangan (2027) → design & polish: hire UI/UX designer (2028).
 9. **Milestone: H-3 bulan HAF (Oktober 2026)** — milestone terdekat; Stream A selesai; foundation baseline selesai (Zahid, end Jul); majlis MVP production-ready.
 10. **Milestone: HAF Januari 2027** — wide-usage launch; 3 platform live; thin landing ship; ZIS donasi hexa embed finalized; 1000+ users.
 11. **Tim kita** — pembagian aktual: dev (Zahid, Dzaky, Anaz, Faiz) + product (Shofi, Taufik, Tahzan) + leadership (Imam).

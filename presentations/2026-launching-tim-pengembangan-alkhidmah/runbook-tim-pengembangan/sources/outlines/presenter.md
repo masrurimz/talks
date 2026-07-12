@@ -128,16 +128,15 @@ Tiga stream migrasi: A (jamaah→super app, Okt'26), B (web→thin landing, HAF)
 
 ## Slide 8 [Opsional] — Roadmap 2026–2028
 **Ritme bicara:** 2 menit
-- **2026 H2**: Build + Migrate + Launch (H-3 HAF Okt, HAF Jan'27).
-- **2027**: Functionality Coverage — semua PRD domain MVP parity; ekhidmah embedded.
-- **2028**: Redesign + UX Maturity — app-wide redesign, riset usability.
-- Hiring: designer Q4 2026.
+- **2026 H2 (Build Basics)**: Foundation baseline (Zahid, Jul). Majlis management — CRUD, RSVP, maktab, undangan. Org management. H-3 HAF Okt, HAF Jan'27.
+- **2027 (Expand & Explore)**: Eksplorasi kebutuhan org. SK docs. Signing. Keuangan module. ZIS donasi dari hexa.
+- **2028 (Design & Polish)**: Hire UI/UX designer. Design review & improvement. App-wide redesign.
 
 **Arah bicara:**
-Tunjukkan tabel roadmap. Jangan bahas detail per-tahun — fokus pada tema: build dulu, lalu coverage, lalu redesign.
+Tunjukkan tabel roadmap. Fokus pada tema: build basics dulu (majlis+org), lalu expand (SK, signing, keuangan), lalu design polish (hire designer). Designer di tahun 3, bukan tahun 1.
 
 **Pesan utama:**
-Tiga tahun: build (2026) → coverage (2027) → redesign (2028).
+Tiga tahun: build basics (2026) → expand & explore (2027) → design & polish (2028).
 
 ---
 
