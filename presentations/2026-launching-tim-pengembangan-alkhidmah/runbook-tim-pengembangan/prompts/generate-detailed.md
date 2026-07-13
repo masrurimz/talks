@@ -77,6 +77,8 @@ Buat deck presentasi dengan format **Slide Detailed** untuk materi:
 6. `sources/references/referensi-tim-dan-raci.md` — tim & RACI.
 7. `sources/references/referensi-engineering-process.md` — cara kerja.
 8. `sources/references/referensi-arsitektur-dan-auth.md` — arsitektur, auth/OTP, kapasitas, tooling, infra.
+9. `sources/references/referensi-public-portal-options.md` — portal options.
+10. `sources/references/referensi-document-management-options.md` — Google Workspace, signing, self-hosted alternatives.
 
 ---
 
@@ -93,6 +95,10 @@ Buat deck presentasi dengan format **Slide Detailed** untuk materi:
 - **Kapasitas ~10 jam/orang/2-minggu** (part-time). Sprint 2-mingguan.
 - **Tooling: GitHub Issues + Projects + markdown** (tidak pakai Jira/Trello/Notion).
 - **Infra: Biznet Gio VPS** (self-hosted, no managed cloud) + kirimdev Rp 25K/mo.
-- **WhatsApp fallback = open design item** — belum ada keputusan.
+- Deck menjadi **~23 slide** (3 slide baru: Portal Options, Document Management Options, Signing & Parent→Child Access).
+- **Portal: tampilkan OPSI** — Option B (CMS+ABAC) adalah rekomendasi, bukan final approval.
+- **Document management cost = USD reference** — jangan fabricate IDR. Label "quote required".
+- **Signing = open question** — jangan portray satu path sebagai sudah dipilih.
+- **PP→child Drive: explicit Google Groups, bukan OU inheritance**.
+- **WPS = hosted integration, BUKAN open-source self-hosted**.
 - **Foundation baseline WIP** — Zahid target done end July. Shared packages only.
-- Deck menjadi **~21 slide** (ada slide baru: Auth, OTP & Infrastruktur).

@@ -76,6 +76,8 @@ Buat deck presentasi dengan format **Slide Presenter** untuk materi:
 6. `sources/references/referensi-tim-dan-raci.md` — tim & RACI.
 7. `sources/references/referensi-engineering-process.md` — cara kerja.
 8. `sources/references/referensi-arsitektur-dan-auth.md` — arsitektur, auth/OTP, kapasitas, tooling, infra.
+9. `sources/references/referensi-public-portal-options.md` — portal options (separate, CMS+ABAC, WordPress).
+10. `sources/references/referensi-document-management-options.md` — Google Workspace, self-hosted alternatives, signing options.
 
 ---
 
@@ -93,6 +95,10 @@ Buat deck presentasi dengan format **Slide Presenter** untuk materi:
 - **Kapasitas ~10 jam/orang/2-minggu** (part-time, bukan full-time). Sprint 2-mingguan.
 - **Tooling: GitHub Issues + Projects + markdown** (tidak pakai Jira/Trello/Notion).
 - **Infra: Biznet Gio VPS** (self-hosted, no managed cloud) + kirimdev Rp 25K/mo.
-- **WhatsApp fallback = open design item** — belum ada keputusan, flag untuk diskusi.
+- Deck menjadi **22 slide** (3 slide baru: Portal Options #9, Document Management Options #12, Signing & Parent→Child Access #13). Slide-slide decision `[Wajib — tonight]` untuk review Imam & Dzaky.
+- **Portal: tampilkan OPSI, bukan satu keputusan** — Option B (CMS+ABAC) adalah rekomendasi, bukan final approval. Option C (WordPress) = pilot fallback. Option A = autonomy-only.
+- **Document management: Google Workspace cost = USD reference** — jangan fabricate harga IDR. Tampilkan label "quote required".
+- **Signing: open question** — tanyakan Imam/Dzaky apa definisi "official signing" untuk SK/surat. Jangan portray satu signing path sebagai sudah dipilih.
+- **PP→child Drive: explicit Google Groups, bukan OU inheritance** — OU policy ≠ Drive membership inheritance. Folder/file permissions inherit within a drive only.
+- **WPS = hosted integration platform, BUKAN open-source self-hosted** — jangan label sebagai self-hosted alternative.
 - **Foundation baseline WIP** — Zahid target done end July. Folder structure: shared packages only.
-- Deck menjadi **19 slide** (ada slide baru: Auth, OTP & Infrastruktur di posisi 16).

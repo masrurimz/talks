@@ -67,6 +67,18 @@ Revisi deck presentasi yang sudah dihasilkan untuk materi:
 - **Desktop-first** (bukan mobile-first).
 - **Monorepo shared packages only** — per-feature packages deferred.
 
+#### 11. Cek portal options
+- **Tiga opsi portal muncul**: separate deployment, custom CMS + ABAC, one WordPress.
+- **Option B (CMS+ABAC) = rekomendasi**, bukan final approval. Option C = pilot fallback. Option A = autonomy-only.
+- Decision matrix (9 dimensions) present.
+
+#### 12. Cek document management & signing
+- **Google Workspace cost = USD reference** — jangan fabricate IDR. Label "quote required" present.
+- **PP→child Drive: explicit Google Groups** — OU policy ≠ Drive membership inheritance.
+- **Signing = open question** — jangan portray satu path sebagai sudah dipilih.
+- **WPS = hosted integration, BUKAN open-source self-hosted**.
+- Deck = **22 slide** (3 slide decision baru di posisi 9, 12, 13).
+
 ---
 
 ## Prioritas sumber untuk revisi:
@@ -76,6 +88,8 @@ Revisi deck presentasi yang sudah dihasilkan untuk materi:
 4. `sources/references/referensi-tim-dan-raci.md` — cek tim & RACI.
 5. `sources/references/referensi-milestone.md` — cek milestone.
 6. `sources/references/referensi-arsitektur-dan-auth.md` — cek arsitektur, auth, kapasitas, tooling, infra.
+7. `sources/references/referensi-public-portal-options.md` — cek portal options.
+8. `sources/references/referensi-document-management-options.md` — cek document management, signing, cost.
 
 ---
 

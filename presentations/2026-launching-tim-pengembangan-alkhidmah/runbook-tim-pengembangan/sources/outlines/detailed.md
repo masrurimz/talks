@@ -106,7 +106,27 @@
 
 ---
 
-## Slide 9 — Milestone: H-3 bulan HAF (Oktober 2026)
+## Slide 9 — Portal Options [Wajib — tonight; Opsional — Tuesday]
+- Tiga opsi untuk portal public per-region (PW/PD/PC), mengikuti kebutuhan identitas tiap wilayah.
+- **Shared requirements (semua opsi)**: portal public terpusat + identitas per-unit; konten public SEO/read-only (jadwal majlis, berita, galeri, profil); link ke authenticated app (`my.alkhidmah.or.id`); workflow approval/publishing konten; akses kontributor scoped per organisasi; konvensi SEO/analytics; security update & backup; kemampuan publish markdown/konten lewat app di masa depan.
+- **Option A — Separate deployment per PW/PD/PC**: setiap unit punya deployment/database/content sendiri.
+  - Pro: autonomy penuh, full control, isolation per unit.
+  - Con: hosting/backup/security/monitoring berlipat ganda, UX tidak konsisten, integrasi terduplikasi, central publishing sulit.
+  - Cocok hanya untuk unit yang secara eksplisit otonom (legal/operasional) dan punya maintainer yang ditunjuk.
+- **Option B — Custom CMS + ABAC (RECOMMENDED)**: satu deployment, satu content model, setiap portal di-resolve berdasarkan unit scope. Reuses existing org hierarchy + Permix ABAC untuk role contributor/editor/publisher.
+  - Pro: integrated auth, UX konsisten, central publishing, reuse di app/API di masa depan.
+  - Con: build time lebih lama, editorial UX harus didesain, ABAC/content workflow harus diuji, satu deployment = shared operational dependency.
+  - Long-term strategic target, bukan final approval.
+- **Option C — One WordPress**: satu deployment, konten regional direpresentasikan via categories/custom post types/taxonomy + scoped roles/plugins.
+  - Pro: pilot tercepat, editor matang, initial engineering rendah.
+  - Con: regional ABAC/isolation tidak cukup native untuk hierarchy org kita, risiko security plugin/theme update, integrasi butuh custom code.
+  - Multisite variant: centralized network admin (Super Admin/plugin/theme), tapi operational/security blast radius tetap shared network-level.
+- Decision matrix (9 dimensi × 3 opsi, nilai kualitatif Low/Medium/High): build effort to first portal, unit autonomy, security blast radius, regional access control, shared UX/content standards, initial integration effort, ongoing maintenance, future app/markdown publishing, cost shape.
+- Malam ini: pilih arah/pilot — bukan build semua opsi. Option B = strategic target; Option C = pilot fallback kalau portal dibutuhkan sebelum custom CMS siap; Option A = autonomy-only.
+
+---
+
+## Slide 10 — Milestone: H-3 bulan HAF (Oktober 2026)
 - **Milestone terdekat.** Internal readiness checkpoint 3 bulan sebelum HAF.
 - Super app harus feature-complete dan testable pada titik ini.
 - Definition of Done:
@@ -121,7 +141,7 @@
 
 ---
 
-## Slide 10 — Milestone: HAF (Januari 2027)
+## Slide 11 — Milestone: HAF (Januari 2027)
 - **Wide-usage launch.** Super app jadi pengganti resmi jamaah app.
 - Definition of Done:
   - Super app live di 3 platform: iOS App Store + Google Play + `my.alkhidmah.or.id` web.
@@ -135,7 +155,48 @@
 
 ---
 
-## Slide 11 — Tim Kita
+## Slide 12 — Document Management Options [Wajib — tonight; Opsional — Tuesday]
+- **Scope**: manajemen dokumen organisasi — persuratan, SK docs, archive, templates, approval metadata, access policy, signing orchestration. Keuangan = domain terpisah. App tidak menduplikasi binary storage Google/Nextcloud.
+- **Option 1 — Google Workspace** (Drive/Docs/Sheets/Gmail) — recommended first evaluation.
+  - App owns: organization/document metadata, links, workflow state, ABAC scope.
+  - Google owns: document collaboration & storage (Docs/Sheets/Drive/Gmail).
+  - Satu tenant under `alkhidmah.or.id`. Shared drives per PP/PW/PC/PD.
+- **Access model**: `pp-doc-admins@alkhidmah.or.id` = Manager/Content Manager di semua child drives. Local group tiap child unit = Content Manager/Contributor di drive sendiri. Hindari direct per-user sharing (kecuali break-glass). OUs configure policy; Groups grant membership.
+- **Cost** (USD reference, before tax/FX/reseller; **quote required**):
+
+| Licensed users | Nonprofit free | Standard annual | Standard monthly | Plus annual | Plus monthly |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 50 | $0/yr if eligible | $2,100/yr | $2,520/yr | $3,696/yr | $4,440/yr |
+| 100 | $0/yr if eligible | $4,200/yr | $5,040/yr | $7,392/yr | $8,880/yr |
+| 300 | $0/yr if eligible | $12,600/yr | $15,120/yr | $22,176/yr | $26,640/yr |
+
+  - Final IDR cost butuh Google/reseller quote, nonprofit verification, taxes/FX, konfirmasi user mana yang butuh paid account.
+- **Provider-lobby checklist**: nonprofit verification; donated/free plan eligibility; Business Standard/Plus nonprofit quote; billing IDR; annual commitment discount; jumlah active accounts vs occasional contributors; pooled storage; Shared Drive/eSignature availability; migration assistance; admin/support SLA; data/export/retention; training/partner credits.
+- **Self-hosted alternatives**:
+  - **Nextcloud + Nextcloud Office (Collabora) + LibreSign/DocuSeal**: control tinggi, no per-user SaaS cost. Con: VPS capacity, backup, upgrade, security, office-fidelity, training burden. Current VPS capacity perlu diukur — no capacity claim tanpa pilot.
+  - **ONLYOFFICE Docs + Nextcloud**: MS Office compatibility kuat. Con: licensing/support & resource perlu di-quote.
+  - **Paperless-ngx**: archive/OCR/search/workflow complement — bukan full office collaboration/signing replacement.
+- **WPS WebOffice**: hosted integration/API platform — **NOT** open-source self-hosted. Kalau dipakai, request provider quote & integration terms terpisah.
+- Keuangan = domain terpisah, tidak termasuk document management scope ini.
+
+---
+
+## Slide 13 — Signing & Parent→Child Access [Wajib — tonight; Opsional — Tuesday]
+- **Signing options** (dipisah dari collaboration/storage):
+  - **(1) Google eSignature** pada eligible Standard/Plus plans: evaluasi tercepat, up to 10 signers/200 fields per request. Tapi validasi formal/legal requirements — availability ≠ acceptance.
+  - **(2) App workflow + licensed/certified provider**: app owns approval state/audit/integration; provider handles signature evidence/certificates. **Jangan implementasikan cryptographic signing ad hoc.**
+  - **(3) Self-host LibreSign/DocuSeal**: control + integration, tapi validasi legal acceptance, identity assurance, audit trail, dan operations.
+- **Decision gate**: Imam/Dzaky define apa yang dimaksud "official signing" (signer identity, approval authority, audit evidence, certificate/PSrE, document retention) sebelum memilih implementation.
+- **PP → child Drive access model**:
+  - Explicit Google Groups membership. `pp-doc-admins@alkhidmah.or.id` = Manager/Content Manager di child drives.
+  - **OU policy inheritance is NOT Drive membership inheritance.** OUs control policy/settings; akses drive diberikan explicit ke users/groups.
+  - Folder/file permissions inherit **within** a shared drive only; tidak otomatis cross dari parent drive ke child drive.
+  - Fallback (children pakai separate Workspace tenants): external sharing/groups, dengan governance & support cost lebih tinggi.
+- Boundary: Google Workspace/alternative office suite = document collaboration/storage; Alkhidmah app = document metadata, workflow state, regional scope, links.
+
+---
+
+## Slide 14 — Tim Kita
 - **Development** (4 orang):
   - **Zahid** — Tech Lead / Koordinator Pengembangan. Bangun core baseline arsitektur, lalu development. Release authority.
   - **Dzaky** — Developer. Dual role: juga Sekretaris Bidang. Development di atas baseline Zahid.
@@ -149,7 +210,7 @@
 
 ---
 
-## Slide 12 — Peran & Tanggung Jawab
+## Slide 15 — Peran & Tanggung Jawab
 - **Zahid (Tech Lead)**: architecture decisions, trunk keeper, release authority, stakeholder bridge ke Pengurus. Menetapkan core baseline agar developer lain bisa build di atasnya.
 - **Dzaky, Anaz, Faiz (Developer)**: fitur di `apps/*` + `packages/api`. Cross-cutting feature work. Build di atas baseline Zahid.
 - **Anaz (QA Automation)**: automated test infrastructure, regression suites, release verification. Double duty: dev + QA.
@@ -158,7 +219,7 @@
 
 ---
 
-## Slide 13 — RACI: Siapa Pegang Apa
+## Slide 16 — RACI: Siapa Pegang Apa
 - **R** = Responsible (mengerjakan) · **A** = Accountable (tanggung jawab akhir) · **C** = Consulted · **I** = Informed.
 
 | Workstream | Zahid (TL) | Dev (Dzaky/Anaz/Faiz) | PM (Shofi/Taufik/Tahzan) | Imam (KB) |
@@ -174,7 +235,7 @@
 
 ---
 
-## Slide 14 — Cara Kerja: Trunk-Based Development
+## Slide 17 — Cara Kerja: Trunk-Based Development
 - Semua orang integrate ke `master` (trunk) setidaknya harian.
 - Branch fitur berumur pendek (< 2 hari) → PR → review → merge.
 - `master` selalu deployable — tidak ada branch release lama.
@@ -189,7 +250,7 @@
 
 ---
 
-## Slide 15 — Code Review Policy
+## Slide 18 — Code Review Policy
 - **Aturan inti: setiap PR butuh 2 reviewers + 1 local retest oleh orang ketiga sebelum merge.**
 - Tidak ada exception — berlaku universal, termasuk "PR kecil" dan "fix typo".
 
@@ -205,7 +266,7 @@
 
 ---
 
-## Slide 16 — Auth, OTP & Infrastruktur
+## Slide 19 — Auth, OTP & Infrastruktur
 - **OTP provider**: kirimdev.com — WhatsApp Business API, Indonesia. Rp 25K/mo starter. Meta-approved AUTHENTICATION templates (auto-approved). Single REST endpoint, TypeScript SDK, webhooks.
 - **Cost optimization — customer-initiated messages**: registrasi via WhatsApp di mana user menginisiasi chat (klik link → kirim trigger → sistem balas OTP). Free within 24h window (up to 1.000/bulan per WABA). Business-initiated auth template ~$0.003/msg.
 - **WhatsApp fallback — OPEN DESIGN ITEM**: current approach tidak disukai. Flag untuk diskusi dengan Imam & Dzaky. Belum ada keputusan.
@@ -214,7 +275,7 @@
 
 ---
 
-## Slide 17 — Cadence Pertemuan
+## Slide 20 — Cadence Pertemuan
 | Meeting | Frequency | Duration | Output |
 | --- | --- | --- | --- |
 | Product Meeting | Bulanan (minggu pertama) | 90 min | Prioritized backlog, milestone progress, decisions log |
@@ -228,7 +289,7 @@
 
 ---
 
-## Slide 18 — Langkah Berikutnya
+## Slide 21 — Langkah Berikutnya
 - **Minggu 1 — Onboarding**:
   - Setup environment, worktree, akses repo untuk semua.
   - Baca `docs/ops/` — mulai dari roadmap, roster, engineering process.
@@ -240,7 +301,7 @@
 
 ---
 
-## Slide 19 — Penutup
+## Slide 22 — Penutup
 - Tim ini punya peran strategis: mewujudkan Al Khidmah Oase Dunia lewat teknologi.
 - Kita bukan sekadar ngoding — kita membangun alat yang melayani jamaah dan mensyiarkan nilai Al Khidmah.
 - Setiap orang di tim ini penting — dev, PM, leadership.

@@ -14,7 +14,7 @@
 ## Urutan potong jika waktu mepet
 Potong dalam urutan ini:
 1. Slide 5 (Program Kerja 7 item — ringkas jadi 1 kalimat).
-2. Slide 17 (Cadence pertemuan — sebut cepat).
+2. Slide 20 (Cadence pertemuan — sebut cepat).
 3. Slide 8 (Roadmap detail — tunjukkan tabel saja, skip detail per-tahun).
 
 Dengan begitu, inti besar masih aman: strategi, milestone, tim, dan cara kerja masih utuh.
@@ -140,7 +140,24 @@ Tiga tahun: build basics (2026) → expand & explore (2027) → design & polish 
 
 ---
 
-## Slide 9 [Wajib] — Milestone: H-3 bulan HAF (Oktober 2026)
+## Slide 9 [Wajib — tonight; Opsional — Tuesday full-team] — Portal Options
+**Ritme bicara:** 3 menit
+- Tiga opsi untuk portal public per-region (PW/PD/PC).
+- **Option A — Separate deployment**: autonomy + control. Con: ops × N, inconsistent UX.
+- **Option B — Custom CMS + ABAC** (RECOMMENDED): reuse existing org hierarchy + Permix. Con: build time.
+- **Option C — One WordPress**: fastest pilot. Con: ABAC not native, plugin risk.
+- Decision matrix summary (9 dimensions, qualitative Low/Medium/High).
+- Malam ini: pilih arah/pilot, bukan build semua.
+
+**Arah bicara:**
+Tunjukkan tabel. Tekankan Option B sebagai strategic target, C sebagai pilot fallback, A hanya untuk unit otonom. Ini decision slide untuk Imam & Dzaky.
+
+**Pesan utama:**
+Tiga opsi portal — malam ini pilih satu arah, bukan tiga.
+
+---
+
+## Slide 10 [Wajib] — Milestone: H-3 bulan HAF (Oktober 2026)
 **Ritme bicara:** 3–4 menit
 - **Milestone terdekat kita.** Internal readiness checkpoint 3 bulan sebelum HAF.
 - Definition of Done:
@@ -160,7 +177,7 @@ Target pertama kita: H-3 bulan HAF (Okt 2026) — super app feature-complete dan
 
 ---
 
-## Slide 10 [Wajib] — Milestone: HAF (Januari 2027)
+## Slide 11 [Wajib] — Milestone: HAF (Januari 2027)
 **Ritme bicara:** 2–3 menit
 - **Wide-usage launch.** Super app jadi pengganti resmi jamaah app.
 - Definition of Done:
@@ -179,7 +196,36 @@ HAF Januari 2027 = wide-usage launch — super app resmi menggantikan jamaah app
 
 ---
 
-## Slide 11 [Wajib] — Tim Kita
+## Slide 12 [Wajib — tonight; Opsional — Tuesday full-team] — Document Management Options
+**Ritme bicara:** 3 menit
+- **Google Workspace** (Drive/Docs/Sheets/Gmail) — evaluasi provider pertama. App stores metadata, Google stores documents.
+- One tenant under alkhidmah.or.id. Shared drives per PP/PW/PC/PD.
+- Cost: USD reference (50 users = $2,100/yr Standard; nonprofit free if eligible). Quote required.
+- Self-hosted alternatives: Nextcloud + Collabora, ONLYOFFICE, Paperless-ngx.
+- Keuangan = separate domain.
+
+**Arah bicara:**
+Jelaskan provider comparison singkat. Tekankan: cost USD reference, bukan IDR. Provider-lobby checklist. WPS = hosted, bukan self-hosted.
+
+**Pesan utama:**
+Google Workspace adalah evaluasi pertama — cost reference + quote required.
+
+---
+
+## Slide 13 [Wajib — tonight; Opsional — Tuesday full-team] — Signing & Parent→Child Access
+**Ritme bicara:** 2-3 menit
+- **Signing**: Google eSignature (10 signers/200 fields, validate formal/legal), app workflow + licensed provider, self-host LibreSign. Formal requirements TBD — decision untuk Imam & Dzaky.
+- **PP→child Drive access**: explicit Google Groups (Manager/Content Manager on child drives). OU policy ≠ Drive membership. Folder/file permissions inherit within drive only.
+
+**Arah bicara:**
+Signing = open question. Parent access = explicit groups, bukan automatic. Tanyakan Imam/Dzaky: apa definisi 'official signing' untuk SK?
+
+**Pesan utama:**
+Signing TBD; PP akses child Drive via explicit groups, bukan inheritance.
+
+---
+
+## Slide 14 [Wajib] — Tim Kita
 **Ritme bicara:** 3–4 menit
 - **Development** (4 orang):
   - **Zahid** — Tech Lead. Bangun core baseline arsitektur, lalu development.
@@ -198,7 +244,7 @@ Tim kita: 4 developer (Zahid lead + Dzaky/Anaz/Faiz) + 3 product manager (Shofi/
 
 ---
 
-## Slide 12 [Wajib] — Peran & Tanggung Jawab
+## Slide 15 [Wajib] — Peran & Tanggung Jawab
 **Ritme bicara:** 2–3 menit
 - **Zahid (Tech Lead)**: architecture, trunk keeper, release authority, stakeholder bridge. Bangun baseline agar tim lain bisa build.
 - **Dzaky, Anaz, Faiz (Developer)**: fitur di `apps/*` + `packages/api`. Build di atas baseline Zahid.
@@ -213,7 +259,7 @@ Zahid bangun baseline → Dzaky, Anaz & Faiz kembangkan fitur → PM kumpul kebu
 
 ---
 
-## Slide 13 [Wajib] — RACI: Siapa Pegang Apa
+## Slide 16 [Wajib] — RACI: Siapa Pegang Apa
 **Ritme bicara:** 2–3 menit
 - RACI = siapa **R**esponsible (mengerjakan), **A**ccountable (tanggung jawab akhir), **C**onsulted, **I**nformed.
 - Architecture decisions: Zahid A/R.
@@ -231,7 +277,7 @@ Setiap workstream punya R/A/C/I yang jelas — tidak ada yang ambiguity tentang 
 
 ---
 
-## Slide 14 [Wajib] — Cara Kerja: Trunk-Based Development
+## Slide 17 [Wajib] — Cara Kerja: Trunk-Based Development
 **Ritme bicara:** 2–3 menit
 - Semua integrate ke `master` **setidaknya harian**.
 - Branch fitur pendek (< 2 hari) → PR → review → merge.
@@ -249,7 +295,7 @@ Kita bekerja trunk-based: integrate harian, branch pendek, PR dengan review — 
 
 ---
 
-## Slide 15 [Wajib] — Code Review Policy
+## Slide 18 [Wajib] — Code Review Policy
 **Ritme bicara:** 3 menit
 - **Aturan inti: 2 reviewers + 1 local retest oleh orang ketiga sebelum merge.**
 - Tidak ada exception untuk "PR kecil" atau "fix typo".
@@ -265,7 +311,7 @@ Ini adalah aturan paling penting untuk kualitas. Jelaskan kenapa 3 pasang mata: 
 Setiap PR diverifikasi oleh 3 orang: 2 reviewer + 1 retester — tanpa exception.
 
 ---
-## Slide 16 [Wajib] — Auth, OTP & Infrastruktur
+## Slide 19 [Wajib] — Auth, OTP & Infrastruktur
 **Ritme bicara:** 2–3 menit
 - **OTP via kirimdev.com** — WhatsApp Business API, Indonesia. Rp 25K/mo starter. Meta-approved AUTHENTICATION templates (auto-approved).
 - **Customer-initiated messages untuk registrasi murah** — user menginisiasi chat → sistem balas OTP. Customer-initiated conversations dalam 24h window = **gratis** (up to 1.000/bulan per WABA).
@@ -282,7 +328,7 @@ Auth hemat via kirimdev + customer-initiated; infra sederhana di 1 VPS.
 
 ---
 
-## Slide 17 [Opsional] — Cadence Pertemuan
+## Slide 20 [Opsional] — Cadence Pertemuan
 **Ritme bicara:** 1–2 menit
 - **Product Meeting**: bulanan, 90 min — prioritized backlog, milestone progress.
 - **Dev Sync**: mingguan (Senin), 30 min — blockers, PR queue.
@@ -298,7 +344,7 @@ Kita punya ritme: product meeting bulanan, dev sync mingguan — output selalu d
 
 ---
 
-## Slide 18 [Wajib] — Langkah Berikutnya
+## Slide 21 [Wajib] — Langkah Berikutnya
 **Ritme bicara:** 2–3 menit
 - **Minggu 1**: Onboarding — setup environment, worktree, akses repo.
 - **Zahid**: core baseline WIP, target done end of July. Folder structure: shared packages only.
@@ -315,7 +361,7 @@ Ini adalah call to action konkret. Setiap orang tahu apa yang dilakukan minggu p
 Minggu pertama: onboarding + Zahid selesaikan baseline + PM mulai audit kebutuhan + dev familiarisasi codebase.
 
 ---
-## Slide 19 [Wajib] — Penutup
+## Slide 22 [Wajib] — Penutup
 **Ritme bicara:** 2–3 menit
 - Tim ini punya peran strategis: mewujudkan Al Khidmah Oase Dunia lewat teknologi.
 - Kita bukan sekadar ngoding — kita membangun alat yang melayani jamaah dan mensyiarkan nilai Al Khidmah.
@@ -331,5 +377,5 @@ Kita adalah tim yang mewujudkan Al Khidmah Oase Dunia lewat teknologi — mari m
 
 ---
 
-## Jumlah slide: 19
-## Estimasi total waktu: 30–35 menit
+## Jumlah slide: 22
+## Estimasi total waktu: 35–40 menit

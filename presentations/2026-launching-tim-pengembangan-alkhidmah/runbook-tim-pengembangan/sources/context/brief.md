@@ -25,9 +25,11 @@ Materi ini bertugas:
 ## Fokus isi yang benar
 Urutan prioritas isi:
 1. **Strategi konsolidasi super app + roadmap 2026–2028** — arah multi-tahun, kenapa 3 app jadi 1 super app.
-2. **Struktur tim & RACI aktual** — siapa mengerjakan apa, pembagian dev vs product.
-3. **Cara kerja engineering** — trunk-based, code review 2+1, cadence meeting.
-4. **Milestone terdekat: H-3 bulan HAF (Oktober 2026)** — readiness checkpoint, lalu HAF Januari 2027.
+2. **Portal per-region options** — tiga opsi (separate deployment, custom CMS + ABAC, one WordPress). Malam ini: pilih arah/pilot.
+3. **Document management options** — Google Workspace partnership (cost model + Drive hierarchy + signing) vs self-hosted alternatives. Malam ini: approve quote/lobby work + define signing requirements.
+4. **Struktur tim & RACI aktual** — siapa mengerjakan apa, pembagian dev vs product.
+5. **Cara kerja engineering** — trunk-based, code review 2+1, cadence meeting.
+6. **Milestone terdekat: H-3 bulan HAF (Oktober 2026)** — readiness checkpoint, lalu HAF Januari 2027.
 
 Strategi dan cara kerja adalah bagian terbesar deck. Tim dan milestone proporsi sedang.
 
@@ -74,5 +76,8 @@ Setelah materi ini, audiens diharapkan:
 - tahu perannya masing-masing dalam tim (dev vs product);
 - memahami model accountability (siapa R/A/C/I);
 - tahu milestone terdekat (H-3 bulan HAF, Oktober 2026) dan target HAF (Januari 2027);
+- **(untuk review Imam & Dzaky malam ini)** pilih arah portal (separate deployment, custom CMS + ABAC, atau WordPress pilot);
+- **(untuk review Imam & Dzaky malam ini)** approve Google Workspace quote/lobby work dan define PP child-drive access principle;
+- **(untuk review Imam & Dzaky malam ini)** identify signing requirements — apa definisi "official signing" untuk SK dan surat.
 - paham cara kontribusi kode dan proses review (trunk-based + 2 reviewer + 1 retest);
 - merasa bagian dari tim yang punya arah jelas menuju Al Khidmah Oase Dunia.

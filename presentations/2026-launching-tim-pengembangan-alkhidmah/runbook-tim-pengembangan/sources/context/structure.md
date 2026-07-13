@@ -22,7 +22,7 @@ Fokus terbesar harus pada:
 
 ## Durasi target
 - Presentasi sekitar **30 menit**.
-- Deck berisi **18–19 slide** untuk presenter-style, sekitar **20–21 slide** untuk detailed-style.
+- Deck berisi **20–22 slide** untuk presenter-style, sekitar **23–24 slide** untuk detailed-style.
 
 ## Judul yang diinginkan
 Judul deck harus langsung nyambung ke tujuan:
@@ -42,17 +42,20 @@ Susun deck dengan alur **why → where → what → who → how → next**:
 6. **Strategi: konsolidasi super app** — as-is 3 app terpisah → to-be 1 super app (`my.alkhidmah.or.id`) + 1 thin landing (`alkhidmah.or.id`). Desktop-first adaptive mobile.
 7. **Tiga stream migrasi** — A: jamaah→super app (H-3 HAF Okt'26); B: web→thin landing (HAF Jan'27); C: ZIS donasi→embedded dari hexa (Q2'27).
 8. **Roadmap 2026–2028** — build basics: majlis+org management (H2'26) → expand: SK docs, signing, keuangan (2027) → design & polish: hire UI/UX designer (2028).
-9. **Milestone: H-3 bulan HAF (Oktober 2026)** — milestone terdekat; Stream A selesai; foundation baseline selesai (Zahid, end Jul); majlis MVP production-ready.
-10. **Milestone: HAF Januari 2027** — wide-usage launch; 3 platform live; thin landing ship; ZIS donasi hexa embed finalized; 1000+ users.
-11. **Tim kita** — pembagian aktual: dev (Zahid, Dzaky, Anaz, Faiz) + product (Shofi, Taufik, Tahzan) + leadership (Imam).
-12. **Peran & tanggung jawab** — apa yang dimiliki tiap peran; Zahid bangun baseline → Dzaky, Anaz & Faiz kembangkan; PM kumpul kebutuhan & desain.
-13. **RACI — siapa pegang apa** — model accountability: Ketua Bidang=A, Koord. Pengembangan=R/A dev, PM=R product.
-14. **Cara kerja: trunk-based development** — integrate ke master harian, branch pendek <2 hari, PR→review→merge. Monorepo: shared packages only.
-15. **Code review policy** — aturan inti: 2 reviewer + 1 local retest oleh orang ketiga sebelum merge.
-16. **Auth, OTP & Infrastruktur** — OTP via kirimdev.com (WhatsApp, Rp 25K/mo); customer-initiated untuk registrasi murah; WhatsApp fallback = open design item; infra: Biznet Gio VPS (no managed cloud).
-17. **Cadence pertemuan** — product meeting bulanan, dev sync mingguan, retrospective. Tooling: GitHub Issues + Projects (sprint 2-mingguan).
-18. **Langkah berikutnya** — Zahid: core baseline WIP (done end Jul). PM mulai audit kebutuhan. Kapasitas: ~10 jam/orang/2-minggu (part-time). Onboarding minggu pertama.
-19. **Penutup** — tekad: tim ini mewujudkan Al Khidmah Oase Dunia lewat teknologi.
+9. **Portal Options** `[Wajib — tonight; Opsional — Tuesday]` — tiga opsi portal per-region: separate deployment, custom CMS + ABAC (recommended), one WordPress. Decision matrix.
+10. **Milestone: H-3 bulan HAF (Oktober 2026)** — milestone terdekat; Stream A selesai; foundation baseline selesai (Zahid, end Jul); majlis MVP production-ready.
+11. **Milestone: HAF Januari 2027** — wide-usage launch; 3 platform live; thin landing ship; ZIS donasi hexa embed finalized; 1000+ users.
+12. **Document Management Options** `[Wajib — tonight; Opsional — Tuesday]` — Google Workspace partnership (Drive/Docs/Sheets/Gmail), cost scenarios, provider-lobby checklist; self-hosted alternatives (Nextcloud, ONLYOFFICE, Paperless-ngx).
+13. **Signing & Parent→Child Access** `[Wajib — tonight; Opsional — Tuesday]` — Google eSignature limits; app workflow + provider; self-host LibreSign. One-tenant Shared Drive + explicit Google Groups model. Formal signing requirements TBD.
+14. **Tim kita** — pembagian aktual: dev (Zahid, Dzaky, Anaz, Faiz) + product (Shofi, Taufik, Tahzan) + leadership (Imam).
+15. **Peran & tanggung jawab** — apa yang dimiliki tiap peran; Zahid bangun baseline → Dzaky, Anaz & Faiz kembangkan; PM kumpul kebutuhan & desain.
+16. **RACI — siapa pegang apa** — model accountability: Ketua Bidang=A, Koord. Pengembangan=R/A dev, PM=R product.
+17. **Cara kerja: trunk-based development** — integrate ke master harian, branch pendek <2 hari, PR→review→merge. Monorepo: shared packages only.
+18. **Code review policy** — aturan inti: 2 reviewer + 1 local retest oleh orang ketiga sebelum merge.
+19. **Auth, OTP & Infrastruktur** — OTP via kirimdev.com (WhatsApp, Rp 25K/mo); customer-initiated untuk registrasi murah; WhatsApp fallback = open design item; infra: Biznet Gio VPS (no managed cloud).
+20. **Cadence pertemuan** — product meeting bulanan, dev sync mingguan, retrospective. Tooling: GitHub Issues + Projects (sprint 2-mingguan).
+21. **Langkah berikutnya** — Zahid: core baseline WIP (done end Jul). PM mulai audit kebutuhan. Kapasitas: ~10 jam/orang/2-minggu (part-time). Onboarding minggu pertama.
+22. **Penutup** — tekad: tim ini mewujudkan Al Khidmah Oase Dunia lewat teknologi.
 
 ## Aturan isi slide
 - Satu slide, satu gagasan utama.
