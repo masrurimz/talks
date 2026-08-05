@@ -19,3 +19,15 @@ __pycache__/
 
 # OS files
 .DS_Store
+
+# Graphify & tooling artifacts
+.pi/
+graphify-out/
+.gitattributes
+
+# Drafting / scratch tooling
+.sisyphus/
+
+# Scratch working docs & extracted images (not deck sources)
+extracted_images/
+DRAFT BIDANG DANA USAHA (1).docx
