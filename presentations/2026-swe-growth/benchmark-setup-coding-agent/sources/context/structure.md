@@ -8,18 +8,18 @@ The arc moves from proof, to how it got built, to three pillars around the model
 
 | Time | Section | Organizer questions |
 |---|---|---|
-| 0-5 | 1. Cold open | none |
-| 5-15 | 2. The journey | 1 |
-| 15-30 | 3. Pillar 1, the benchmark lab | 2, 3, 11 |
-| 30-45 | 4. Pillar 2, knowledge | 5, 7, 8 |
-| 45-65 | 5. Pillar 3, the crew | 4, 6, 9 |
-| 65-75 | 6. Infra and guardrails | 10 |
-| 75-82 | 7. Open problems | 12 |
-| 82-90 | 8. Close and Q&A | none |
+| 0-7 | 1. Cold open | none |
+| 7-15 | 2. The journey | 1 |
+| 15-32 | 3. Pillar 1, the benchmark lab | 2, 3, 11 |
+| 32-47 | 4. Pillar 2, knowledge | 5, 7, 8 |
+| 47-65 | 5. Pillar 3, the crew | 4, 6, 9 |
+| 65-74 | 6. Infra and guardrails | 10 |
+| 74-79 | 7. Open problems | 12 |
+| 79-90 | 8. Close and Q&A | none |
 
 ## Section details
 
-### 1. Cold open (0-5 min)
+### 1. Cold open (0-7 min)
 
 **Key theme.** The payoff first. A real bug, fixed and proven from a phone, so the audience asks "how".
 
@@ -28,13 +28,15 @@ The arc moves from proof, to how it got built, to three pillars around the model
 - PR #804. QA posted a warning at 08:52 WIB, and a pass at 09:57 WIB. That is about 65 minutes from finding to QA pass.
 - It was done while Zahid was already on board the plane, before takeoff, from the Tern Android app.
 
-**Ends with.** The claim, said out loud once: "The model is a swappable part. What lets one engineer ship from a phone is the setup around it: skills, proof, coordination, and guardrails."
+**Ends with.** The claim, said out loud once: "The model is a swappable part. What lets one engineer ship from a phone is the setup around it: skills, proof, coordination, and guardrails." The claim slide shows the model in grey and the four parts with equal weight.
 
-**Outside evidence for the claim.** Can Bölük, the author of omp (Stencil), on X: "I improved 15 LLMs at coding in one afternoon. Only the harness changed." Put it on the claim slide with the link, https://x.com/_can1357/status/2021828033640911196
+**Then the words.** What a harness is, in plain words, before any quote that uses the word. Then one pre-training slide that names six terms the audience will hear (harness, worktree, skill, mesh, SHIP, poteto-mode), one short gloss each.
+
+**Outside evidence for the claim.** Can Bölük, the author of omp (Stencil), on X: "I improved 15 LLMs at coding in one afternoon. Only the harness changed." It gets its own short slide after the harness definition, with the link, https://x.com/_can1357/status/2021828033640911196
 
 **Transition.** "To explain how that was possible, I need to show how I got here, and it was not a straight line."
 
-### 2. The journey (5-15 min)
+### 2. The journey (7-15 min)
 
 **Key theme.** Every tool switch had a concrete reason, and the reasons point to the same needs: extensibility, usage limits, and quality.
 
@@ -45,14 +47,14 @@ The arc moves from proof, to how it got built, to three pillars around the model
 - Amp, December 2025 to March 2026. More mature. Mostly used through a proxy for very large usage. The longest stay, with cross-agent communication and the ability to spawn other agents. Slide line: "I forgot why I left Amp, but omp is better because..."
 - Antigravity, briefly. Good free usage and features like plan annotations and session artifacts. Left because it is heavy, quality and limits were uneven, and the Google account got banned.
 - omp, first on m5 in February 2026, then on the main dev machine (x1) since March 2026.
-- What a harness is, in plain words. Why omp: extensible with own plugins, autolearn, Hindsight memory, multi-provider subscription logins, good compaction.
+- Why omp: extensible with own plugins, autolearn, Hindsight memory, multi-provider subscription logins, good compaction.
 - The tool journey is also a terminal journey. OpenChamber, then Ghostty tabs because of omp, then herdr for worktrees and sessions, then Paseo for more managed worktrees, and now Tern. Show it in one slide, with one line each.
 
 **Boundaries.** Dormant tools appear only as history, one line each. Do not teach how to use them.
 
 **Transition.** "Whatever tool I used, the question was always the same. Which model does which job, and what does it cost?"
 
-### 3. Pillar 1, the benchmark lab (15-30 min)
+### 3. Pillar 1, the benchmark lab (15-32 min)
 
 **Key theme.** This is the part that matches the title. Zahid measures before he chooses. He has a value formula, a bench of his own, a finding about effort, a handoff trick he tested and turned off, and a subscription journey that ended with "all in on Claude 5.5". All the facts and evidence paths are in `references/referensi-benchmark-lab.md`. Prioritize that file for this section.
 
@@ -60,7 +62,8 @@ The arc moves from proof, to how it got built, to three pillars around the model
 - **Demo starts here (about minute 15).** Pick a small real issue from the Alkhidmah backlog, create a worktree, send one prompt from the phone, and leave it running.
 - Model routing per role. Live config: default is Opus at low effort, plan is Opus at high, reviewer is Opus at medium, task is Sonnet at medium, and scout and sonic use fast Haiku. Effort rule of thumb. Low for execution, high for plans and hard debugging, medium for review, max almost never. Speeds since October 2026 (Anthropic, average per request). Haiku subagent 130 tokens per second, Sonnet subagent 95, Opus main 66. Effort is not recorded per request, which is why the bench exists.
 - The value formula. Value Multiplier = quota $ / subscription cost. Effective $/1M = blended $/1M / multiplier. Value Score = benchmark / effective $/1M. Speed-adjusted QSPD multiplies the benchmark by tokens per second. It catches the "$25 per 1M versus $2 per 1M at the same performance" trap. Rules. One common benchmark only (Terminal-Bench 2.1), count accounts, `cost_total` is API-equivalent, GLM is verbose.
-- The October 2026 bench. Two easy tasks (a UI page, a slot finder), three runs each, hidden-check graders, medians. Every arm passed 126 of 126 checks, so the bench separates models on speed and cost, not quality. Opus 5.5 low 92 s and 54 s at $0.22 to $0.39 per task. Haiku 5.5 medium 170 s and 120 s at $0.02 to $0.03. DeepSeek v4.1 flash low 476 s and 275 s, the slowest arm.
+- The October 2026 bench, plotted as time against cost. Two easy tasks (a UI page, a slot finder), three runs each, hidden-check graders, medians. The results file stores no per-run times, so there are no whiskers. Every arm passed 126 of 126 checks, so the bench separates models on speed and cost, not quality. Opus 5.5 low 92 s and 54 s at $0.22 to $0.39 per task. Haiku 5.5 medium 170 s and 120 s at $0.02 to $0.03. DeepSeek v4.1 flash low 476 s and 275 s, the slowest arm.
+- Tokens per second misled me. The September formula rated DeepSeek at about 118 tokens per second. In the bench it was the slowest per task, with 28 turns on the UI task against 9 for Opus low. The formula has no term for turns.
 - Effort versus turns. Raising effort raised the turn count in every head-to-head pair (Spark slot finder 9 to 23, DeepSeek UI 28 to 40). The likely cause, re-checking, is an inference. The rule stays.
 - Handoff arms and the caveat. A handoff costs extra on short tasks and saved money in real long sessions ($2.58 against $1.63 per task, log estimates). Public Terminal-Bench 4.0 has Haiku 5.5 at 39.2% and Sonnet 5.5 at 70.6%, so Haiku on long multi-step work is unproven.
 - Prewalk. From the omp docs, a one-shot handoff from the active model to a cheaper one at the first edit, after a todo list exists. Can Bölük's post, "Opus fixing things does not cost money. Opus reading things costs money." and "Hand off a trajectory, not a fairytale." His receipts on SWE-Bench Pro. Sol prewalk into Luna 85% at $1.04 against Sol alone 88% at $1.71. Opus 4.8 prewalk into Flash 78% at $1.46 against Opus alone 85% at $2.78. Zahid's own experience. It took extra time on some tasks, a Haiku target was too expensive, a DeepSeek target too slow, and it is off now.
@@ -69,28 +72,28 @@ The arc moves from proof, to how it got built, to three pillars around the model
 
 **Transition.** "A fast, well-chosen engine still forgets everything tomorrow. The next pillar is what the agent knows."
 
-### 4. Pillar 2, knowledge (30-45 min)
+### 4. Pillar 2, knowledge (32-47 min)
 
 **Key theme.** Skills are reusable knowledge. Memory is what carries across projects. Specs keep agents on track.
 
 **Stories.**
 - The skill rule: "When you see you are doing the same work more than twice, it is a candidate for a skill, so the agent can do it for you."
-- Favorites to show. The principle-check-every-layer principle that Zahid added to poteto. The per-domain area skills. His own omp plugins, which were a main reason he picked omp.
-- Autolearn story. Auto-on minted too many skills. He consolidated them into 14 domain skills plus a lint, and now triggers autolearn by hand after a session that taught something.
+- Favorites to show. The poteto-mode port and the principle-check-every-layer principle that Zahid added to it, placed after the layered instructions. The per-domain area skills. His own omp plugins, which were a main reason he picked omp.
+- Autolearn story. Auto-on created too many skills. He consolidated them into 14 domain skills plus a lint, and now triggers autolearn by hand after a session that taught something.
 - Memory as a journey. Mnemopi, then Hindsight in June 2026. Cognee tried in September and removed in October. Verdict: "Skills and references are for TIL and reusable knowledge, while memory is what you do cross-project."
 - Context and compaction. omp's compaction (shake and snapcompact) plus the memory layer keep long sessions usable.
 - Specs and tasks. Why beads was dropped. Agents got smarter, beads is not really human-readable, and agents now retain context better. Replaced by GitHub issues plus coordinator ledgers.
 
 **Transition.** "One agent with good knowledge is useful. The real jump came when I ran many at once."
 
-### 5. Pillar 3, the crew (45-65 min)
+### 5. Pillar 3, the crew (47-65 min)
 
 **Key theme.** Parallel agents need separation, one coordinator, and gates that demand proof.
 
 **Stories.**
 - Worktrees. One worktree per task, opened as a Tern tab by the tern-worktrees plugin Zahid wrote.
 - Mesh. Why many sessions on one machine collide, and how omp-agent-mesh (own plugin, Effect-based) provides repo groups, presence, waking messages, file claims, and subagent attribution.
-- The SHIP coordinator. A normal omp session that owns merging. It ran about three days (November 2 to 5), with a 276-line ledger. It runs the poteto skill set that Zahid ported to omp. Workers report MERGE-READY with a PR and SHA, freeze the head, and get one fix round. An independent reviewer writes a report.
+- The SHIP coordinator. A normal omp session that owns merging. It ran about three days (November 2 to 5), with a 276-line ledger. It runs the poteto skill set that Zahid ported to omp, introduced in Pillar 2. A reset with a chat question at minute 55 opens this part. Workers report MERGE-READY with a PR and SHA, freeze the head, and get one fix round. An independent reviewer writes a report.
 - Base-branch coordination is solved, not open. Many PRs against one base are handled by his own mesh plugin (omp-agent-mesh) plus one spawned coordinator agent that guides the workers. One writer per branch, and the coordinator merges in sequence. Present it as solved.
 - Long-run guardrails. Frozen heads, ledgers, independent review, and proof requirements.
 - Review gates and proof. Proof ladder: a recording for UI, command output for API or CLI, a run link for CI, the test command when nothing is visible. Alkhidmah goes further, since `verify.ts` must fail on master and pass on the branch. PR body ends with a "Not verified" line.
@@ -99,7 +102,7 @@ The arc moves from proof, to how it got built, to three pillars around the model
 
 **Transition.** "All of this runs on machines, and machines hold secrets and production access. So the last pillar is boring and important."
 
-### 6. Infra and guardrails (65-75 min)
+### 6. Infra and guardrails (65-74 min)
 
 **Key theme.** Make repos bootable in one command, and make every dangerous action reversible or dry-run.
 
@@ -114,7 +117,7 @@ The arc moves from proof, to how it got built, to three pillars around the model
 
 **Transition.** "That is the setup that works. Now the part that does not."
 
-### 7. Open problems (75-82 min)
+### 7. Open problems (74-79 min)
 
 **Key theme.** Honest limits. This section builds trust. Exactly three problems, the three Zahid picked.
 
@@ -127,13 +130,12 @@ The arc moves from proof, to how it got built, to three pillars around the model
 
 **Transition.** "So where does that leave us?"
 
-### 8. Close and Q&A (82-90 min)
+### 8. Close and Q&A (79-90 min)
 
 **Key theme.** One claim, one action.
 
 - Restate the claim.
 - The one action: the skill rule, "more than twice, make it a skill".
-- A short set of quotes from earlier slides.
 - Q&A with the prepared list below.
 
 ## Content boundaries
@@ -181,7 +183,7 @@ Say aloud that the demo runs while Zahid talks about other things, which is how 
 
 ## Notes for the outline writers
 
-- Keep all timings above. The presenter outline has 47 slides and the detailed outline has 37. Both rehearse to about 72 minutes of material.
+- Keep all timings above. The presenter outline has 48 slides and 7 section dividers, and the detailed outline has 37. Both rehearse to about 72 minutes of material. The clock windows are in the presenter outline run of show.
 - Each pillar section needs one visual: a number, a diagram, or a screenshot.
 - Put the claim on the opening and closing slides in the same words.
 - Pillar 1 centers on the benchmark lab. Take its facts from `references/referensi-benchmark-lab.md`.
