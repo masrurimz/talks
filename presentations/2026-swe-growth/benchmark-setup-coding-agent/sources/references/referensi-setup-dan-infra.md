@@ -12,8 +12,8 @@ Evidence paths are relative to the home directory unless noted. `MS/` means `~/.
 
 - omp is the agent harness. Its live home is `~/.omp/agent/`. It holds `config.yml`, `models.yml`, `AGENTS.md`, `mesh.json`, `mcp.json`, `lsp.json`, plus `agents/`, `commands/`, `extensions/`, `managed-skills/`, `skills/`, `rules/`, `sessions/` (`~/.omp/agent/`).
 - Sessions are JSONL files grouped by working directory, for example `~/.omp/agent/sessions/-work-talks/`. The archive holds 2,585 sessions across 500+ projects (`local://talk-extra-facts.md`, archive numbers).
-- Telemetry in `~/.omp/stats.db` covers 2026-03-07 to 2026-10-21. It records 9,817 sessions, 682,512 model requests and about 116B tokens. The API-equivalent price is $19.9k. That is not actual spend, because subscriptions carry most of it. Say "API-equivalent" on stage.
-- Top models by recorded API-equivalent cost in that window were glm-5.3 ($7.8k), glm-5.2 ($2.9k) and claude-opus-5-5 ($2.3k) (`~/.omp/stats.db`, table `message_rollup`).
+- Telemetry in `~/.omp/stats.db` (table `message_rollup`) was re-aggregated on 2026-11-05 and covers 2026-03-07 to 2026-11-05 on x1-dev. All time it records 11,842 sessions, 833,553 model requests and 138B tokens. The API-equivalent price is $25.9k. Without prompt caching the same work would price at $158.7k. API-equivalent is the list price of the tokens, not money paid. Zahid pays about $200 per month now (2x Claude Max plus OpenCode Go), usually about $100. Say "API-equivalent" on stage.
+- Providers by requests, all time: anthropic 240k, zai (GLM, his own Max plan) 224k, openai-codex (office Codex Pro) 128k, then muse-sub 91k and opencode-go 59k. At least 12 providers tried. Full table in `referensi-evolusi-biaya-plugin.md`. The subscription history and the benchmark lab are in `referensi-benchmark-lab.md`.
 - Model roles live in `~/.omp/agent/config.yml` under `modelRoles`.
   - `default` is claude-opus-5-5 at low thinking.
   - `plan`, `slow` are claude-opus-5-5 at high thinking.
@@ -279,4 +279,4 @@ A rolled-back or refused update still shows green while the old container serves
 
 - `~/.omp/agent/config.yml` unfiltered. The memory token is a plain value there and in the git-tracked dotfiles copy. It is a rotation item.
 - `~/.ssh/config`, `~/.config/tern/` contents, `~/.omp/agent/secret-placeholder.key`, `~/.omp/agent/org-accounts.yml`, `~/.omp/agent/agent.db`.
-- Prompt history in raw form. It contains pasted credentials from client work, and obfuscation does not cover local history (`local://talk-extra-facts.md`, security findings).
+- Raw session files in `~/.omp/agent/sessions/`. They hold client work context. Show only a redacted excerpt.

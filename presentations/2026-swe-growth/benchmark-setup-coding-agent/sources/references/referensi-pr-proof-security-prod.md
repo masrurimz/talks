@@ -39,7 +39,7 @@ Evidence comes from research notes taken on 2026-11-05. Paths starting with `MS/
 
 ### Story/example
 
-PR #804 in `groundup-ai/GinaV2` came from a QA message pasted into a session on 2026-10-26, with the instruction to test on the shared dev box so the PR could carry proof screenshots or recordings. The body has a Why with six numbered issues, and Verification gives a before and after table with videos for each one. The agent reproduced each issue on the base first, then checked it on the branch, with the same recording method. The next morning QA posted one low-priority finding on the PR, a draft sensor opening the edit modal on click. From a phone, Zahid pasted it and asked the agent to fix it, prove it and update the PR. In about four minutes the agent committed the fix, recorded a "before" video on the dev stack, applied the fix, recorded "after", uploaded both and edited the body. QA marked the finding resolved 65 minutes after posting it. The PR carries the label "Tested - Pass". `local://talk-extra-facts.md` section on #804.
+PR #804 in `groundup-ai/GinaV2` came from a QA message pasted into a session on 2026-10-26, with the instruction to test on the shared dev box so the PR could carry proof screenshots or recordings. The body has a Why with six numbered issues, and Verification gives a before and after table with videos for each one. The agent reproduced each issue on the base first, then checked it on the branch, with the same recording method. The next morning QA posted one low-priority finding on the PR, a draft sensor opening the edit modal on click. From the Tern Android app, Zahid pasted it and asked the agent to fix it, prove it and update the PR. In about four minutes the agent committed the fix, recorded a "before" video on the dev stack, applied the fix, recorded "after", uploaded both and edited the body. QA marked the finding resolved 65 minutes after posting it. The PR carries the label "Tested - Pass". `local://talk-extra-facts.md` section on #804.
 
 PR #760 is the cleanest example of the shape. Its title is "feat(deploy): build, vulnerability scan images in CI and deploy them by digest". How is a mermaid diagram plus bullets. Verification cites a staging deploy run by link and says the first scan found 16 CRITICAL findings in three packages, all fixed. It ends with a Not verified list that names an auth deploy on staging and a password-reset email with the mounted template. The `<details>` block says CI built, scanned and pushed all nine images in 6 minutes, down from 38.
 
@@ -73,8 +73,8 @@ PR #760 is the cleanest example of the shape. Its title is "feat(deploy): build,
 
 ### Key facts
 
-- **Obfuscation is switched on.** The live config has `secrets: { enabled: true }`. A key file sits at `~/.omp/agent/secret-placeholder.key`. The notes did not read it, and it should stay off screen. `~/.omp/agent/config.yml`
-- **What the model sees.** Tool output carries opaque tokens shaped `$$HASH$$` or `$$HASH:CASE$$`. The system rule is to copy them byte for byte. [INFERENCE] The real value is swapped in at tool execution and the model only sees the placeholder. The notes say to confirm with Zahid how the key file is used before claiming this on stage.
+- **Obfuscation is on by default.** omp ships with secret obfuscation switched on, and Zahid's live config keeps it on (`secrets: { enabled: true }` in `~/.omp/agent/config.yml`). A key file sits at `~/.omp/agent/secret-placeholder.key`. It should stay off screen.
+- **What the model sees.** Tool output carries opaque tokens shaped `$$HASH$$` or `$$HASH:CASE$$`. The system rule is to copy them byte for byte. The model works with the placeholder, never the stored value.
 - **Example of the placeholder form.** `~/.omp/agent/managed-skills/omp-ops/playbooks/reset-amp-cliapi-proxy-integration.md` line 16 shows a stored key as a `$$...$$` token. Show only that line, never the secrets file it describes.
 - **Damage-control rules.** `~/dotfiles/omp/agent/damage-control-rules.yaml` is version controlled and declares four lists.
   - Blocked bash patterns include `rm -r/-rf`, `git reset --hard`, `git clean -fd`, `git push --force` (not `--force-with-lease`, which asks), `DROP TABLE|DATABASE`, `TRUNCATE`, `chmod 777`, `eas update --force` and `eas build --clear-cache`.
@@ -87,14 +87,13 @@ PR #760 is the cleanest example of the shape. Its title is "feat(deploy): build,
 - **Per-worktree `.env` handling.** `tern-wt create` with `worktree.clone` copies ignored files such as `.env` into a new worktree. Damage control marks `.env*` read-only. GinaV2 checkouts symlink `.env` to one shared file, so a backup comes before any edit. `MS/groundup-ops/references/ginav2-tailnet-dev-stack.md`
 - **Rules about output.** Playbooks say "Redact API keys in user-visible output" (`verify-premzone-pricing.md` line 64) and "Redact keys when displaying" (`wire-vscode-byok-reseller-into-omp.md` line 26).
 - **His own framing.** On 2026-10-21 he wrote "go enable those obfuscate secrets", then, while evaluating a credential manager, "omp just doing obfuscation but not manage secrets". `local://talk-extra-facts.md`, prompting style section.
-- **Finding 1, to rotate.** Prompt history contains a pasted client secret for a client-integration project (2026-11-05). Obfuscation does not cover what already sits in local history. Talk point plus a rotation item. No value is recorded.
-- **Finding 2, to move or rotate.** The memory backend token is a plain value in the live omp config and in the git-tracked dotfiles copy of it. The dotfiles repo is private. A literal tenant token also appears in a memory-setup playbook. Action is to move it into the secret manager and rotate it. No value is recorded.
+- **Finding 1, to rotate.** The memory backend token is a plain value in the live omp config and in the git-tracked dotfiles copy of it. The dotfiles repo is private. A literal tenant token also appears in a memory-setup playbook. Action is to move it into the secret manager and rotate it. No value is recorded.
 - **Other credentials at rest.** The omp agent DB has an `auth_credentials` table (19 rows, not read). Provider API keys are exported in the shell env file as variables, and the notes recorded names only.
 - **Browser relay is on.** The live config has `browser: { headless: true, relay: true }`. Confirm what that exposes before showing it.
 
 ### Story/example
 
-On 2026-10-21 he turned on omp's secret obfuscation, and the same day he wrote that omp "just doing obfuscation but not manage secrets". Two weeks later the research for this talk found exactly the gap that sentence predicts. Obfuscation hides values from the model in tool output. It does not clean the local prompt history where he once pasted a client secret, and it does not move a plain-text memory token out of a config file that is also tracked in a private dotfiles repo. Both became rotation items instead of slides with values. The fix path is the rule already in infra-ops, machines get Infisical and humans get Bitwarden.
+On 2026-10-21 he checked omp's secret obfuscation (on by default, confirmed on in his config) and wrote that omp is "just doing obfuscation but not manage secrets". That sentence is the whole security model. Obfuscation hides values from the model in tool output. It does not move a plain-text memory token out of a config file that is also tracked in a private dotfiles repo. That became a rotation item instead of a slide with a value. The layers around it are damage-control rules, Infisical for machines, Bitwarden for humans, and production read-only by default.
 
 ### Show on screen
 
@@ -104,7 +103,7 @@ On 2026-10-21 he turned on omp's secret obfuscation, and the same day he wrote t
 - `~/.omp/agent/managed-skills/omp-ops/playbooks/reset-amp-cliapi-proxy-integration.md:16` (the `$$...$$` form).
 - `~/.omp/agent/managed-skills/infra-ops/SKILL.md` lines 8 to 16 (Hard rules).
 - `~/dotfiles/dev-server/infisical/docker-compose.yml`, service names only.
-- Never show `secret-placeholder.key`, `~/.config/tern/` files, `agent.db`, or prompt history.
+- Never show `secret-placeholder.key`, `~/.config/tern/` files, `agent.db`, or raw session files.
 
 ### Quotable
 

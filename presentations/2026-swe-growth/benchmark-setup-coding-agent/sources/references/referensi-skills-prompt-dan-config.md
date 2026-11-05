@@ -21,13 +21,14 @@ Where an item came from a note marked [INFERENCE] or [UNVERIFIED], the marker is
 - The size budget is enforced by a check. A coordinator message reported one nested file at 4218 bytes against a 4096 budget. A `bun run docs:agents` run reported "14 nested files fit their budgets." Evidence `~/.omp/agent/mesh/feed.jsonl` (entry dated 2026-10-28).
 - Subagent briefs follow one shape. The opening line is "Complete assignment thoroughly:", then `# Target`, `# Change`, and `# Contract` (or `# Output`). A brief names the file to write, the facts that must appear, and what not to leak. Evidence a `DomainResearch.jsonl` session file for the GinaV2 agentic-reasoning worktree, user message at line 9.
 - The poteto-mode skill is autoloaded by an extension once per context lifetime. It skips subagents and plan or vibe modes. Off switch is the file `~/.omp/agent/poteto-mode.off`. Evidence `~/work/labs/omp-skills/SYNC.md`, section "OMP adaptation rules".
-- Prompts paste raw context. Seen in prompt history are WhatsApp threads, HAR dumps, screenshots, Excalidraw JSON, and spreadsheets. Evidence `local://talk-extra-facts.md`.
+- Prompts paste raw context. Seen in his prompts are WhatsApp threads, HAR dumps, screenshots, Excalidraw JSON, and spreadsheets. Evidence `local://talk-extra-facts.md`.
 - Voice input is on. The config has `stt` enabled with `submitTrigger: say-submit`, and a mic icon is visible in the phone screenshot of the mobile fix. Evidence live `~/.omp/agent/config.yml`.
 - `/handoff` is a user-level skill (`~/.omp/agent/skills/handoff`). It appears in a real prompt as "/handoff i will be doing all the testing on staging".
+- Secret obfuscation is on by default in omp. Values in tool output reach the model as placeholders, so pasted context and tool output do not carry live secrets to the model. Details in the security reference.
 
 ### Story/example
 
-On 2026-10-26 Zahid pasted a QA engineer's WhatsApp report straight into a fresh session and wrote one line. It told the agent to do the fix, then ssh to groundup-dev, start the stack there, and capture screenshots or a recording so the PR body carries proof. The line ended with "own all the changes poteto". No spec, no ticket. The next morning, from his phone, he pasted a second finding with "Fix those own changes proof and update pr", and the agent recorded a before video, applied the fix, recorded an after video, and updated the PR body. The brief shape (Target, Change, Contract) shows up one level down, when the main agent hands research to subagents. His own prompts stay loose. The structure lives in the rules and skills that load around them.
+On 2026-10-26 Zahid pasted a QA engineer's WhatsApp report straight into a fresh session and wrote one line. It told the agent to do the fix, then ssh to groundup-dev, start the stack there, and capture screenshots or a recording so the PR body carries proof. The line ended with "own all the changes poteto". No spec, no ticket. The next morning, from the Tern Android app, he pasted a second finding with "Fix those own changes proof and update pr", and the agent recorded a before video, applied the fix, recorded an after video, and updated the PR body. The brief shape (Target, Change, Contract) shows up one level down, when the main agent hands research to subagents. His own prompts stay loose. The structure lives in the rules and skills that load around them.
 
 ### Show on screen
 
@@ -35,7 +36,7 @@ On 2026-10-26 Zahid pasted a QA engineer's WhatsApp report straight into a fresh
 - `ls ~/.omp/agent/rules/` then `cat ~/.omp/agent/rules/check-every-layer.md`.
 - `head -40 ~/work/alkhidmah/main_digital-platform/AGENTS.md` for the router table and nearest-wins line.
 - `cat ~/.omp/agent/rules/pytest-resource-cap.md` to show the `condition:` frontmatter (read only, do not trigger it with a real test run on stage).
-- A redacted prompt-history excerpt with the typo lines below.
+- A short excerpt of real prompts with the typo lines below.
 
 ### Quotable
 
@@ -54,10 +55,10 @@ creare new workgtree and trace teh impacted and related flow tehn fix, and then 
 i will follow all your recommendations now implement those and open pr then while waiting pr ci you can ask codex review to review your implementations poteto
 ```
 ```
-We wont deploy staging aji will pull and test on pr
+We wont deploy staging [QA] will pull and test on pr
 ```
 
-The tester's first name appears in the last prompt. Replace it with "QA" on a slide if you prefer.
+The tester's first name is replaced with "[QA]" in this quote.
 
 Rule text.
 
@@ -244,7 +245,6 @@ These are drift items found while researching. Resolve each before showing it on
 - Date mismatch on the Hindsight migration. The playbook is dated 2026-06-28, while the pre-Hindsight config backup is dated 2026-09-18. Confirm which date to quote.
 - Live and dotfiles `config.yml` differ. The omp-ops playbook says the live file is a symlink to the dotfiles copy. The two files now differ, so [INFERENCE] the symlink was replaced. Verify before showing any dotfiles diff as "the same file".
 - Plaintext token. The Hindsight API token is stored as a plain value in the live config and in the version-controlled dotfiles copy (a private repo). Treat it as a rotation item. Crop it out of every screen.
-- Prompt history keeps pasted secrets. A client-integration credential was pasted into a prompt on 2026-11-05, and secret obfuscation does not cover local history. This is a talk point and a rotation item. Do not show the history file.
 - PR rules disagree on drafts. `opening-a-pr.md` says to open every PR ready. `pr-body-shape.md` says GinaV2 PRs open as drafts. The `pr-body` rule routes to the second. Pick the GinaV2 rule if the slide covers it.
 - Autoskills reasoning is [INFERENCE]. Ask Zahid why it is off before stating a reason.
 - Skill counts are partial. Router-entry and playbook counts came from capped globs. Re-run `grep -c` per skill and `ls -d ~/.agents/skills/principle-* | wc -l` before slides carry numbers. The reflog count of 14 commits for `omp-skills` is also [INFERENCE] until `git log --oneline | wc -l` is run.

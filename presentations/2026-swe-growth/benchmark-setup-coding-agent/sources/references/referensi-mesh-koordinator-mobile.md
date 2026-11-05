@@ -1,6 +1,6 @@
 # Reference digest: omp mesh, coordinator sessions, omp on the phone
 
-Three talk topics. Topic 4 covers the omp mesh, the built-in way parallel sessions on one machine avoid stepping on each other. Topic 7 covers the coordinator session, an ordinary omp session that drives SHIP and MERGE rounds through mesh, `gh`, TSV ledgers and independent reviewer subagents. Topic 8 covers a real bug fix driven from a phone, GinaV2 PR #804, with a 65-minute loop from QA finding to QA pass.
+Three talk topics. Topic 4 covers the omp mesh, the way parallel sessions on one machine avoid stepping on each other. Mesh is Zahid's own plugin, `omp-agent-mesh` (an Effect-based mesh engine with repo groups, presence, waking messages, throttled sends, file claims and subagent attribution, enabled in his setup, 7 commits on 2026-10-25 and 2026-10-26). Topic 7 covers the coordinator session, an ordinary omp session that drives SHIP and MERGE rounds through mesh, `gh`, TSV ledgers and independent reviewer subagents. Topic 8 covers a real bug fix driven from a phone with the Tern Android app, GinaV2 PR #804, with a 65-minute loop from QA finding to QA pass.
 Times are WIB (UTC+7) unless marked UTC. Evidence paths are on the author's workstation. Items marked [UNVERIFIED] or [INFERENCE] were not confirmed on disk.
 Customer and project names are replaced with generic labels. The coordinator ledger directory is written as `~/work/<project>/coord/`.
 
@@ -9,7 +9,7 @@ Customer and project names are replaced with generic labels. The coordinator led
 ### Key facts
 
 - Many omp sessions run on one machine and share one set of ports, one Docker daemon and one checkout. Mesh exists so two agents do not run the same heavy job or edit the same file. `~/.omp/agent/AGENTS.md` (section "Multi-agent coordination (mesh)").
-- Mesh is a built-in omp tool named `mesh`. It is also reachable as the write target `xd://mesh` with a JSON body such as `{"action":"send","to":"<name>","body":"..."}`. Session transcripts under `~/.omp/agent/sessions/`.
+- Mesh is a tool named `mesh`, provided by Zahid's own `omp-agent-mesh` plugin (source of truth: `~/.omp/plugins/omp-plugins.lock.json` and the plugin repo under `~/work/labs/`). It is also reachable as the write target `xd://mesh` with a JSON body such as `{"action":"send","to":"<name>","body":"..."}`. Session transcripts under `~/.omp/agent/sessions/`.
 - Rules in the global AGENTS.md, paraphrased from the file. `~/.omp/agent/AGENTS.md`
   - Run `peers` before work that touches shared resources.
   - Keep a `note` current with what you do and which ports and containers you hold.
@@ -110,7 +110,7 @@ Quoted from the ship and merge-queue ledgers. Customer names removed.
 - `#490 FAIL: README dvc pull command errors when run as written | ran the README verbatim in a clean worktree`
 - `#492 FAIL: staging mask leaks most PII, reset rerun can drop the only prior live DB | proven on throwaway PG by reviewer`
 - `decided #492 does not gate the release | devkit-only CLI; nothing in prod images changes`
-- Worker messages in prompt history. "#549 round 1: FAIL at 76bcdaf2b (report coord/2026-11-04-review-549.md)... One fix round, everything in one push". "#544 round 1: PASS+NOTES ... Proof red on pre-#535, green on head".
+- Worker messages in the coordinator session. "#549 round 1: FAIL at 76bcdaf2b (report coord/2026-11-04-review-549.md)... One fix round, everything in one push". "#544 round 1: PASS+NOTES ... Proof red on pre-#535, green on head".
 
 ### Story/example
 
@@ -203,25 +203,23 @@ Frozen verdict: PASS+NOTES at head 592b92ae9
 | 2026-10-27 09:29 | Fix applied on dev, "after" recording starts |
 | 2026-10-27 09:30 | Proofs uploaded, branch pushed |
 | 2026-10-27 09:31 | PR body updated with item 6 (proof). Zahid comments on the PR telling QA to `gh pr checkout 804` rather than use staging. |
-| 2026-10-27 09:39 | Prompt: "We wont deploy staging aji will pull and test on pr" |
+| 2026-10-27 09:39 | Prompt: "We wont deploy staging [QA] will pull and test on pr" |
 | 2026-10-27 09:57 | QA posts Test Result with status pass. Finding marked Resolved. |
 
-- QA finding to QA pass is 65 minutes (08:52 to 09:57), driven from the phone. Prompt history and PR #804.
+- QA finding to QA pass is 65 minutes (08:52 to 09:57), driven from the phone. Session transcript and PR #804.
 - The "before" recording was 20,363 ms and 54 frames. `/tmp/i803/draftclick-before.mp4` on the dev host, session line 849.
 - Dev host commits for the fix: `e9a36aad fix(drive-train): select draft sensors instead of opening the edit modal` and `3a0b4180 fix(machine-systems): report the gateway a sensor is actually mapped to`. The same fix has PR-head SHAs `b4540e54` and `8b6cee3d`, since `git am` produces new SHAs. Session lines 838 to 849.
 - Cleanup after merge: the user said the PR was merged and asked to clean local. The dev box went back to main and the local branch was deleted. On 2026-11-02 the remote branch was deleted. The agent noted "PR #804's squash commit 618c3a9f is on main, so no work was lost." Session lines 885 to 942.
-- Flight context. Prompt history shows a booked flight on 2026-10-27 at 09:00 for an on-site sensor deployment trip. The fix happened around boarding time. [UNVERIFIED] No on-disk record shows whether he was at the gate or the flight was delayed. Zahid to confirm.
-- Open question: which phone app. The screenshot shows no brand. Bridges installed on the workstation, none proven to be the one used. `~/.config/systemd/user/`
+- Phone and flight. The phone app is the Tern Android app. Zahid was already on board the plane, before takeoff, when he sent these prompts (his own account, 2026-11-05). A flight was booked for 2026-10-27 at 09:00 for an on-site sensor deployment trip.
+- Bridges installed on the workstation, for context only. `~/.config/systemd/user/`
   - Tern web (`tern-web.service`, proxied by tailscale serve) and `tern-remote.service`.
-  - Paseo daemon (`paseo.service`).
-  - Orca serve (`orca-serve.service`) and Collie (`collie.service`).
-  - Moshi hook (`moshi-hook.service`). A runbook exists in `~/.omp/agent/managed-skills/worktree-herdr/playbooks/moshi-phone-agent-cockpit.md`.
-  - Paseo logs for 2026-10-27 were not found, so relay use on that day is unconfirmed.
-- Transport is Tailscale for these bridges. The exact security wording in the runbook was not re-checked, so do not quote it. [UNVERIFIED]
+  - Paseo daemon (`paseo.service`), Orca serve (`orca-serve.service`) and Collie (`collie.service`). These are older experiments, not the app used on this day.
+  - Moshi hook (`moshi-hook.service`), dormant.
+- Transport is Tailscale for these bridges. Do not quote security wording from the runbook.
 
 ### Story/example
 
-On 2026-10-27 QA posted a low-priority finding on an already-approved PR. Clicking a draft sensor opened the edit modal. Zahid was on the phone, with a flight that morning. He pasted the finding into the existing omp session with "Fix those own changes proof and update pr". Within five minutes the agent committed a fix, recorded a "before" clip on the groundup-dev stack, confirmed it reproduced the bug ("one click on a draft sensor opens the edit modal"), applied the commit, recorded "after", uploaded both, and updated the PR body. The 9:29 phone screenshot catches exactly that before/after step. Zahid then told QA to `gh pr checkout 804` and test on the PR itself, skipping a staging deploy. QA passed at 09:57.
+On 2026-10-27 QA posted a low-priority finding on an already-approved PR. Clicking a draft sensor opened the edit modal. Zahid was on the Tern Android app, already on board the plane before takeoff. He pasted the finding into the existing omp session with "Fix those own changes proof and update pr". Within five minutes the agent committed a fix, recorded a "before" clip on the groundup-dev stack, confirmed it reproduced the bug ("one click on a draft sensor opens the edit modal"), applied the commit, recorded "after", uploaded both, and updated the PR body. The 9:29 phone screenshot catches exactly that before/after step. Zahid then told QA to `gh pr checkout 804` and test on the PR itself, skipping a staging deploy. QA passed at 09:57.
 
 ### Diagram: PR #804 loop
 
@@ -250,7 +248,7 @@ sequenceDiagram
 - PR page `https://github.com/groundup-ai/GinaV2/pull/804` (body sections and before/after proof). Check that no customer data appears in the clips.
 - Session replay: `less ~/.omp/agent/sessions/-.omp-wt-fix-sensor-assign-ota-remnant-d3c9633/2026-10-26T02-21-39-596Z_01a17603...jsonl`, lines 838 to 858.
 - `stt` block in `~/.omp/agent/config.yml` (voice input). Mask the `hindsight.apiToken` line if the file is on screen.
-- Service names only: `systemctl --user status paseo.service tern-web.service tern-remote.service orca-serve.service collie.service`. Do not print tokens or pairing addresses.
+- Service names only, if you want to show bridges: `systemctl --user status tern-web.service tern-remote.service`. Do not print tokens or pairing addresses.
 
 ### Quotable
 
@@ -272,7 +270,7 @@ Fix those own changes proof and update pr
 (Zahid's prompt, 2026-10-27 09:26)
 
 ```
-We wont deploy staging aji will pull and test on pr
+We wont deploy staging [QA] will pull and test on pr
 ```
 (Zahid's prompt, 2026-10-27 09:39)
 
