@@ -34,7 +34,7 @@ The live demo starts at slide 10 (clock 10:30) and is checked at slide 45 (clock
 
 - `deck/build.py --render` builds the slides, runs the lint and renders pages to `/tmp/deck-render/`. Run it from `/home/zahid/work/talks` with `uv run python3 presentations/2026-swe-growth/benchmark-setup-coding-agent/deck/build.py --render`.
 - `deck/publish.py` updates the same Google Slides file. Edits made directly in Slides are lost on the next publish, so change `content.py` or `presenter.md` and rebuild.
-- `prompts/` and `sources/outlines/detailed.md` come from the NotebookLM workflow. The deck does not use them.
+- `prompts/` and `sources/outlines/detailed.md` are kept for a NotebookLM comparison test. They follow the same v2 rules as the deck, but the deck does not use them.
 
 ## Folder structure
 
@@ -53,7 +53,7 @@ The live demo starts at slide 10 (clock 10:30) and is checked at slide 45 (clock
 │   │   └── structure.md    # Arc, principles, timings, content boundaries, demo checkpoints, Q&A prep
 │   ├── outlines/
 │   │   ├── presenter.md    # Speaker notes by slide number
-│   │   └── detailed.md     # NotebookLM output, not used by the deck
+│   │   └── detailed.md     # Self-reading v2 outline, for the NotebookLM comparison test
 │   └── references/
 │       ├── referensi-benchmark-lab.md
 │       ├── referensi-evolusi-biaya-plugin.md
@@ -62,7 +62,7 @@ The live demo starts at slide 10 (clock 10:30) and is checked at slide 45 (clock
 │       ├── referensi-mesh-koordinator-mobile.md
 │       ├── referensi-pr-proof-security-prod.md
 │       └── screenshot-omp-mobile-0929.png
-└── prompts/                # NotebookLM prompts, not used by the deck
+└── prompts/                # NotebookLM prompts, v2 rules, for the comparison test
 ```
 
 ## NotebookLM workflow

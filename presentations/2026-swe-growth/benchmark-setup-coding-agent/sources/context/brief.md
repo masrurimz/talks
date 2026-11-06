@@ -41,8 +41,8 @@ Every section of the talk either supports this claim or shows its limit.
 
 - One action. Zahid's rule: "When you see you are doing the same work more than twice, it is a candidate for a skill, so the agent can do it for you."
 - A mental model with four parts around any model: skills, proof, coordination, guardrails.
-- A rough effort rule for choosing thinking levels, backed by a small bench that showed higher effort took more turns, and a way to think about cost per task rather than per token.
-- A list of things to try on Monday, such as writing the first skill, asking for proof in every PR, and dry-running anything that touches production.
+- A rough effort rule for choosing thinking levels, backed by a small bench that showed higher effort took more steps, and a way to think about cost per task rather than per token.
+- Five principles, each told through a story: measure it on your own work, do it twice and make it a skill, one writer per branch, show proof and not "done", make it safe to walk away. A list of things to try this week, such as writing the first skill, asking for proof in every PR, and dry-running anything that touches production.
 - A realistic view of what is still hard.
 
 ## Tone
@@ -51,24 +51,24 @@ Every section of the talk either supports this claim or shows its limit.
 - Honest about limits. Say "I forgot why I left Amp" when it is true. Say "this part is still ugly" when it is.
 - Show real numbers and real mistakes, not polished claims.
 - No hype words. Do not claim the setup is the best. Claim only that it works for one person with this kind of workload.
-- Dollar figures are fine to show. State clearly that API-equivalent price is list price of the tokens, not money paid.
+- Dollar figures are fine to show. On a slide, write "if I paid per token", because the list price of the tokens is not money paid. The full explanation goes in the speaker notes.
 
-## The organizer's 12 questions, mapped to sections
+## The organizer's 12 questions, mapped to parts
 
-| # | Organizer question | Section in the talk |
+| # | Organizer question | Part in the talk |
 |---|---|---|
-| 1 | Tool evolution: from Antigravity to OpenCode to Amp to omp, and why each switch | Section 2, the journey (5-15 min) |
-| 2 | Model routing per role: plan, execute, review and debug, UI, explore | Section 3, pillar 1 the benchmark lab (15-30 min) |
-| 3 | Effort and thinking level: when to use medium, high, max, and the effect on speed | Section 3, pillar 1 the benchmark lab |
-| 4 | Orchestration and parallel agents: worktrees, handoff, one coordinator with many workers. Base-branch coordination is solved by the mesh plugin plus one coordinator agent | Section 5, pillar 3 the crew (45-65 min) |
-| 5 | Task and spec management: beads, hooks, how to write specs so agents do not get lost | Section 4, pillar 2 knowledge (30-45 min) |
-| 6 | Long-horizon runs: guardrails so agents run for hours or days and stay correct | Section 5, pillar 3 the crew |
-| 7 | Memory and context: Hindsight and Cognee, managing context so it is not wasteful | Section 4, pillar 2 knowledge |
-| 8 | Own skills: one or two favorites and what is inside | Section 4, pillar 2 knowledge |
-| 9 | Review and quality gate: multi-reviewer, rules, LSP, linter, what is still checked by hand | Section 5, pillar 3 the crew |
-| 10 | Supporting infra: remote dev server, terminal and multiplexer, secrets, setup per worktree | Section 6, infra and guardrails (65-75 min) |
-| 11 | Cost and subscription strategy: money-saving tips for a solo dev | Section 3, pillar 1 the benchmark lab (value formula, bench, prewalk, subscription journey) |
-| 12 | Open problems: UI, base branch coordination, env and seeding | Section 7, open problems (75-82 min), with UI, env and seeding, and RAM on the shared box. Base-branch coordination is answered in section 5 as solved |
+| 1 | Tool evolution: from Antigravity to OpenCode to Amp to omp, and why each switch | My journey (slides 6 to 8) |
+| 2 | Model routing per role: plan, execute, review and debug, UI, explore | Part 1, measure it on your own work (slides 14, 15) |
+| 3 | Effort and thinking level: when to use medium, high, max, and the effect on speed | Part 1 (slides 14, 16) |
+| 4 | Orchestration and parallel agents: worktrees, handoff, one coordinator with many workers. Base-branch coordination is solved by the mesh plugin plus one coordinator agent | Part 3, one writer per branch (slides 33, 35 to 38) |
+| 5 | Task and spec management: beads, hooks, how to write specs so agents do not get lost | Part 2, do it twice, make it a skill (slides 28, 30) |
+| 6 | Long-horizon runs: guardrails so agents run for hours or days and stay correct | Parts 3 and 5 (slides 33, 38, 48) |
+| 7 | Memory and context: Hindsight and Cognee, managing context so it is not wasteful | Part 2 (slides 26, 27) |
+| 8 | Own skills: one or two favorites and what is inside | Part 2 (slides 23 to 25, 29) |
+| 9 | Review and quality gate: multi-reviewer, rules, LSP, linter, what is still checked by hand | Part 4, show proof, not "done" (slides 41, 42, 44, 55) |
+| 10 | Supporting infra: remote dev server, terminal and multiplexer, secrets, setup per worktree | Part 5, make it safe to walk away (slides 50 to 53) |
+| 11 | Cost and subscription strategy: money-saving tips for a solo dev | Part 1 (slides 12, 15, 17 to 20) |
+| 12 | Open problems: UI, base branch coordination, env and seeding | What is still hard (slides 55 to 57), with UI, env and seeding, and RAM on the shared box. Base-branch coordination is answered in Part 3 as solved |
 
 Question 9 is also where "PR standard" lives. No command called "poteto validate" exists. Proof comes from the poteto-mode "Prove It Works" principle, a PR body shape with a Verification section, and Alkhidmah's `verify.ts`, which must fail on master and pass on the branch.
 
@@ -81,4 +81,4 @@ Question 9 is also where "PR standard" lives. No command called "poteto validate
 
 ## Key source files
 
-Pillar 1 is built on `sources/references/referensi-benchmark-lab.md`. It holds the value formula, the October 2026 bench, effort versus turns, handoff arms, the Terminal-Bench caveat, the subscription portfolio (September 2026 versus now), prewalk (omp docs plus Can Bölük's post, with receipts and quotes), and the harness-only quote. The other references cover the setup, skills and config, mesh and coordinator, and PR proof, secrets and production.
+Part 1 is built on `sources/references/referensi-benchmark-lab.md`. It holds the value formula, the October 2026 bench, effort versus steps, handoff arms, the Terminal-Bench caveat, the subscription portfolio (September 2026 versus now), prewalk (omp docs plus Can Bölük's post, with receipts and quotes), and the harness-only quote. The other references cover the setup, skills and config, mesh and coordinator, and PR proof, secrets and production. The slide-by-slide speaker notes are in `sources/outlines/presenter.md`.
