@@ -73,7 +73,7 @@ The AI assistant prepares the materials. Zahid runs NotebookLM.
 
 Research digests in `sources/references/`:
 
-- `referensi-benchmark-lab.md` covers Pillar 1, the core of the talk. The value formula, the October 2026 bench, effort versus turns, handoff arms, the Terminal-Bench caveat, the subscription portfolio (September 2026 versus now), prewalk with Can Bölük's receipts, and the harness-only quote. Prioritize it for Pillar 1.
+- `referensi-benchmark-lab.md` covers Pillar 1, the core of the talk. The value formula, the October 2026 bench, effort versus turns, handoff arms, the Terminal-Bench caveat, the subscription portfolio (September 2026 versus now), prewalk (Can Bölük's own numbers with his models, and Zahid's own bench and timeline), and the harness-only quote. Prioritize it for Pillar 1.
 - `referensi-evolusi-biaya-plugin.md` covers the tool journey, harness, plugins, terminal journey, model roles, cost, memory and beads.
 - `referensi-setup-dan-infra.md` covers the agent setup, devkit idea, and machine map.
 - `referensi-skills-prompt-dan-config.md` covers how instructions are organized, poteto-mode, area skills, and memory and autolearn config.

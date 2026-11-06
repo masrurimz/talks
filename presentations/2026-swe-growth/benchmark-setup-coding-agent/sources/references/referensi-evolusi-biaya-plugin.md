@@ -203,8 +203,8 @@ anthropic 240k, zai (GLM, his own Max plan) 224k, openai-codex (office Codex Pro
 
 - Definition, from the omp docs (`omp://prewalk.md`). Prewalk is a one-shot handoff from the active model to a faster or cheaper model after planning reaches implementation. An armed prewalk injects a planning nudge. A successful `todo` call opens the gate. At the first `edit` or `write` the session switches to the target (default the `@smol` role), prunes the planning instruction and steers with an implementation checklist. It is off by default. Flags are `--prewalk`, `--prewalk-into <model>` and `/prewalk`.
 - Source of the idea. Can Bölük (omp author, Stencil), "You only need the frontier model for one single edit", 2026-07-13, https://stencil.so/blog/prewalk. Receipts and quotes are in `referensi-benchmark-lab.md`, section 6.
-- Zahid's facts: prewalk was used previously. It takes extra time on some tasks. Haiku was too expensive as the prewalk model and DeepSeek was too slow. It is now off.
-- The lesson: plan with the strong model and execute with the cheap one. It pays off on long sessions and costs more on short tasks, so test it on your own workload.
+- Zahid's facts, from his prompts. On 2026-10-24 he turned prewalk on into Haiku 5.5 medium. On 2026-10-25 he moved the target to DeepSeek v4.1 flash for cost. It was really slow, so he turned prewalk off the same day. In his October bench, prewalk cost the same or more on short tasks (Sonnet 5.5 medium into Haiku 5.5 medium, UI task, $0.36 against $0.24 alone).
+- The lesson: plan with the strong model and execute with the cheap one. It may pay off on long sessions (log estimates, not graded) and costs more on short tasks, so test it on your own workload.
 
 ### Story/example
 

@@ -39,9 +39,8 @@ Cut in this order. Each cut saves about the time shown.
 3. Slide 33 (long runs, one writer per branch), 1 min. Slide 34 carries the loop.
 4. Slide 41 (per-worktree setup), 1 min.
 5. Slide 29 (why beads was dropped), 1 min. Say one sentence on slide 26.
-6. Slide 16 (handoff arms), 1 min. Keep the line "every arm passed, so speed and cost separate" on slide 13.
 
-The core stays intact. The claim, the benchmark lab (slides 12 to 15 and 17), the cost slide, skills, mesh and the coordinator loop with base-branch coordination, the proof ladder, and open problems.
+The core stays intact. The claim, the benchmark lab (slides 12 to 17), the cost slide, skills, mesh and the coordinator loop with base-branch coordination, the proof ladder, and open problems.
 
 ## Coverage of the 12 organizer questions
 
@@ -236,25 +235,25 @@ Pillar 1 is built on `references/referensi-benchmark-lab.md`. The story is one e
 **Visual hint:** Paired bars for four rows (Haiku slot finder 12 to 16, Spark slot finder 9 to 23, Sonnet UI 7 to 10, DeepSeek UI 28 to 40). Each bar names its effort level. The rule line under it.
 **Speaker note:** "I expected low effort to cost more steps. It was the other way round on these tasks." Say it covers execution on easy work. The "high for plans" half is my judgment.
 
-## Slide 16 [Opsional] Handoff arms, and what the bench cannot say
+## Slide 16 [Wajib] Prewalk, plan with the strong model and type with the cheap one
 **Timing:** 1.0 min (clock 24:00)
 **Key points**
-- Opus low to Sonnet medium cost $0.35 to $0.48 per task. Sonnet medium to Haiku medium cost $0.17 to $0.36. On short tasks a handoff costs extra, because the second model re-reads.
-- Real long sessions (50 or more turns, estimates from logs, not graded). Sonnet medium alone $2.58 per task. Sonnet medium to Haiku medium $1.63, at about the same time.
-- Caveat. Public Terminal-Bench 4.0 has Haiku 5.5 at 39.2% and Sonnet 5.5 at 70.6%. Haiku on long multi-step work is unproven.
+- Prewalk is off by default in omp. The starting model, here Opus 5.5, reads the repo and writes a todo list.
+- At the first file edit, omp switches the same session to a cheaper or faster model, which makes the edits.
+- The reasoning, from Can Bölük (the omp author). Reading is what costs money. Edits were about 9% of the tokens in his logs.
 
-**Visual hint:** Table with two handoff rows next to the solo rows they came from. The caption says the long numbers are estimates.
-**Speaker note:** "A handoff is not a free discount. It pays off when reading is the cost, which means long sessions. I say estimates, because I did not grade them." This leads into prewalk, where the target model was too expensive or too slow for me.
+**Visual hint:** Three steps in a row (Opus 5.5 reads and writes a todo list, omp switches models at the first edit, a cheaper model makes the edits). The switch step highlighted. One caption line under it. Only Claude 5.5 names on the slide.
+**Speaker note:** "Prewalk means plan with the strong model, type with the cheap one." Say what a todo list is in one breath. Two lines from his post, said aloud and not shown: "Opus fixing things does not cost money. Opus reading things costs money." and "Hand off a trajectory, not a fairytale", meaning the cheap model keeps the real work history, not a made-up summary. Next slide is what happened when I tried it.
 
-## Slide 17 [Wajib] Prewalk, a handoff I tried and turned off
+## Slide 17 [Wajib] Prewalk on my short tasks, and why it is off
 **Timing:** 2.0 min (clock 25:00)
 **Key points**
-- What it is, from the omp docs. A one-shot handoff from the active model to a faster or cheaper one after planning reaches implementation. Off by default.
-- The author's receipts on SWE-Bench Pro. Sol alone 88%, $1.71, 372 s. Sol prewalk into Luna 85%, $1.04, 300 s. Opus 4.8 alone 85%, $2.78. Opus 4.8 prewalk into Flash 78%, $1.46.
-- My own experience. It took extra time on some tasks. Haiku was too expensive as the target, DeepSeek too slow. It is off now.
+- Opus 5.5 low alone cost $0.22 (slot finder) and $0.39 (UI). Prewalk into Sonnet 5.5 low cost $0.35 and $0.48.
+- Sonnet 5.5 medium alone cost $0.17 and $0.24. Prewalk into Haiku 5.5 medium cost $0.17 and $0.36.
+- Timeline. 24 Oct I turned prewalk on into Haiku. 25 Oct I moved the target to DeepSeek to save money. It was really slow, so I turned prewalk off the same day.
 
-**Visual hint:** Four bars of cost per task with pass rate in the label. Cheapest one highlighted. One line for my experience under it.
-**Speaker note:** Say that the receipts are the author's numbers on SWE-Bench Pro, not mine. Two lines from his post, said aloud and not shown: "Opus fixing things does not cost money. Opus reading things costs money." and "Hand off a trajectory, not a fairytale", meaning pass the real work history, not a made-up summary. Only 9% of 1.81B tokens in his data were edits. Lesson. Test a trick on your own workload.
+**Visual hint:** Paired bars, four rows (slot finder and UI for each pair), alone against prewalk, dollar labels on the bars. The UI Sonnet to Haiku pair ($0.24 against $0.36) highlighted. The timeline in the caption.
+**Speaker note:** Every arm passed all 126 checks, so this compares cost only. On short tasks the cheaper model re-reads the conversation after the switch, so the run costs more. The handoff did not fire in 3 of 18 prewalk runs, which stayed on the starter model. My log estimates suggest it helps on long sessions, $2.58 against $1.63 for Sonnet medium alone against Sonnet medium into Haiku medium, but those are estimates, not graded. Public Terminal-Bench 4.0 has Haiku 5.5 at 39.2% and Sonnet 5.5 at 70.6%, so Haiku on long multi-step work is unproven. Can Bölük's own test with other models, not mine, GPT-5.6 Sol into Luna and Opus 4.8 into Flash on SWE-Bench Pro, cut cost 39 to 47 percent for 3 to 7 points of pass rate. That is his workload, not mine. Untried next step is a faster cheap target. Lesson. Test a trick on your own workload.
 
 ## Slide 18 [Wajib] Cost, October 2026
 **Timing:** 1.5 min (clock 27:00)
@@ -592,4 +591,4 @@ Pillar 1 is built on `references/referensi-benchmark-lab.md`. The story is one e
 - Thank you, SWE Growth.
 
 **Visual hint:** Handle in large type, "Slides link in the chat" under it. No QR code, because Drive sharing is not decided.
-**Speaker note:** Likely questions to prepare. How much does it cost for a beginner. Which model for which role. Is it safe to run agents for days. Why not Claude Code alone. How to start with one skill. Seed question if quiet: what is the first task you would turn into a skill?
+**Speaker note:** Likely questions to prepare. How much does it cost for a beginner. Which model for which role. Is it safe to run agents for days. Why not Claude Code alone. How to start with one skill. Why is prewalk off? On my short tasks it cost the same or more, and the one time I tried a cheaper target (DeepSeek) it was really slow. It may still help on long sessions and with a faster cheap target, which I have not tried. Seed question if quiet: what is the first task you would turn into a skill?

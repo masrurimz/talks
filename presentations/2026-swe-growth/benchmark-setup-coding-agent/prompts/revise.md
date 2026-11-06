@@ -39,7 +39,7 @@ Make a light revision, not a rewrite. Keep the structure and the slide order. Fi
 - The October 2026 bench says two easy tasks, three runs, hidden-check graders, and that every arm passed 126 of 126 checks, so speed and cost separate the models.
 - Effort versus turns says raising effort raised the turn count in every pair. The cause is worded as likely, not proven.
 - The Terminal-Bench caveat is present. Haiku 5.5 39.2% and Sonnet 5.5 70.6% on Terminal-Bench 4.0.
-- Prewalk is defined as a one-shot handoff from the active model to a faster or cheaper model at the first edit, after a todo list exists. Can Bölük's receipts are labeled as his own numbers. Zahid's experience is that it is off now.
+- Prewalk is explained in plain words as a handoff from the active model to a cheaper one at the first edit, after a todo list exists. Can Bölük's numbers are labeled as his own, with his models. Zahid's own bench (Claude 5.5 only) and his 24 to 25 October timeline are the evidence that it is off now.
 - The subscription journey reads GLM Max (his own), Codex Pro (office), Devin Pro and OpenCode Go (his own), then all in on Claude 5.5 because "Claude 5.5 series quality is GOAT".
 - The harness quote by Can Bölük appears on the claim slide.
 

@@ -218,7 +218,7 @@ Speed-adjusted QSPD = (Benchmark x tok/s) / (Effective $/1M x 1000)
 **Sources:** `references/referensi-benchmark-lab.md`, "3. Effort versus turns". Origin `omp-ops/references/model-bench-results.md`, "Effort versus turn count".
 
 ## Slide 12. Handoff arms, and what the bench cannot say
-- Handoff arms. Opus low to Sonnet medium took 136 s and 84 s at $0.35 to $0.48 per task. Sonnet medium to Haiku medium took 157 s and 127 s at $0.17 to $0.36. On short tasks a handoff costs extra, because the second model re-reads the conversation after the switch.
+- Handoff arms. Opus 5.5 low to Sonnet 5.5 low took 136 s and 84 s at $0.35 to $0.48 per task (the prewalk target inherits the starter's effort). Sonnet 5.5 medium to Haiku 5.5 medium took 157 s and 127 s at $0.17 to $0.36. On short tasks a handoff costs extra, because the second model re-reads the conversation after the switch. The handoff did not fire in 3 of the 18 prewalk runs, which stayed on the starter model.
 - Real long sessions showed the reverse. At 50 or more turns, Sonnet medium alone cost $2.58 per task and Sonnet medium to Haiku medium cost $1.63, at about the same time. These are estimates from logs of uncontrolled work, not graded results.
 - The lesson. Every arm passed, so speed and cost separate the models on easy tasks.
 - Caveat. The bench is two easy tasks. Public Terminal-Bench 4.0 puts Haiku 5.5 at 39.2% and Sonnet 5.5 at 70.6%, and Anthropic says Haiku can report a change as done without running a check at low or medium effort. Haiku on long multi-step work is unproven. Do not compare these 4.0 figures with the Terminal-Bench 2.1 scores on slide 9.
@@ -235,12 +235,13 @@ Speed-adjusted QSPD = (Benchmark x tok/s) / (Effective $/1M x 1000)
 **Visual hint:** Two quote cards ("Opus reading things costs money." and "Hand off a trajectory, not a fairytale.") and a four-step line (plan, todo, first edit, swap).
 **Sources:** `references/referensi-benchmark-lab.md`, "6. Prewalk". omp docs `omp://prewalk.md`. https://stencil.so/blog/prewalk
 
-## Slide 14. Prewalk receipts, and why mine is off
-- The author's receipts on SWE-Bench Pro. GPT-5.6 Sol prewalk into Luna reached 85% pass at $1.04 and 300 s. Sol alone reached 88% at $1.71 and 372 s ("97% of Sol's pass rate at 61% of the cost"). Opus 4.8 prewalk into Flash reached 78% at $1.46. Opus alone reached 85% at $2.78 ("92% of Opus at 53% of the cost, 1.5x the speed"). These are the author's numbers, not the speaker's.
-- The speaker's own experience. He used prewalk before. It took extra time on some tasks. A Haiku target was too expensive at the time, and a DeepSeek target was too slow. DeepSeek flash was also the slowest arm in his bench at 476 s on the UI task. It is off now.
-- His framing. Plan with the strong model and execute with the cheap one. It pays off on long sessions and costs more on short tasks. Test it on your own workload.
+## Slide 14. Prewalk on my short tasks, and why mine is off
+- My own bench, Claude 5.5 only, 2 tasks (UI page, slot finder) x 3 runs, medians, every arm 126 of 126. Opus 5.5 low alone cost $0.22 (slot finder) and $0.39 (UI). Prewalk Opus 5.5 low into Sonnet 5.5 low cost $0.35 and $0.48. Sonnet 5.5 medium alone cost $0.17 and $0.24. Prewalk Sonnet 5.5 medium into Haiku 5.5 medium cost $0.17 and $0.36. On short tasks prewalk cost the same or more.
+- The speaker's timeline. On 2026-10-24 he turned prewalk on into Haiku 5.5 medium. On 2026-10-25 he moved the target to DeepSeek v4.1 flash to save money. It was really slow, so he turned prewalk off the same day. DeepSeek flash was also the slowest arm in his bench at 476 s on the UI task.
+- Can Bölük's own test, with his models and not the speaker's, on SWE-Bench Pro. Prewalk cut cost 39 to 47 percent for 3 to 7 points of pass rate (GPT-5.6 Sol into Luna 85% against 88%, $1.04 against $1.71. Opus 4.8 into Flash 78% against 85%, $1.46 against $2.78). That is his workload, not the speaker's. Untried next step is a faster cheap target.
 
-**Visual hint:** The receipts table below, with the Sol row highlighted, and a card "Zahid, prewalk, off now".
+**Visual hint:** The speaker's paired bars (alone against prewalk, four rows) with the UI Sonnet to Haiku pair highlighted. The table below is Can Bölük's, for the speaker's notes only, and is not shown on the slide.
+Can Bölük's SWE-Bench Pro table (his models and his workload, not the speaker's):
 
 | Arm | Pass | Cost per task | Time |
 |---|---|---|---|
@@ -251,7 +252,7 @@ Speed-adjusted QSPD = (Benchmark x tok/s) / (Effective $/1M x 1000)
 | Opus 4.8 prewalk into Flash | 78% | $1.46 | 402 s |
 | Opus 4.8 alone | 85% | $2.78 | 606 s |
 
-**Sources:** `references/referensi-benchmark-lab.md`, "6. Prewalk". https://stencil.so/blog/prewalk. Speaker's own account.
+**Sources:** `references/referensi-benchmark-lab.md`, "6. Prewalk". https://stencil.so/blog/prewalk. Speaker's own bench and account.
 
 ## Slide 15. Cost, October 2026
 - October 2026 was 270k requests and 41B tokens. The API-equivalent price was $7.3k. The speaker paid about $200, roughly 36 times less. The all-time figure from 2026-03-07 to 2026-11-05 is $25.9k API-equivalent over 833,553 requests.

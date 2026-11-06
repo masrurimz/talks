@@ -120,10 +120,10 @@ More thinking sounds free when you are not the one waiting. On a task a model ca
 
 | Setup | UI | Slot finder | Cost per task |
 | --- | --- | --- | --- |
-| Opus low to Sonnet medium | 136 s | 84 s | $0.35 to $0.48 |
-| Sonnet medium to Haiku medium | 157 s | 127 s | $0.17 to $0.36 |
+| Opus 5.5 low to Sonnet 5.5 low | 136 s | 84 s | $0.35 to $0.48 |
+| Sonnet 5.5 medium to Haiku 5.5 medium | 157 s | 127 s | $0.17 to $0.36 |
 
-- On short tasks a handoff costs extra. The second model re-reads the conversation after the switch, so you pay for the read twice.
+- On short tasks a handoff costs extra. The second model re-reads the conversation after the switch, so you pay for the read twice. The prewalk target inherits the starter's effort, which is why the first arm is low into low. The handoff did not fire in 3 of the 18 prewalk runs, which stayed on the starter model.
 - Real long sessions showed the reverse. At 50 or more turns, Sonnet medium alone cost $2.58 a task and Sonnet medium handing off to Haiku medium cost $1.63, at about the same time. These log numbers are estimates from uncontrolled work, not graded results. Say so on the slide.
 
 **The lesson, in one sentence.** Every arm passed, so quality did not separate the models. Speed and cost did. On easy tasks the cheapest lane that passes wins, and a plain price list hides how many minutes it takes.
@@ -194,7 +194,7 @@ The September portfolio was built with the formula. Several plans, each used for
 - Why a plain plan handoff fails. A /plan handoff (Opus plans read-only, Gemini Flash implements) cost $3.18 per task, 12.7 minutes, 84.6 percent pass. Opus alone cost $2.78, 10.1 minutes, 84.6 percent. The cheap model has to read the code again, so the reading is paid twice. The post says a plan is a postcard and an executor needs the trajectory.
 - Method. "Hand off a trajectory, not a fairytale." Keep the context, swap the model after the first edit lands, and delete the planning instruction so the cheap model thinks it planned and began on its own.
 
-**Receipts, SWE-Bench Pro (from the post).**
+**Can Bölük's receipts, SWE-Bench Pro (from the post). His models and his workload, not Zahid's.**
 
 | Arm | Pass | Cost per task | Time |
 | --- | --- | --- | --- |
@@ -205,14 +205,14 @@ The September portfolio was built with the formula. Several plans, each used for
 | Opus 4.8 prewalk into Flash | 78% | $1.46 | 402 s |
 | Opus 4.8 alone | 85% | $2.78 | 606 s |
 
-- The post's own summaries. "97% of Sol's pass rate at 61% of the cost" and "92% of Opus at 53% of the cost, 1.5x the speed".
+- The post's own summaries. "97% of Sol's pass rate at 61% of the cost" and "92% of Opus at 53% of the cost, 1.5x the speed". His test cut cost 39 to 47 percent for 3 to 7 points of pass rate.
 
-**Zahid's own experience.**
+**Zahid's own bench and timeline.**
 
-- He used prewalk before. For subagents it handed off from Sonnet medium to DeepSeek flash at low effort at the first edit (live routing state, 2026-10-25, `MS/omp-ops/references/model-bench-results.md`).
-- Problem. It took extra time on some tasks. The Haiku target was too expensive at the time, in his words. The DeepSeek target was too slow, which matches the bench, where DeepSeek flash was the slowest arm at 476 s on the UI task.
-- It is off now. His framing, "plan with the strong model, execute with the cheap one. It pays off on long sessions, costs more on short tasks. Turned off for now." This agrees with the bench handoff numbers in section 4.
-- Say clearly that the receipts above are the author's numbers on SWE-Bench Pro, and the verdict "off" is Zahid's own experience on his own work.
+- Bench, Claude 5.5 only, 2 tasks (UI page, slot finder) x 3 runs, medians, every arm 126 of 126, API-equivalent cost per task. Opus 5.5 low alone $0.22 (slot finder) and $0.39 (UI). Prewalk Opus 5.5 low into Sonnet 5.5 low $0.35 and $0.48. Sonnet 5.5 medium alone $0.17 and $0.24. Prewalk Sonnet 5.5 medium into Haiku 5.5 medium $0.17 and $0.36.
+- Timeline from his prompts. On 2026-10-24 he turned prewalk on into Haiku 5.5 medium. On 2026-10-25 he moved the target to DeepSeek v4.1 flash for cost. It was really slow, so he turned prewalk off the same day. This matches the bench, where DeepSeek flash was the slowest arm at 476 s on the UI task.
+- It is off now. On short tasks prewalk cost the same or more. Log estimates suggest it helps on long sessions ($2.58 against $1.63), but those are not graded. An untried next step is a faster cheap target.
+- Say clearly that the receipts above are Can Bölük's numbers with his models, and the verdict "off" is Zahid's own experience on his own work.
 
 ### Story/example
 
@@ -221,7 +221,7 @@ The two results do not fight. The author measured long, hard tasks where reading
 ### Show on screen
 
 - Two ribbons, "plan then re-read" against "keep the trajectory", or the table above with the Sol row highlighted.
-- A card "Zahid, prewalk, off now" with the two reasons (target too expensive, target too slow).
+- A card "Zahid, prewalk, off now" with the two reasons (short tasks cost the same or more, the DeepSeek target was too slow).
 
 ### Quotable
 

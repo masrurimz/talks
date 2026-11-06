@@ -163,7 +163,8 @@ Reserve a fixed 6 min block. [Toastmasters Q&A rubric; weak] Repeat or restate e
 | Is it safe to run agents for days? | "The SHIP run lasted about three days. One coordinator, one writer per branch, an independent reviewer, and a frozen verdict. I watch the coordinator, not each branch." |
 | How do I start? | "One skill. When you do the same work more than twice, write it as a skill." |
 | Why not Cursor or Claude Code alone? | "Both are harnesses and I used Claude Code first. I left for reasons about my workload and the time, not a verdict on the tools. I use omp because I can write my own plugins, which is why mesh exists." |
-| What about prewalk? | "A handoff from a strong model to a cheaper one after planning. It pays off on long sessions and costs more on short tasks. The numbers on slide 17 are the omp author's, not mine. For my work it is off for now. Test it on your own workload." |
+| What about prewalk? | "Plan with the strong model, type with the cheap one. On my short tasks it cost the same or more, so it is off. Can Bölük's test with his own models cut cost a lot, but that is his workload, not mine. Test it on yours." |
+| Why is prewalk off? | "On my short tasks it cost the same or more. I tried Haiku as the target on 24 October, then DeepSeek on 25 October to save money, and it was really slow. It may still help on long sessions or with a faster cheap target, which I have not tried." |
 | Does effort matter? | "On two easy tasks, higher effort meant more turns. That is two easy tasks, not a quality ranking. The cause is my inference, the turn counts are measured." |
 
 **"I don't know" line.** "I do not know. I have not tested that. If you send it in chat, I will try it and answer in the follow-up." Say it plainly, offer a way to find out. [practitioner]
