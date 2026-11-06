@@ -51,18 +51,14 @@ X0 = 0.8
 CW = SLIDE_W - 2 * X0
 TOP = 2.0
 BOTTOM = 6.8
-FOOTER_Y = 6.95
 
-SIZE_HEADLINE, SIZE_PROSE, SIZE_EVIDENCE, SIZE_FOOTER = 36, 28, 20, 14
+SIZE_HEADLINE, SIZE_PROSE, SIZE_EVIDENCE, SIZE_MIN = 36, 28, 20, 14
 SIZE_DIVIDER = 48
-MAX_HEADLINE_CHARS = 95
-MAX_PROSE_WORDS = 25
-MAX_BODY_WORDS = 40
+MAX_HEADLINE_WORDS = 12
+MAX_FACE_WORDS = 30
 MAX_LABEL_WORDS = 8
 MIN_GRAPHIC_CONTRAST = 3.0
-TOTAL_OUTLINE_SLIDES = 48
-TALK_MINUTES = 72.0
-THIRD_PARTY_COSTS = {17}
+TALK_MINUTES = 71.0
 FALLBACK_SENTENCE = "The live run is slow today, so here is the recording from this morning."
 DEMO_TIME_BOX = "90 s"
 
@@ -142,6 +138,7 @@ class TextRecord:
     bg: str
     words: int
     snippet: str
+    text: str
     need_h: float
     box_h: float
     widest_word_pt: float
@@ -265,6 +262,7 @@ class Canvas:
                 bg=bg,
                 words=sum(len(t.split()) for t, _ in items),
                 snippet=items[0][0][:40],
+                text=" ".join(t for t, _ in items),
                 need_h=need,
                 box_h=h,
                 widest_word_pt=widest,
@@ -281,10 +279,6 @@ class Canvas:
         if y + need > max_bottom + 0.01:
             self.lint.fail(self.index, f"prose runs below {max_bottom}in: {s[:40]!r}")
         return need
-
-    def footer(self, source: str, width: float = CW) -> None:
-        if source:
-            self.text(X0, FOOTER_Y, width, 0.3, "Source: " + source, SIZE_FOOTER, MUTED, kind="footer")
 
     def check_bottom(self, y: float, what: str, limit: float = BOTTOM) -> None:
         if y > limit + 0.01:
@@ -316,22 +310,39 @@ def code_panel(c: Canvas, x, y, w, lines, max_h: float = 3.6, sizes=(28, 26, 24,
 
 def render_title(c: Canvas, s: C.Title) -> None:
     c.rect(X0, 1.6, 0.12, 3.8, ACC)
-    c.text(X0 + 0.5, 1.6, 10.9, 3.1, s.title, 54, WHITE, kind="display", bold=True)
+    c.text(X0 + 0.5, 1.6, 10.9, 3.1, s.title, 54, WHITE, kind="title", bold=True)
     c.text(X0 + 0.5, 4.9, 10.5, 0.5, s.subtitle, 28, PANEL_TXT, kind="display")
 
 
-SECTION_COUNT = 8
+PART_COUNT = 5
 
 
 def render_divider(c: Canvas, s: C.Divider) -> None:
-    c.text(X0, 0.8, 6, 0.5, f"Minute {s.minute}", 28, WHITE, kind="display", bold=True)
+    c.text(X0, 0.8, 6, 0.5, f"Part {s.part}", 28, WHITE, kind="display", bold=True)
     c.text(X0, 1.6, CW, 2.8, s.title, SIZE_DIVIDER, WHITE, kind="divider-headline", bold=True)
-    if s.ask_chat:
-        c.rect(X0, 4.75, CW, 0.03, WHITE)
-        c.text(X0, 5.0, CW, 0.9, f"Ask chat: {s.ask_chat}", 28, WHITE, kind="display")
-    gap, seg_w = 0.15, (CW - 7 * 0.15) / SECTION_COUNT
-    for i in range(SECTION_COUNT):
-        c.gfx(X0 + i * (seg_w + gap), 6.6, seg_w, 0.1, WHITE if i < s.section else ACC_TINT, "progress strip")
+    c.rect(X0, 4.75, CW, 0.03, WHITE)
+    c.text(X0, 5.0, CW, 1.3, s.question, 28, WHITE, kind="display")
+    gap, seg_w = 0.15, (CW - (PART_COUNT - 1) * 0.15) / PART_COUNT
+    for i in range(PART_COUNT):
+        c.gfx(X0 + i * (seg_w + gap), 6.6, seg_w, 0.1, WHITE if i < s.part else ACC_TINT, "progress strip")
+
+
+def render_principle(c: Canvas, s: C.Principle) -> None:
+    w = CW - 0.5
+    h = block_height_in([(s.title, True)], 60, w)
+    c.text(X0, 0.9, 6, 0.5, f"Principle {s.number}", 28, ACC_TINT, kind="display", bold=True)
+    c.rect(X0, 1.7, 0.12, h, ACC)
+    c.text(X0 + 0.5, 1.7, w, h + 0.02, s.title, 60, WHITE, kind="title", bold=True)
+    if s.line:
+        c.text(X0 + 0.5, 1.7 + h + 0.5, w, block_height_in([(s.line, False)], 32, w) + 0.02, s.line, 32, PANEL_TXT, kind="display")
+
+
+def render_trythis(c: Canvas, s: C.TryThis) -> None:
+    w = CW - 0.5
+    h = block_height_in([(s.title, True)], 44, w)
+    c.text(X0, 0.9, 6, 0.5, "Try this week", 28, ACC, kind="display", bold=True)
+    c.rect(X0, 1.9, 0.12, h, ACC)
+    c.text(X0 + 0.5, 1.9, w, h + 0.02, s.title, 44, INK, kind="title", bold=True)
 
 
 def render_statement(c: Canvas, s: C.Statement) -> None:
@@ -339,7 +350,6 @@ def render_statement(c: Canvas, s: C.Statement) -> None:
     c.text(X0, 3.0, CW, 1.2, s.support, 54, ACC, kind="display", bold=True)
     if s.extra:
         c.prose(X0, 4.4, CW, s.extra)
-    c.footer(s.source)
 
 
 VBAR_FRACTION = 0.55
@@ -392,7 +402,6 @@ def render_barchart(c: Canvas, s: C.BarChart) -> None:
     end = draw_bars(c, s.bars, TOP, y_end)
     if s.caption:
         c.prose(X0, end + 0.25, CW, s.caption)
-    c.footer(s.source)
 
 
 def render_scatter(c: Canvas, s: C.Scatter) -> None:
@@ -416,8 +425,8 @@ def render_scatter(c: Canvas, s: C.Scatter) -> None:
         h = max(0.2, bottom - top)
         hi = i == s.highlight
         c.gfx(px(p.x) - mark_w / 2, mid - h / 2, mark_w, h, ACC if hi else BAR, "scatter mark")
-        if p.inline:
-            paras = [(f"{p.label}, {p.text}", False)]
+        if p.inline or not p.text:
+            paras = [(f"{p.label}, {p.text}" if p.text else p.label, False)]
             w = text_width_pt(paras[0][0], SIZE_EVIDENCE) / 72 + 0.1
             lh = line_height_pt(SIZE_EVIDENCE) / 72
         else:
@@ -440,7 +449,6 @@ def render_scatter(c: Canvas, s: C.Scatter) -> None:
         c.text(px1 - nw, py0 + 0.05, nw, block_height_in([(s.note, False)], SIZE_EVIDENCE, nw) + 0.02, s.note, SIZE_EVIDENCE, MUTED)
     if s.caption:
         c.prose(X0, 6.15, CW, s.caption)
-    c.footer(s.source)
 
 
 def _day(s: str) -> int:
@@ -474,7 +482,6 @@ def render_gantt(c: Canvas, s: C.Gantt) -> None:
         c.text(x - 0.8, axis_y + 0.18, 1.6, 0.4, lab, SIZE_EVIDENCE, MUTED, align=PP_ALIGN.CENTER)
     if s.caption:
         c.prose(X0, axis_y + 0.7, CW, s.caption)
-    c.footer(s.source)
 
 
 def render_bignumbers(c: Canvas, s: C.BigNumbers) -> None:
@@ -490,8 +497,8 @@ def render_bignumbers(c: Canvas, s: C.BigNumbers) -> None:
     label_need = []
     for i, it in enumerate(s.items):
         x = X0 + i * col_w
-        c.text(x, vy, col_w - 0.3, vh, it.value, size, ACC if i == s.highlight else INK, kind="display", bold=True)
-        label_need.append(c.text(x, vy + vh + 0.05, col_w - 0.3, 0.8, it.label, SIZE_EVIDENCE, MUTED))
+        c.text(x, vy, col_w - 0.3, vh, it.value, size, ACC if i == s.highlight else (MUTED if it.muted else INK), kind="display", bold=True)
+        label_need.append(c.text(x, vy + vh + 0.05, col_w - 0.3, 0.8 if compact else 1.2, it.label, SIZE_EVIDENCE if compact else 28, MUTED))
     if compact:
         stat_bottom = vy + vh + 0.05 + max(label_need)
         bars_y = stat_bottom + 0.3
@@ -502,7 +509,6 @@ def render_bignumbers(c: Canvas, s: C.BigNumbers) -> None:
         draw_bars(c, s.bars, bars_y, BOTTOM)
     elif s.support:
         c.prose(X0, vy + vh + 1.3, CW, s.support)
-    c.footer(s.source)
 
 
 def _set_cell_border(cell, color: str) -> None:
@@ -561,6 +567,7 @@ def render_table(c: Canvas, s: C.Table) -> None:
                 TextRecord(
                     slide=c.index, kind="evidence", size=SIZE_EVIDENCE, fg=fg, bg=fill, words=len(text.split()),
                     snippet=text[:40], need_h=heights[ri], box_h=heights[ri],
+                    text=text,
                     widest_word_pt=max(text_width_pt(w_, SIZE_EVIDENCE, bold=ri == 0 or hi) for w_ in text.split(" ")),
                     box_w_pt=(widths[ci] - 2 * pad_x) * 72,
                 )
@@ -570,7 +577,6 @@ def render_table(c: Canvas, s: C.Table) -> None:
         end += 0.3
         end += c.prose(X0, end, CW, s.caption)
     c.check_bottom(end, "table block")
-    c.footer(s.source)
 
 
 def render_code(c: Canvas, s: C.Code) -> None:
@@ -579,7 +585,6 @@ def render_code(c: Canvas, s: C.Code) -> None:
     h = code_panel(c, X0, TOP, CW, s.lines, max_h=BOTTOM - TOP - cap_need)
     if s.caption:
         c.prose(X0, TOP + h + 0.3, CW, s.caption)
-    c.footer(s.source)
 
 
 SERIAL_BLURS = (
@@ -632,7 +637,6 @@ def render_image(c: Canvas, s: C.Image) -> None:
         c.rect(X0, y, CROP_W, h, None, ACC, 3.0)
         lw = text_w - CROP_W - 0.25
         c.text(X0 + CROP_W + 0.25, y, lw, h, crop.label, 28, ACC, bold=True, anchor=MSO_ANCHOR.MIDDLE)
-    c.footer(s.source, width=ix - X0 - 0.3)
 
 
 SHOT_LABEL_W = 3.3
@@ -734,7 +738,6 @@ def render_shot(c: Canvas, s: C.Slide) -> None:
         ly = SHOT_TOP + ih + 0.1
         c.check_bottom(ly + need, "screenshot label")
         c.text(bx, ly, lw, need + 0.02, shot.label, 28, ACC, bold=True)
-    c.footer(s.source)
 
 
 def render_before_after(c: Canvas, s: C.BeforeAfter) -> None:
@@ -749,7 +752,6 @@ def render_before_after(c: Canvas, s: C.BeforeAfter) -> None:
         c.slide.shapes.add_picture(io.BytesIO(_png(f)), emu(x), emu(SHOT_TOP), emu(iw), emu(ih))
         c.rect(x, SHOT_TOP, iw, ih, None, RULE, 1.0)
         x += iw + gap
-    c.footer(s.source)
 
 
 def render_timeline(c: Canvas, s: C.Timeline) -> None:
@@ -785,7 +787,6 @@ def render_timeline(c: Canvas, s: C.Timeline) -> None:
         c.text(cx - lw / 2, by, lw, h, [(ev.when, True), (ev.label, False)], SIZE_EVIDENCE, ACC if hi else INK, align=PP_ALIGN.CENTER, anchor=anchor)
     if s.code:
         code_panel(c, X0, 4.25, CW, s.code, max_h=BOTTOM - 4.25, sizes=(24, 22, 20), pad=0.2)
-    c.footer(s.source)
 
 
 CLUSTER_GAP_IN = 1.3
@@ -832,7 +833,6 @@ def render_timeline_proportional(c: Canvas, s: C.Timeline) -> None:
         minutes = round(s.events[b[0]].at - s.events[a[-1]].at)
         mid = (xs[a[-1]] + xs[b[0]]) / 2
         c.text(mid - 1.0, line_y + 0.14, 2.0, 0.4, f"{minutes} minutes", SIZE_EVIDENCE, MUTED, align=PP_ALIGN.CENTER)
-    c.footer(s.source)
 
 
 def render_flow(c: Canvas, s: C.Flow) -> None:
@@ -841,14 +841,19 @@ def render_flow(c: Canvas, s: C.Flow) -> None:
     gap = 0.55 if n < 5 else 0.42
     bw = (CW - gap * (n - 1)) / n
     pad = 0.18 if n < 5 else 0.1
-    need = max(block_height_in([(t, False)], SIZE_EVIDENCE, bw - 2 * pad) for t in s.steps)
+    def fits(z: int) -> bool:
+        wide = all(text_width_pt(w, z) <= (bw - 2 * pad) * 72 for t in s.steps for w in t.split(" "))
+        return wide and max(block_height_in([(t, False)], z, bw - 2 * pad) for t in s.steps) + 2 * pad <= 1.9
+
+    size = next((z for z in (28, 24) if fits(z)), SIZE_EVIDENCE)
+    need = max(block_height_in([(t, False)], size, bw - 2 * pad) for t in s.steps)
     bh = max(1.3, need + 2 * pad)
     by = TOP + 0.15
     for i, t in enumerate(s.steps):
         x = X0 + i * (bw + gap)
         hi = s.highlight == i
         c.rect(x, by, bw, bh, ACC if hi else WHITE, None if hi else RULE)
-        c.text(x + pad, by + pad, bw - 2 * pad, bh - 2 * pad, t, SIZE_EVIDENCE, WHITE if hi else INK, ACC if hi else WHITE, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+        c.text(x + pad, by + pad, bw - 2 * pad, bh - 2 * pad, t, size, WHITE if hi else INK, ACC if hi else WHITE, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
         if i < n - 1:
             c.rect(x + bw + 0.1, by + bh / 2 - 0.17, gap - 0.2, 0.34, MUTED, shape=MSO_SHAPE.RIGHT_ARROW)
     y = by + bh
@@ -871,12 +876,12 @@ def render_flow(c: Canvas, s: C.Flow) -> None:
         need_c = c.prose(X0, y + 0.4, CW, s.caption)
         y = y + 0.4 + need_c
     c.check_bottom(y, "flow block")
-    c.footer(s.source)
 
 
 def render_compare(c: Canvas, s: C.Compare) -> None:
     c.headline(s.title)
     y = TOP
+    cap_h = block_height_in([(s.caption, False)], SIZE_PROSE, CW) + 0.3 if s.caption else 0.0
     if s.lead:
         y += c.prose(X0, y, CW, s.lead) + 0.3
     n = len(s.cards)
@@ -884,7 +889,7 @@ def render_compare(c: Canvas, s: C.Compare) -> None:
     gap = 0.25 if rows < 3 else 0.15
     cw = (CW - gap * (s.cols - 1)) / s.cols
     pad = 0.25 if rows < 3 else 0.15
-    avail = BOTTOM - 0.15 - y
+    avail = BOTTOM - 0.15 - y - cap_h
     cap = (avail - gap * (rows - 1)) / rows
     if rows == 1:
         cap = min(cap, 4.2)
@@ -913,8 +918,10 @@ def render_compare(c: Canvas, s: C.Compare) -> None:
             x + pad, cy + pad, card_w - 2 * pad, ch - 2 * pad, [(cd.heading, True), (cd.body, False)], size, fg, fill,
             anchor=MSO_ANCHOR.MIDDLE if s.fill else MSO_ANCHOR.TOP,
         )
-    c.check_bottom(y + rows * ch + (rows - 1) * gap, "cards")
-    c.footer(s.source)
+    end = y + rows * ch + (rows - 1) * gap
+    if s.caption:
+        end += 0.3 + c.prose(X0, end + 0.3, CW, s.caption)
+    c.check_bottom(end, "cards")
 
 
 def render_stacks(c: Canvas, s: C.Stacks) -> None:
@@ -928,19 +935,24 @@ def render_stacks(c: Canvas, s: C.Stacks) -> None:
     for si, st in enumerate(s.stacks):
         x = X0 + si * (sw + gap)
         y = TOP
-        if st.heading:
+        if st.heading and n == 1:
+            c.text(x, y, sw, 0.5, st.heading, SIZE_PROSE, ACC, bold=True)
+            y += 0.6
+        elif st.heading:
             c.text(x, y, sw, 0.35, st.heading, SIZE_EVIDENCE, MUTED, bold=True)
             y += 0.45
         roomy = not s.code and len(st.rows) <= 3
-        min_h = (1.05 if s.caption else 1.3) if roomy else 0.5
+        big = not s.code and all(not r.detail for r in st.rows)
+        size = 28 if big else SIZE_EVIDENCE
+        min_h = 0.8 if big else ((1.05 if s.caption else 1.3) if roomy else 0.5)
         for ri, row in enumerate(st.rows):
             paras = [(row.label, True)] + ([(row.detail, False)] if row.detail else [])
-            need = block_height_in(paras, SIZE_EVIDENCE, sw - 2 * pad)
+            need = block_height_in(paras, size, sw - 2 * pad)
             rh = max(min_h, need + 2 * pad)
             hi = st.highlight == ri
             fill = ACC if hi else WHITE
             c.rect(x, y, sw, rh, fill, None if hi else RULE)
-            c.text(x + pad, y, sw - 2 * pad, rh, paras, SIZE_EVIDENCE, WHITE if hi else INK, fill, anchor=MSO_ANCHOR.MIDDLE)
+            c.text(x + pad, y, sw - 2 * pad, rh, paras, size, WHITE if hi else INK, fill, anchor=MSO_ANCHOR.MIDDLE)
             y += rh + 0.08
         lowest = max(lowest, y - 0.08)
     if s.code:
@@ -949,7 +961,6 @@ def render_stacks(c: Canvas, s: C.Stacks) -> None:
     if s.caption:
         lowest += 0.25 + c.prose(X0, lowest + 0.25, CW, s.caption)
     c.check_bottom(lowest, "stacks")
-    c.footer(s.source)
 
 
 def render_hub(c: Canvas, s: C.Hub) -> None:
@@ -983,7 +994,6 @@ def render_hub(c: Canvas, s: C.Hub) -> None:
         c.check_bottom(sy + sh, "hub spoke", y_bot + 0.05)
     if s.caption:
         c.prose(X0, y_bot + 0.3, CW, s.caption)
-    c.footer(s.source)
 
 
 def render_quote(c: Canvas, s: C.Quote) -> None:
@@ -1010,7 +1020,6 @@ def render_quote(c: Canvas, s: C.Quote) -> None:
         h = code_panel(c, X0 + 0.4, yy, 4.8, s.code, max_h=2.1, sizes=(22, 20))
         yy += h
     c.check_bottom(yy, "quote block")
-    c.footer(s.source)
 
 
 RENDERERS: dict[type, Callable] = {
@@ -1018,6 +1027,8 @@ RENDERERS: dict[type, Callable] = {
     C.Divider: render_divider,
     C.BeforeAfter: render_before_after,
     C.Statement: render_statement,
+    C.Principle: render_principle,
+    C.TryThis: render_trythis,
     C.BigNumbers: render_bignumbers,
     C.Table: render_table,
     C.BarChart: render_barchart,
@@ -1032,7 +1043,7 @@ RENDERERS: dict[type, Callable] = {
     C.Hub: render_hub,
     C.Quote: render_quote,
 }
-DARK_BG = {C.Title: INK, C.Divider: ACC}
+DARK_BG = {C.Title: INK, C.Divider: ACC, C.Principle: INK}
 
 # ---------------------------------------------------------------- outline notes
 
@@ -1043,12 +1054,18 @@ class OutlineSlide:
     timing: str
     minutes: float
     clock: float
-    key_points: tuple[str, ...]
     say: str
+    evidence: str
     delivery: str
+    chat: str
 
 
 TIMING = re.compile(r"^([\d.]+) min \(clock (\d+):(\d\d)\)")
+
+
+def _field(block: str, name: str) -> str:
+    m = re.search(rf"(?ms)^\*\*{name}:\*\* (.+?)(?=^\*\*[A-Za-z ]+:\*\*|^#|^---|\Z)", block)
+    return m.group(1).strip() if m else ""
 
 
 def parse_outline(path: Path = OUTLINE_PATH) -> dict[int, OutlineSlide]:
@@ -1059,40 +1076,45 @@ def parse_outline(path: Path = OUTLINE_PATH) -> dict[int, OutlineSlide]:
         if not m:
             continue
         n, label = int(m.group(1)), m.group(2)
-        timing = re.search(r"\*\*Timing:\*\* (.+)", block).group(1).strip()
+        timing = _field(block, "Timing")
         tm = TIMING.match(timing)
         if not tm:
             raise ValueError(f"slide {n}: timing line does not match '<min> min (clock M:SS)': {timing!r}")
-        kp_block = re.search(r"\*\*Key points\*\*\n((?:- .+\n?)+)", block).group(1)
-        points = tuple(l[2:].strip() for l in kp_block.strip().split("\n"))
-        say = re.search(r"\*\*Speaker note:\*\* (.+)", block).group(1).strip()
-        dm = re.search(r"\*\*Delivery:\*\* (.+)", block)
         slides[n] = OutlineSlide(
-            n, label, timing, float(tm.group(1)), int(tm.group(2)) + int(tm.group(3)) / 60, points, say, dm.group(1).strip() if dm else ""
+            n, label, timing, float(tm.group(1)), int(tm.group(2)) + int(tm.group(3)) / 60,
+            _field(block, "Say"), _field(block, "Evidence"), _field(block, "Delivery"), _field(block, "Chat"),
         )
     return slides
 
 
 def notes_for(s: C.Slide, outline: dict[int, OutlineSlide]) -> str:
-    if isinstance(s, C.Divider):
-        parts = [f"Delivery: {s.delivery}", f"Section {s.section} of {SECTION_COUNT}, minute {s.minute}. Section divider, an attention reset."]
-        if s.ask_chat:
-            parts.append(f"Ask chat: {s.ask_chat}")
-        return "\n\n".join(parts)
-    if isinstance(s, C.BeforeAfter):
-        return f"Delivery: {s.delivery}\n\nSay: {s.say}\n\nTiming: no time of its own, 15 seconds inside slide 3. [Wajib]"
     o = outline[s.n]
-    kp = "\n".join(f"- {p}" for p in o.key_points)
-    head = f"Delivery: {o.delivery}\n\n" if o.delivery else ""
-    return f"{head}Key points:\n{kp}\n\nSay: {o.say}\n\nTiming: {o.timing}. [{o.label}]"
+    parts = [f"Delivery: {o.delivery}"] if o.delivery else []
+    parts.append(f"Say: {o.say}")
+    if o.chat:
+        parts.append(f"Chat: {o.chat}")
+    if o.evidence:
+        parts.append(f"Evidence: {o.evidence}")
+    parts.append(f"Timing: {o.timing}. [{o.label}]")
+    return "\n\n".join(parts)
 
 
 # ---------------------------------------------------------------- lint
 
-VERB = re.compile(
-    r"\b(\w+ed|\w+s|is|are|was|were|be|has|have|had|do|does|did|can|will|see|run|pay|hold|go|get|keep|write|take|make|show|give|cut|reach|stop|fix|check|load|work|look|ship|cost|pick|send|need|bring|prove|solve|watch|use|tell|saw|moved|called|made|lifted|come|brings|stays|runs)\b",
-    re.I,
+FACE_RULES = (
+    (re.compile(r"\bSource\b"), "'Source'"),
+    (re.compile(r"~/"), "a file path"),
+    (re.compile(r"\b\w+\.(ya?ml|json|db|md|py|ts|sh)\b"), "a file path"),
+    (re.compile(r"\b20\d\d-\d\d-\d\d\b"), "an ISO date"),
+    (re.compile(r"\bMinute \d+"), "'Minute N'"),
+    (re.compile(r"Ask chat"), "'Ask chat'"),
+    (re.compile(r"\barms?\b", re.I), "the jargon 'arm'"),
+    (re.compile(r"\bmedians?\b", re.I), "the jargon 'median'"),
+    (re.compile(r"API-equivalent", re.I), "the jargon 'API-equivalent'"),
+    (re.compile(r"head-to-head", re.I), "the jargon 'head-to-head'"),
+    (re.compile(r"\bn/a\b", re.I), "the jargon 'n/a'"),
 )
+HEADLINE_KINDS = frozenset({"headline", "divider-headline", "title"})
 FORBIDDEN = [
     (re.compile("\u2014|\u2013"), "dash character"),
     (re.compile(r"\s·\s"), "middle-dot meta string"),
@@ -1118,115 +1140,68 @@ def slide_strings(obj) -> list[str]:
     return out
 
 
-def _words(*strs: str) -> int:
-    return sum(len(t.split()) for t in strs if t)
 
 
-def body_words(s: C.Slide) -> tuple[int, int]:
-    """Return (prose words, all body words). Titles, sources, code panels and table cells do not count."""
-    match s:
-        case C.Compare():
-            n = _words(s.lead, *(f"{c.heading} {c.body}" for c in s.cards))
-            return n, n
-        case C.Stacks():
-            prose = _words(s.caption)
-            return prose, prose + _words(*(f"{r.label} {r.detail}" for st in s.stacks for r in st.rows))
-        case C.Flow():
-            prose = _words(s.caption)
-            return prose, prose + _words(*s.steps, s.loop.label if s.loop else "")
-        case C.Hub():
-            prose = _words(s.caption)
-            return prose, prose + _words(s.center, *(sp.label for sp in s.spokes))
-        case C.Quote():
-            return 0, _words(*s.lines, s.attribution)
-        case C.Statement():
-            n = _words(s.support, s.extra)
-            return n, n
-        case C.BigNumbers():
-            prose = _words(s.support)
-            return prose, prose + _words(*(i.label for i in s.items))
-        case C.Scatter():
-            n = _words(s.note, s.caption)
-            return n, n
-        case C.BarChart() | C.Gantt() | C.Table() | C.Code():
-            n = _words(s.caption)
-            return n, n
-        case C.Image():
-            return 0, _words(*(c.label for c in s.crops))
-    return 0, 0
 
 
 def lint_content(slides, outline, lint: Lint) -> None:
-    ns = [s.n for s in slides if s.n is not None]
-    if ns != list(range(1, TOTAL_OUTLINE_SLIDES + 1)):
-        lint.fail(0, f"outline slide numbers are not 1..{TOTAL_OUTLINE_SLIDES} in order: {ns}")
+    ns = [s.n for s in slides]
+    if ns != list(range(1, len(slides) + 1)):
+        lint.fail(0, f"slide numbers are not 1..{len(slides)} in order: {ns}")
+    extra = sorted(set(outline) - set(ns))
+    if extra:
+        lint.fail(0, f"presenter.md has blocks for slides that do not exist: {extra}")
+    last = len(slides)
     clock, total = 0.0, 0.0
-    after_divider = False
     for i, s in enumerate(slides, 1):
         if type(s) not in RENDERERS:
             lint.fail(i, f"no renderer registered for {type(s).__name__}")
             continue
+        t = s.title
+        if len(t.split()) > MAX_HEADLINE_WORDS:
+            lint.fail(i, f"headline has {len(t.split())} words, limit {MAX_HEADLINE_WORDS}: {t!r}")
         if isinstance(s, C.Divider):
-            if not s.title.strip():
-                lint.fail(i, "divider has no section name")
-            if len(wrap(s.title, SIZE_DIVIDER, CW, bold=True)) > 3:
+            if len(wrap(t, SIZE_DIVIDER, CW, bold=True)) > 3:
                 lint.fail(i, "divider title needs more than 3 lines")
-            if not 1 <= s.section <= SECTION_COUNT:
-                lint.fail(i, f"divider section {s.section} out of range")
-            if s.minute < clock - 1e-9:
-                lint.fail(i, f"divider minute {s.minute} is before the running clock {clock:g}")
-            if not s.delivery.startswith("Look at the lens"):
-                lint.fail(i, "divider delivery cue must start with 'Look at the lens'")
-            clock = float(s.minute)
-            after_divider = True
+            if not 1 <= s.part <= PART_COUNT:
+                lint.fail(i, f"divider part {s.part} out of range")
+            if not s.question.strip():
+                lint.fail(i, "divider has no chat question")
+        elif isinstance(s, C.Principle):
+            if not 1 <= s.number <= PART_COUNT:
+                lint.fail(i, f"principle number {s.number} out of range")
         elif not isinstance(s, C.Title):
-            t = s.title
             if not t.endswith("."):
                 lint.fail(i, f"headline does not end with a period: {t!r}")
-            if len(t) > MAX_HEADLINE_CHARS:
-                lint.fail(i, f"headline is {len(t)} chars, limit {MAX_HEADLINE_CHARS}")
-            if not VERB.search(t) or len(t.split()) < 5:
-                lint.fail(i, f"headline does not read as a full-sentence assertion: {t!r}")
             if not isinstance(s, C.Image):
                 lines = len(wrap(t, SIZE_HEADLINE, CW, bold=True))
                 if lines > 2:
                     lint.fail(i, f"headline needs {lines} lines at {SIZE_HEADLINE}pt, limit 2")
-            if not isinstance(s, C.Statement) and not s.source:
-                lint.fail(i, "evidence slide has no Source footer")
-            if re.search(r"sources/|referensi|presenter\.md", s.source) and not isinstance(s, C.Image):
-                lint.fail(i, f"footer cites this talk repo instead of the evidence: {s.source!r}")
         text = " ".join(slide_strings(s))
         for rx, what in FORBIDDEN:
             if rx.search(text):
                 lint.fail(i, f"forbidden {what}")
         if BACKSTAGE.search(text):
             lint.fail(i, "backstage text (recorded backup) is visible on the slide; keep it in notes")
-        if re.search(r"\$\d", text) and "API-equivalent" not in text and s.n not in THIRD_PARTY_COSTS:
-            lint.fail(i, "dollar figure without an API-equivalent label")
-        if s.n is not None:
-            if s.n not in outline:
-                lint.fail(i, f"outline slide {s.n} not found")
-                continue
-            o = outline[s.n]
-            if abs(o.clock - clock) > 1e-6:
-                lint.fail(i, f"outline clock {o.clock:g} min does not match the running clock {clock:g} min")
-            clock += o.minutes
-            total += o.minutes
+        if re.search(r"\$\d", text) and not re.search(r"paid|list price|per token|would cost", text, re.I):
+            lint.fail(i, "dollar figure without 'paid', 'list price', 'per token' or 'would cost' beside it")
+        if s.n not in outline:
+            lint.fail(i, f"presenter.md has no block for slide {s.n}")
+            continue
+        o = outline[s.n]
+        if abs(o.clock - clock) > 1e-6:
+            lint.fail(i, f"presenter.md clock {o.clock:g} min does not match the running clock {clock:g} min")
+        clock += o.minutes
+        total += o.minutes
         notes = notes_for(s, outline)
-        needs_delivery = isinstance(s, (C.Title, C.Divider)) or after_divider or s.n in (TOTAL_OUTLINE_SLIDES - 1, TOTAL_OUTLINE_SLIDES) or s.demo
-        if needs_delivery and not notes.startswith("Delivery:"):
+        if (isinstance(s, C.Title) or s.demo or s.n == last) and not notes.startswith("Delivery:"):
             lint.fail(i, "notes must start with 'Delivery:'")
+        if isinstance(s, C.Divider) and not o.chat:
+            lint.fail(i, "divider notes need a Chat: line")
         if s.demo and (FALLBACK_SENTENCE not in notes or DEMO_TIME_BOX not in notes):
             lint.fail(i, f"demo notes need the fallback sentence and the {DEMO_TIME_BOX} time-box")
-        if s.n in (TOTAL_OUTLINE_SLIDES - 1, TOTAL_OUTLINE_SLIDES) and "repeat the question" not in notes.lower():
-            lint.fail(i, "closing and Q&A notes need 'repeat the question, answer, link back to the claim'")
-        if not isinstance(s, C.Divider):
-            after_divider = False
-        prose, body = body_words(s)
-        if prose > MAX_PROSE_WORDS:
-            lint.fail(i, f"{prose} prose words on the slide, limit {MAX_PROSE_WORDS}")
-        if body > MAX_BODY_WORDS:
-            lint.fail(i, f"{body} body words on the slide, limit {MAX_BODY_WORDS}")
+        if s.n == last and "repeat the question" not in notes.lower():
+            lint.fail(i, "Q&A notes need 'repeat the question, answer, link back to the claim'")
         for shot in [x for x in (s.shot, getattr(s, "before", None), getattr(s, "after", None)) if x is not None]:
             if not (TALK / shot.path).is_file():
                 lint.fail(i, f"screenshot {shot.path} does not exist")
@@ -1260,28 +1235,25 @@ def lint_content(slides, outline, lint: Lint) -> None:
     if abs(total - TALK_MINUTES) > 1e-6:
         lint.fail(0, f"slide timings sum to {total:g} min, talk time is {TALK_MINUTES:g} min")
     for s in slides:
-        text = notes_for(s, outline) if isinstance(s, (C.Divider, C.BeforeAfter)) or s.n in outline else ""
+        if s.n not in outline:
+            continue
         for rx, what in FORBIDDEN[2:]:
-            if rx.search(text):
-                lint.fail(0, f"notes contain forbidden {what}: {rx.pattern}")
+            if rx.search(notes_for(s, outline)):
+                lint.fail(s.n, f"notes contain forbidden {what}: {rx.pattern}")
 
 
 def lint_records(records: list[TextRecord], lint: Lint) -> None:
     for r in records:
         where = f"{r.kind} text {r.snippet!r}"
-        if r.size < SIZE_FOOTER:
-            lint.fail(r.slide, f"{where} is {r.size}pt, minimum {SIZE_FOOTER}")
+        if r.size < SIZE_MIN:
+            lint.fail(r.slide, f"{where} is {r.size}pt, minimum {SIZE_MIN}")
         if r.kind == "headline" and r.size != SIZE_HEADLINE:
             lint.fail(r.slide, f"{where} is {r.size}pt, headline must be {SIZE_HEADLINE}")
-        if r.kind == "prose":
-            if r.size != SIZE_PROSE:
-                lint.fail(r.slide, f"{where} is {r.size}pt, prose must be {SIZE_PROSE}")
-            if r.words > MAX_PROSE_WORDS:
-                lint.fail(r.slide, f"{where} has {r.words} words, limit {MAX_PROSE_WORDS}")
         if r.kind == "evidence" and r.size < SIZE_EVIDENCE:
             lint.fail(r.slide, f"{where} is {r.size}pt, evidence minimum {SIZE_EVIDENCE}")
-        if r.kind == "footer" and r.size != SIZE_FOOTER:
-            lint.fail(r.slide, f"{where} is {r.size}pt, footer must be {SIZE_FOOTER}")
+        for rx, what in FACE_RULES:
+            if rx.search(r.text):
+                lint.fail(r.slide, f"face text {r.snippet!r} contains {what}")
         ratio = contrast(r.fg, r.bg)
         if ratio < 4.5:
             lint.fail(r.slide, f"{where} contrast {ratio:.2f}:1 on {r.bg}, minimum 4.5")
@@ -1289,6 +1261,23 @@ def lint_records(records: list[TextRecord], lint: Lint) -> None:
             lint.fail(r.slide, f"{where} needs {r.need_h:.2f}in but its box is {r.box_h:.2f}in")
         if r.widest_word_pt > r.box_w_pt:
             lint.fail(r.slide, f"{where} has a word wider than its box")
+
+    face: dict[int, int] = {}
+    for r in records:
+        if r.kind not in HEADLINE_KINDS:
+            face[r.slide] = face.get(r.slide, 0) + r.words
+    for slide, n in face.items():
+        if n > MAX_FACE_WORDS:
+            lint.fail(slide, f"{n} words on the face besides the headline, limit {MAX_FACE_WORDS}")
+
+
+def lint_notes(records: list[TextRecord], notes: dict[int, str], lint: Lint) -> None:
+    for i, text in notes.items():
+        if not re.search(r"(?m)^Say: \S", text):
+            lint.fail(i, "notes have no Say: line")
+        face = " ".join(r.text for r in records if r.slide == i)
+        if re.search(r"\d", face) and not re.search(r"(?m)^Evidence: \S", text):
+            lint.fail(i, "a digit is on the face but the notes have no Evidence: line")
 
 
 def lint_graphics(graphics: list[GraphicRecord], lint: Lint) -> None:
@@ -1309,6 +1298,7 @@ def build() -> tuple[Presentation, Lint]:
     blank = prs.slide_layouts[6]
     records: list[TextRecord] = []
     graphics: list[GraphicRecord] = []
+    notes: dict[int, str] = {}
     for i, s in enumerate(C.SLIDES, 1):
         slide = prs.slides.add_slide(blank)
         if type(s) not in RENDERERS:
@@ -1319,8 +1309,10 @@ def build() -> tuple[Presentation, Lint]:
                 render_shot(canvas, s)
         else:
             RENDERERS[type(s)](canvas, s)
-        slide.notes_slide.notes_text_frame.text = notes_for(s, outline)
+        notes[i] = notes_for(s, outline)
+        slide.notes_slide.notes_text_frame.text = notes[i]
     lint_records(records, lint)
+    lint_notes(records, notes, lint)
     lint_graphics(graphics, lint)
     return prs, lint
 
