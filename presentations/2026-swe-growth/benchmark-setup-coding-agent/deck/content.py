@@ -21,6 +21,14 @@ ASSETS = "deck/assets/"
 
 
 @dataclass(frozen=True, kw_only=True)
+class Blur:
+    """Gaussian blur of `box` (x1, y1, x2, y2 in the final cropped or stacked picture), or all of it when `box` is None."""
+
+    radius: int
+    box: tuple[int, int, int, int] | None = None
+
+
+@dataclass(frozen=True, kw_only=True)
 class Shot:
     path: str
     label: str
@@ -29,6 +37,7 @@ class Shot:
     cut: tuple[tuple[int, int], ...] = ()
     stack: tuple[tuple[int, int, int, int], ...] = ()
     stack_w: int | None = None
+    blur: tuple[Blur, ...] = ()
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -643,11 +652,13 @@ DECK: tuple[Slide, ...] = (
             path=ASSETS + "pr804-draft-click-before.png",
             label="Before: click opens the edit modal",
             crop=(60, 65, 1000, 900),
+            blur=(Blur(radius=14),),
         ),
         after=Shot(
             path=ASSETS + "pr804-draft-click-after.png",
             label="After: click only selects",
             crop=(60, 65, 1000, 900),
+            blur=(Blur(radius=14),),
         ),
     ),
     BigNumbers(
@@ -692,6 +703,7 @@ DECK: tuple[Slide, ...] = (
                 (96, 672, 1622, 1100),
             ),
             stack_w=1300,
+            blur=(Blur(radius=9, box=(0, 135, 1300, 10_000)),),
         ),
         demo=True,
     ),

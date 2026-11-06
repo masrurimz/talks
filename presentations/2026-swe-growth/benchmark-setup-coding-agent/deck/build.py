@@ -691,6 +691,10 @@ def shot_image(shot: C.Shot, banner: bool = False) -> PILImage.Image:
         img = _stack_rows(img, shot)
     else:
         img = _crop_cut(img, shot)
+    for b in shot.blur:
+        box = b.box or (0, 0, img.width, img.height)
+        box = (box[0], box[1], min(box[2], img.width), min(box[3], img.height))
+        img.paste(img.crop(box).filter(ImageFilter.GaussianBlur(b.radius)), box[:2])
     if banner:
         size = max(24, round(img.width * 0.06))
         font = ImageFont.truetype(str(BANNER_FONT), size)
