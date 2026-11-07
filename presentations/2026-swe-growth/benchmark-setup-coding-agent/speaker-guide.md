@@ -14,11 +14,11 @@ Open with a "what is" the audience already accepts (everyone uses agents, almost
 
 | # | Story | Slides | The point it proves | Number to say after the story |
 |---|---|---|---|---|
-| 1 | Phone fix. 9:29 on a plane, QA warning to QA pass | 2, 3, 41 (the before and after frames, as the callback), 45 | One engineer can ship from a phone | 65 minutes (08:52 to 09:57) |
-| 2 | The bench. The fastest model on paper was the slowest in my hands, every model passed, so speed and cost separated | 12, 14, 15 | Measure your own workload, do not trust a trick | 476 seconds for DeepSeek flash against 92 for Opus; 126 of 126 checks in the notes |
-| 3 | SHIP coordinator. Idle agents never saw the messages, so one writer per branch and one coordinator | 33, 38 | Coordination and proof beat a bigger model | 3 days, 276-line ledger |
+| 1 | Phone fix. 9:29 on a plane, QA warning to QA pass | 2, 3, 46 (the before and after frames, as the callback), 51 | One engineer can ship from a phone | 65 minutes (08:52 to 09:57) |
+| 2 | The bench. The fastest model on paper was the slowest in my hands, every model passed, so speed and cost separated | 14, 16, 17 | Measure your own workload, do not trust a trick | 476 seconds for DeepSeek flash against 92 for Opus; 126 of 126 checks in the notes |
+| 3 | SHIP coordinator. Idle agents never saw the messages, so one writer per branch and one coordinator | 38, 43 | Coordination and proof beat a bigger model | 353 decisions in the ledger, 2 to 7 November |
 
-If time runs short, cut in the order of presenter.md: slide 53 first, then 30, 52, 37 and 28, then skip the compaction sentence on slide 27. **Never cut slides 2 to 4, 10, 12 to 19, 23 to 26, 33 to 36, 38, 41 to 45, 48, or 55 to 60.** That is the core list in presenter.md plus the two demo slides (10 and 45).
+If time runs short, cut in the order of presenter.md: slide 42 first (my plugins, 1 min, the only [Opsional] slide, say it on slide 41), then skip the compaction sentence on slide 31 (0.5 min). Every other slide holds the answer to an organizer question, so none is cut. If the clock is still behind, shorten the chat reading on the dividers. **Never cut the core.** That is the claim, the benchmark story and its proof (slides 14 to 21), skills, mesh and the coordinator hub, the PR proof frames, the production steps, and what is still hard, plus the two demo slides (12 and 51).
 
 **The X quote on slide 5 is confirmed verbatim.** The line "I improved 15 LLMs at coding in one afternoon. Only the harness changed." is the exact title of Can Bölük's article on X (x.com/_can1357/status/2021828033640911196). It was checked against the live page on 2026-11-05, and the screenshot on the slide shows it. Say "article", not "post". The slide headline is a short paraphrase ("Only the harness changed, and 15 models got better."), so read the exact title aloud from the screenshot.
 
@@ -28,18 +28,18 @@ Dates are relative to talk day (T-0). Nothing here has a primary study behind th
 
 | When | What | Done when |
 |---|---|---|
-| T-7 | Write the throughline and the opening and closing scripts (below). Mark 1 to 2 s pause points in the slide notes. [Liu, Nakajima et al. 2022; moderate-weak] Run 1: full out-loud run-through alone, timed per section against the run of show. [practitioner] | Section times on paper, gaps over 20% flagged |
-| T-7 | Record one 2-min section (suggest slide 12, the story of the fastest model on paper). Count words and divide by minutes. Target 130 to 150 wpm. [Tauroza & Allison 1990 via Nesi 2001; moderate for norms, target is `[INFERENCE]`] Count fillers in the same clip. [Corley & Stewart 2008; moderate for what fillers are] | wpm and filler count noted |
+| T-7 | Write the throughline and the opening and closing scripts (below). Mark 1 to 2 s pause points in the slide notes. [Liu, Nakajima et al. 2022; moderate-weak] Run 1: full out-loud run-through alone, timed per section against the run of show. The talk is now 80 minutes, so Q&A has only 10. [practitioner] | Section times on paper, gaps over 20% flagged |
+| T-7 | Record one 2-min section (suggest slide 14, the story of the fastest model on paper). Count words and divide by minutes. Target 130 to 150 wpm. [Tauroza & Allison 1990 via Nesi 2001; moderate for norms, target is `[INFERENCE]`] Count fillers in the same clip. [Corley & Stewart 2008; moderate for what fillers are] | wpm and filler count noted |
 | T-3 | Run 2: full run-through out loud with 4 or more watchers, or recorded and watched back. [Smith thesis; weak-moderate] Watchers get one job: say where they lost the thread. Include a live phone demo from start to the PR. | Notes from watchers, demo run end to end once |
 | T-3 | Rehearse the demo switch to the recording out loud, with the fallback sentence (section 5). [Low, Simple Talk; weak] | Switch takes under 10 s |
-| T-1 | Run 3: opening (slides 1 to 5) and closing (slides 58 to 60) word for word, three times each, without notes. [Anderson valley of awkwardness; weak] Middle stays as bullets. Final audio and screen-share test on the real Zoom (section 3). | Opening and closing from memory |
+| T-1 | Run 3: opening (slides 1 to 6) and closing (slides 66 to 68) word for word, three times each, without notes. [Anderson valley of awkwardness; weak] Middle stays as bullets. Final audio and screen-share test on the real Zoom (section 3). | Opening and closing from memory |
 | T-0 morning | Cyclic sighing, 5 min (section 8). One quiet read of the opening script. No new content. | Calm, not cramming |
 
-**Time each section against the clock windows.** The windows are 0 to 5 (Opening), 5 to 12 (My journey), 12 to 26 (Part 1), 26 to 37 (Part 2), 37 to 48 (Part 3), 48 to 57 (Part 4), 57 to 64 (Part 5), 64 to 68 (What's still hard) and 68 to 71 (Close), then Q&A. Talk time inside them is 5, 7, 14, 11, 11, 9, 7, 4 and 3 minutes, 71 in total. Q&A and slack take the other 19 minutes, from 71:00 to about 90:00. The deck builds with those clock values, and the dividers show no minutes, so keep your own clock. Log actual minutes per section at T-7 and T-3. If a section runs over, pick cuts from the cut order in presenter.md, do not speed up. [practitioner]
+**Time each section against the clock windows.** The windows are 0 to 6 (Opening), 6 to 14 (My journey), 14 to 29 (Part 1), 29 to 42.5 (Part 2), 42.5 to 53.5 (Part 3), 53.5 to 64 (Part 4), 64 to 72.5 (Part 5), 72.5 to 77 (What is still hard) and 77 to 80 (Close), then Q&A. Talk time inside them is 6, 8, 15, 13.5, 11, 10.5, 8.5, 4.5 and 3 minutes, 80 in total. Q&A and slack take only the last 10 minutes, from 80:00 to about 90:00. The deck builds with those clock values, and the dividers show no minutes, so keep your own clock. Log actual minutes per section at T-7 and T-3. If a section runs over, pick cuts from the cut order in presenter.md, do not speed up. [practitioner]
 
-### Opening script, memorize word for word (about 5 min, slides 1 to 5)
+### Opening script, memorize word for word (about 6 min, slides 1 to 6)
 
-Drawn from the `Say:` lines of slides 1 to 5 in presenter.md. Pause 1 to 2 s where marked `/`. [Liu, Nakajima et al. 2022; moderate-weak] All five slides are word for word. The faces carry only a title, a phone screenshot, a four-point timeline, the claim hub and the quote screenshot, so every number below comes from your voice.
+Drawn from the `Say:` lines of slides 1 to 6 in presenter.md. Pause 1 to 2 s where marked `/`. [Liu, Nakajima et al. 2022; moderate-weak] The faces carry a title, a phone screenshot, a four-point timeline, the claim hub, the quote screenshot and the map, so every number below comes from your voice.
 
 > **Slide 1, title (0:00).** Hello everyone, and thank you to Mas Zikrul and SWE Growth. / This is a casual talk about one real setup. / I will show real numbers, and I will also show what still does not work. / If a word of mine is unclear, ask in chat, and I will say it again. /
 >
@@ -47,23 +47,25 @@ Drawn from the `Say:` lines of slides 1 to 5 in presenter.md. Pause 1 to 2 s whe
 >
 > **Slide 3, the timeline (1:30).** QA found one more problem on a pull request that was already approved. / At 9:26 I pasted the finding into my session from the phone. / The agent recorded the bug, fixed it, and updated the PR. / QA passed it at 9:57, / and most of that time I was not touching it. /
 >
-> **Slide 4, the claim (2:30).** Here is the claim of this talk. / The model is a swappable part. / The setup around it does the work. / I see four parts in the setup: skills, proof, coordination and guardrails. / Every part of the talk either supports this claim, or shows where it breaks. /
+> **Slide 4, the claim (2:30).** Here is the claim of this talk. / The model is a swappable part. / The setup around it does the work. / I see four parts in the setup, skills, proof, coordination and guardrails. / Every part of the talk either supports this claim or shows where it breaks. /
 >
-> **Slide 5, the quote (3:30).** This is not only me saying this. / Can Bölük is the author of omp. / He wrote that he improved 15 models at coding in one afternoon, and only the harness changed. / A harness is the program around the model. / I will explain it on the slide after the journey.
-
-The line in the first slide, "If a word of mine is unclear...", is not in the `Say:` of slide 1. It comes from the old script and keeps the second-language promise (section 6). Keep it. The number "65 minutes" is in the Evidence line of slide 3, not in `Say:`. Say it after the story if you want it: "Sixty-five... minutes, from the warning to the pass."
-
-### Closing script, memorize word for word (about 3 min, slides 58 to 60)
-
-Drawn from the `Say:` lines of slides 58 to 60. Say the claim slowly, then the rule, then stop. [Duarte: audiences remember the last thing; weak] Slide 58 shows the five principles under the claim, so you can read down the list as you speak.
-
-> **Slide 58, the five principles and the claim (68:00).** Here are the five principles again. / Measure it on your own work. / Do it twice, make it a skill. / One writer per branch. / Show proof, not "done". / Make it safe to walk away. / The model is a swappable part, and the setup does the work. / If you do one thing on Monday, write a skill the third time you repeat a task. /
+> **Slide 5, the quote (3:30).** This is not only me saying this. / Can Bölük is the author of omp. / He wrote that he improved 15 models at coding in one afternoon, and only the harness changed. / A harness is the program around the model. / I will explain it on the slide after the journey. /
 >
-> **Slide 59, links (69:30).** These are the links if you want to dig deeper. / The omp repo, the prewalk article, Can Bölük's article on X, and two plugins I wrote. / The slides link goes in the chat. /
->
-> **Slide 60, questions (70:00).** Questions are welcome, in chat or out loud. / Thank you, SWE Growth. / The slides link is in the chat. / My GitHub handle is masrurimz if you want to follow up. / Now, your questions.
+> **Slide 6, the map (5:00).** Before we start, here is the map. / First my journey. Then five parts, and then what is still hard. / Part 1 is models, effort and cost. / Part 2 is skills, memory and specs. / Part 3 is many agents and long runs. / Part 4 is review and quality. / Part 5 is infra and secrets. / Your questions are in there. If you do not see yours, ask in chat at any time.
 
-The two small habits (ask for proof in every PR, dry-run anything that touches production) live in the Evidence line of slide 58. Hold them for Q&A, because the slide-58 Say ends on the skill rule.
+The line in the first slide, "If a word of mine is unclear...", is not in the `Say:` of slide 1. It comes from the old script and keeps the second-language promise (section 6). Keep it. The number "65 minutes" is in the Evidence line of slide 3, not in `Say:`. Say it after the story if you want it: "Sixty-five... minutes, from the warning to the pass." The map on slide 6 is the same list that appears as a strip at the bottom of every divider, with a "you are here" label, so the audience can find their question again later.
+
+### Closing script, memorize word for word (about 3 min, slides 66 to 68)
+
+Drawn from the `Say:` lines of slides 66 to 68. Say the claim slowly, then the rule, then stop. [Duarte: audiences remember the last thing; weak] Slide 66 shows the five principles under the claim, so you can read down the list as you speak.
+
+> **Slide 66, the five principles and the claim (77:00).** Here are the five principles again. / Measure it on your own work. / Do it twice, make it a skill. / One writer per branch. / Show proof, not "done". / Make it safe to walk away. / The model is a swappable part, and the setup does the work. / If you do one thing on Monday, write a skill the third time you repeat a task. /
+>
+> **Slide 67, links (78:30).** These are the links if you want to dig deeper. / The omp repo, the prewalk article, Can Bölük's article on X, and two plugins I wrote. / The slides link goes in the chat. /
+>
+> **Slide 68, questions (79:00).** Questions are welcome, in chat or out loud. / Thank you, SWE Growth. / The slides link is in the chat. / My GitHub handle is masrurimz if you want to follow up.
+
+The two small habits (ask for proof in every PR, dry-run anything that touches production) live in the Evidence line of slide 66. Hold them for Q&A, because the slide-66 Say ends on the skill rule. Q&A has only 10 minutes, so start it on time at 80:00.
 
 ## 3. Zoom setup checklist
 
@@ -85,21 +87,21 @@ The two small habits (ask for proof in every PR, dry-run anything that touches p
 
 ## 4. Section delivery cues
 
-Pause 1 to 2 s after the opening line, after the number, and before each slide change. [Liu, Nakajima et al. 2022; moderate-weak] The chat questions for Parts 1 to 5 are the exact text on the deck's dividers (slides 11, 22, 32, 40 and 47). The journey question comes from the slide 6 notes, because the journey has no divider. The opening, What's still hard and the close have none. On Zoom, a silent wait can read as a dead line, so name a person or ask for a chat reaction, then wait 5 s. [Tauroza & Allison via Nesi 2001, weak for Zoom; practitioner] Mode changes every 10 to 15 minutes reset attention, and the chat prompts and demos are those resets. [Szpunar, Moulton & Schacter 2013 and related, via slide-methodology; moderate for drift, weak for the exact interval]
+Pause 1 to 2 s after the opening line, after the number, and before each slide change. [Liu, Nakajima et al. 2022; moderate-weak] The chat questions for Parts 1 to 5 and for What is still hard are the exact text on the deck's dividers (slides 13, 25, 37, 45, 53 and 62). The journey question comes from the slide 7 notes, because the journey has no divider. Slide 56 (accidents) also asks one question from its notes. The opening and the close have none. On Zoom, a silent wait can read as a dead line, so name a person or ask for a chat reaction, then wait 5 s. [Tauroza & Allison via Nesi 2001, weak for Zoom; practitioner] Mode changes every 10 to 15 minutes reset attention, and the chat prompts and demos are those resets. [Szpunar, Moulton & Schacter 2013 and related, via slide-methodology; moderate for drift, weak for the exact interval]
 
 | Clock | Section | Opening line | Chat question | Number to say slowly | Transition line |
 |---|---|---|---|---|---|
-| 0 to 5 | Opening, slides 1 to 5 | "This is my phone at 9:29 in the morning. I was sitting in the plane, before takeoff." | none | 65 minutes | "This is not only me saying this. Now, the journey: which tools I used, and why I switched." |
-| 5 to 12 | My journey, slides 6 to 10 | "I started with Gemini tooling, then Claude Code, then OpenCode, then Amp, and now omp. omp stayed because I can extend it." | Slide 6, from the notes: "Which coding agent do you use today?" | 2,200 requests in May, 270,000 in October | "The agent is working while I keep talking. Now, choosing models and paying for them." |
-| 12 to 26 | Part 1, slides 11 to 21 | "The fastest model on paper was the slowest in my hands." | Divider, slide 11: "Per token or per subscription? Tell us in chat." | 476 seconds for DeepSeek flash, 92 for Opus | "A fast, well-chosen engine still forgets everything tomorrow. Next, teaching the agent." |
-| 26 to 37 | Part 2, slides 22 to 31 | "Autolearn made too many skills, so I merged them." | Divider, slide 22: "Which task do you repeat with your agent more than twice? Tell us in chat." | 14 area skills | "One agent with good knowledge is useful. The real jump came when I ran many at once." |
-| 37 to 48 | Part 3, slides 32 to 39 | "Idle agents never saw the messages sent to them." | Divider, slide 32: "How many agents do you run at once? Tell us in chat." | 101 worktrees, 3 days, 276-line ledger | "Many agents write a lot of code. How do I trust it? Remember the plane." |
-| 48 to 57 | Part 4, slides 40 to 46 | "Remember the plane? This is the proof that came with that fix." | Divider, slide 40: "Which part of your agent's work do you still check by hand? Tell us in chat." | 3 failed runs on the old code, 3 passed with the fix | "That is proof. Now, running it safely." |
-| 57 to 64 | Part 5, slides 47 to 54 | "Every production change goes dry run, backup, apply, then verify." | Divider, slide 47: "Where do your agents run: laptop, server or cloud? Tell us in chat." | none | "So far, what works. Now let me be honest about what still does not." |
-| 64 to 68 | What's still hard, slides 55 to 57 | "I want to be honest about three open problems. The first one is the screen." | none. Reuse the Part 4 answers on slide 55 | 171 seconds, down from 652. 38 GB | "Let me bring it back to the claim." |
-| 68 to 71 | Close, slides 58 to 60 | "Here are the five principles again." | none | none | "Thank you, SWE Growth. Now, your questions." |
+| 0 to 6 | Opening, slides 1 to 6 | "This is my phone at 9:29 in the morning. I was sitting in the plane, before takeoff." | none | 65 minutes | "Before we start, here is the map. First my journey." |
+| 6 to 14 | My journey, slides 7 to 12 | "I started with Gemini tooling, then Claude Code, then OpenCode, then Amp, and now omp. omp stayed because I can extend it." | Slide 7, from the notes: "Which coding agent do you use today?" | 2,200 requests in May, 270,000 in October | "The agent is working while I keep talking. Now, choosing models and paying for them." |
+| 14 to 29 | Part 1, slides 13 to 24 | "The fastest model on paper was the slowest in my hands." | Divider, slide 13: "Per token or per subscription? Tell us in chat." | 476 seconds for DeepSeek flash, 92 for Opus | "A fast, well-chosen engine still forgets everything tomorrow. Next, teaching the agent." |
+| 29 to 42.5 | Part 2, slides 25 to 36 | "Autolearn made too many skills, so I merged them." | Divider, slide 25: "Which task do you repeat with your agent more than twice? Tell us in chat." | 14 area skills | "One agent with good knowledge is useful. The real jump came when I ran many at once." |
+| 42.5 to 53.5 | Part 3, slides 37 to 44 | "Idle agents never saw the messages sent to them." | Divider, slide 37: "How many agents do you run at once? Tell us in chat." | 101 worktrees, 353 decisions in the ledger | "Many agents write a lot of code. How do I trust it? Remember the plane." |
+| 53.5 to 64 | Part 4, slides 45 to 52 | "Remember the plane? This is the proof that came with that fix." | Divider, slide 45: "Which part of your agent's work do you still check by hand? Tell us in chat." | 3 failed runs on the old code, 3 passed with the fix | "That is proof. Now, running it safely." |
+| 64 to 72.5 | Part 5, slides 53 to 61 | "Every production change goes dry run, backup, apply, then verify." | Divider, slide 53: "Where do your agents run: laptop, server or cloud? Tell us in chat." Slide 56, from the notes: "Has an agent ever deleted something it should not have?" | about 244 volumes, 11 reviews | "So far, what works. Now let me be honest about what still does not." |
+| 72.5 to 77 | What is still hard, slides 62 to 65 | "Now the honest part. Three things are still hard for me." | Divider, slide 62: "What still breaks for you? Tell us in chat." | 171 seconds, down from 652. 38 GB | "Let me bring it back to the claim." |
+| 77 to 80 | Close, slides 66 to 68 | "Here are the five principles again." | none | none | "Questions are welcome, in chat or out loud." |
 
-The dividers show no minutes and no "Ask chat" label. Say the chat question as printed, then wait 5 s, then read two or three answers aloud.
+The dividers show no minutes and no "Ask chat" label. Say the chat question as printed, then wait 5 s, then read two or three answers aloud. Each divider also carries a seven-segment map strip with a "you are here" label, so point at it as you say the part's topic.
 
 Say "if I paid per token" every time a dollar figure appears on a slide. It is list price, not money paid. The notes call it API-equivalent. [presenter.md rule; practitioner]
 
@@ -116,20 +118,20 @@ All of this is practitioner convention. No primary study found on live-demo hand
 - [ ] Phone mirror window placed, readable, notifications off (section 3).
 - [ ] No customer or tenant names visible in the issue, branch, or PR.
 
-**At 10:30 (slide 10).** Send the prompt, say what you expect, then go straight to slide 11. Do not wait for the agent. [presenter.md slide 10 note]
+**At 12:30 (slide 12).** Send the prompt, say what you expect, then go straight to slide 13. Do not wait for the agent. [presenter.md slide 12 note]
 
 **Narration lines while waiting.** Silence reads as lost floor on Zoom, so narrate the step, the expected output, and the reason. [Tauroza & Allison via Nesi; weak. `INFERENCE`] Read the output aloud. [practitioner]
 - "I sent the prompt. The agent will create a worktree, then trace the impacted flow."
 - "While it works, notice it is not asking me anything. The rules around it carry the structure."
-- "Here I expect a pull request with a Verification section. I will check that at slide 45, around 54:30."
+- "Here I expect a pull request with a Verification section. I will check that at slide 51, around 61:30."
 
 **90 s time-box.** If a live step has not produced its expected output in 90 s, do not debug. Switch. [practitioner, never debug live; Low, weak]
 
 **Fallback sentence, rehearsed.** "The live run is slow today, so here is the recording from this morning." Then narrate live over the video, never play it silent. [Low, Simple Talk, weak]
 
-**The check at 54:30 (slide 45).**
+**The check at 61:30 (slide 51).**
 - If the run finished, open the PR, scroll to Verification, and walk through the body in 60 s. Check three things aloud: Why, proof, and an honest "Not verified".
-- If it did not finish, say which step it is on, show the recording, and keep slide 45 up. It shows the PR #804 body as the reference, cropped to the draft click bullet and its before and after table. The slide has no expected-output cards, so name Why, proof and Not verified aloud. PR #804 has no "Not verified:" line, so say that aloud. [presenter.md slide 45 note]
+- If it did not finish, say which step it is on, show the recording, and keep slide 51 up. It shows the PR #804 body as the reference, cropped to the draft click bullet and its before and after table. The slide has no expected-output cards, so name Why, proof and Not verified aloud. PR #804 has no "Not verified:" line, so say that aloud. [presenter.md slide 51 note]
 - Never wait for the agent.
 
 ## 6. Delivering in English as a second language
@@ -137,7 +139,7 @@ All of this is practitioner convention. No primary study found on live-demo hand
 The evidence here is small. A mild accent did not lower truth ratings once listeners were warned about processing difficulty, and a heavy accent still did. [Lev-Ari & Keysar 2010; moderate, two small experiments, not Indonesian speech] No study found on Indonesian-accented English. [`INFERENCE`] Intelligibility is the lever, not accent removal. [`INFERENCE`]
 
 - **Slow down at numbers and terms.** Say the number, pause, then the unit. "Sixty-five... minutes." [INFERENCE from Newman & Schwarz 2018 on processing difficulty; moderate for the audio finding, practitioner for this use]
-- **Say the key term aloud as well as showing it.** Harness, worktree, mesh, coordinator, skill. Define each on the slide where it first appears, as the `Say:` lines do. [`INFERENCE`; practitioner]
+- **Say the key term aloud as well as showing it.** Harness, worktree, mesh, coordinator, skill. Define each on the slide where it first appears, as the `Say:` lines do (harness on slide 9, SHIP on slide 12, skill on slide 26, worktree on slide 40, mesh on slide 41). [`INFERENCE`; practitioner]
 - **Articulate word endings and key nouns.** For example "worktrees", "tokens", "checks". [`INFERENCE`; practitioner]
 - **Pauses, not fillers.** A silent pause carries the same "I am thinking" signal as "um". Plan transitions rather than policing fillers mid-talk. [Corley & Stewart 2008; moderate]
 - **Pace.** About 130 to 150 wpm, slightly slower than conversation. [Tauroza & Allison via Nesi 2001; moderate for norms; Matsuura et al. 2014 was not read, so no L2 rate claim]
@@ -147,23 +149,28 @@ The evidence here is small. A mild accent did not lower truth ratings once liste
 
 ## 7. Q&A
 
-Reserve a fixed 6 min block. [Toastmasters Q&A rubric; weak] Repeat or restate every question before answering, because the recording and some listeners will not hear it. [practitioner] Answer the core in two or three sentences, then link back to the throughline. [practitioner] Short answers below use only numbers from the slides.
+Q&A now has only 10 minutes in total, from 80:00 to about 90:00, slack included. Keep a fixed block and stop at the end. [Toastmasters Q&A rubric; weak] Repeat or restate every question before answering, because the recording and some listeners will not hear it. [practitioner] Answer the core in two or three sentences, then link back to the throughline. [practitioner] Most organizer questions are already answered on slides, so point to the slide number instead of repeating the whole story. Short answers below use only numbers from the slides.
 
 | Question | Short answer |
 |---|---|
-| How much does it cost for a beginner? | "I do not know a beginner budget. My own October was about $200 paid, against $7.3k if I paid per token, because 97% of tokens were cache reads. Start with one subscription and one skill." |
-| Which model for which role? | "I pick once per role, not per prompt. Opus plans and reviews, Sonnet runs tasks, Haiku explores. Effort is low for execution, high for plans. Slide 14 has the cards." |
+| How much does it cost for a beginner? | "I do not know a beginner budget. My own October was about $200 paid, against $7.3k if I paid per token, because 97% of tokens were cache reads. Start with one subscription and one skill. Slide 23 has three money tips." |
+| Which model for which role? | "I pick once per job, not per prompt. Chat is Opus at low effort. Plan and hard bugs are Opus at high. UI design is Sonnet at high. Review is Opus at medium. Exploring is Haiku. Slide 16 has the cards." |
 | Is it safe for production? | "Prod is read-only by default. Every write goes dry run, backup, guarded apply, verify. Secrets are obfuscated, the model sees placeholders." |
-| Is it safe to run agents for days? | "The SHIP run lasted about three days. One coordinator, one writer per branch, an independent reviewer, and a frozen verdict. I watch the coordinator, not each branch." |
+| Is it safe to run agents for days? | "The SHIP coordinator ledger has 353 decisions from 2 to 7 November. One coordinator, one writer per branch, an independent reviewer, and a frozen verdict. I watch the coordinator, not each branch. Slide 56 has three accidents and the three guardrails they gave me." |
 | How do I start? | "One skill. When you do the same work more than twice, write it as a skill." |
 | Why not Cursor or Claude Code alone? | "Both are harnesses and I used Claude Code first. I left for reasons about my workload and the time, not a verdict on the tools. I use omp because I can write my own plugins, which is why mesh exists." |
-| What about prewalk? | "Plan with the strong model, let a small one type. On my short tasks it was never cheaper, so it is off. Can Bölük's test with his own models cut cost a lot, but that is his workload, not mine. Test it on yours. Slides 17 and 18." |
+| What about prewalk? | "Plan with the strong model, let a small one type. On my short tasks it was never cheaper, so it is off. Can Bölük's test with his own models cut cost a lot, but that is his workload, not mine. Test it on yours. Slides 19 and 20." |
 | Why is prewalk off? | "On my short tasks it cost the same or more. I tried Haiku as the target on 24 October, then DeepSeek on 25 October to save money, and it was really slow. It may still help on long sessions or with a faster cheap target, which I have not tried." |
-| Does effort matter? | "On two easy tasks, higher effort meant more steps. That is two easy tasks, not a quality ranking. The cause is my inference, the step counts are measured. Slide 16." |
+| Does effort matter? | "On two easy tasks, higher effort meant more steps. That is two easy tasks, not a quality ranking. The cause is my inference, the step counts are measured. My rule is low to do, medium to review, high to plan and for hard bugs, and max almost never because it is slow and gave little gain. Slides 16 and 18." |
+| What happened to Antigravity? | "It was the first tool I used with a proper plan mode, memory and design artifacts, and its screen was built around agents. My Google account got banned. I still use it in one place, because omp uses its image model. Slide 8." |
+| How do you write specs so agents do not get lost? | "Wireframe first, from the product. Then folders and files, then data and flow, and I check each layer. All of it goes into one markdown file in a plans folder for the feature. No hooks for tasks, GitHub issues and the coordinator's ledger hold the work. Slides 34 and 35." |
+| What checks run before you look at a PR? | "Five. The language server on every edit, lint and types, tests shaped like the testing trophy, reviewer agents that scale with risk, and me for UI and feel. Slide 49." |
+| Why did you try Paseo? | "For easier managed worktrees. Tern replaced it. Slide 60." |
+| How do you organize skills? | "By area, inspired by Tiago Forte's PARA method. That gives my 14 area skills. My favorites are poteto-mode and show-me. Slide 28." |
 
 **"I don't know" line.** "I do not know. I have not tested that. If you send it in chat, I will try it and answer in the follow-up." Say it plainly, offer a way to find out. [practitioner]
 
-**Seeded first question if chat is quiet.** Ask a friend to post one in chat at the start of Q&A. [practitioner] Suggested: "What is the one thing you would do first if you only had a day?" Also pre-write 2 backups: "Which of your own skills do you use most?" and "What still breaks?" If nothing arrives after the friend's question, name the first listed question yourself and answer it, then say "I will take the next one in chat or aloud." Do not wait in silence. [Tauroza & Allison via Nesi 2001, weak for Zoom]
+**Seeded first question if chat is quiet.** Ask a friend to post one in chat at the start of Q&A. [practitioner] Suggested: "What is the one thing you would do first if you only had a day?" Also pre-write 2 backups: "Which of your own skills do you use most?" and "What still breaks?" (the divider on slide 62 already asked the second one, so reuse those chat answers). If nothing arrives after the friend's question, name the first listed question yourself and answer it, then say "I will take the next one in chat or aloud." Do not wait in silence. [Tauroza & Allison via Nesi 2001, weak for Zoom]
 
 ## 8. Nerves
 
@@ -173,7 +180,7 @@ Reserve a fixed 6 min block. [Toastmasters Q&A rubric; weak] Repeat or restate e
   1. Look at the lens, smile, say hello.
   2. Name one friendly face on the grid, then the organizer's thanks.
   3. Say the opening script line by line, slowly, pausing after "9:29" and "65 minutes".
-  4. Do not ask a chat question yet, the opening has none. The first one is on slide 6 at 5:00, and the first divider question is on slide 11 at 12:00.
+  4. Do not ask a chat question yet, the opening has none. The first one is on slide 7 at 6:00, and the first divider question is on slide 13 at 14:00.
   5. By 1:00, you are already in the phone story. The story carries you, not the script.
 - If your voice shakes or you lose the line, stop, breathe out, and say the next sentence of the script. Silence is fine. [Corley & Stewart 2008, moderate; `INFERENCE`]
 

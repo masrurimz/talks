@@ -1,8 +1,8 @@
 # Benchmarking My Coding Agent Setup: One Engineer, Many Agents
 
-> **Status**: The v2 deck is built. 60 slides, lint clean. Speaker notes are in `sources/outlines/presenter.md`.
+> **Status**: The v3 deck is built. 68 slides, lint clean. Speaker notes are in `sources/outlines/presenter.md`. All 12 organizer questions are answered on slides.
 > **Event**: SWE Growth community, online on Zoom. Organizer: Mas Zikrul. Date to be confirmed.
-> **Duration**: 90 minutes. 71 minutes of talking, 19 for Q&A and slack.
+> **Duration**: 90 minutes. 80 minutes of talking, 10 for Q&A and slack.
 > **Speaker**: Zahid
 > **Language**: English slides
 
@@ -12,21 +12,21 @@ The model is a swappable part. What lets one engineer ship from a phone is the s
 
 ## Run of show
 
-71 minutes of talking, then Q&A and slack from 71:00 to about 90:00. The deck has 60 numbered slides, and dividers are numbered slides.
+80 minutes of talking, then Q&A and slack from 80:00 to about 90:00. The deck has 68 numbered slides, and dividers are numbered slides.
 
 | Clock | Section | Slides | Organizer topics |
 |---|---|---|---|
-| 0-5 | Opening. The 9:29 phone screenshot, PR #804 with QA at 08:52 and 09:57 WIB, the claim, and Can Bölük's quote. | 1 to 5 | none |
-| 5-12 | My journey. Tools and why each switch, what a harness is, why omp, from one chat to many agents. The live demo starts at slide 10. | 6 to 10 | 1 |
-| 12-26 | Part 1. Choosing models and paying for them. Principle: Measure it on your own work. | 11 to 21 | 2, 3, 11 |
-| 26-37 | Part 2. Teaching the agent. Principle: Do it twice, make it a skill. | 22 to 31 | 5, 7, 8 |
-| 37-48 | Part 3. Many agents at once. Principle: One writer per branch. | 32 to 39 | 4 |
-| 48-57 | Part 4. Trusting the result. Principle: Show proof, not "done". The demo check is slide 45. | 40 to 46 | 9 |
-| 57-64 | Part 5. Running it safely. Principle: Make it safe to walk away. | 47 to 54 | 6, 10 |
-| 64-68 | What's still hard. A screen a clip cannot judge, worktree setup time, RAM. | 55 to 57 | 12 |
-| 68-71 | Close. The five principles, links, questions. | 58 to 60 | none |
+| 0-6 | Opening. The 9:29 phone screenshot, PR #804 with QA at 08:52 and 09:57 WIB, the claim, Can Bölük's quote, and the map of the talk. | 1 to 6 | none |
+| 6-14 | My journey. Tools and why each switch, Antigravity, what a harness is, why omp, from one chat to many agents. The live demo starts at slide 12. | 7 to 12 | 1 |
+| 14-29 | Part 1. Choosing models and paying for them. Principle: Measure it on your own work. Ends with three money tips. | 13 to 24 | 2, 3, 11 |
+| 29-42.5 | Part 2. Teaching the agent. Principle: Do it twice, make it a skill. Includes the PARA skills slide and the wireframe-first spec flow. | 25 to 36 | 5, 7, 8 |
+| 42.5-53.5 | Part 3. Many agents at once. Principle: One writer per branch. | 37 to 44 | 4, 6 |
+| 53.5-64 | Part 4. Trusting the result. Principle: Show proof, not "done". The five checks are slide 49 and the demo check is slide 51. | 45 to 52 | 9 |
+| 64-72.5 | Part 5. Running it safely. Principle: Make it safe to walk away. Includes three accidents and their guardrails. | 53 to 61 | 6, 10 |
+| 72.5-77 | What is still hard. A divider, then a screen a clip cannot judge, worktree env and seed setup time, RAM. | 62 to 65 | 12 |
+| 77-80 | Close. The five principles, links, questions. | 66 to 68 | none |
 
-The live demo starts at slide 10 (clock 10:30) and is checked at slide 45 (clock 54:30). A recorded backup exists and is never named on a slide.
+The live demo starts at slide 12 (clock 12:30) and is checked at slide 51 (clock 61:30). A recorded backup exists and is never named on a slide. Slide 6 is a seven-row map of the talk. The same list draws a small strip at the bottom of every divider.
 
 ## How the deck is made
 
@@ -34,7 +34,7 @@ The live demo starts at slide 10 (clock 10:30) and is checked at slide 45 (clock
 
 - `deck/build.py --render` builds the slides, runs the lint and renders pages to `/tmp/deck-render/`. Run it from `/home/zahid/work/talks` with `uv run python3 presentations/2026-swe-growth/benchmark-setup-coding-agent/deck/build.py --render`.
 - `deck/publish.py` updates the same Google Slides file. Edits made directly in Slides are lost on the next publish, so change `content.py` or `presenter.md` and rebuild.
-- `prompts/` and `sources/outlines/detailed.md` are kept for a NotebookLM comparison test. They follow the same v2 rules as the deck, but the deck does not use them.
+- `prompts/` and `sources/outlines/detailed.md` are kept for a NotebookLM comparison test. They follow the same v3 story and rules as the deck, but the deck does not use them. The presenter prompts follow the 68-slide outline and the detailed outline has 47 slides.
 
 ## Folder structure
 
@@ -53,7 +53,7 @@ The live demo starts at slide 10 (clock 10:30) and is checked at slide 45 (clock
 │   │   └── structure.md    # Arc, principles, timings, content boundaries, demo checkpoints, Q&A prep
 │   ├── outlines/
 │   │   ├── presenter.md    # Speaker notes by slide number
-│   │   └── detailed.md     # Self-reading v2 outline, for the NotebookLM comparison test
+│   │   └── detailed.md     # Self-reading v3 outline, 47 slides, for the NotebookLM comparison test
 │   └── references/
 │       ├── referensi-benchmark-lab.md
 │       ├── referensi-evolusi-biaya-plugin.md
@@ -62,7 +62,7 @@ The live demo starts at slide 10 (clock 10:30) and is checked at slide 45 (clock
 │       ├── referensi-mesh-koordinator-mobile.md
 │       ├── referensi-pr-proof-security-prod.md
 │       └── screenshot-omp-mobile-0929.png
-└── prompts/                # NotebookLM prompts, v2 rules, for the comparison test
+└── prompts/                # NotebookLM prompts, v3 rules, for the comparison test
 ```
 
 ## NotebookLM workflow
@@ -80,7 +80,7 @@ The AI assistant prepares the materials. Zahid runs NotebookLM.
 - **Demo issue.** Pick one small real issue from the Alkhidmah backlog before the talk, with its worktree and stack ready.
 - **Phone screen on Zoom.** Test screen mirroring of the Tern Android app next to the laptop, since the audience is online.
 - **Recorded backup.** Record a full demo run to play if the live one fails.
-- **Rehearsal.** Run the talk end to end against the 71-minute plan.
+- **Rehearsal.** Run the talk end to end against the 80-minute plan, with Q&A held to 10 minutes.
 
 ## Sources
 

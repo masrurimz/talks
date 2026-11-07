@@ -6,12 +6,12 @@ Create a **Detailed Slides** deck for this talk:
 
 **Benchmarking My Coding Agent Setup: One Engineer, Many Agents**
 
-Build it from `sources/outlines/detailed.md`. That file is the v2 outline for a self-reading deck, with 40 slides. Use its slide order and headlines.
+Build it from `sources/outlines/detailed.md`. That file is the v3 outline for a self-reading deck, with 47 slides. Use its slide order and headlines.
 
 ### Settings
 - **Format**: Detailed Slides. Someone who was not at the talk can read it alone.
 - **Language**: English.
-- **Length**: 40 slides.
+- **Length**: 47 slides.
 
 ### Who the slides are for
 People who read the deck after the talk, on their own. Many read English as a second language, so use plain words and short sentences. The speaker is Zahid.
@@ -21,7 +21,7 @@ People who read the deck after the talk, on their own. Many read English as a se
 ## The claim
 "The model is a swappable part. What lets one engineer ship from a phone is the setup around it: skills, proof, coordination, and guardrails."
 
-Say it on slide 3 and again on slide 39, in the same words.
+Say it on slide 3 and again on slide 46, in the same words.
 
 ## The five principles
 Use these names word for word. Each one is the principle slide of one part.
@@ -33,11 +33,11 @@ Use these names word for word. Each one is the principle slide of one part.
 5. Make it safe to walk away
 
 ## Structure
-Each part tells one story, then names the principle, then shows the proof, then gives one thing to try. The order is story, principle, proof, try this. The part topics are "Choosing models and paying for them", "Teaching the agent", "Many agents at once", "Trusting the result" and "Running it safely".
+Each part tells one story, then names the principle, then shows the proof, then gives one thing to try. The order is story, principle, proof, try this. The part topics are "Choosing models and paying for them", "Teaching the agent", "Many agents at once", "Trusting the result" and "Running it safely". This deck has no divider slides. Slide 5 is a seven-row map of the talk (My journey, the five parts, and What is still hard) with the topics each one covers, so a reader can find their question.
 
 ## Rules for this deck
 
-1. **More words than the live deck, but a cap.** A headline of at most 12 words, in plain English. About 50 words on the slide face besides the headline, never more than 60. Short sentences. One idea and one picture per slide.
+1. **More words than the live deck, but a cap.** A headline of at most 12 words, in plain English. About 50 words on the slide face besides the headline, never more than 60. The map slide (slide 5) may carry about 60. Short sentences. One idea and one picture per slide.
 2. **Clean faces.** The slide face never shows a file path, a command-line flag, an internal date such as 2026-11-05, a minute count, a chat cue, or the words arm, median, API-equivalent, head-to-head or n/a. A time is allowed only when it is part of the story, like "9:29". A month name is fine when the month is the subject, like "October". Write "steps", not "turns".
 3. **Dollar figures.** Write "if I paid per token" next to every dollar figure from the usage stats. It is the list price of the tokens, not money paid. State real spend separately, in the same slide when it fits: about $200 in October, usually about $100 a month.
 4. **No footers and no source lines.** Put references in one place. The last slide, "Links", lists the public links from `sources/outlines/detailed.md` and no others.
@@ -73,6 +73,6 @@ Each part tells one story, then names the principle, then shows the proof, then 
 
 ## Special notes
 - The phone story: Zahid was on board a plane before takeoff and fixed a bug from the Tern Android app.
-- Obfuscation is not secret management. Slide 35 says so in plain words.
+- Obfuscation is not secret management. Slide 42 says so in plain words.
 - Mesh is Zahid's own plugin. The poteto skill set is ported to omp by him, and "check every layer" is his own principle.
 - The close is the five principles and the claim, then the Links slide.

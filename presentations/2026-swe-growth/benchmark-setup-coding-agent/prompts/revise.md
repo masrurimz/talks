@@ -8,7 +8,7 @@ Revise the deck that was already generated for this talk:
 
 Make a light revision, not a rewrite. Keep the slide order and the headlines. Fix only what the checks below find. Keep the language English.
 
-The presenter deck follows `sources/outlines/presenter.md` (60 slides). The detailed deck follows `sources/outlines/detailed.md` (40 slides).
+The presenter deck follows `sources/outlines/presenter.md` (68 slides). The detailed deck follows `sources/outlines/detailed.md` (47 slides).
 
 ### Checklist 1. The six rules
 
@@ -17,8 +17,8 @@ For each slide, check these. Fix a slide only where it fails.
 1. **One audience.** The slide talks to the people watching. Sources, dates, caveats, timing and chat cues are in the speaker notes, not on the face.
 2. **No source lines.** No "Source" line and no footer. A quote has the speaker's name next to it, for example "Can Bölük, omp author". All links sit on one Links slide near the end.
 3. **Headlines in Zahid's words.** About 10 words, never more than 12. Plain English, with no bench jargon.
-4. **One picture per slide.** One screenshot, one or two big numbers, or one simple diagram. Presenter deck: at most about 25 words on the face besides the headline, never more than 30. Detailed deck: about 50, never more than 60.
-5. **One story per section.** Each part runs divider, story, principle, proof, try this. The divider says "Part N" and a plain topic, with one chat question and no minutes. The principle slide shows the principle name, large.
+4. **One picture per slide.** One screenshot, one or two big numbers, or one simple diagram. Presenter deck: at most about 25 words on the face besides the headline, never more than 30. Detailed deck: about 50, never more than 60. The map slide (presenter slide 6, detailed slide 5) may carry about 60 in either deck.
+5. **One story per section.** Each part runs divider, story, principle, proof, try this. The divider says "Part N" and a plain topic, with one chat question, no minutes and a seven-segment map strip at the bottom. The "What is still hard" divider follows the same shape and has no principle slide. The principle slide shows the principle name, large.
 6. **Clean faces.** The face never shows a file path, an internal date such as 2026-11-05, a minute count, "Ask chat", or the words arm, median, API-equivalent, head-to-head or n/a. "Steps", not "turns". Every dollar figure says "if I paid per token". A time like "9:29" is fine when it is part of the story.
 
 ### Checklist 2. The five principles, word for word
@@ -46,7 +46,12 @@ Open `sources/outlines/presenter.md`. Each slide has an `Evidence:` line. For ev
 - Raising effort raised the step count in every pair he tested. The reason is worded as a guess.
 - GLM Max is his own plan. Codex Pro came from the office. Neither is described the other way round.
 - Mesh is his own plugin, not built into omp. Base-branch coordination is solved by mesh plus one coordinator agent, and is not listed as a problem.
-- What is still hard is three things: a clip cannot judge how a screen looks, setting up each worktree is slow, and one test run reached 38 GB of RAM.
+- What is still hard is three things: a clip cannot judge how a screen looks (UI still needs design skills and manual feedback), setting up the environment and seed data for each worktree is slow (652 seconds to 171 seconds), and one test run reached 38 GB of RAM on the shared box. Base branches are not on the list. Part 3 shows them as solved.
+- Model roles are chat Opus low, plan and hard bugs Opus high, UI design Sonnet high, review Opus medium, explore Haiku. Max is almost never used because it is slow and gave little gain. That more steps means a longer wait is an inference.
+- The three accidents are a reset that wiped the shared dev database (the devkit now refuses such resets), a Docker prune that deleted about 244 unused volumes (Docker cleanup is banned for agents), and a masking tool that went through 11 reviews (reviews are capped at two rounds). The coordinator log has 353 decisions from 2 to 7 November.
+- The five checks are, in order, language server on every edit, lint and types, tests shaped like the testing trophy, reviewer agents that scale with risk, and Zahid by hand.
+- The wireframe on the spec slide is a neutral example, not one of Zahid's apps.
+- The OpenCode reason is "token hungry, slow, and its tests did not catch much". It is not "accounts were banned". Only the Antigravity account ban is stated.
 - Obfuscation is not called secret management. Production is read-only by default. Writes go dry run, backup, guarded apply, verify.
 - Quotes are verbatim, typos kept.
 
@@ -92,11 +97,11 @@ Do not: [anything to avoid].
 Example.
 
 ```
-Revise slide 19 of the presenter deck.
+Revise slide 21 of the presenter deck.
 
 Problem: the cost slide shows $7.3k without saying "if I paid per token".
 Change: write "$7.3k if I paid per token" and "about $200 paid".
-Evidence: slide 19 Evidence line in sources/outlines/presenter.md.
+Evidence: slide 21 Evidence line in sources/outlines/presenter.md.
 Keep: the two big numbers.
 Do not: add new numbers.
 ```
