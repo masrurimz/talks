@@ -405,21 +405,17 @@ DECK: tuple[Slide, ...] = (
         highlight=0,
         fill=True,
     ),
-    BarChart(
+    Code(
         title="From one chat at a time to many agents at once.",
-        bars=Bars(
-            rows=(
-                BarRow(label="May", values=(2.2,), texts=("2.2k",)),
-                BarRow(label="Jun", values=(23,), texts=("23k",)),
-                BarRow(label="Jul", values=(46,), texts=("46k",)),
-                BarRow(label="Aug", values=(174,), texts=("174k",)),
-                BarRow(label="Sep", values=(235,), texts=("235k",)),
-                BarRow(label="Oct", values=(270,), texts=("270k",)),
+        shot=Shot(
+            path=ASSETS + "omp-stats-dashboard.png",
+            label="139 billion tokens, 97% from cache",
+            box=(0.30, 0.0, 0.92, 0.30),
+            stack=(
+                (1080, 388, 2610, 630),
+                (568, 1465, 2243, 2055),
             ),
-            highlight=5,
-            vertical=True,
         ),
-        caption="Requests to my agents each month.",
     ),
     Code(
         title="I send one prompt from my phone, and the agent keeps working.",
