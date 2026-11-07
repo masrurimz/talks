@@ -1,12 +1,12 @@
 # Benchmarking My Coding Agent Setup: One Engineer, Many Agents
-## Detailed outline, self-reading deck (v3)
+## Detailed outline, self-reading deck (v4)
 
 **SWE Growth community. Online on Zoom, 90 minutes. All slides in English.**
 **Speaker: Zahid**
 
 ## How to use this outline
-- This is the deck people read after the talk, without the speaker. It has 47 slides. The live deck in `presenter.md` has 68.
-- It follows the same v3 story as the live deck. Five principles, each told through a story. Every part runs story, principle, proof, try this. The v3 story answers all 12 organizer questions, so seven slides were added over v2: the map, Antigravity, three money tips, PARA, the wireframe, the five checks and the three accidents. The live deck's dividers have no slide here, because this deck has no dividers. The map slide takes their place.
+- This is the deck people read after the talk, without the speaker. It has 47 slides. The live deck in `presenter.md` has 73.
+- It follows the same v4 story as the live deck. Five principles, each told through a story. Every part runs story, principle, proof, try this. The v3 story answers all 12 organizer questions, so seven slides were added over v2: the map, Antigravity, three money tips, PARA, the wireframe, the five checks and the three accidents. The v4 story adds the tool journey in Zahid's order, the parallel-agents reason for leaving the editor, the rules that step in on risky commands, the busy hour, and the CI queue, full disk and pause-and-wake plan. Here they sit inside existing slides, so this deck keeps its 47 slides. The live deck's dividers have no slide here, because this deck has no dividers. The map slide takes their place.
 - Each slide has a headline of at most 12 words and about 50 words of text on the face, in short plain sentences. Each slide has one picture. The map slide may use about 60 words.
 - A slide face never shows a file path, an internal date, a source line or bench jargon. Use "steps", not "turns". Do not use "arm", "median", "API-equivalent" or "head-to-head".
 - Where a dollar figure appears, say "if I paid per token". It is the list price of the tokens, not money paid. State real spend separately.
@@ -73,9 +73,9 @@ The model is a swappable part. What lets one engineer ship from a phone is the s
 **Picture:** Diagram with the model in the middle and four boxes around it: tools, context, memory, rules.
 
 ## Slide 7. Every tool switch had a reason
-**On the slide:** Claude Code, then OpenCode, then Amp, then omp. Claude Code was not good enough for some tasks. I always ran OpenCode with OmO, and it was token hungry, slow, and its tests did not catch much. Amp: I forgot why I left. omp stayed because I can extend it.
-**Picture:** A timeline with four bars and one short reason under each: Claude Code, OpenCode (OmO), Amp, omp. Gemini tooling comes first. Antigravity is not on the timeline. It has the next slide.
-**Facts behind it:** Gemini tooling from July 2025, Claude Code from October 2025, OpenCode from October 2025, Amp from December 2025 to March 2026, omp from February 2026.
+**On the slide:** I started with Copilot in VS Code at its 2022 launch, before Claude Code existed. Then Claude Code in VS Code, then Gemini tooling, then OpenCode with OmO, which was token hungry. When I started running agents in parallel, VS Code was too heavy, so I moved to Ghostty, Neovim and Amp. omp stayed because I can extend it.
+**Picture:** A six-event timeline with no date scale, in this order: 2022 VS Code and Copilot at launch, 2025 Claude Code in VS Code, July 2025 Gemini tooling, October 2025 OpenCode (OmO) token hungry, December 2025 Ghostty with Neovim and Amp lighter, February 2026 omp extensible (highlighted). Antigravity is not on the timeline. It has the next slide.
+**Facts behind it:** The order is the one I gave, not the order of the folder dates on disk, which conflict with it, so there are no bars on a date scale. I started when Copilot became generally available, and Claude Code launched in February 2025. OpenCode: "token hungry, slow, and its tests didn't catch much". Amp: I forgot why I left. One agent in an editor is fine and four agents in four editors is not, so I moved to the terminal so the memory goes to the agents, not the windows. That reason is mine and it is not measured, so there is no memory number.
 
 ## Slide 8. Antigravity showed me what an agent-first app looks like
 **On the slide:** Antigravity was the first tool I used with a proper plan mode, memory and design artifacts. Its screen was built around agents, not around an editor. My Google account got banned, so I moved on.
@@ -85,7 +85,7 @@ The model is a swappable part. What lets one engineer ship from a phone is the s
 ## Slide 9. omp is better because I can extend it
 **On the slide:** When something hurts, I write a plugin. Autolearn: the agent writes a skill after a session. Hindsight: my memory tool. Compaction: the agent shortens a long chat so it can keep going.
 **Picture:** A row of five icons: plugins, autolearn, memory, logins, compaction.
-**Facts behind it:** Mesh, the org account router and the worktree plugin are all mine. Multi-provider subscription logins are the fifth item. My terminal changed five times and each step removed one chore: OpenChamber, Ghostty, herdr, then Tern. I tried Paseo to get easier managed worktrees, and Tern replaced it. Tern has an Android app for my phone.
+**Facts behind it:** Mesh, the org account router and the worktree plugin are all mine. Multi-provider subscription logins are the fifth item. My terminal changed five times and each step removed one chore: OpenChamber, Ghostty, herdr, then Tern. I tried Paseo to get easier managed worktrees, and Tern replaced it. Tern has an Android app for my phone. Ghostty came first because omp is a terminal program, and running agents in parallel is the reason I left the editor (slide 7).
 
 ---
 
@@ -164,7 +164,7 @@ The model is a swappable part. What lets one engineer ship from a phone is the s
 ## Slide 24. My prompts are loose on purpose
 **On the slide:** I paste raw context into the agent. A WhatsApp message from QA. A screenshot. A spreadsheet. The structure is in the files around the prompt. I dropped the task tracker beads, because agents got smarter and beads is hard for humans to read. No hooks for tasks. GitHub issues and the coordinator logs hold the work, and CI does the checking.
 **Picture:** Layers of instructions, from a short global file down to the repo, with "beads" struck through.
-**Facts behind it:** When I hand work to a helper agent, the brief has one shape: target, change and contract.
+**Facts behind it:** When I hand work to a helper agent, the brief has one shape: target, change and contract. Rules are small files. Some are always in the prompt, such as check every layer. Others wait for a pattern. When the agent types pytest or vitest without a memory cap, omp stops the stream, adds the rule, and the agent rewrites the command. omp calls this TTSR, time traveling stream rules. Rules stepped in 4,635 times since June. 1,424 were my two memory caps. The rest were omp's own TypeScript rules.
 
 ## Slide 25. 25 principles, and one of them is mine
 **On the slide:** poteto-mode is an agent-style skill I ported to omp. It brings 25 principles and 23 playbooks. The agent must say which principle shaped each decision. My own principle is check every layer: product and the human walk, structure, and data and flow.
@@ -187,6 +187,7 @@ The model is a swappable part. What lets one engineer ship from a phone is the s
 ## Slide 28. Idle agents never saw the messages
 **On the slide:** My agents talk to each other through a plugin I call mesh. My coordinator sent a message to every agent. Idle agents do not wake up for a message, so they never read it. The coordinator wrote in its log: "idle sessions don't wake on mesh messages; each branch needs one writer".
 **Picture:** One coordinator sending a message. Some agents receive it. Two idle agents stay grey.
+**Facts behind it:** On a busy hour, 4 to 9 agents work at once. 39% of my working hours since September had 4 to 9 agents, and a typical hour had 3. A folder is a worktree or repo, so this counts workstreams, not processes. It only works because the agents have full control of the dev infra. They start the stack, seed it and test it without me.
 
 ## Slide 29. Principle 3. One writer per branch
 **On the slide:** One writer per branch. Many agents and many branches are fine. On each branch, exactly one agent writes.
@@ -273,10 +274,10 @@ The model is a swappable part. What lets one engineer ship from a phone is the s
 
 # What is still hard
 
-## Slide 45. Three things are still hard
-**On the slide:** A proof clip cannot judge how a screen looks, so UI the agent builds still needs design skills and my feedback by hand. Setting up the environment and the seed data for each worktree is still slow. One fix took it from 652 seconds to 171 seconds. One test run without a memory cap reached 38 GB of RAM on the shared box. Base branches used to be on this list. Part 3 showed how the coordinator solved it.
-**Picture:** Three cards with one number each. "By hand", "171 s", "38 GB".
-**Facts behind it:** A rule now fires when a test command appears and tells the agent to cap memory first. The fix for RAM was a rule, not more memory.
+## Slide 45. Four things are still hard, and one plan is next
+**On the slide:** A proof clip cannot judge how a screen looks, so I still check UI by hand. CI is now the queue. Setting up each worktree is still slow, 652 seconds down to 171. My disk is 89% full. Next I try one VM per stack, asleep when idle and awake when an agent needs it. That is a plan, not a result.
+**Picture:** Four cards with one number each. "By hand", "355 runs", "171 s", "89%".
+**Facts behind it:** CI. One day in November my alkhidmah repo ran 355 CI runs, and 1 in 10 runs took 13 minutes or more. I am testing larger runners and spreading the load over free runners, and nothing is settled. Setup. At work the analytics app is heavier, with a large time series stack and a long seed, and I did not measure that seed. Disk. Docker alone holds 447 GB, and one test run without a memory cap once reached 38 GB of RAM on the shared box. A rule now caps memory, so the fix for RAM was a rule, not more memory. Plan. A sleeping VM still takes disk, so a bigger SSD comes first. Base branches used to be on this list. Part 3 showed how the coordinator solved it.
 
 ---
 

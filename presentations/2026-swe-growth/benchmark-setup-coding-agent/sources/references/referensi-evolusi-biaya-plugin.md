@@ -1,6 +1,6 @@
 # Reference digest: tool journey, harness, plugins, terminal, models, cost, memory
 
-Summary. This digest tells how Zahid's setup evolved and what it costs. It covers the tool journey (Claude Code, OMO on OpenCode, Amp, a short Antigravity side trip, then omp), what a harness is, why omp won (it is extensible), the plugins he wrote, the terminal journey (OpenChamber, Ghostty, herdr, Paseo, Tern), model routing per role with an effort rule and a speed table, cost and subscriptions (including why he went back to Claude), prewalk, the habit of constant benchmarking, the memory journey (Mnemopi, Hindsight, Cognee), the autolearn story, why beads was dropped, and his one rule for when to write a skill. The benchmark lab itself (value formula, October 2026 bench, effort versus turns, prewalk with receipts) is in `referensi-benchmark-lab.md`. This digest keeps the short version.
+Summary. This digest tells how Zahid's setup evolved and what it costs. It covers the tool journey in the order he gave it on 2026-11-07 (VS Code with Copilot at launch, Claude Code in VS Code, Gemini tooling, OpenCode with OMO, Ghostty with Neovim and Amp, then omp, plus a short Antigravity side trip), why running agents in parallel pushed him out of the editor, what a harness is, why omp won (it is extensible), the plugins he wrote, the terminal journey (OpenChamber, Ghostty, herdr, Paseo, Tern), model routing per role with an effort rule and a speed table, cost and subscriptions (including why he went back to Claude), how many agents run at once in a busy hour, prewalk, the habit of constant benchmarking, the memory journey (Mnemopi, Hindsight, Cognee), the autolearn story, why beads was dropped, and his one rule for when to write a skill. The benchmark lab itself (value formula, October 2026 bench, effort versus turns, prewalk with receipts) is in `referensi-benchmark-lab.md`. This digest keeps the short version.
 Numbers come from `omp stats` re-aggregated on 2026-11-05 (`~/.omp/stats.db`, table `message_rollup`, x1-dev, 2026-03-07 to 2026-11-05) and from Zahid's own answers in the grilling rounds of 2026-11-05. Prices are omp's API-equivalent estimate, the list price of the tokens. They are not money paid. Items marked [INFERENCE] were not confirmed.
 No secret values, emails or addresses appear in this file.
 
@@ -10,26 +10,30 @@ No secret values, emails or addresses appear in this file.
 
 ### Key facts
 
-- Zahid started with Claude Code. Some tasks were not good enough and he wanted more efficiency, so he moved on.
+- Order, in his words of 2026-11-07: "I adopted VS Code Copilot early, before Claude Code even existed", then Claude Code inside VS Code, then Gemini, then OpenCode (OmO), then Ghostty with Neovim and Amp "to conserve resource because I start working agent in parallel", then omp. This replaces the older order in which Claude Code came first. Zahid confirmed he started when Copilot became generally available (2022-06-21). Claude Code launched 2025-02-24 (Anthropic, research preview).
+- Earlier account, 2026-11-05: some Claude Code tasks were not good enough and he wanted more efficiency, so he moved on. Keep it as a reason, not as the first tool.
 - Next was OMO (oh-my-opencode, an extension of OpenCode). First he used it as a pure CLI, then found OpenChamber, a web UI. OMO had many issues and limits because it is an extension of another tool, and quality was not as good. Claude and OpenAI subscriptions were also getting banned on OpenCode.
 - He switched to Amp because it was more mature. On Amp he mostly went through a proxy (CLIProxyAPI) so he could get very large usage. Amp was the longest stay. It had cross-agent communication and could spawn other agents.
 - Antigravity was a short side trip. He used it at first while it had good free usage and features like plan annotations and session artifacts. He left because it is heavy, quality and limits disappointed him, and the Google account got banned (prompt dated 2026-03-10).
 - Why he left Amp: he forgot. The slide says "I forgot why I left Amp, but omp is better because..." and then lists the reasons in section 3.
 - Where omp stands: the longest and current tool. Since 2026-03-07 on x1-dev main.
 
-### Data timeline (follow this order on the slide)
+### Data timeline (the slide is a six-event timeline with no date scale)
 
-| Date | Tool | Evidence |
+The slide order is the order Zahid gave, not the order of the folder dates. The disk dates conflict with it, so never draw bars to a date scale. The Claude data folder on the Mac dates from 2025-10-19, which is later than the Gemini folder (2025-07-29).
+
+| Slide `when` | Slide label | Disk or public evidence |
 | --- | --- | --- |
-| 2025-07-29 | Gemini CLI folder first appears on m5 (`~/.gemini`) | file dates on m5 |
-| 2025-10-19 | Claude Code | first session on m5 |
-| 2025-10-20 | OpenCode | 215 sessions on m5 |
-| 2025-12-22 to 2026-03-16 | Amp | longest stay |
-| 2026-02-23 | omp on m5 | 37 session folders |
-| 2026-03-07 | omp on x1-dev main, the workstation | start of `stats.db` |
-| 2026-03 | oh-my-opencode prompts concentrated on x1 | prompt log |
+| 2022 | VS Code and Copilot, at launch | Copilot technical preview 2021-06-29, a VS Code extension with a waitlist (https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/). Generally available 2022-06-21, $10 a month, free for verified students (https://github.blog/news-insights/product-news/github-copilot-is-generally-available-to-all-developers/). Zahid confirmed on 2026-11-07 that he started at that launch. The VS Code extensions folder on the current Mac dates from 2024-03-13. That only shows when VS Code data on this Mac begins, not when he started |
+| 2025 | Claude Code in VS Code | Claude Code launched 2025-02-24. First Claude Code session on m5 2025-10-19 |
+| Jul 2025 | Gemini tooling | Gemini CLI folder first appears on m5 (`~/.gemini`), 2025-07-29 |
+| Oct 2025 | OpenCode (OmO), token hungry | 2025-10-20, 215 sessions on m5. In his words, "I always ran it with OmO. It was token hungry, slow, and its tests didn't catch much." |
+| Dec 2025 | Ghostty, Neovim and Amp, lighter | Amp data 2025-12-22, Amp ran to 2026-03-16 and was the longest stay. Neovim data 2026-01-04 on the Mac |
+| Feb 2026 | omp, extensible | omp on m5 2026-02-23 (37 session folders). Main tool on x1-dev from 2026-03-07, the start of `stats.db` |
 
+- 2026-03 on x1: oh-my-opencode prompts concentrated in the prompt log.
 - The m5 and x1 split is part of the story. m5 is the Mac used for first tries and review. x1-dev is the Linux workstation where the real work runs.
+- Editor to terminal (slide 8). One agent in an editor is fine, four agents in four editors is not. He moved to Ghostty and Neovim, then Amp, so the memory goes to the agents, not the windows. It is his own reason, from 2026-11-07, and it is not measured. Quote no memory number.
 
 ### Quotable
 
@@ -102,7 +106,7 @@ description = "Opens git worktrees as Tern tabs, and creates, relocates and tear
 
 ### Key facts
 
-Order, in his words: OpenChamber, then Ghostty (windows and tabs) because of omp, then herdr to manage worktrees and open sessions, then Paseo to find something easier with more managed worktrees, and now Tern. He says he just uses Tern now.
+Order, in his words: OpenChamber, then Ghostty (windows and tabs) because of omp, then herdr to manage worktrees and open sessions, then Paseo to find something easier with more managed worktrees, and now Tern. He says he just uses Tern now. The reason for moving from the editor to a terminal at all is on slide 8, in the tool journey above.
 
 | Step | Why | Evidence |
 | --- | --- | --- |
@@ -184,6 +188,13 @@ All prices are API-equivalent: the list price of the tokens. They are not money 
 
 - Headline for the cost slide: October 2026 was 270k requests and 41B tokens, an API-equivalent price of $7.3k, and he paid about $200. That is roughly 36 times. 97% of tokens were cache reads. Two thirds of requests came from subagents. 277 project or worktree folders were active that month.
 - The jump from 23k requests in June to 174k in August is the shift from one chat at a time to many agents at once.
+
+**Busy hour (slide 40)**
+
+- Source. `stats.db`, table `message_rollup`, main agents only. Count of distinct project folders with activity in the same hour, 2026-09-01 to 2026-11-07, 1,128 hours. A folder is a worktree or repo, so this counts workstreams, not processes.
+- Median 3 agents in an hour, 90th percentile 6. 436 of 1,128 hours (39%) had 4 to 9. 13 hours had 10 or more.
+- Hours per agent count, 1 to 9 and 10+: 249, 219, 211, 172, 124, 67, 42, 21, 10, 13. Two hours at 61 and 62 are batch jobs and are in the 10+ bar only.
+- The sentence that goes with it. That only works because the agents have full control of the dev infra. They start the stack, seed it and test it without him.
 
 **Subscriptions**
 

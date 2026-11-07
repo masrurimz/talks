@@ -275,6 +275,24 @@ A rolled-back or refused update still shows green while the old container serves
 
 ---
 
+## 12. Open infra problems: CI queue, seeding, disk, pause and wake plan
+
+These are the four infra problems on the What is still hard slides (67 to 70) and the plan that follows them. Facts below are from `presenter.md` and Zahid's own words of 2026-11-05 and 2026-11-07. None of it is solved.
+
+### Key facts
+
+- CI is the queue (slide 67). `gh run list -R alkhidmah-tech/digital-platform` showed 355 workflow runs on 2026-11-05. Across the 400 most recent runs, preview 120, check 83, e2e 68, link-check 46, deploy 36. The 90th percentile run duration is 12.8 minutes, which is the "1 in 10 runs took 13 minutes or more" on the slide. Zahid's 2026-11-05 prompts were about joining CI jobs into larger runners and load balancing free runners. Both are experiments, nothing is settled. More agents means more PRs, and every push runs CI.
+- Worktree env and seeding (slide 68). One fix took per-worktree environment setup and database seeding from 652 seconds to 171 seconds. It is still too slow, because every new worktree pays the cost and agents create many. The analytics app at work is heavier. It runs a large time series stack, so its seeding takes much longer. That seed time is not measured. Source Zahid, 2026-11-07 (see section 10 for the Alkhidmah devkit and the GinaV2 bootstrap).
+- Disk (slide 69). `df -h` on x1, 2026-11-07. 902G filesystem, 777G used, 101G free, 89% used, Samsung 990 PRO 1TB. `docker system df`, same day. Images 173.7 GB, volumes 114.8 GB, build cache 158.7 GB, which is 447.2 GB in total (the slide says 447 GB). The 38 GB stat is RAM, not disk. An uncapped full test run reached 38 GB of RAM on the shared workstation, and it is why the memory-cap rule exists (section 1 of `referensi-skills-prompt-dan-config.md`, topic 2). The slide mutes it. Each branch of the agentic analytics app needs an expensive stack and a long seed, so nine of them do not fit on one machine.
+- Pause and wake plan (slide 70). Each stack lives in its own VM. When nobody uses it, it sleeps. When an agent needs it, it wakes up. A sleeping VM still takes disk, so a bigger SSD comes first. The slide steps are "Bigger SSD first", "One VM per stack", "Pause it when idle", "Wake it when an agent needs it", with "One VM per stack" highlighted and the caption "A paused VM still costs disk." Zahid mentioned the SSD purchase in his 2026-10-25 prompts ("waiting for my ssd"). It is an experiment and nothing is shipped, so say plainly that it is a plan, not a result.
+
+### Do not claim
+
+- No seed time for the analytics app, and no speed or cost result for larger or free CI runners.
+- No result for the pause and wake plan.
+
+---
+
 ## Do not show
 
 - `~/.omp/agent/config.yml` unfiltered. The memory token is a plain value there and in the git-tracked dotfiles copy. It is a rotation item.

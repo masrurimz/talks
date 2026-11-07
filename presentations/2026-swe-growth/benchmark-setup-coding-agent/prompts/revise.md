@@ -8,7 +8,7 @@ Revise the deck that was already generated for this talk:
 
 Make a light revision, not a rewrite. Keep the slide order and the headlines. Fix only what the checks below find. Keep the language English.
 
-The presenter deck follows `sources/outlines/presenter.md` (68 slides). The detailed deck follows `sources/outlines/detailed.md` (47 slides).
+The presenter deck follows `sources/outlines/presenter.md` (73 slides). The detailed deck follows `sources/outlines/detailed.md` (47 slides).
 
 ### Checklist 1. The six rules
 
@@ -46,7 +46,10 @@ Open `sources/outlines/presenter.md`. Each slide has an `Evidence:` line. For ev
 - Raising effort raised the step count in every pair he tested. The reason is worded as a guess.
 - GLM Max is his own plan. Codex Pro came from the office. Neither is described the other way round.
 - Mesh is his own plugin, not built into omp. Base-branch coordination is solved by mesh plus one coordinator agent, and is not listed as a problem.
-- What is still hard is three things: a clip cannot judge how a screen looks (UI still needs design skills and manual feedback), setting up the environment and seed data for each worktree is slow (652 seconds to 171 seconds), and one test run reached 38 GB of RAM on the shared box. Base branches are not on the list. Part 3 shows them as solved.
+- What is still hard is four problems and a plan. A clip cannot judge how a screen looks (UI still needs design skills and manual feedback). CI is now the queue (355 CI runs in one day, and 1 in 10 runs took 13 minutes or more). Setting up the environment and seed data for each worktree is slow (652 seconds to 171 seconds). The disk is full (89% of a 1 TB SSD, 447 GB in Docker, and one uncapped test run reached 38 GB of RAM, which is why the memory rule exists). The plan is a stack per VM that sleeps when idle and wakes when an agent needs it, and it is a plan, not a result. Base branches are not on the list. Part 3 shows them as solved.
+- The tool journey order is VS Code and Copilot early, Claude Code in VS Code, Gemini, OpenCode (OmO), Ghostty with Neovim and Amp, then omp. It is a timeline with no date scale. Running agents in parallel is the stated reason for leaving the editor, and it is not measured, so no memory number is quoted. Copilot came before Claude Code.
+- On a busy hour, 4 to 9 agents work at once. 39% of working hours had 4 to 9 agents, and the typical hour had 3. A folder is a worktree or repo, so this counts workstreams, not processes.
+- Rules step in when the agent types a risky command. 4,635 injections since June, of which 1,424 were the two memory caps. omp calls this TTSR.
 - Model roles are chat Opus low, plan and hard bugs Opus high, UI design Sonnet high, review Opus medium, explore Haiku. Max is almost never used because it is slow and gave little gain. That more steps means a longer wait is an inference.
 - The three accidents are a reset that wiped the shared dev database (the devkit now refuses such resets), a Docker prune that deleted about 244 unused volumes (Docker cleanup is banned for agents), and a masking tool that went through 11 reviews (reviews are capped at two rounds). The coordinator log has 353 decisions from 2 to 7 November.
 - The five checks are, in order, language server on every edit, lint and types, tests shaped like the testing trophy, reviewer agents that scale with risk, and Zahid by hand.
@@ -97,11 +100,11 @@ Do not: [anything to avoid].
 Example.
 
 ```
-Revise slide 21 of the presenter deck.
+Revise slide 22 of the presenter deck.
 
 Problem: the cost slide shows $7.3k without saying "if I paid per token".
 Change: write "$7.3k if I paid per token" and "about $200 paid".
-Evidence: slide 21 Evidence line in sources/outlines/presenter.md.
+Evidence: slide 22 Evidence line in sources/outlines/presenter.md.
 Keep: the two big numbers.
 Do not: add new numbers.
 ```

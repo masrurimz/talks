@@ -6,7 +6,7 @@ Create a **Detailed Slides** deck for this talk:
 
 **Benchmarking My Coding Agent Setup: One Engineer, Many Agents**
 
-Build it from `sources/outlines/detailed.md`. That file is the v3 outline for a self-reading deck, with 47 slides. Use its slide order and headlines.
+Build it from `sources/outlines/detailed.md`. That file is the v4 outline for a self-reading deck, with 47 slides. Use its slide order and headlines.
 
 ### Settings
 - **Format**: Detailed Slides. Someone who was not at the talk can read it alone.
