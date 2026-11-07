@@ -329,7 +329,7 @@ DECK: tuple[Slide, ...] = (
         bars=(
             GanttBar(label="Gemini tooling", start="2025-07-01", end="2025-10-19"),
             GanttBar(label="Claude Code", start="2025-10-19", end="2025-10-20", reason="quality"),
-            GanttBar(label="OpenCode", start="2025-10-20", end="2025-12-22", reason="bans"),
+            GanttBar(label="OpenCode (OmO)", start="2025-10-20", end="2025-12-22", reason="token hungry"),
             GanttBar(label="Amp", start="2025-12-22", end="2026-03-16", reason="forgot why"),
             GanttBar(label="omp", start="2026-02-23", end="2026-11-05", reason="extensible", highlight=True),
         ),
