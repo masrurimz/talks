@@ -350,7 +350,7 @@ DECK: tuple[Slide, ...] = (
     Timeline(
         title="Each switch had a reason, and omp is the one that stayed.",
         events=(
-            Event(when="2024", label="VS Code and Copilot, early"),
+            Event(when="2022", label="VS Code and Copilot, at launch"),
             Event(when="2025", label="Claude Code in VS Code"),
             Event(when="Jul 2025", label="Gemini tooling"),
             Event(when="Oct 2025", label="OpenCode (OmO), token hungry"),
