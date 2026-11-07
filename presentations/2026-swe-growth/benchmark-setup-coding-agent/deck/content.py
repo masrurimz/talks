@@ -286,14 +286,18 @@ class MapRow:
 
 
 MAP: tuple[MapRow, ...] = (
-    MapRow(name="My journey", covers="Tools and why I switched"),
-    MapRow(name="Measure it on your own work", covers="Models, effort, cost"),
-    MapRow(name="Do it twice, make it a skill", covers="Skills, memory, specs"),
-    MapRow(name="One writer per branch", covers="Many agents, long runs"),
-    MapRow(name="Show proof, not \"done\"", covers="Review and quality"),
-    MapRow(name="Make it safe to walk away", covers="Infra and secrets"),
-    MapRow(name="What is still hard", covers="Open problems"),
+    MapRow(name="My journey", covers="The tools I tried, and why I left"),
+    MapRow(name="Choosing models and paying for them", covers="Which model, and what it costs"),
+    MapRow(name="Teaching the agent", covers="Skills, memory, and plans"),
+    MapRow(name="Many agents at once", covers="One coordinator, many workers"),
+    MapRow(name="Trusting the result", covers="Checks before I merge"),
+    MapRow(name="Running it safely", covers="Servers, secrets, production"),
+    MapRow(name="What is still hard", covers="What I have not solved yet"),
 )
+
+
+def part(segment: int, question: str) -> Divider:
+    return Divider(segment=segment, title=MAP[segment].name, question=question)
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -357,7 +361,7 @@ DECK: tuple[Slide, ...] = (
             crop=(0, 0, 745, 640),
         ),
     ),
-    Map(title="Here is the map, and where your questions land."),
+    Map(title="Today we go from my first tool to what is still hard."),
     # My journey, 6:00 to 14:00
     Gantt(
         title="Each switch had a reason, and omp is the one that stayed.",
@@ -434,11 +438,7 @@ DECK: tuple[Slide, ...] = (
         demo=True,
     ),
     # Part 1. Measure it on your own work, 14:00 to 29:00
-    Divider(
-        segment=1,
-        title="Choosing models and paying for them",
-        question="Per token or per subscription? Tell us in chat.",
-    ),
+    part(1, "Per token or per subscription? Tell us in chat."),
     BarChart(
         title="The fastest model on paper was the slowest in my hands.",
         bars=Bars(
@@ -511,16 +511,15 @@ DECK: tuple[Slide, ...] = (
         highlight=1,
         caption="Reading costs money. Editing is cheap.",
     ),
-    BarChart(
-        title="On my tasks it was never cheaper.",
-        bars=Bars(
-            rows=(
-                BarRow(label="Opus low", values=(0.39, 0.48), texts=("$0.39 alone", "$0.48 with prewalk")),
-                BarRow(label="Sonnet medium", values=(0.24, 0.36), texts=("$0.24 alone", "$0.36 with prewalk")),
-            ),
-            highlight=1,
+    Flow(
+        title="Prewalk was cheaper on long tasks, but slower.",
+        steps=(
+            "Opus low plans, Haiku high edits",
+            "Cheaper on long tasks, but slow",
+            "UI needed more, so Sonnet medium",
         ),
-        caption="UI task. Cost if I paid per token.",
+        highlight=2,
+        caption="On short tasks it cost the same or more.",
     ),
     BigNumbers(
         title="$7,300 worth of tokens. I paid about $200.",
@@ -545,18 +544,14 @@ DECK: tuple[Slide, ...] = (
         cards=(
             Card(heading="Flat plan plus caching", body="97% of October tokens were cache reads"),
             Card(heading="Cheap model to search", body="Strong model to plan"),
-            Card(heading="Test tricks on your work", body="Prewalk was never cheaper"),
+            Card(heading="Test tricks on your work", body="Cheaper on long tasks, but slower"),
         ),
         cols=3,
         fill=True,
     ),
     TryThis(title="Time one real task of yours on two different models."),
     # Part 2. Do it twice, make it a skill, 29:00 to 42:30
-    Divider(
-        segment=2,
-        title="Teaching the agent",
-        question="Which task do you repeat with your agent more than twice? Tell us in chat.",
-    ),
+    part(2, "Which task do you repeat with your agent more than twice? Tell us in chat."),
     Flow(
         title="Autolearn made too many skills, so I merged them.",
         steps=(
@@ -653,11 +648,7 @@ DECK: tuple[Slide, ...] = (
     ),
     TryThis(title="Write the skill the third time you repeat a task."),
     # Part 3. One writer per branch, 42:30 to 53:30
-    Divider(
-        segment=3,
-        title="Many agents at once",
-        question="How many agents do you run at once? Tell us in chat.",
-    ),
+    part(3, "How many agents do you run at once? Tell us in chat."),
     Flow(
         title="Idle agents never saw the messages sent to them.",
         steps=(
@@ -716,11 +707,7 @@ DECK: tuple[Slide, ...] = (
     ),
     TryThis(title="When you run two agents, give each its own worktree."),
     # Part 4. Show proof, not "done", 53:30 to 64:00
-    Divider(
-        segment=4,
-        title="Trusting the result",
-        question="Which part of your agent's work do you still check by hand? Tell us in chat.",
-    ),
+    part(4, "Which part of your agent's work do you still check by hand? Tell us in chat."),
     BeforeAfter(
         title="Remember the plane? This is the proof that came with that fix.",
         before=Shot(
@@ -800,11 +787,7 @@ DECK: tuple[Slide, ...] = (
     ),
     TryThis(title="Ask for a before and after clip in your next PR."),
     # Part 5. Make it safe to walk away, 64:00 to 72:30
-    Divider(
-        segment=5,
-        title="Running it safely",
-        question="Where do your agents run: laptop, server or cloud? Tell us in chat.",
-    ),
+    part(5, "Where do your agents run: laptop, server or cloud? Tell us in chat."),
     Flow(
         title="Every production change goes dry run, backup, apply, then verify.",
         steps=("Dry run first", "Backup", "Apply, counts checked", "Verify the result"),
@@ -865,11 +848,7 @@ DECK: tuple[Slide, ...] = (
     ),
     TryThis(title="Make every production change start with a dry run."),
     # What's still hard, 72:30 to 77:00
-    Divider(
-        segment=6,
-        title="What is still hard",
-        question="What still breaks for you? Tell us in chat.",
-    ),
+    part(6, "What still breaks for you? Tell us in chat."),
     Compare(
         title="A proof clip shows a button works, not that it looks right.",
         cards=(
