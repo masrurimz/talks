@@ -56,9 +56,10 @@ SIZE_HEADLINE, SIZE_PROSE, SIZE_EVIDENCE, SIZE_MIN = 36, 28, 20, 14
 SIZE_DIVIDER = 48
 MAX_HEADLINE_WORDS = 12
 MAX_FACE_WORDS = 30
+FACE_LIMITS: dict[type, int] = {C.Map: 64}
 MAX_LABEL_WORDS = 8
 MIN_GRAPHIC_CONTRAST = 3.0
-TALK_MINUTES = 71.0
+TALK_MINUTES = 80.0
 FALLBACK_SENTENCE = "The live run is slow today, so here is the recording from this morning."
 DEMO_TIME_BOX = "90 s"
 
@@ -315,16 +316,42 @@ def render_title(c: Canvas, s: C.Title) -> None:
 
 
 PART_COUNT = 5
+STRIP_SEG_GAP = 0.15
 
 
 def render_divider(c: Canvas, s: C.Divider) -> None:
-    c.text(X0, 0.8, 6, 0.5, f"Part {s.part}", 28, WHITE, kind="display", bold=True)
+    kicker = f"Part {s.segment}" if 1 <= s.segment <= PART_COUNT else C.MAP[s.segment].covers
+    c.text(X0, 0.8, 6, 0.5, kicker, 28, WHITE, kind="display", bold=True)
     c.text(X0, 1.6, CW, 2.8, s.title, SIZE_DIVIDER, WHITE, kind="divider-headline", bold=True)
     c.rect(X0, 4.75, CW, 0.03, WHITE)
-    c.text(X0, 5.0, CW, 1.3, s.question, 28, WHITE, kind="display")
-    gap, seg_w = 0.15, (CW - (PART_COUNT - 1) * 0.15) / PART_COUNT
-    for i in range(PART_COUNT):
-        c.gfx(X0 + i * (seg_w + gap), 6.6, seg_w, 0.1, WHITE if i < s.part else ACC_TINT, "progress strip")
+    c.text(X0, 5.0, CW, 1.1, s.question, 28, WHITE, kind="display")
+    n = len(C.MAP)
+    seg_w = (CW - (n - 1) * STRIP_SEG_GAP) / n
+    for i in range(n):
+        x = X0 + i * (seg_w + STRIP_SEG_GAP)
+        here = i == s.segment
+        c.gfx(x, 6.2 if here else 6.26, seg_w, 0.2 if here else 0.08, WHITE if here else ACC_TINT, "map strip")
+        if here:
+            right = i == n - 1
+            c.text(x - (1.5 - seg_w if right else 0), 6.5, max(seg_w, 1.5), 0.35, "You are here", 18, WHITE, kind="display", bold=True, align=PP_ALIGN.RIGHT if right else PP_ALIGN.LEFT)
+
+
+MAP_ROW_GAP = 0.07
+MAP_NUM_W, MAP_NAME_W = 0.65, 5.6
+
+
+def render_map(c: Canvas, s: C.Map) -> None:
+    c.headline(s.title)
+    n = len(C.MAP)
+    rh = (BOTTOM - TOP - MAP_ROW_GAP * (n - 1)) / n
+    for i, row in enumerate(C.MAP):
+        y = TOP + i * (rh + MAP_ROW_GAP)
+        c.rect(X0, y, CW, rh, WHITE, RULE)
+        if 1 <= i <= PART_COUNT:
+            c.text(X0 + 0.2, y, 0.4, rh, str(i), 22, ACC, bold=True, anchor=MSO_ANCHOR.MIDDLE)
+        c.text(X0 + MAP_NUM_W, y, MAP_NAME_W, rh, row.name, 22, INK, bold=True, anchor=MSO_ANCHOR.MIDDLE)
+        cx = X0 + MAP_NUM_W + MAP_NAME_W + 0.2
+        c.text(cx, y, X0 + CW - 0.2 - cx, rh, row.covers, 22, MUTED, anchor=MSO_ANCHOR.MIDDLE)
 
 
 def render_principle(c: Canvas, s: C.Principle) -> None:
@@ -758,6 +785,27 @@ def render_before_after(c: Canvas, s: C.BeforeAfter) -> None:
         x += iw + gap
 
 
+def render_spec(c: Canvas, s: C.Spec) -> None:
+    """Wireframe on the left, the three layers it leads to on the right."""
+    c.headline(s.title)
+    img = shot_image(s.picture)
+    area_h = BOTTOM - SHOT_TOP
+    scale = shot_scale(img, 7.0, area_h)
+    iw, ih = img.width * scale, img.height * scale
+    c.slide.shapes.add_picture(io.BytesIO(_png(img)), emu(X0), emu(SHOT_TOP), emu(iw), emu(ih))
+    c.rect(X0, SHOT_TOP, iw, ih, None, RULE, 1.0)
+    x = X0 + iw + 0.4
+    w = X0 + CW - x
+    n = len(s.steps)
+    gap = 0.2
+    rh = (ih - gap * (n - 1)) / n
+    for i, step in enumerate(s.steps):
+        y = SHOT_TOP + i * (rh + gap)
+        c.rect(x, y, w, rh, WHITE, RULE)
+        c.text(x + 0.2, y, 0.5, rh, str(i + 1), 32, ACC, bold=True, anchor=MSO_ANCHOR.MIDDLE)
+        c.text(x + 0.8, y, w - 1.0, rh, step, 28, INK, bold=True, anchor=MSO_ANCHOR.MIDDLE)
+
+
 def render_timeline(c: Canvas, s: C.Timeline) -> None:
     if all(e.at is not None for e in s.events):
         render_timeline_proportional(c, s)
@@ -900,11 +948,11 @@ def render_compare(c: Canvas, s: C.Compare) -> None:
     size = SIZE_EVIDENCE
     for trial in (32, 28, 24) if s.fill else (28, 24, SIZE_EVIDENCE):
         size = trial
-        trial_need = max(block_height_in([(cd.heading, True), (cd.body, False)], trial, cw - 2 * pad) for cd in s.cards)
-        widest = max(text_width_pt(w_, trial, bold=b) for cd in s.cards for t, b in ((cd.heading, True), (cd.body, False)) for w_ in t.split(" "))
+        trial_need = max(block_height_in(cd.paras, trial, cw - 2 * pad) for cd in s.cards)
+        widest = max(text_width_pt(w_, trial, bold=b) for cd in s.cards for t, b in cd.paras for w_ in t.split(" "))
         if trial_need + 2 * pad <= cap and widest <= (cw - 2 * pad) * 72:
             break
-    need = max(block_height_in([(cd.heading, True), (cd.body, False)], size, cw - 2 * pad) for cd in s.cards)
+    need = max(block_height_in(cd.paras, size, cw - 2 * pad) for cd in s.cards)
     ch = cap if s.fill else min(cap, max(2.2 if rows == 1 else 1.5, need + 2 * pad + 0.3))
     if rows == 1 and not s.fill:
         y += (avail - ch) * 0.2
@@ -919,7 +967,7 @@ def render_compare(c: Canvas, s: C.Compare) -> None:
         fg = WHITE if hi else (MUTED if cd.muted else INK)
         c.rect(x, cy, card_w, ch, fill, None if hi else RULE)
         c.text(
-            x + pad, cy + pad, card_w - 2 * pad, ch - 2 * pad, [(cd.heading, True), (cd.body, False)], size, fg, fill,
+            x + pad, cy + pad, card_w - 2 * pad, ch - 2 * pad, cd.paras, size, fg, fill,
             anchor=MSO_ANCHOR.MIDDLE if s.fill else MSO_ANCHOR.TOP,
         )
     end = y + rows * ch + (rows - 1) * gap
@@ -1029,6 +1077,8 @@ def render_quote(c: Canvas, s: C.Quote) -> None:
 RENDERERS: dict[type, Callable] = {
     C.Title: render_title,
     C.Divider: render_divider,
+    C.Map: render_map,
+    C.Spec: render_spec,
     C.BeforeAfter: render_before_after,
     C.Statement: render_statement,
     C.Principle: render_principle,
@@ -1167,8 +1217,8 @@ def lint_content(slides, outline, lint: Lint) -> None:
         if isinstance(s, C.Divider):
             if len(wrap(t, SIZE_DIVIDER, CW, bold=True)) > 3:
                 lint.fail(i, "divider title needs more than 3 lines")
-            if not 1 <= s.part <= PART_COUNT:
-                lint.fail(i, f"divider part {s.part} out of range")
+            if not 1 <= s.segment < len(C.MAP):
+                lint.fail(i, f"divider segment {s.segment} out of range")
             if not s.question.strip():
                 lint.fail(i, "divider has no chat question")
         elif isinstance(s, C.Principle):
@@ -1206,7 +1256,7 @@ def lint_content(slides, outline, lint: Lint) -> None:
             lint.fail(i, f"demo notes need the fallback sentence and the {DEMO_TIME_BOX} time-box")
         if s.n == last and "repeat the question" not in notes.lower():
             lint.fail(i, "Q&A notes need 'repeat the question, answer, link back to the claim'")
-        for shot in [x for x in (s.shot, getattr(s, "before", None), getattr(s, "after", None)) if x is not None]:
+        for shot in [x for x in (s.shot, getattr(s, "picture", None), getattr(s, "before", None), getattr(s, "after", None)) if x is not None]:
             if not (TALK / shot.path).is_file():
                 lint.fail(i, f"screenshot {shot.path} does not exist")
             if not shot.path.startswith(C.ASSETS):
@@ -1246,7 +1296,7 @@ def lint_content(slides, outline, lint: Lint) -> None:
                 lint.fail(s.n, f"notes contain forbidden {what}: {rx.pattern}")
 
 
-def lint_records(records: list[TextRecord], lint: Lint) -> None:
+def lint_records(records: list[TextRecord], slides, lint: Lint) -> None:
     for r in records:
         where = f"{r.kind} text {r.snippet!r}"
         if r.size < SIZE_MIN:
@@ -1271,8 +1321,9 @@ def lint_records(records: list[TextRecord], lint: Lint) -> None:
         if r.kind not in HEADLINE_KINDS:
             face[r.slide] = face.get(r.slide, 0) + r.words
     for slide, n in face.items():
-        if n > MAX_FACE_WORDS:
-            lint.fail(slide, f"{n} words on the face besides the headline, limit {MAX_FACE_WORDS}")
+        limit = FACE_LIMITS.get(type(slides[slide - 1]), MAX_FACE_WORDS)
+        if n > limit:
+            lint.fail(slide, f"{n} words on the face besides the headline, limit {limit}")
 
 
 def lint_notes(records: list[TextRecord], notes: dict[int, str], lint: Lint) -> None:
@@ -1315,7 +1366,7 @@ def build() -> tuple[Presentation, Lint]:
             RENDERERS[type(s)](canvas, s)
         notes[i] = notes_for(s, outline)
         slide.notes_slide.notes_text_frame.text = notes[i]
-    lint_records(records, lint)
+    lint_records(records, C.SLIDES, lint)
     lint_notes(records, notes, lint)
     lint_graphics(graphics, lint)
     return prs, lint

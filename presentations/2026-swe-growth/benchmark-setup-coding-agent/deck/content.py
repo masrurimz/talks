@@ -55,7 +55,7 @@ class Title(Slide):
 
 @dataclass(frozen=True, kw_only=True)
 class Divider(Slide):
-    part: int = 0
+    segment: int = 0
     question: str = ""
 
 
@@ -222,6 +222,10 @@ class Card:
     body: str
     muted: bool = False
 
+    @property
+    def paras(self) -> list[tuple[str, bool]]:
+        return [(self.heading, True)] + ([(self.body, False)] if self.body else [])
+
 
 @dataclass(frozen=True, kw_only=True)
 class Compare(Slide):
@@ -275,8 +279,38 @@ class Quote(Slide):
     code: tuple[str, ...] = ()
 
 
+@dataclass(frozen=True, kw_only=True)
+class MapRow:
+    name: str
+    covers: str
+
+
+MAP: tuple[MapRow, ...] = (
+    MapRow(name="My journey", covers="Tools and why I switched"),
+    MapRow(name="Measure it on your own work", covers="Models, effort, cost"),
+    MapRow(name="Do it twice, make it a skill", covers="Skills, memory, specs"),
+    MapRow(name="One writer per branch", covers="Many agents, long runs"),
+    MapRow(name="Show proof, not \"done\"", covers="Review and quality"),
+    MapRow(name="Make it safe to walk away", covers="Infra and secrets"),
+    MapRow(name="What is still hard", covers="Open problems"),
+)
+
+
+@dataclass(frozen=True, kw_only=True)
+class Map(Slide):
+    """The seven MAP rows as a list. Dividers draw the same rows as a strip."""
+
+
+@dataclass(frozen=True, kw_only=True)
+class Spec(Slide):
+    """A picture on the left, a numbered list of steps on the right."""
+
+    picture: Shot | None = None
+    steps: tuple[str, ...] = ()
+
+
 DECK: tuple[Slide, ...] = (
-    # Opening, 0:00 to 5:00
+    # Opening, 0:00 to 6:00
     Title(
         title="Benchmarking My Coding Agent Setup: One Engineer, Many Agents",
         subtitle="SWE Growth community, online. Zahid.",
@@ -323,7 +357,8 @@ DECK: tuple[Slide, ...] = (
             crop=(0, 0, 745, 640),
         ),
     ),
-    # My journey, 5:00 to 12:00
+    Map(title="Here is the map, and where your questions land."),
+    # My journey, 6:00 to 14:00
     Gantt(
         title="Each switch had a reason, and omp is the one that stayed.",
         bars=(
@@ -335,6 +370,18 @@ DECK: tuple[Slide, ...] = (
         ),
         ticks=(("2025-07-01", "Jul 2025"), ("2026-01-01", "Jan 2026"), ("2026-07-01", "Jul 2026")),
         caption="Each bar ends with the reason I left.",
+    ),
+    Compare(
+        title="Antigravity showed me what an agent-first app looks like.",
+        cards=(
+            Card(heading="Plan mode", body=""),
+            Card(heading="Memory", body=""),
+            Card(heading="Design artifacts", body=""),
+            Card(heading="Agent-first screen", body=""),
+        ),
+        cols=2,
+        fill=True,
+        caption="It was the first tool with all four.",
     ),
     Hub(
         title="A harness is everything around the model.",
@@ -386,9 +433,9 @@ DECK: tuple[Slide, ...] = (
         caption="We open the result later in the talk.",
         demo=True,
     ),
-    # Part 1. Measure it on your own work, 12:00 to 26:00
+    # Part 1. Measure it on your own work, 14:00 to 29:00
     Divider(
-        part=1,
+        segment=1,
         title="Choosing models and paying for them",
         question="Per token or per subscription? Tell us in chat.",
     ),
@@ -413,11 +460,11 @@ DECK: tuple[Slide, ...] = (
     Compare(
         title="Each job gets its own model.",
         cards=(
-            Card(heading="Chat with me", body="Opus, low"),
-            Card(heading="Plan", body="Opus, high"),
+            Card(heading="Chat", body="Opus, low"),
+            Card(heading="Plan and hard bugs", body="Opus, high"),
+            Card(heading="UI design", body="Sonnet, high"),
             Card(heading="Review", body="Opus, medium"),
-            Card(heading="Helper agents", body="Sonnet, medium"),
-            Card(heading="Quick searches", body="Haiku"),
+            Card(heading="Explore", body="Haiku"),
         ),
         cols=3,
         fill=True,
@@ -493,10 +540,20 @@ DECK: tuple[Slide, ...] = (
         highlight=1,
         fill=True,
     ),
+    Compare(
+        title="Three money tips from my own bills.",
+        cards=(
+            Card(heading="Flat plan plus caching", body="97% of October tokens were cache reads"),
+            Card(heading="Cheap model to search", body="Strong model to plan"),
+            Card(heading="Test tricks on your work", body="Prewalk was never cheaper"),
+        ),
+        cols=3,
+        fill=True,
+    ),
     TryThis(title="Time one real task of yours on two different models."),
-    # Part 2. Do it twice, make it a skill, 26:00 to 37:00
+    # Part 2. Do it twice, make it a skill, 29:00 to 42:30
     Divider(
-        part=2,
+        segment=2,
         title="Teaching the agent",
         question="Which task do you repeat with your agent more than twice? Tell us in chat.",
     ),
@@ -518,6 +575,19 @@ DECK: tuple[Slide, ...] = (
             crop=(24, 40, 640, 206),
             cut=((84, 160),),
         ),
+    ),
+    Compare(
+        title="One skill per area of my work, like PARA.",
+        cards=(
+            Card(heading="Projects", body="Work with an end date"),
+            Card(heading="Areas", body="Work that never ends"),
+            Card(heading="Resources", body="Topics I look up"),
+            Card(heading="Archives", body="Finished work"),
+        ),
+        cols=4,
+        highlight=1,
+        fill=True,
+        caption="My Areas became 14 area skills.",
     ),
     Principle(
         number=2,
@@ -566,20 +636,25 @@ DECK: tuple[Slide, ...] = (
         highlight=1,
         fill=True,
     ),
+    Spec(
+        title="Before any code, the agent draws the screen.",
+        picture=Shot(path=ASSETS + "wireframe-neutral.png", label="Wireframe", crop=(0, 0, 1650, 1280)),
+        steps=("The screen, drawn first", "Folders and files", "Data and flow"),
+    ),
     Compare(
         title="I dropped beads because agents now keep context.",
         cards=(
             Card(heading="Beads, a task tracker", body="Hard for humans to read", muted=True),
-            Card(heading="Now", body="GitHub issues and coordinator logs"),
+            Card(heading="Now", body="No task hooks. GitHub issues and the coordinator's ledger hold the work."),
         ),
         cols=2,
         highlight=1,
         fill=True,
     ),
     TryThis(title="Write the skill the third time you repeat a task."),
-    # Part 3. One writer per branch, 37:00 to 48:00
+    # Part 3. One writer per branch, 42:30 to 53:30
     Divider(
-        part=3,
+        segment=3,
         title="Many agents at once",
         question="How many agents do you run at once? Tell us in chat.",
     ),
@@ -637,12 +712,12 @@ DECK: tuple[Slide, ...] = (
             Spoke(label="Worker, branch C"),
             Spoke(label="Worker, branch D"),
         ),
-        caption="One writer per branch, merged one at a time.",
+        caption="A worker sends MERGE-READY and the commit.",
     ),
     TryThis(title="When you run two agents, give each its own worktree."),
-    # Part 4. Show proof, not "done", 48:00 to 57:00
+    # Part 4. Show proof, not "done", 53:30 to 64:00
     Divider(
-        part=4,
+        segment=4,
         title="Trusting the result",
         question="Which part of your agent's work do you still check by hand? Tell us in chat.",
     ),
@@ -674,6 +749,22 @@ DECK: tuple[Slide, ...] = (
         number=4,
         title="Show proof, not \"done\"",
         line="A PR is ready when it shows evidence, not when the agent says so.",
+    ),
+    Stacks(
+        title="Five checks run before I look.",
+        stacks=(
+            Stack(
+                heading="",
+                rows=(
+                    Row(label="Diagnostics after every edit"),
+                    Row(label="Lint and type checks"),
+                    Row(label="Tests shaped like a trophy"),
+                    Row(label="Reviewer agents, more for riskier work"),
+                    Row(label="Me, for UI and feel"),
+                ),
+                highlight=4,
+            ),
+        ),
     ),
     Stacks(
         title="A second agent checks the work and freezes its verdict.",
@@ -708,9 +799,9 @@ DECK: tuple[Slide, ...] = (
         demo=True,
     ),
     TryThis(title="Ask for a before and after clip in your next PR."),
-    # Part 5. Make it safe to walk away, 57:00 to 64:00
+    # Part 5. Make it safe to walk away, 64:00 to 72:30
     Divider(
-        part=5,
+        segment=5,
         title="Running it safely",
         question="Where do your agents run: laptop, server or cloud? Tell us in chat.",
     ),
@@ -724,6 +815,16 @@ DECK: tuple[Slide, ...] = (
         number=5,
         title="Make it safe to walk away",
         line="A human can repeat every step, and secrets stay hidden.",
+    ),
+    Compare(
+        title="Three accidents gave me three guardrails.",
+        cards=(
+            Card(heading="Wiped the shared database", body="Now the devkit refuses that reset"),
+            Card(heading="Deleted about 244 volumes", body="Now Docker cleanup is banned"),
+            Card(heading="11 reviews of one tool", body="Now two rounds, then rethink"),
+        ),
+        cols=3,
+        fill=True,
     ),
     Compare(
         title="Three layers protect my secrets.",
@@ -763,7 +864,12 @@ DECK: tuple[Slide, ...] = (
         highlight=4,
     ),
     TryThis(title="Make every production change start with a dry run."),
-    # What's still hard, 64:00 to 68:00
+    # What's still hard, 72:30 to 77:00
+    Divider(
+        segment=6,
+        title="What is still hard",
+        question="What still breaks for you? Tell us in chat.",
+    ),
     Compare(
         title="A proof clip shows a button works, not that it looks right.",
         cards=(
@@ -775,7 +881,7 @@ DECK: tuple[Slide, ...] = (
         fill=True,
     ),
     BarChart(
-        title="Setting up a worktree dropped from 652 s to 171 s.",
+        title="Worktree env and seeding fell from 652 s to 171 s.",
         bars=Bars(
             rows=(
                 BarRow(label="Before the fix", values=(652,), texts=("652 s",)),
@@ -793,7 +899,7 @@ DECK: tuple[Slide, ...] = (
         ),
         highlight=0,
     ),
-    # Close, 68:00 to 71:00
+    # Close, 77:00 to 80:00
     Stacks(
         title="The model is a swappable part. The setup does the work.",
         stacks=(
