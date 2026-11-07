@@ -59,10 +59,10 @@ The model is a swappable part. What lets one engineer ship from a phone is the s
 **On the slide:** "I improved 15 LLMs at coding in one afternoon. Only the harness changed." Can Bölük, omp author.
 **Picture:** The screenshot of the article header with the title boxed.
 
-## Slide 5. Here is the map, and where your questions land
-**On the slide:** My journey: tools and why I switched. 1 Measure it on your own work: models, effort, cost. 2 Do it twice, make it a skill: skills, memory, specs. 3 One writer per branch: many agents, long runs. 4 Show proof, not "done": review and quality. 5 Make it safe to walk away: infra and secrets. What is still hard: open problems.
+## Slide 5. Today we go from my first tool to what is still hard
+**On the slide:** My journey: the tools I tried, and why I left. 1 Choosing models and paying for them: which model, and what it costs. 2 Teaching the agent: skills, memory, and plans. 3 Many agents at once: one coordinator, many workers. 4 Trusting the result: checks before I merge. 5 Running it safely: servers, secrets, production. What is still hard: what I have not solved yet.
 **Picture:** Seven rows, one per section of the talk, in this order.
-**Facts behind it:** In the live talk the same map appears as a strip at the bottom of every divider. This deck has no dividers, so the map is the guide to the sections.
+**Facts behind it:** In the live talk the same map appears as a strip at the bottom of every divider, and the divider titles come from the same list. This deck has no dividers, so the map is the guide to the sections. The map names no principle, because the reader has not met the principles yet.
 
 ---
 
@@ -119,10 +119,10 @@ The model is a swappable part. What lets one engineer ship from a phone is the s
 **Picture:** A four-step line: plan, todo list, first edit, swap model.
 **Facts behind it:** It is off by default in omp. In his logs, edits were about 9% of the tokens.
 
-## Slide 16. On my tasks prewalk was never cheaper
-**On the slide:** UI task. Opus alone: 39 cents. With prewalk: 48 cents. Sonnet alone: 24 cents. With prewalk: 36 cents. On the other task, one pair tied at 17 cents. Test a trick on your own work. It may help someone else and not you.
-**Picture:** Paired bars, alone next to prewalk, for the UI task. Prices are what it would cost if I paid per token.
-**Facts behind it:** On short tasks the cheaper model re-reads the conversation after the switch. The handoff did not fire in 3 of 18 prewalk runs. I tried DeepSeek as the cheap target, it was really slow, and I turned prewalk off the same day. It may still help on long sessions, which I have not tested.
+## Slide 16. Prewalk was cheaper on long tasks, but slower
+**On the slide:** Three steps. Opus low plans, Haiku high edits. Cheaper on long tasks, but slow. UI needed more, so Sonnet medium (this step is highlighted). Under them: On short tasks it cost the same or more. Test a trick on your own work. It may help someone else and not you.
+**Picture:** Three steps in a row, the same layout as slide 15, with the third step highlighted.
+**Facts behind it:** My first setup, from 14 October, was Opus at low effort planning and Haiku at high effort editing. On my long tasks it was cheaper, but slower, and tasks took too long to finish. That is my own account, with no numbers for that setup. On 23 October I turned prewalk off and moved my task agents to Sonnet at medium, because UI work needed a better model than Haiku. On short test tasks (a UI page and a slot finder, three runs each, medians, prices if I paid per token) prewalk cost the same or more. Opus low alone: 39 and 22 cents. With prewalk: 48 and 35 cents. Sonnet medium alone: 24 and 17 cents. With prewalk: 36 and 17 cents, a tie. In those tests prewalk was slower in every pair with a solo run to compare. Opus low took 92 s and 54 s alone, and 136 s and 84 s with prewalk. Sonnet medium took 94 s and 84 s alone, and 157 s and 127 s with prewalk. On short tasks the cheaper model re-reads the conversation after the switch. The handoff did not fire in 3 of 18 prewalk runs. A rough estimate from my logs, at 50 or more steps, was about $2.58 a task for Sonnet medium alone against $1.63 with a Haiku handoff. That is an estimate from uncontrolled work, not graded. My second try was on 24 and 25 October, first Haiku, then DeepSeek as the cheap model. It was really slow, and I turned it off the same day. Today my task agents run Sonnet at medium with no prewalk.
 
 ## Slide 17. In October I paid about $200 for $7.3k of tokens
 **On the slide:** In October my agents used tokens worth $7.3k if I paid per token. I paid about $200. 270,000 requests. 41 billion tokens. 97% were cache reads, and those are cheap. I usually pay about $100 a month.
@@ -130,7 +130,7 @@ The model is a swappable part. What lets one engineer ship from a phone is the s
 **Facts behind it:** I pay for two Claude Max plans and OpenCode Go. In September my plans were GLM Max (my own, bought cheap at the launch price), Codex Pro from the office, and Devin Pro and OpenCode Go (my own). When the Claude 5.5 models arrived, I went all in on Claude. My words: "Claude 5.5 series quality is GOAT". Between June and August I moved from one chat at a time to many agents at once.
 
 ## Slide 18. Three money tips from my own bills
-**On the slide:** One. Pay a flat plan and let caching work. In October, 97% of my tokens were cache reads. Two. Use a cheap model to search, like Haiku, and a strong model to plan, like Opus at high effort. Three. Test any cost trick on your own work before you trust it. Prewalk was never cheaper on my tasks.
+**On the slide:** One. Pay a flat plan and let caching work. In October, 97% of my tokens were cache reads. Two. Use a cheap model to search, like Haiku, and a strong model to plan, like Opus at high effort. Three. Test any cost trick on your own work before you trust it. Prewalk was cheaper on my long tasks, but slower.
 **Picture:** Three tips, one, two and three.
 **Facts behind it:** Tip one is the October bill on the previous slide. Tip two follows the model roles. Tip three is the prewalk result.
 
@@ -274,7 +274,7 @@ The model is a swappable part. What lets one engineer ship from a phone is the s
 # What is still hard
 
 ## Slide 45. Three things are still hard
-**On the slide:** A proof clip cannot judge how a screen looks, so UI the agent builds still needs design skills and my feedback by hand. Setting up the environment and the seed data for each worktree is still slow. One fix took it from 652 seconds to 171 seconds. One test run without a memory cap reached 38 GB of RAM on the shared box. You asked about base branches, and Part 3 showed how I solved it.
+**On the slide:** A proof clip cannot judge how a screen looks, so UI the agent builds still needs design skills and my feedback by hand. Setting up the environment and the seed data for each worktree is still slow. One fix took it from 652 seconds to 171 seconds. One test run without a memory cap reached 38 GB of RAM on the shared box. Base branches used to be on this list. Part 3 showed how the coordinator solved it.
 **Picture:** Three cards with one number each. "By hand", "171 s", "38 GB".
 **Facts behind it:** A rule now fires when a test command appears and tells the agent to cap memory first. The fix for RAM was a rule, not more memory.
 

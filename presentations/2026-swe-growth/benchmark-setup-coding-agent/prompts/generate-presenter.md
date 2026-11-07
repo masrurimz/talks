@@ -45,7 +45,7 @@ Use these names word for word. Each one is the principle slide of one part of th
 
 | Slide type | What it carries |
 |---|---|
-| Divider | "Part N" and a plain topic, not the principle name. One chat question for the audience, for example "Per token or per subscription? Tell us in chat." No minutes. A small seven-segment map strip at the bottom, with the current segment in the accent colour and a "you are here" label. |
+| Divider | "Part N" and the part name from the `MAP` list, not the principle name. One chat question for the audience, for example "Per token or per subscription? Tell us in chat." No minutes. A small seven-segment map strip at the bottom, with the current segment in the accent colour and a "you are here" label. |
 | Story | One or two slides about a real moment. The number comes after the story. |
 | Principle | The principle name, large, with at most one plain line under it. |
 | Proof | One to eight slides, one idea and one picture each. Part 1 has eight. |
@@ -53,7 +53,7 @@ Use these names word for word. Each one is the principle slide of one part of th
 
 Part topics: Part 1 "Choosing models and paying for them". Part 2 "Teaching the agent". Part 3 "Many agents at once". Part 4 "Trusting the result". Part 5 "Running it safely". After Part 5 comes a sixth divider, "What is still hard" (slide 62), drawn the same way as the Part dividers, with the chat question "What still breaks for you? Tell us in chat." It has no principle slide.
 
-The map. Slide 6 shows seven rows, one per section: My journey (tools and why I switched), 1 Measure it on your own work (models, effort, cost), 2 Do it twice, make it a skill (skills, memory, specs), 3 One writer per branch (many agents, long runs), 4 Show proof, not "done" (review and quality), 5 Make it safe to walk away (infra and secrets), What is still hard (open problems). The strip on every divider is the same seven rows, drawn small. Draw both from one list. Question numbers never appear on a slide face.
+The map. Slide 6 has the headline "Today we go from my first tool to what is still hard." and seven rows, one per section, each a name and a short line: My journey (The tools I tried, and why I left), 1 Choosing models and paying for them (Which model, and what it costs), 2 Teaching the agent (Skills, memory, and plans), 3 Many agents at once (One coordinator, many workers), 4 Trusting the result (Checks before I merge), 5 Running it safely (Servers, secrets, production), What is still hard (What I have not solved yet). The map names no principle, because the audience has not heard them yet. The strip on every divider is the same seven rows, drawn small, and the divider titles are the same names. Draw all three from one list (`MAP`). Question numbers and organizer-facing words such as "your questions" never appear on a slide face or in a `Say:` line.
 
 ## Face and notes
 

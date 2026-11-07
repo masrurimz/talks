@@ -124,7 +124,7 @@ More thinking sounds free when you are not the one waiting. On a task a model ca
 | Sonnet 5.5 medium to Haiku 5.5 medium | 157 s | 127 s | $0.17 to $0.36 |
 
 - On short tasks a handoff costs extra. The second model re-reads the conversation after the switch, so you pay for the read twice. The prewalk target inherits the starter's effort, which is why the first arm is low into low. The handoff did not fire in 3 of the 18 prewalk runs, which stayed on the starter model.
-- Real long sessions showed the reverse. At 50 or more turns, Sonnet medium alone cost $2.58 a task and Sonnet medium handing off to Haiku medium cost $1.63, at about the same time. These log numbers are estimates from uncontrolled work, not graded results. Say so on the slide.
+- Real long sessions showed the reverse on cost. At 50 or more turns, Sonnet medium alone cost about $2.58 a task and Sonnet medium handing off to Haiku medium cost $1.63. These log numbers are estimates from uncontrolled work, not graded results. Say so on the slide. They carry no timing, so they say nothing about speed.
 
 **The lesson, in one sentence.** Every arm passed, so quality did not separate the models. Speed and cost did. On easy tasks the cheapest lane that passes wins, and a plain price list hides how many minutes it takes.
 
@@ -209,9 +209,11 @@ The September portfolio was built with the formula. Several plans, each used for
 
 **Zahid's own bench and timeline.**
 
-- Bench, Claude 5.5 only, 2 tasks (UI page, slot finder) x 3 runs, medians, every arm 126 of 126, API-equivalent cost per task. Opus 5.5 low alone $0.22 (slot finder) and $0.39 (UI). Prewalk Opus 5.5 low into Sonnet 5.5 low $0.35 and $0.48. Sonnet 5.5 medium alone $0.17 and $0.24. Prewalk Sonnet 5.5 medium into Haiku 5.5 medium $0.17 and $0.36.
-- Timeline from his prompts. On 2026-10-24 he turned prewalk on into Haiku 5.5 medium. On 2026-10-25 he moved the target to DeepSeek v4.1 flash for cost. It was really slow, so he turned prewalk off the same day. This matches the bench, where DeepSeek flash was the slowest arm at 476 s on the UI task.
-- It is off now. On short tasks prewalk cost the same or more. Log estimates suggest it helps on long sessions ($2.58 against $1.63), but those are not graded. An untried next step is a faster cheap target.
+- Bench, Claude 5.5 only, 2 tasks (UI page, slot finder) x 3 runs, medians, every arm 126 of 126, API-equivalent cost per task. Opus 5.5 low alone $0.39 (UI) and $0.22 (slot finder). Prewalk Opus 5.5 low into Sonnet 5.5 low $0.48 and $0.35. Sonnet 5.5 medium alone $0.24 and $0.17. Prewalk Sonnet 5.5 medium into Haiku 5.5 medium $0.36 and $0.17 (a tie on slot finder).
+- Bench times. Prewalk was slower in every pair with a solo run to compare. Opus 5.5 low alone 92 s (UI) and 54 s (slot finder), with prewalk 136 s and 84 s. Sonnet 5.5 medium alone 94 s and 84 s, with prewalk 157 s and 127 s. The bench has no solo Opus medium arm, so do not say "every prewalk arm was slower".
+- Timeline from his prompts, first setup first. On 2026-10-14 he wrote "default will be opus low default prewalk will be into haiku high". That was his first setup, Opus 5.5 low plans and prewalk hands off into Haiku 5.5 high. On 2026-10-23 he wrote "the issue now task is taking too long to complete", then "disable the prewalk and go with sonnet medium for task". On 2026-11-07 he said prewalk was cheaper for longer tasks but slower, and that he switched to Sonnet medium because he needed better UI work. There are no numbers for the Opus low into Haiku high setup, so "cheaper on long tasks" for it is his own account.
+- Second try. On 2026-10-24 he turned prewalk on into Haiku 5.5 medium (Sonnet medium into Haiku medium). On 2026-10-25 he moved the target to DeepSeek v4.1 flash for cost. It was really slow, so he turned it off the same day. This matches the bench, where DeepSeek flash was the slowest arm at 476 s on the UI task.
+- Config now. `task` and `poteto-agent` run Sonnet 5.5 medium, and `task.agentPrewalk` is off for both. On short tasks prewalk cost the same or more. The log estimate ($2.58 against $1.63 at 50 or more turns, Sonnet medium alone against Sonnet medium into Haiku medium) is an estimate from uncontrolled work, not graded.
 - Say clearly that the receipts above are Can Bölük's numbers with his models, and the verdict "off" is Zahid's own experience on his own work.
 
 ### Story/example
@@ -221,7 +223,7 @@ The two results do not fight. The author measured long, hard tasks where reading
 ### Show on screen
 
 - Two ribbons, "plan then re-read" against "keep the trajectory", or the table above with the Sol row highlighted.
-- A card "Zahid, prewalk, off now" with the two reasons (short tasks cost the same or more, the DeepSeek target was too slow).
+- A card "Zahid, prewalk, off now" with the reasons (cheaper on long tasks but slower, UI work needed a better model, short tasks cost the same or more, the DeepSeek second try was really slow).
 
 ### Quotable
 

@@ -38,25 +38,25 @@ Talk time per section is 6, 8, 15, 13.5, 11, 10.5, 8.5, 4.5 and 3 minutes, which
 
 ## The map
 
-Slide 6 shows a seven-row map. It is one list in `deck/content.py` (`MAP`). The same list draws a small seven-segment strip at the bottom of every divider (Part 1 to Part 5 and What is still hard), with the current segment in the accent colour and a "you are here" label.
+Slide 6 has the headline "Today we go from my first tool to what is still hard." and shows a seven-row map. It is one list in `deck/content.py` (`MAP`) with a name and a short line per row. The same list draws a small seven-segment strip at the bottom of every divider (Part 1 to Part 5 and What is still hard), with the current segment in the accent colour and a "you are here" label. The divider titles come from `MAP`, so the part names exist in one place only. The map names no principle, because the audience has not heard the principles yet.
 
-| Map row | Where it lands | Organizer questions |
-|---|---|---|
-| My journey. Tools and why I switched | My journey | 1 |
-| 1 Measure it on your own work. Models, effort, cost | Part 1 | 2, 3, 11 |
-| 2 Do it twice, make it a skill. Skills, memory, specs | Part 2 | 5, 7, 8 |
-| 3 One writer per branch. Many agents, long runs | Part 3 | 4, 6 |
-| 4 Show proof, not "done". Review and quality | Part 4 | 9 |
-| 5 Make it safe to walk away. Infra and secrets | Part 5 | 6, 10 |
-| What is still hard. Open problems | What is still hard | 12 |
+| Map row | Short line | Where it lands | Organizer questions |
+|---|---|---|---|
+| My journey | The tools I tried, and why I left | My journey | 1 |
+| 1 Choosing models and paying for them | Which model, and what it costs | Part 1 | 2, 3, 11 |
+| 2 Teaching the agent | Skills, memory, and plans | Part 2 | 5, 7, 8 |
+| 3 Many agents at once | One coordinator, many workers | Part 3 | 4, 6 |
+| 4 Trusting the result | Checks before I merge | Part 4 | 9 |
+| 5 Running it safely | Servers, secrets, production | Part 5 | 6, 10 |
+| What is still hard | What I have not solved yet | What is still hard | 12 |
 
-The map slide has its own face-word limit (about 60 words) as a per-layout limit in `deck/build.py`.
+The map slide has its own face-word limit, raised for the map layout only, as a per-layout limit in `deck/build.py`.
 
 ## Section shape
 
 Each of the five parts runs in the same order.
 
-1. **Divider.** "Part N" plus a plain topic, not the principle name, so the principle can come after the story. It carries one chat question to the audience, with no minutes and no "Ask chat" label, and the map strip at the bottom.
+1. **Divider.** "Part N" plus the part name from `MAP`, not the principle name, so the principle can come after the story. It carries one chat question to the audience, with no minutes and no "Ask chat" label, and the map strip at the bottom.
 2. **Story.** One or two slides about a real moment. The number comes after the story, never stacked on it.
 3. **Principle.** The principle name, large, with at most one plain line under it.
 4. **Proof.** One to eight slides, each with one idea and one picture. Part 1 has eight (slides 16 to 23), because it matches the title and keeps every benchmark slide.
@@ -68,7 +68,7 @@ The opening, the journey and the close have no divider and no principle slide. W
 
 ### Opening (0-6 min, slides 1 to 6)
 
-**Key theme.** The payoff first. A real bug, fixed and proven from a phone, so the audience asks "how". Then the map, so each person sees where their question lands.
+**Key theme.** The payoff first. A real bug, fixed and proven from a phone, so the audience asks "how". Then the map, so each person sees the plan of the talk. Organizer question numbers stay in these notes and never appear on a slide or in a `Say:` line.
 
 **Slides.**
 - 1. Title.
@@ -76,7 +76,7 @@ The opening, the journey and the close have no divider and no principle slide. W
 - 3. PR #804 timeline. QA flagged the bug at 08:52, Zahid pasted it in at 09:26 from his phone, the agent recorded the bug at 09:29, and QA passed the fix at 09:57, 65 minutes after the warning (times in WIB, in the notes).
 - 4. The claim, with the model in grey and the four parts (skills, proof, coordination, guardrails) with equal weight.
 - 5. Can Bölük, the author of omp, on X: "I improved 15 LLMs at coding in one afternoon. Only the harness changed." The slide shows the article screenshot. The link is on the Links slide (67).
-- 6. The map. Seven rows, one per section of the talk, with the topics each one covers. Zahid says that the audience's questions are in there, and that they can ask in chat at any time.
+- 6. The map. Headline "Today we go from my first tool to what is still hard." Seven rows, one per section of the talk, each with a name and a short line. Zahid reads the rows, says the audience can ask in chat at any time, and says he will answer in the last ten minutes.
 
 **Transition.** "To explain how that was possible, I need to show how I got here, and it was not a straight line."
 
@@ -108,10 +108,10 @@ The opening, the journey and the close have no divider and no principle slide. W
 - 16. Each job gets its own model. Live config: chat is Opus at low effort, plan and hard bugs are Opus at high, UI design is Sonnet at high, review is Opus at medium, and exploring is Haiku. Rule of thumb: low to do, medium to review, high to plan and for hard bugs, max almost never because it is slow and gave little gain. The `designer` agent appears in 316 session files, mostly UI redesign tasks.
 - 17. Every model passed, so speed and price decided. The bench was two easy tasks, three runs each, hidden-check graders, medians. Every model passed 126 of 126 checks.
 - 18. Thinking harder made the agent take more steps. Raising effort raised the step count in every pair (Spark slot finder 9 to 23, DeepSeek UI 28 to 40). The cause, re-checking, is an inference. "More steps probably means a longer wait" is also an inference, because high-effort runs were not timed.
-- 19 and 20. Prewalk, a handoff from the big model to a cheaper one at the first edit. On his tasks it was never cheaper. Opus 5.5 low alone $0.39 against $0.48 with prewalk, and Sonnet 5.5 medium alone $0.24 against $0.36. The slot-finder pairs ($0.22 against $0.35, and a tie at $0.17) are in the notes. Can Bölük's own test, with his models, cut cost 39 to 47 percent for 3 to 7 points of pass rate. That is his workload, not Zahid's.
+- 19 and 20. Prewalk, a handoff from the big model to a cheaper one at the first edit. His first setup (14 Oct) was Opus 5.5 low planning and Haiku 5.5 high editing. On his long tasks it was cheaper, but slower, and tasks took too long to finish (his own account, no numbers for that setup). On 23 Oct he moved his task agents to Sonnet 5.5 medium with no prewalk, because UI work needed a better model than Haiku. On the short bench tasks it cost the same or more. Opus 5.5 low alone $0.39 (UI) and $0.22 (slot finder) against $0.48 and $0.35 with prewalk. Sonnet 5.5 medium alone $0.24 and $0.17 against $0.36 and $0.17 (a tie) with prewalk. In the bench, prewalk was slower in every pair with a solo run to compare: Opus low 92 s to 136 s (UI) and 54 s to 84 s (slot finder), Sonnet medium 94 s to 157 s and 84 s to 127 s. A log estimate at 50 or more turns, Sonnet medium alone about $2.58 a task against $1.63 into Haiku medium, is an estimate from uncontrolled work, not graded. Second try on 24 and 25 Oct, Haiku then DeepSeek v4.1 flash, really slow. Can Bölük's own test, with his models, cut cost 39 to 47 percent for 3 to 7 points of pass rate. That is his workload, not Zahid's.
 - 21. $7,300 worth of tokens, and he paid about $200. October 2026 was 270k requests and 41B tokens. The $7.3k is list price, not money paid. 97 percent of tokens were cache reads.
 - 22. When Claude 5.5 quality moved, he moved. The September portfolio (GLM Max, Codex Pro, Devin Pro, OpenCode Go) became 2x Claude Max plus OpenCode Go. At least 12 providers were tried.
-- 23. Three money tips from his own bills. A flat plan plus prompt caching. A cheap model (Haiku) to search and a strong one (Opus at high) to plan. Test a cost trick on your own work before you trust it, because prewalk was never cheaper on his tasks. Organizer question 11.
+- 23. Three money tips from his own bills. A flat plan plus prompt caching. A cheap model (Haiku) to search and a strong one (Opus at high) to plan. Test a cost trick on your own work before you trust it, because prewalk was cheaper on his long tasks, but slower. Organizer question 11.
 
 **Try this (slide 24).** Time one real task of yours on two different models.
 
@@ -196,7 +196,7 @@ The opening, the journey and the close have no divider and no principle slide. W
 
 ### What is still hard (72.5-77 min, slides 62 to 65)
 
-**Key theme.** Honest limits. Exactly three problems, one short slide each, after a divider. The divider (slide 62) asks "What still breaks for you? Tell us in chat." and says that base branches were asked about and that Part 3 showed how he solved it.
+**Key theme.** Honest limits. Exactly three problems, one short slide each, after a divider. The divider (slide 62) asks "What still breaks for you? Tell us in chat." Its spoken line says that base branches used to be on this list and that Part 3 showed how the coordinator solved it.
 
 - 62. Divider, What is still hard, with the map strip.
 - 63. A proof clip shows a button works, not that the screen looks right. Agent-built UI still needs design skills and his feedback. He still checks UI, visual feel and UX by hand. Reuse the Part 4 answers here.
@@ -267,7 +267,7 @@ Q&A has only 10 minutes, so most answers should point to a slide.
 7. **Which effort level should I use?** Low to do, medium to review, high to plan and for hard bugs, and max almost never because it is slow and gave little gain. This is a rule of thumb. Raising effort raised the step count in every pair he measured. Effort per request is not recorded, so he cannot show a per-effort speed chart.
 8. **Can a beginner copy this?** Start with one habit. When you do the same work a third time, write a skill. Then ask for proof in every PR. Skip mesh and coordinators until you really run many agents.
 9. **Why did you go all in on Claude?** Quality. "Claude 5.5 series quality is GOAT." In September he ran GLM Max (his own, a cheap one-year launch plan), Codex Pro (from the office), Devin Pro and OpenCode Go. Then the Claude 5.5 series arrived and won on quality.
-10. **Is prewalk worth it?** Can Bölük's test with his own models says yes for long, read-heavy tasks (cost down 39 to 47 percent for 3 to 7 points of pass rate). In Zahid's runs on short tasks it was never cheaper, and the DeepSeek target was too slow, so he turned it off. Test it on your own workload.
+10. **Is prewalk worth it?** Can Bölük's test with his own models says yes for long, read-heavy tasks (cost down 39 to 47 percent for 3 to 7 points of pass rate). In Zahid's own work it was cheaper on long tasks but slower, and on short bench tasks it cost the same or more and was slower in every pair with a solo run to compare. He moved his task agents to Sonnet medium with no handoff because UI work needed a better model. A second try with DeepSeek was really slow. Test it on your own workload.
 11. **How do many agents merge into one base branch?** His mesh plugin plus one coordinator agent. One writer per branch, and the coordinator merges in sequence after an independent review.
 12. **What went wrong when agents ran for days?** Three accidents gave three guardrails (slide 56). A reset wiped the shared dev database, so the devkit refuses such resets. A Docker prune deleted about 244 unused volumes, so Docker cleanup is banned for agents. A masking tool went through 11 reviews, so reviews are capped at two rounds.
 13. **How do you write specs?** Wireframe first, then folders and files, then data and flow, checked layer by layer, in one markdown file per feature (slide 34). The show-me skill draws the wireframes.

@@ -18,7 +18,7 @@ For each slide, check these. Fix a slide only where it fails.
 2. **No source lines.** No "Source" line and no footer. A quote has the speaker's name next to it, for example "Can Bölük, omp author". All links sit on one Links slide near the end.
 3. **Headlines in Zahid's words.** About 10 words, never more than 12. Plain English, with no bench jargon.
 4. **One picture per slide.** One screenshot, one or two big numbers, or one simple diagram. Presenter deck: at most about 25 words on the face besides the headline, never more than 30. Detailed deck: about 50, never more than 60. The map slide (presenter slide 6, detailed slide 5) may carry about 60 in either deck.
-5. **One story per section.** Each part runs divider, story, principle, proof, try this. The divider says "Part N" and a plain topic, with one chat question, no minutes and a seven-segment map strip at the bottom. The "What is still hard" divider follows the same shape and has no principle slide. The principle slide shows the principle name, large.
+5. **One story per section.** Each part runs divider, story, principle, proof, try this. The divider says "Part N" and the part name from the `MAP` list, with one chat question, no minutes and a seven-segment map strip at the bottom. The "What is still hard" divider follows the same shape and has no principle slide. The principle slide shows the principle name, large. The map slide names no principle and no organizer-facing words such as "your questions".
 6. **Clean faces.** The face never shows a file path, an internal date such as 2026-11-05, a minute count, "Ask chat", or the words arm, median, API-equivalent, head-to-head or n/a. "Steps", not "turns". Every dollar figure says "if I paid per token". A time like "9:29" is fine when it is part of the story.
 
 ### Checklist 2. The five principles, word for word
@@ -42,7 +42,7 @@ Open `sources/outlines/presenter.md`. Each slide has an `Evidence:` line. For ev
 - Every number matches its source. If a number has no source, remove it and say which slide it was on.
 - The bars on the benchmark slide show seconds on the UI task: Opus low 92, Sonnet medium 94, Haiku medium 170, DeepSeek flash low 476.
 - Every dollar figure is the price if Zahid paid per token. It is not called spend, cost paid or savings. Real spend is stated separately: about $200 in October, usually about $100 a month.
-- Prewalk is described as "never cheaper" on Zahid's tasks, not "cost more", because one pair tied.
+- Prewalk is cheaper on Zahid's long tasks but slower, and the same or more on his short bench tasks. His first setup was Opus low into Haiku high (14 Oct). On 23 Oct he moved task agents to Sonnet medium without prewalk, because UI work needed a better model. Never write 'never cheaper'.
 - Raising effort raised the step count in every pair he tested. The reason is worded as a guess.
 - GLM Max is his own plan. Codex Pro came from the office. Neither is described the other way round.
 - Mesh is his own plugin, not built into omp. Base-branch coordination is solved by mesh plus one coordinator agent, and is not listed as a problem.

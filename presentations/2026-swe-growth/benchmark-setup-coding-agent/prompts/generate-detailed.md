@@ -33,7 +33,7 @@ Use these names word for word. Each one is the principle slide of one part.
 5. Make it safe to walk away
 
 ## Structure
-Each part tells one story, then names the principle, then shows the proof, then gives one thing to try. The order is story, principle, proof, try this. The part topics are "Choosing models and paying for them", "Teaching the agent", "Many agents at once", "Trusting the result" and "Running it safely". This deck has no divider slides. Slide 5 is a seven-row map of the talk (My journey, the five parts, and What is still hard) with the topics each one covers, so a reader can find their question.
+Each part tells one story, then names the principle, then shows the proof, then gives one thing to try. The order is story, principle, proof, try this. The part topics are "Choosing models and paying for them", "Teaching the agent", "Many agents at once", "Trusting the result" and "Running it safely". This deck has no divider slides. Slide 5 has the headline "Today we go from my first tool to what is still hard." It is a seven-row map of the talk (My journey, the five parts, and What is still hard), each row a name and a short line, with no principle names. Organizer-facing words such as "your questions" never appear on a slide face.
 
 ## Rules for this deck
 
