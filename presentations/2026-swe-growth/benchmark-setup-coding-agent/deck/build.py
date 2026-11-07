@@ -13,7 +13,6 @@ import shutil
 import subprocess
 import sys
 from dataclasses import dataclass, field
-from datetime import date
 from functools import lru_cache
 from pathlib import Path
 from typing import Callable
@@ -56,10 +55,11 @@ SIZE_HEADLINE, SIZE_PROSE, SIZE_EVIDENCE, SIZE_MIN = 36, 28, 20, 14
 SIZE_DIVIDER = 48
 MAX_HEADLINE_WORDS = 12
 MAX_FACE_WORDS = 30
-FACE_LIMITS: dict[type, int] = {C.Map: 70}
+FACE_LIMITS: dict[type, int] = {C.Map: 70, C.Timeline: 36}
+CHART_FACE_WORDS = 45
 MAX_LABEL_WORDS = 8
 MIN_GRAPHIC_CONTRAST = 3.0
-TALK_MINUTES = 80.0
+TALK_MINUTES = 86.0
 FALLBACK_SENTENCE = "The live run is slow today, so here is the recording from this morning."
 DEMO_TIME_BOX = "90 s"
 
@@ -478,39 +478,6 @@ def render_scatter(c: Canvas, s: C.Scatter) -> None:
         c.prose(X0, 6.15, CW, s.caption)
 
 
-def _day(s: str) -> int:
-    return date.fromisoformat(s).toordinal()
-
-
-def render_gantt(c: Canvas, s: C.Gantt) -> None:
-    c.headline(s.title)
-    d0 = min(_day(b.start) for b in s.bars)
-    d1 = max(_day(b.end) for b in s.bars)
-    cx0, cx1 = X0 + 2.4, X0 + CW - 0.1
-    gx = lambda d: cx0 + (d - d0) / (d1 - d0) * (cx1 - cx0)
-    row_h, bar_h = 0.58, 0.38
-    for i, b in enumerate(s.bars):
-        ry = TOP + i * row_h
-        c.text(X0, ry, 2.3, row_h, b.label, SIZE_EVIDENCE, INK, bold=b.highlight, anchor=MSO_ANCHOR.MIDDLE)
-        x1, x2 = gx(_day(b.start)), gx(_day(b.end))
-        bw = max(0.06, x2 - x1)
-        by = ry + (row_h - bar_h) / 2
-        c.gfx(x1, by, bw, bar_h, ACC if b.highlight else BAR, "gantt bar")
-        if b.reason:
-            if b.highlight:
-                c.text(x1 + 0.15, by, bw - 0.3, bar_h, b.reason, SIZE_EVIDENCE, WHITE, ACC, bold=True, anchor=MSO_ANCHOR.MIDDLE)
-            else:
-                c.text(x1 + bw + 0.12, by, 3.0, bar_h, b.reason, SIZE_EVIDENCE, INK, bold=True, anchor=MSO_ANCHOR.MIDDLE)
-    axis_y = TOP + len(s.bars) * row_h + 0.05
-    c.gfx(cx0, axis_y, cx1 - cx0, 0.03, MUTED, "axis")
-    for d, lab in s.ticks:
-        x = gx(_day(d))
-        c.gfx(x - 0.01, axis_y, 0.02, 0.14, MUTED, "axis tick")
-        c.text(x - 0.8, axis_y + 0.18, 1.6, 0.4, lab, SIZE_EVIDENCE, MUTED, align=PP_ALIGN.CENTER)
-    if s.caption:
-        c.prose(X0, axis_y + 0.7, CW, s.caption)
-
-
 def render_bignumbers(c: Canvas, s: C.BigNumbers) -> None:
     c.headline(s.title)
     n = len(s.items)
@@ -525,7 +492,9 @@ def render_bignumbers(c: Canvas, s: C.BigNumbers) -> None:
     for i, it in enumerate(s.items):
         x = X0 + i * col_w
         c.text(x, vy, col_w - 0.3, vh, it.value, size, ACC if i == s.highlight else (MUTED if it.muted else INK), kind="display", bold=True)
-        label_need.append(c.text(x, vy + vh + 0.05, col_w - 0.3, 0.8 if compact else 1.2, it.label, SIZE_EVIDENCE if compact else 28, MUTED))
+        label_size = SIZE_EVIDENCE if compact else 28
+        label_h = max(0.8 if compact else 1.2, block_height_in([(it.label, False)], label_size, col_w - 0.3))
+        label_need.append(c.text(x, vy + vh + 0.05, col_w - 0.3, label_h, it.label, label_size, MUTED))
     if compact:
         stat_bottom = vy + vh + 0.05 + max(label_need)
         bars_y = stat_bottom + 0.3
@@ -1087,7 +1056,6 @@ RENDERERS: dict[type, Callable] = {
     C.Table: render_table,
     C.BarChart: render_barchart,
     C.Scatter: render_scatter,
-    C.Gantt: render_gantt,
     C.Code: render_code,
     C.Image: render_image,
     C.Timeline: render_timeline,
@@ -1277,10 +1245,6 @@ def lint_content(slides, outline, lint: Lint) -> None:
             lint.fail(i, "highlight index out of range")
         if isinstance(s, C.Timeline) and any(e.at is not None for e in s.events) and not all(e.at is not None for e in s.events):
             lint.fail(i, "timeline mixes events with and without a clock position")
-        if isinstance(s, C.Gantt):
-            for b in s.bars:
-                if _day(b.end) <= _day(b.start):
-                    lint.fail(i, f"gantt bar {b.label!r} ends before it starts")
         bars = getattr(s, "bars", None)
         if isinstance(bars, C.Bars):
             limit = len(bars.rows[0].values) if len(bars.rows[0].values) == 2 else len(bars.rows)
@@ -1294,6 +1258,12 @@ def lint_content(slides, outline, lint: Lint) -> None:
         for rx, what in FORBIDDEN[2:]:
             if rx.search(notes_for(s, outline)):
                 lint.fail(s.n, f"notes contain forbidden {what}: {rx.pattern}")
+
+
+def face_limit(s: C.Slide) -> int:
+    if isinstance(s, C.BigNumbers) and s.bars is not None:
+        return CHART_FACE_WORDS
+    return FACE_LIMITS.get(type(s), MAX_FACE_WORDS)
 
 
 def lint_records(records: list[TextRecord], slides, lint: Lint) -> None:
@@ -1321,7 +1291,7 @@ def lint_records(records: list[TextRecord], slides, lint: Lint) -> None:
         if r.kind not in HEADLINE_KINDS:
             face[r.slide] = face.get(r.slide, 0) + r.words
     for slide, n in face.items():
-        limit = FACE_LIMITS.get(type(slides[slide - 1]), MAX_FACE_WORDS)
+        limit = face_limit(slides[slide - 1])
         if n > limit:
             lint.fail(slide, f"{n} words on the face besides the headline, limit {limit}")
 

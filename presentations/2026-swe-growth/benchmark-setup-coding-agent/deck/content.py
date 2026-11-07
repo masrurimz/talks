@@ -152,22 +152,6 @@ class Scatter(Slide):
 
 
 @dataclass(frozen=True, kw_only=True)
-class GanttBar:
-    label: str
-    start: str
-    end: str
-    reason: str = ""
-    highlight: bool = False
-
-
-@dataclass(frozen=True, kw_only=True)
-class Gantt(Slide):
-    bars: tuple[GanttBar, ...] = ()
-    ticks: tuple[tuple[str, str], ...] = ()
-    caption: str = ""
-
-
-@dataclass(frozen=True, kw_only=True)
 class Code(Slide):
     lines: tuple[str, ...] = ()
     caption: str = ""
@@ -362,18 +346,28 @@ DECK: tuple[Slide, ...] = (
         ),
     ),
     Map(title="Today we go from my first tool to what is still hard."),
-    # My journey, 6:00 to 14:00
-    Gantt(
+    # My journey, 6:00 to 15:00
+    Timeline(
         title="Each switch had a reason, and omp is the one that stayed.",
-        bars=(
-            GanttBar(label="Gemini tooling", start="2025-07-01", end="2025-10-19"),
-            GanttBar(label="Claude Code", start="2025-10-19", end="2025-10-20", reason="quality"),
-            GanttBar(label="OpenCode (OmO)", start="2025-10-20", end="2025-12-22", reason="token hungry"),
-            GanttBar(label="Amp", start="2025-12-22", end="2026-03-16", reason="forgot why"),
-            GanttBar(label="omp", start="2026-02-23", end="2026-11-05", reason="extensible", highlight=True),
+        events=(
+            Event(when="2024", label="VS Code and Copilot, early"),
+            Event(when="2025", label="Claude Code in VS Code"),
+            Event(when="Jul 2025", label="Gemini tooling"),
+            Event(when="Oct 2025", label="OpenCode (OmO), token hungry"),
+            Event(when="Dec 2025", label="Ghostty, Neovim and Amp, lighter"),
+            Event(when="Feb 2026", label="omp, extensible"),
         ),
-        ticks=(("2025-07-01", "Jul 2025"), ("2026-01-01", "Jan 2026"), ("2026-07-01", "Jul 2026")),
-        caption="Each bar ends with the reason I left.",
+        highlight=5,
+    ),
+    Compare(
+        title="Running agents in parallel pushed me out of the editor.",
+        cards=(
+            Card(heading="VS Code", body="One agent, and a heavy app", muted=True),
+            Card(heading="Terminal", body="Ghostty and Neovim, many agents, less memory"),
+        ),
+        cols=2,
+        highlight=1,
+        fill=True,
     ),
     Compare(
         title="Antigravity showed me what an agent-first app looks like.",
@@ -437,7 +431,7 @@ DECK: tuple[Slide, ...] = (
         caption="We open the result later in the talk.",
         demo=True,
     ),
-    # Part 1. Measure it on your own work, 14:00 to 29:00
+    # Part 1. Measure it on your own work, 15:00 to 30:00
     part(1, "Per token or per subscription? Tell us in chat."),
     BarChart(
         title="The fastest model on paper was the slowest in my hands.",
@@ -550,7 +544,7 @@ DECK: tuple[Slide, ...] = (
         fill=True,
     ),
     TryThis(title="Time one real task of yours on two different models."),
-    # Part 2. Do it twice, make it a skill, 29:00 to 42:30
+    # Part 2. Do it twice, make it a skill, 30:00 to 45:00
     part(2, "Which task do you repeat with your agent more than twice? Tell us in chat."),
     Flow(
         title="Autolearn made too many skills, so I merged them.",
@@ -622,6 +616,17 @@ DECK: tuple[Slide, ...] = (
         code=("Brief for subagents", "", "Target", "Change", "Contract"),
     ),
     Compare(
+        title="A rule steps in the moment the agent types a risky command.",
+        cards=(
+            Card(heading="Always on", body="Check every layer. Follow my PR shape."),
+            Card(heading="On a trigger", body="Agent types pytest or vitest. The memory cap steps in."),
+        ),
+        cols=2,
+        highlight=1,
+        fill=True,
+        caption="Rules stepped in 4,635 times since June.",
+    ),
+    Compare(
         title="My agent follows 25 principles, and one of them is mine.",
         cards=(
             Card(heading="poteto-mode", body="25 principles and 23 playbooks, ported to omp"),
@@ -647,8 +652,33 @@ DECK: tuple[Slide, ...] = (
         fill=True,
     ),
     TryThis(title="Write the skill the third time you repeat a task."),
-    # Part 3. One writer per branch, 42:30 to 53:30
+    # Part 3. One writer per branch, 45:00 to 57:00
     part(3, "How many agents do you run at once? Tell us in chat."),
+    BigNumbers(
+        title="On a busy hour, 4 to 9 agents work at once.",
+        items=(
+            Stat(value="39%", label="of my working hours had 4 to 9 agents"),
+            Stat(value="3", label="agents in a typical hour"),
+        ),
+        highlight=0,
+        support="Hours, by agents at once",
+        bars=Bars(
+            rows=(
+                BarRow(label="1", values=(249,), texts=("249",)),
+                BarRow(label="2", values=(219,), texts=("219",)),
+                BarRow(label="3", values=(211,), texts=("211",)),
+                BarRow(label="4", values=(172,), texts=("172",)),
+                BarRow(label="5", values=(124,), texts=("124",)),
+                BarRow(label="6", values=(67,), texts=("67",)),
+                BarRow(label="7", values=(42,), texts=("42",)),
+                BarRow(label="8", values=(21,), texts=("21",)),
+                BarRow(label="9", values=(10,), texts=("10",)),
+                BarRow(label="10+", values=(13,), texts=("13",)),
+            ),
+            highlight=3,
+            vertical=True,
+        ),
+    ),
     Flow(
         title="Idle agents never saw the messages sent to them.",
         steps=(
@@ -706,7 +736,7 @@ DECK: tuple[Slide, ...] = (
         caption="A worker sends MERGE-READY and the commit.",
     ),
     TryThis(title="When you run two agents, give each its own worktree."),
-    # Part 4. Show proof, not "done", 53:30 to 64:00
+    # Part 4. Show proof, not "done", 57:00 to 67:30
     part(4, "Which part of your agent's work do you still check by hand? Tell us in chat."),
     BeforeAfter(
         title="Remember the plane? This is the proof that came with that fix.",
@@ -786,7 +816,7 @@ DECK: tuple[Slide, ...] = (
         demo=True,
     ),
     TryThis(title="Ask for a before and after clip in your next PR."),
-    # Part 5. Make it safe to walk away, 64:00 to 72:30
+    # Part 5. Make it safe to walk away, 67:30 to 76:00
     part(5, "Where do your agents run: laptop, server or cloud? Tell us in chat."),
     Flow(
         title="Every production change goes dry run, backup, apply, then verify.",
@@ -847,7 +877,7 @@ DECK: tuple[Slide, ...] = (
         highlight=4,
     ),
     TryThis(title="Make every production change start with a dry run."),
-    # What's still hard, 72:30 to 77:00
+    # What's still hard, 76:00 to 83:00
     part(6, "What still breaks for you? Tell us in chat."),
     Compare(
         title="A proof clip shows a button works, not that it looks right.",
@@ -858,6 +888,14 @@ DECK: tuple[Slide, ...] = (
         cols=2,
         highlight=1,
         fill=True,
+    ),
+    BigNumbers(
+        title="Nine agents means nine PRs, and CI becomes the queue.",
+        items=(
+            Stat(value="355", label="CI runs in one day"),
+            Stat(value="1 in 10", label="runs took 13 minutes or more"),
+        ),
+        highlight=0,
     ),
     BarChart(
         title="Worktree env and seeding fell from 652 s to 171 s.",
@@ -871,14 +909,21 @@ DECK: tuple[Slide, ...] = (
         caption="Every new worktree still pays 171 s.",
     ),
     BigNumbers(
-        title="One test run used 38 GB, so a rule now caps memory.",
+        title="Every branch wants its own full stack, and my disk is full.",
         items=(
-            Stat(value="38 GB", label="peak of one uncapped test run"),
-            Stat(value="15 GiB", label="free RAM needed before checks run"),
+            Stat(value="89%", label="of my 1 TB SSD used"),
+            Stat(value="447 GB", label="Docker images, volumes and build cache"),
+            Stat(value="38 GB", label="one uncapped test run", muted=True),
         ),
         highlight=0,
     ),
-    # Close, 77:00 to 80:00
+    Flow(
+        title="Next: stacks I can pause and wake up.",
+        steps=("Bigger SSD first", "One VM per stack", "Pause it when idle", "Wake it when an agent needs it"),
+        highlight=1,
+        caption="A paused VM still costs disk.",
+    ),
+    # Close, 83:00 to 86:00
     Stacks(
         title="The model is a swappable part. The setup does the work.",
         stacks=(
