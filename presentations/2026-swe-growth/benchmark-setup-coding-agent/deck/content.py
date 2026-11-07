@@ -892,8 +892,8 @@ DECK: tuple[Slide, ...] = (
     BigNumbers(
         title="Nine agents means nine PRs, and CI becomes the queue.",
         items=(
-            Stat(value="355", label="CI runs in one day"),
-            Stat(value="1 in 10", label="runs took 13 minutes or more"),
+            Stat(value="538", label="CI runs in one day"),
+            Stat(value="1 in 10", label="runs took 16 minutes or more"),
         ),
         highlight=0,
     ),

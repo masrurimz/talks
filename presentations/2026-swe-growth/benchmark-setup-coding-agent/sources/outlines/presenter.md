@@ -461,8 +461,8 @@ Part 1 is built on `references/referensi-benchmark-lab.md`. The story is one eng
 
 ## Slide 67 [Wajib] Nine agents means nine PRs, and CI becomes the queue
 **Timing:** 1.5 min (clock 78:00)
-**Say:** More agents means more PRs, and every push runs CI. On one day in November my alkhidmah repo ran 355 CI runs: previews, checks and end-to-end tests. CI is now the slowest part of my loop. I am testing larger runners and spreading the load over free runners.
-**Evidence:** `gh run list -R alkhidmah-tech/digital-platform`. 2026-11-05 had 355 workflow runs. Across the 400 most recent runs, preview 120, check 83, e2e 68, link-check 46, deploy 36. The 90th percentile run duration is 12.8 minutes, which is the "1 in 10 runs took 13 minutes or more" on the slide. From Zahid's 2026-11-05 prompts about joining CI jobs into larger runners and load balancing free runners. The larger and free runners are experiments, nothing is settled.
+**Say:** More agents means more PRs, and every push runs CI. On one day in November my alkhidmah repo ran 538 CI runs: previews, checks and end-to-end tests. CI is now the slowest part of my loop. I am testing larger runners and spreading the load over free runners.
+**Evidence:** `gh run list -R alkhidmah-tech/digital-platform --created 2026-11-04T17:00:00Z..2026-11-05T17:00:00Z`, which is 5 November in WIB, returned 538 workflow runs. Preview 148, check 119, e2e 115, link-check 67, deploy 34, readiness 33, runner-bakeoff 9, Dependabot 7. That day the 90th percentile run duration was 16.0 minutes, and 10.2% of runs took 16 minutes or more, which is the "1 in 10" on the slide. 29 runs took 30 minutes or more, and the longest took 82 minutes. From Zahid's 2026-11-05 prompts about joining CI jobs into larger runners and load balancing free runners. The larger and free runners are experiments, nothing is settled.
 
 ## Slide 68 [Wajib] Worktree setup is still too slow
 **Timing:** 1.0 min (clock 79:30)

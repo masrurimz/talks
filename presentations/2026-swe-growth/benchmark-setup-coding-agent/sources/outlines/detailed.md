@@ -276,8 +276,8 @@ The model is a swappable part. What lets one engineer ship from a phone is the s
 
 ## Slide 45. Four things are still hard, and one plan is next
 **On the slide:** A proof clip cannot judge how a screen looks, so I still check UI by hand. CI is now the queue. Setting up each worktree is still slow, 652 seconds down to 171. My disk is 89% full. Next I try one VM per stack, asleep when idle and awake when an agent needs it. That is a plan, not a result.
-**Picture:** Four cards with one number each. "By hand", "355 runs", "171 s", "89%".
-**Facts behind it:** CI. One day in November my alkhidmah repo ran 355 CI runs, and 1 in 10 runs took 13 minutes or more. I am testing larger runners and spreading the load over free runners, and nothing is settled. Setup. At work the analytics app is heavier, with a large time series stack and a long seed, and I did not measure that seed. Disk. Docker alone holds 447 GB, and one test run without a memory cap once reached 38 GB of RAM on the shared box. A rule now caps memory, so the fix for RAM was a rule, not more memory. Plan. A sleeping VM still takes disk, so a bigger SSD comes first. Base branches used to be on this list. Part 3 showed how the coordinator solved it.
+**Picture:** Four cards with one number each. "By hand", "538 runs", "171 s", "89%".
+**Facts behind it:** CI. One day in November my alkhidmah repo ran 538 CI runs, and 1 in 10 runs took 16 minutes or more. I am testing larger runners and spreading the load over free runners, and nothing is settled. Setup. At work the analytics app is heavier, with a large time series stack and a long seed, and I did not measure that seed. Disk. Docker alone holds 447 GB, and one test run without a memory cap once reached 38 GB of RAM on the shared box. A rule now caps memory, so the fix for RAM was a rule, not more memory. Plan. A sleeping VM still takes disk, so a bigger SSD comes first. Base branches used to be on this list. Part 3 showed how the coordinator solved it.
 
 ---
 
