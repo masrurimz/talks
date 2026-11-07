@@ -169,8 +169,8 @@ All prices are API-equivalent: the list price of the tokens. They are not money 
 
 **All time (2026-03-07 to 2026-11-05, x1-dev)**
 
-- 11,842 sessions, 833,553 model requests, 138B tokens.
-- API-equivalent price $25.9k. Without prompt caching the same work would price at $158.7k.
+- Re-synced 2026-11-07: 11,927 sessions, about 840k model requests, 139B tokens. The omp stats dashboard (range All) on slide 12 shows 839,969 requests, 139B conversation tokens and a 97.5% cache rate. Cache reads are 96.5% of all tokens.
+- API-equivalent price $26.2k. Without prompt caching the same work would price at $161.7k.
 
 **Per month**
 

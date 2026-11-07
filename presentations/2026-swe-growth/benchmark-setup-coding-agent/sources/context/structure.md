@@ -90,7 +90,7 @@ The opening, the journey and the close have no divider and no principle slide. W
 - 9. Antigravity. The first tool Zahid used with a proper plan mode, memory, design artifacts and an agent-first screen instead of an editor-first one. His Google account was banned, and omp still uses its image model.
 - 10. A harness is everything around the model: tools, context, memory and rules, drawn as a hub with the model in the middle.
 - 11. Why omp. He can extend it, so he fixes his own problems. Plugins he writes, autolearn, Hindsight memory, multi-provider logins, good compaction. "I forgot why I left Amp" stays as a joke, then the real answer.
-- 12. From one chat at a time to many agents at once. Requests per month, 2.2k in May to 270k in October.
+- 12. From one chat at a time to many agents at once. The omp stats dashboard since March: requests per day climb from August, 840k requests and 139B tokens in total, 97% of tokens read from cache. Monthly requests went from 2.2k in May to 270k in October.
 - 13. Live demo start. Pick a small real Alkhidmah issue, create a worktree, send one prompt from the Tern Android app, and leave it running. Clock 13:30.
 
 **Boundaries.** Dormant tools appear only as history, one line each. Do not teach how to use them. The terminal journey is in Part 5 (slide 63). Do not draw the journey to a date scale, and do not say Claude Code came before Copilot or Gemini. The dates in the notes of slide 7 are folder dates and product launch dates, not an adoption calendar.
