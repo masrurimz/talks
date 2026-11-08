@@ -591,6 +591,7 @@ SERIAL_BLURS = (
     (918, 816, 996, 832),
     (698, 1096, 850, 1136),
 )
+PRODUCT_BLUR = (108, 470, 1027, 1044)
 
 
 def _png(img: PILImage.Image) -> bytes:
@@ -606,6 +607,8 @@ def sanitized_image(path: str) -> bytes:
         for box in SERIAL_BLURS:
             region = img.crop(box).filter(ImageFilter.GaussianBlur(10))
             img.paste(region, box)
+        region = img.crop(PRODUCT_BLUR).filter(ImageFilter.GaussianBlur(14))
+        img.paste(region, PRODUCT_BLUR)
     return _png(img)
 
 
