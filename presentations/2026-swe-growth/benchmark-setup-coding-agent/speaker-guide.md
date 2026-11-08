@@ -43,7 +43,7 @@ Drawn from the `Say:` lines of slides 1 to 6 in presenter.md. Pause 1 to 2 s whe
 
 > **Slide 1, title (0:00).** Hello everyone, and thank you to Mas Zikrul and SWE Growth. / This is a casual talk about one real setup. / I will show real numbers, and I will also show what still does not work. / If a word of mine is unclear, ask in chat, and I will say it again. /
 >
-> **Slide 2, the phone screenshot (0:30).** This is my phone at 9:29 in the morning. / I was sitting in the plane, before takeoff. / I spoke a prompt, and my agent had just reproduced a bug on a real running stack. / Let me show you how I got there. /
+> **Slide 2, the phone screenshot (0:30).** This is my phone at 9:29 in the morning. / I was sitting in the plane, before takeoff. / I typed one line from my phone. / The agent opened our app on the dev server, took this screenshot itself, and confirmed the bug. / Let me show you how I got there. /
 >
 > **Slide 3, the timeline (1:30).** QA found one more problem on a pull request that was already approved. / At 9:26 I pasted the finding into my session from the phone. / The agent recorded the bug, fixed it, and updated the PR. / QA passed it at 9:57, / and most of that time I was not touching it. /
 >
@@ -168,6 +168,7 @@ Q&A has only 4 minutes in total, from 86:00 to about 90:00. Keep a fixed block a
 | Why did you try Paseo? | "For easier managed worktrees. Tern replaced it. Slide 63." |
 | How do you organize skills? | "By area, inspired by Tiago Forte's PARA method. That gives my 14 area skills. My favorites are poteto-mode and show-me. Slide 29." |
 | Why did you leave VS Code? | "Running agents in parallel. One agent in an editor is fine, four agents in four editors is not. I moved to Ghostty and Neovim so the memory goes to the agents, not the windows. That is my own reason and I did not measure it, so I have no memory number. Slide 8." |
+| Can you send screenshots from your phone? | "No. The Tern app on my phone sends text only, so I paste QA's message and links. The agent opens our app on the dev server, takes its own screenshots and recordings, and puts them in the PR. The screenshot on slide 2 is one of them." |
 | How many agents do you run at once? | "In a typical hour, three. In 39 percent of my working hours since September it was four to nine. That works because the agents control the dev infra, so they start the stack, seed it and test it without me. A folder counts as one, so this is workstreams, not processes. Slide 40." |
 | What are rules? | "A rule is a small file. Some are always in the prompt. Others wait for a pattern. When the agent types pytest without a memory cap, omp stops the stream, adds the rule, and the agent rewrites the command. It stepped in 4,635 times since June, 1,424 of them my two memory caps. Slide 34." |
 | Is CI a problem for you? | "Yes. On one day in November my alkhidmah repo ran 538 CI runs, and 1 in 10 took 16 minutes or more. I am testing larger runners and spreading the load over free runners. Nothing is settled. Slide 67." |

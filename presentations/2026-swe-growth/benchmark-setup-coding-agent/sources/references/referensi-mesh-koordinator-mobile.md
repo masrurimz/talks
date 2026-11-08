@@ -179,13 +179,13 @@ Frozen verdict: PASS+NOTES at head 592b92ae9
 
 ### Key facts
 
-- The phone screenshot shows a chat-style omp transcript titled "SENSOR: Fix sensor mapping an...", a mic composer, and a 9:29 clock. `screenshot-omp-mobile-0929.png` in this folder.
+- The phone screenshot shows a chat-style omp transcript titled "SENSOR: Fix sensor mapping an...", a 9:29 clock, and the agent's own screenshot of the app on the dev stack (the edit modal opened by one click on a draft sensor). `screenshot-omp-mobile-0929.png` in this folder.
 - The session is "SENSOR: Fix sensor mapping and OTA text", created 2026-10-26 09:21 in a worktree named `fix-sensor-assign-ota-remnant`. Model `anthropic/claude-opus-5-5`, thinking high. `~/.omp/agent/sessions/-.omp-wt-fix-sensor-assign-ota-remnant-d3c9633/2026-10-26T02-21-39-596Z_01a17603...jsonl`, lines 1 to 6.
 - First prompt pasted the QA report from WhatsApp and asked the agent to test on the dev server and own the proof: "...so later on PR i can have proof screenshot or recording on the body own all the changes poteto". Same session.
 - PR #804 opened 2026-10-26 10:00 and approved by a reviewer at 14:56. Branch `fix/sensor-assign-ota-remnant`. Issue #803. Squash commit `618c3a9f` on main. `https://github.com/groundup-ai/GinaV2/pull/804`
 - The fix was applied to the dev stack with `git format-patch ... | ssh groundup-dev "cd ~/ginav2-main && git am"`. Session line 548.
 - PR body sections: Why (6 numbered issues), Scope, Tradeoffs, Blast Radius, Verification with before/after tables and videos per issue. Each issue was reproduced on base first, then checked on the branch with the same recording. Label "Tested - Pass". PR #804 body.
-- Voice input is configured: `stt: {enabled: true, submitTrigger: say-submit}`, so "say submit" sends the prompt. The mic is visible in the screenshot. `~/.omp/agent/config.yml`. The typos in the user prompts that morning show phone typing.
+- The phone sent text only. The Tern mobile app cannot attach screenshots or files (Zahid, 2026-11-08). On 27 October he sent two typed messages, at 09:26 (QA's pasted finding plus one line) and 09:39. No message that day carried an attachment. The typos ("ajinwillnpull", "uodate") are keyboard slips, so the prompts were typed, not dictated. The agent made all visual proof itself: headless Chromium on x1 against groundup-dev, `draftclick-before.mp4` and `draftclick-after.mp4`, uploaded with `gh attach` into the PR body. Do not claim voice input for this story.
 - `remote` in `config.yml` is a compaction method, not a mobile bridge. Do not present it as one.
 
 ### PR #804 timeline (WIB)
@@ -247,7 +247,7 @@ sequenceDiagram
 - `screenshot-omp-mobile-0929.png` in this folder (the 9:29 phone screenshot).
 - PR page `https://github.com/groundup-ai/GinaV2/pull/804` (body sections and before/after proof). Check that no customer data appears in the clips.
 - Session replay: `less ~/.omp/agent/sessions/-.omp-wt-fix-sensor-assign-ota-remnant-d3c9633/2026-10-26T02-21-39-596Z_01a17603...jsonl`, lines 838 to 858.
-- `stt` block in `~/.omp/agent/config.yml` (voice input). Mask the `hindsight.apiToken` line if the file is on screen.
+- Do not show `~/.omp/agent/config.yml` for this story. If the file is on screen for another reason, mask the `hindsight.apiToken` line.
 - Service names only, if you want to show bridges: `systemctl --user status tern-web.service tern-remote.service`. Do not print tokens or pairing addresses.
 
 ### Quotable

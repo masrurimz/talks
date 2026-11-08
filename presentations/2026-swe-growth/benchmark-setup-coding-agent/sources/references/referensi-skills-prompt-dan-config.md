@@ -22,8 +22,8 @@ Where an item came from a note marked [INFERENCE] or [UNVERIFIED], the marker is
 - The size budget is enforced by a check. A coordinator message reported one nested file at 4218 bytes against a 4096 budget. A `bun run docs:agents` run reported "14 nested files fit their budgets." Evidence `~/.omp/agent/mesh/feed.jsonl` (entry dated 2026-10-28).
 - Subagent briefs follow one shape. The opening line is "Complete assignment thoroughly:", then `# Target`, `# Change`, and `# Contract` (or `# Output`). A brief names the file to write, the facts that must appear, and what not to leak. Evidence a `DomainResearch.jsonl` session file for the GinaV2 agentic-reasoning worktree, user message at line 9.
 - The poteto-mode skill is autoloaded by an extension once per context lifetime. It skips subagents and plan or vibe modes. Off switch is the file `~/.omp/agent/poteto-mode.off`. Evidence `~/work/labs/omp-skills/SYNC.md`, section "OMP adaptation rules".
-- Prompts paste raw context. Seen in his prompts are WhatsApp threads, HAR dumps, screenshots, Excalidraw JSON, and spreadsheets. Evidence `local://talk-extra-facts.md`.
-- Voice input is on. The config has `stt` enabled with `submitTrigger: say-submit`, and a mic icon is visible in the phone screenshot of the mobile fix. Evidence live `~/.omp/agent/config.yml`.
+- Prompts paste raw context. Seen in his prompts are WhatsApp threads, HAR dumps, screenshots, Excalidraw JSON, and spreadsheets. Evidence `local://talk-extra-facts.md`. Files and screenshots come from the laptop. The Tern mobile app sends text only, so from the phone he pastes text and links, and the agent captures its own screenshots.
+- The omp config has `stt` (voice input) enabled, but there is no evidence he used it in the phone story. Do not present the phone prompts as voice.
 - `/handoff` is a user-level skill (`~/.omp/agent/skills/handoff`). It appears in a real prompt as "/handoff i will be doing all the testing on staging".
 - Secret obfuscation is on by default in omp. Values in tool output reach the model as placeholders, so pasted context and tool output do not carry live secrets to the model. Details in the security reference.
 
