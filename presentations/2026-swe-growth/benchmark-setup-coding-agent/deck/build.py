@@ -611,7 +611,7 @@ def sanitized_image(path: str) -> bytes:
 
 IMAGE_TOP, IMAGE_BOTTOM = 0.3, 7.2
 CROP_W = 5.4
-CROP_YS = (2.5, 4.3)
+CROP_TOP, CROP_GAP = 2.1, 0.3
 
 
 def render_image(c: Canvas, s: C.Image) -> None:
@@ -626,13 +626,16 @@ def render_image(c: Canvas, s: C.Image) -> None:
     scale = ih / base.height
     for (x1, y1, x2, y2) in s.circles:
         c.rect(ix + x1 * scale, iy + y1 * scale, (x2 - x1) * scale, (y2 - y1) * scale, None, ACC, 4.0, MSO_SHAPE.OVAL)
-    for crop, y in zip(s.crops, CROP_YS):
+    y = CROP_TOP
+    for crop in s.crops:
         part = base.crop(crop.box)
         h = CROP_W * part.height / part.width
         c.slide.shapes.add_picture(io.BytesIO(_png(part)), emu(X0), emu(y), emu(CROP_W), emu(h))
         c.rect(X0, y, CROP_W, h, None, ACC, 3.0)
+        c.check_bottom(y + h, "image crop", IMAGE_BOTTOM)
         lw = text_w - CROP_W - 0.25
         c.text(X0 + CROP_W + 0.25, y, lw, h, crop.label, 28, ACC, bold=True, anchor=MSO_ANCHOR.MIDDLE)
+        y += h + CROP_GAP
 
 
 SHOT_LABEL_W = 3.3

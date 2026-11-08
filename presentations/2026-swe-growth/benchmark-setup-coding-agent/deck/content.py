@@ -308,9 +308,9 @@ DECK: tuple[Slide, ...] = (
         path=REFS + "screenshot-omp-mobile-0929.png",
         crops=(
             Crop(box=(20, 20, 420, 110), label="9:29 WIB"),
-            Crop(box=(60, 2238, 1030, 2372), label="voice prompt"),
+            Crop(box=(108, 470, 1027, 1044), label="The agent took this screenshot"),
         ),
-        circles=((55, 38, 165, 94), (888, 2252, 992, 2352)),
+        circles=((55, 38, 165, 94),),
     ),
     Timeline(
         title="QA flagged the bug at 08:52 and passed my fix at 09:57.",

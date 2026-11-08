@@ -70,8 +70,8 @@ The core stays intact. The claim, the benchmark story and its proof (slides 15 t
 
 ## Slide 2 [Wajib] The 9:29 phone screenshot
 **Timing:** 1.0 min (clock 0:30)
-**Say:** This is my phone at 9:29 in the morning. I was sitting in the plane, before takeoff. I spoke a prompt, and my agent had just reproduced a bug on a real running stack. Let me show you how I got there.
-**Evidence:** Tuesday, 27 October 2026, 9:29 WIB, on board the plane before takeoff. An omp session on a phone in the Tern Android app, chat style, with a mic in the composer. The agent had just reproduced a bug on a real stack. The full phone screenshot has serial numbers blurred, with 9:29 and the mic circled. Two enlarged crops carry the labels "9:29 WIB" and "voice prompt". The file is `sources/references/screenshot-omp-mobile-0929.png`.
+**Say:** This is my phone at 9:29 in the morning. I was sitting in the plane, before takeoff. I typed one line from my phone. The agent opened our app on the dev server, took this screenshot itself, and confirmed the bug. Let me show you how I got there.
+**Evidence:** Tuesday, 27 October 2026, 9:29 WIB, on board the plane before takeoff. An omp session on a phone in the Tern Android app, chat style. The phone sent text only: at 09:26 Zahid pasted QA's WhatsApp finding and typed one line. The Tern mobile app cannot attach screenshots or files. The screenshot in the chat is the agent's own: headless Chromium on x1 against the groundup-dev stack, one click on a draft sensor, which opened the edit modal. It then recorded `draftclick-before.mp4`. The full phone screenshot has serial numbers and the tenant name blurred, with 9:29 circled. Two enlarged crops carry the labels "9:29 WIB" and "The agent took this screenshot". The file is `sources/references/screenshot-omp-mobile-0929.png`.
 
 ## Slide 3 [Wajib] QA flagged the bug and passed the fix
 **Timing:** 1.0 min (clock 1:30)
@@ -507,5 +507,7 @@ Part 1 is built on `references/referensi-benchmark-lab.md`. The story is one eng
 Likely questions. How much does it cost for a beginner. Which model for which role. Is it safe to run agents for days. Why not Claude Code alone. How to start with one skill.
 
 Why is prewalk off? It was cheaper on my long tasks, but slower, and tasks took too long to finish. UI work also needed a better model than Haiku, so my task agents run Sonnet at medium with no handoff. On short tasks it cost the same or more. A second try on 24 and 25 October, with DeepSeek as the cheap model, was really slow. See slides 20 and 21.
+
+Can you send screenshots from your phone? No. The Tern app on my phone sends text only, so I paste QA's message and links. The agent opens our app on the dev server, takes its own screenshots and recordings, and puts them in the PR. The screenshot on slide 2 is one of them.
 
 Seed question if quiet. What is the first task you would turn into a skill?
