@@ -2,13 +2,13 @@
 
 ## Instruksi untuk NotebookLM
 
-Buat slide deck **detailed-style** untuk bahan Rakernas dan penelaahan mandiri. Topik deck adalah Renstra Bidang Pemuda Al Khidmah. Pembicara adalah Dida. Audiens adalah peserta Rakernas dan pengurus Al Khidmah.
+Buat **Detailed Deck** untuk paparan Renstra Bidang Pemuda Al Khidmah oleh Dida di Rakernas. Deck harus siap ditayangkan di ruang rapat dan tetap dapat dipahami saat dibaca mandiri. Pertahankan rincian program, tetapi beri setiap slide satu pesan utama yang terlihat dari judulnya.
 
 ## Format
 
 - Format deck: Detailed Deck.
 - Bahasa: Bahasa Indonesia.
-- Panjang: Long.
+- Panjang: Default jika pilihan Long tidak tersedia.
 - Target: 19 slide.
 - Fungsi: bahan musyawarah, pembahasan program, dan tindak lanjut.
 - Status pengesahan Renstra: tidak diketahui.
@@ -48,42 +48,32 @@ Ikuti tepat 19 slide dalam `sources/outlines/detailed.md`:
 
 ## Aturan isi
 
-1. Deck harus dapat dibaca tanpa penjelasan lisan.
-2. Tampilkan seluruh pointer dan seluruh hasil yang diharapkan dari sumber.
-3. Gunakan tabel, daftar bernomor, dan diagram sederhana. Hindari dinding teks.
-4. Bedakan label berikut secara konsisten:
-   - **Arah Renstra**;
-   - **Pointer kegiatan**;
-   - **Hasil yang diharapkan**;
-   - **Permasalahan strategis**;
-   - **Usulan untuk dibahas**;
-   - **Tidak diketahui**.
-5. Jangan mengubah pointer kegiatan menjadi daftar tugas final.
-6. Jangan mengubah hasil yang diharapkan menjadi capaian atau janji pelaksanaan.
-7. Jangan mengarang target numerik, target outcome tahunan, rentang waktu, tanggal, anggaran, jumlah pemuda, jumlah jejaring, jumlah kader, penanggung jawab, atau keputusan.
-8. Tampilkan rumus IKU persis seperti berikut:
+1. Tampilkan seluruh kegiatan dan hasil yang diharapkan dari sumber. Ringkas setiap butir tanpa menghilangkan maknanya. Kelompokkan butir terkait dengan subjudul singkat, bukan satu kartu per butir.
+2. Tulis judul slide sebagai pesan yang bisa dibaca sekilas. Untuk slide padat, beri satu kalimat pengantar yang menjelaskan hubungan antarbutir.
+3. Bedakan rencana dan capaian lewat kalimat biasa. Gunakan judul seperti “Hasil yang ingin dicapai” bila diperlukan. Jangan tampilkan badge status, label dalam kurung siku, instruksi outline, atau daftar informasi yang belum diketahui.
+4. Pada cover, tampilkan hanya judul, “Rakernas Al Khidmah”, dan “Dida”. Jangan tampilkan jabatan, tanggal, lokasi, atau status pengesahan yang tidak diketahui.
+5. Jangan menyatakan hasil yang diharapkan sebagai capaian. Jangan mengarang target, anggaran, tenggat, penanggung jawab, atau keputusan.
+6. Tampilkan rumus IKU persis seperti berikut:
 
    **IKU = (Jumlah program prioritas yang mencapai target outcome tahunan ÷ Jumlah seluruh program prioritas yang ditetapkan dalam Renstra) × 100%**
 
-9. Tampilkan lima indikator dan cara ukur pendukung.
-10. Gunakan istilah yang konsisten dari sumber:
+7. Tampilkan lima indikator dan cara ukur pendukung.
+8. Gunakan istilah yang konsisten dari sumber:
     - jejaring pendidikan;
     - komunitas;
     - karakter dan amaliah;
     - keterampilan dan kapasitas;
     - kaderisasi dan regenerasi.
-11. Tahun folder 2026 adalah label pengarsipan. Jangan menyajikan tahun acara sebagai fakta.
+9. Jangan menyajikan tahun folder 2026 sebagai tahun acara.
 
 ## Aturan visual
 
-- Gunakan nuansa hijau tua, gading, dan aksen emas.
-- Gunakan tabel untuk lima fokus dan lima indikator.
-- Gunakan kartu atau daftar bernomor untuk setiap pointer dan hasil.
-- Gunakan tujuh langkah untuk tujuh prioritas.
-- Gunakan tiga jenjang untuk tiga tahapan.
-- Gunakan rumus besar pada slide IKU.
-- Jangan memakai foto, logo, grafik data, atau ilustrasi yang tidak tersedia dalam sumber.
-- Jangan menyajikan materi sebagai dokumen pengesahan.
+- Gunakan kanvas 16:9. Ambil nuansa Al Khidmah dari kombinasi bidang gading, teks hijau tua, dan aksen emas tipis. Gunakan latar hijau tua untuk cover dan penutup, bukan sebagai latar default. Jangan gunakan bingkai emas tebal, gradien, atau ornamen generik.
+- Sejajarkan judul dan isi pada grid yang sama. Utamakan judul besar, teks isi yang terbaca dari belakang ruang rapat, dan jarak antarkelompok yang jelas. Jangan mengecilkan teks untuk mempertahankan satu layout.
+- Slide 2–4: tonjolkan sasaran utama pada slide tujuan. Kelompokkan tantangan berdasarkan tema dalam dua kolom terbuka tanpa kotak untuk setiap butir.
+- Slide 5–15: gunakan matriks ringkas untuk lima fokus. Variasikan pasangan slide kegiatan dan hasil dengan alur kegiatan, daftar terbuka, atau komposisi dua kolom. Jadikan kaderisasi sebagai alur nyata: pemetaan, pendampingan, penugasan, dan evaluasi. Jangan menggambarkan daftar prioritas sebagai urutan jika sumber tidak menetapkannya.
+- Slide 16–19: tampilkan tujuh prioritas sebagai daftar berkelompok. Gunakan tiga tahap sebagai diagram horizontal. Pada slide IKU, beri rumus ruang sendiri dan letakkan lima cara ukur pada tabel sederhana. Akhiri dengan pesan tentang regenerasi, tanpa mengulang seluruh isi deck.
+- Diagram dan ikon sederhana boleh dibuat dari isi sumber. Jangan menambah foto kegiatan, logo, atau grafik angka yang tidak tersedia.
 
 ## Nada
 
